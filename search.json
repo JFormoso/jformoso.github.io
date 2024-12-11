@@ -140,25 +140,11 @@
     "text": "During this workshop, we introduce the participant to evidence-based strategies to teach programming online effectively.\nObjective: To introduce techniques and good practices to design your programming courses and evaluate students.\nDuring this online workshop:\n\nWe show you how to design programming courses in an efficient and productive way.\nWe talk about the utility of peer-review and the importance of feedback, and how to implement these practices.\nWe present different types of assessment. For example, fill-in the blanks, faded examples, etc.\nWe recap good programming practices and how to promote them among your students.\n\nMaterials can be found here:\n\nCourse overview\nSlides\nRecording"
   },
   {
-    "objectID": "talks/latinr-2023/index.html",
-    "href": "talks/latinr-2023/index.html",
-    "title": "A Shiny app for mapping open-science communities, organizations & events in Latin America (Lightning Talk)",
+    "objectID": "talks/spss-a-r-2018/index.html",
+    "href": "talks/spss-a-r-2018/index.html",
+    "title": "From SPSS to R",
     "section": "",
-    "text": "The presentation “A Shiny App for Mapping Open-Science Communities, Organizations & Events in Latin America” highlighted the challenges of limited resources and spaces in Spanish for open science in Latin America, as well as the difficulty of identifying active communities and networks practicing open science in the region.\nIt emphasized the lack of a centralized, up-to-date repository to facilitate access to key information about resources, events, and communities, which hinders collaboration and knowledge exchange.\nAs a solution, the presentation proposed the development of a collaborative repository accessible through a Shiny application. This repository aims to centralize and map open science resources and communities in the region, enabling users to connect with local and regional initiatives, access resources, and actively participate in promoting open science practices.\nThe app is envisioned as not only a useful tool for researchers and organizations but also a bridge to foster collaboration and visibility for open science across Latin America.\nAn initial version can be found here.\nYou can find the presentation slides here."
-  },
-  {
-    "objectID": "talks/ciencia-datos-psico-2023/index.html",
-    "href": "talks/ciencia-datos-psico-2023/index.html",
-    "title": "Pre-Congress Workshop - “Data Science for Psychologist (with R and RStudio)”",
-    "section": "",
-    "text": "This was a pre-congress workshop taught during the 16th International Congress of Research and Professional Practice in Psychology held in the University of Buenos Aires. The objective was to introduce participants to the fundamental concepts and tools of data science applied to psychological research using R. It was tailored for researchers, practitioners, and students who wish to enhance their skills in data analysis and visualization within the field of psychology.\nFind the slides here."
-  },
-  {
-    "objectID": "talks/alta-ca-2024/index.html",
-    "href": "talks/alta-ca-2024/index.html",
-    "title": "ALTa Ciencia Abierta (Latin America Transforms to Open Science)",
-    "section": "",
-    "text": "The ALTa Ciencia Abierta course is designed to provide a comprehensive introduction to open science practices, focusing on key topics like reproducible research, open data, and collaborative workflows, for Spanish-speaking communities. It aims to equip researchers with the tools and knowledge to make their work more transparent, accessible, and reproducible.\nDuring 2024, I had the pleasure of teaching the module on open code in the three editions of the course, alongside Patricia Loto. In this module, we explored best practices for sharing and collaborating on code, ensuring that research processes remain open, reproducible, and easy for others to follow.\nThis course is part of a broader initiative supported by NASA - NASA TOPS - which promotes open science and collaboration across the global research community. MetaDocencia’s participation in this initiative is a significant step towards fostering a more inclusive and transparent scientific community, ensuring that research is accessible and reproducible for everyone, regardless of location or resources.\n\nLink to the website\nLink to the Open Code module"
+    "text": "This is a 2 hour workshop for R-Ladies Buenos Aires planned for researcherd transitioning from SPSS to R.\nFind the recording here."
   },
   {
     "objectID": "talks/dont-use-this-code-2024/index.html",
@@ -168,11 +154,32 @@
     "text": "During this community event organized by Don’t Use This Code in the context of the NASA TOPS inciative, I participated of a round-table discussion regarding innovations in virtual tranings with Brian Knosp, Scientific Applications Software Engineer at NASA’s Jet Propulsion Laboratory, Kenji Nomura, High School STEM teacher currently serving as an Albert Einstein Distinguished Educator fellow at NASA in the Science Activation (SciAct) program, and James Powel from Don’t Use This Code.\nFind the recording here."
   },
   {
-    "objectID": "talks/spss-a-r-2018/index.html",
-    "href": "talks/spss-a-r-2018/index.html",
-    "title": "From SPSS to R",
+    "objectID": "talks/alta-ca-2024/index.html",
+    "href": "talks/alta-ca-2024/index.html",
+    "title": "ALTa Ciencia Abierta (Latin America Transforms to Open Science)",
     "section": "",
-    "text": "This is a 2 hour workshop for R-Ladies Buenos Aires planned for researcherd transitioning from SPSS to R.\nFind the recording here."
+    "text": "The ALTa Ciencia Abierta course is designed to provide a comprehensive introduction to open science practices, focusing on key topics like reproducible research, open data, and collaborative workflows, for Spanish-speaking communities. It aims to equip researchers with the tools and knowledge to make their work more transparent, accessible, and reproducible.\nDuring 2024, I had the pleasure of teaching the module on open code in the three editions of the course, alongside Patricia Loto. In this module, we explored best practices for sharing and collaborating on code, ensuring that research processes remain open, reproducible, and easy for others to follow.\nThis course is part of a broader initiative supported by NASA - NASA TOPS - which promotes open science and collaboration across the global research community. MetaDocencia’s participation in this initiative is a significant step towards fostering a more inclusive and transparent scientific community, ensuring that research is accessible and reproducible for everyone, regardless of location or resources.\n\nLink to the website\nLink to the Open Code module"
+  },
+  {
+    "objectID": "talks/ciencia-datos-psico-2023/index.html",
+    "href": "talks/ciencia-datos-psico-2023/index.html",
+    "title": "Pre-Congress Workshop - “Data Science for Psychologist (with R and RStudio)”",
+    "section": "",
+    "text": "This was a pre-congress workshop taught during the 16th International Congress of Research and Professional Practice in Psychology held in the University of Buenos Aires. The objective was to introduce participants to the fundamental concepts and tools of data science applied to psychological research using R. It was tailored for researchers, practitioners, and students who wish to enhance their skills in data analysis and visualization within the field of psychology.\nFind the slides here."
+  },
+  {
+    "objectID": "talks/latinr-2023/index.html",
+    "href": "talks/latinr-2023/index.html",
+    "title": "A Shiny app for mapping open-science communities, organizations & events in Latin America (Lightning Talk)",
+    "section": "",
+    "text": "The presentation “A Shiny App for Mapping Open-Science Communities, Organizations & Events in Latin America” highlighted the challenges of limited resources and spaces in Spanish for open science in Latin America, as well as the difficulty of identifying active communities and networks practicing open science in the region.\nIt emphasized the lack of a centralized, up-to-date repository to facilitate access to key information about resources, events, and communities, which hinders collaboration and knowledge exchange.\nAs a solution, the presentation proposed the development of a collaborative repository accessible through a Shiny application. This repository aims to centralize and map open science resources and communities in the region, enabling users to connect with local and regional initiatives, access resources, and actively participate in promoting open science practices.\nThe app is envisioned as not only a useful tool for researchers and organizations but also a bridge to foster collaboration and visibility for open science across Latin America.\nAn initial version can be found here.\nYou can find the presentation slides here."
+  },
+  {
+    "objectID": "talks/ucla-2024/index.html",
+    "href": "talks/ucla-2024/index.html",
+    "title": "A Path to Open, Inclusive, and Collaborative Science for Librarians",
+    "section": "",
+    "text": "In 2023, Irene and I received an award to participate in the UCLA-IMLS Open Science for Librarians Collaborative Lesson Development Workshop, a project sponsored by The Carpentries. This opportunity provided us with specialized training to develop our proposed lesson, “A Path to Open, Inclusive, and Collaborative Science for Librarians”.\nDuring the workshop, we gained insights into lesson design and community-driven curriculum development. The program emphasized inclusivity and collaboration. As a result of this workshop, we’ve been working on the lesson, which is now available in a Pre-Alpha state. You can check out the progress:\n\nGitHub Repository.\nLesson Website."
   },
   {
     "objectID": "talks/elife-2024/index.html",
@@ -207,7 +214,7 @@
     "href": "talks.html",
     "title": "Talks, Workshops, and Courses",
     "section": "",
-    "text": "Introduction to Quarto\n\n\n\n\n\n\n\n\n\nNov 26, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe Carpentries and MetaDocencia’s Instructor Training\n\n\n\n\n\n\n\n\n\nOct 1, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nALTa Ciencia Abierta (Latin America Transforms to Open Science)\n\n\n\n\n\n\n\n\n\nJun 20, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPromoting Open Science in and from the Global South\n\n\n\n\n\n\n\n\n\nMay 20, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPre-Congress Workshop - “Data Science for Psychologist (with R and RStudio)”\n\n\n\n\n\n\n\n\n\nApr 20, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA Shiny app for mapping open-science communities, organizations & events in Latin America (Lightning Talk)\n\n\n\n\n\n\n\n\n\nApr 20, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to OpenSesame\n\n\n\n\n\n\n\n\n\nApr 20, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMapping open-science communities, organizations & events in Latin America (Lightning Talk)\n\n\n\n\n\n\n\n\n\nApr 20, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResponsible Research & Decolonisation from a Latin American Perspective\n\n\n\n\n\n\n\n\n\nApr 20, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nInsights and Innovations in Virtual Training | DUTC/NASA TOPS Talks\n\n\n\n\n\n\n\n\n\nApr 6, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCommunities of practice in Latin America and their influence on the dissemination of open science\n\n\n\n\n\n\n\n\n\nApr 28, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow to Teach Programming Online\n\n\n\n\n\n\n\n\n\nApr 20, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to R\n\n\n\n\n\n\n\n\n\nAug 4, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDplyr workshop\n\n\n\n\n\n\n\n\n\nApr 20, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFrom SPSS to R\n\n\n\n\n\n\n\n\n\nApr 30, 2018\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Introduction to Quarto\n\n\n\n\n\n\n\n\n\nNov 26, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe Carpentries and MetaDocencia’s Instructor Training\n\n\n\n\n\n\n\n\n\nOct 1, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nALTa Ciencia Abierta (Latin America Transforms to Open Science)\n\n\n\n\n\n\n\n\n\nJun 20, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPromoting Open Science in and from the Global South\n\n\n\n\n\n\n\n\n\nMay 20, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPre-Congress Workshop - “Data Science for Psychologist (with R and RStudio)”\n\n\n\n\n\n\n\n\n\nApr 20, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA Shiny app for mapping open-science communities, organizations & events in Latin America (Lightning Talk)\n\n\n\n\n\n\n\n\n\nApr 20, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to OpenSesame\n\n\n\n\n\n\n\n\n\nApr 20, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMapping open-science communities, organizations & events in Latin America (Lightning Talk)\n\n\n\n\n\n\n\n\n\nApr 20, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nResponsible Research & Decolonisation from a Latin American Perspective\n\n\n\n\n\n\n\n\n\nApr 20, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nInsights and Innovations in Virtual Training | DUTC/NASA TOPS Talks\n\n\n\n\n\n\n\n\n\nApr 6, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA Path to Open, Inclusive, and Collaborative Science for Librarians\n\n\n\n\n\n\n\n\n\nFeb 8, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCommunities of practice in Latin America and their influence on the dissemination of open science\n\n\n\n\n\n\n\n\n\nApr 28, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow to Teach Programming Online\n\n\n\n\n\n\n\n\n\nApr 20, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to R\n\n\n\n\n\n\n\n\n\nAug 4, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDplyr workshop\n\n\n\n\n\n\n\n\n\nApr 20, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFrom SPSS to R\n\n\n\n\n\n\n\n\n\nApr 30, 2018\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/2024-09-18-posit-conf-2024/index.html",
@@ -250,12 +257,5 @@
     "title": "Posit::Conf(2024): R, Community, and Learning",
     "section": "Resources",
     "text": "Resources\nIf you’re curious about the workshops, the materials are available here. I highly recommend exploring them—they’re packed with useful information and practical tools that are worth checking out!\nIf you belong to an underrepresented group, don’t miss the chance to attend Posit::conf(2025). Be sure to check out the Opportunity Scholarship—it could be your gateway to an incredible experience!"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Jesica Formoso",
-    "section": "",
-    "text": "Hi everyone, I’m Jesica! I’m a Data Scientist, a Tenured Researcher at the National Scientific and Technical Research Council (CONICET) in Argentina, and the Impact Measurement Coordinator at MetaDocencia. Since 2019, I have been teaching and developing curricula for courses in statistics, programming, data science, and data visualization at the University of Buenos Aires (UBA), National Agricultural Technology Institute (INTA), and the University Institute of the Italian Hospital of Buenos Aires. I also serve as an advisor for research projects within Doctoral and Masters graduate programs in Psychology, Neuropsychology and Neuroscience at the University of Buenos Aires, the Latin American Faculty of Social Sciences (FLACSO), and the National University of Flores (UFLO), among others.\nI am passionate about fostering diversity and inclusion in the tech and data science communities. As an organizer of R-Ladies Buenos Aires, I actively work to support underrepresented genders in R and data science. Additionally, through my work with MetaDocencia, I promote open science and contribute to the development of open educational resources in Spanish, making quality learning materials more accessible."
   }
 ]
