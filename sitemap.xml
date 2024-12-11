@@ -2,70 +2,78 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://JFormoso.github.io/jformoso.github.io/cv.html</loc>
-    <lastmod>2024-12-11T07:40:07.143Z</lastmod>
+    <lastmod>2024-12-11T07:46:35.346Z</lastmod>
   </url>
   <url>
     <loc>https://JFormoso.github.io/jformoso.github.io/posts/2023-08-18-disc-unconf-2023/index.html</loc>
-    <lastmod>2024-12-11T07:40:07.149Z</lastmod>
+    <lastmod>2024-12-11T07:46:35.361Z</lastmod>
   </url>
   <url>
     <loc>https://JFormoso.github.io/jformoso.github.io/posts.html</loc>
-    <lastmod>2024-12-11T07:40:07.149Z</lastmod>
+    <lastmod>2024-12-11T07:46:35.361Z</lastmod>
   </url>
   <url>
     <loc>https://JFormoso.github.io/jformoso.github.io/talks/ttt-2024/index.html</loc>
-    <lastmod>2024-12-11T07:40:07.168Z</lastmod>
+    <lastmod>2024-12-11T07:46:35.372Z</lastmod>
   </url>
   <url>
-    <loc>https://JFormoso.github.io/jformoso.github.io/talks/dplyr-rladiesba-2020/index.html</loc>
-    <lastmod>2024-12-11T07:40:07.165Z</lastmod>
-  </url>
-  <url>
-    <loc>https://JFormoso.github.io/jformoso.github.io/talks/quarto-rladiesba-2024/index.html</loc>
-    <lastmod>2024-12-11T07:40:07.166Z</lastmod>
-  </url>
-  <url>
-    <loc>https://JFormoso.github.io/jformoso.github.io/talks/how-to-teach-programing-2023/index.html</loc>
-    <lastmod>2024-12-11T07:40:07.166Z</lastmod>
-  </url>
-  <url>
-    <loc>https://JFormoso.github.io/jformoso.github.io/talks/dont-use-this-code-2024/index.html</loc>
-    <lastmod>2024-12-11T07:40:07.165Z</lastmod>
-  </url>
-  <url>
-    <loc>https://JFormoso.github.io/jformoso.github.io/talks/introduction-to-r-2023/index.html</loc>
-    <lastmod>2024-12-11T07:40:07.166Z</lastmod>
-  </url>
-  <url>
-    <loc>https://JFormoso.github.io/jformoso.github.io/talks/alta-ca-2024/index.html</loc>
-    <lastmod>2024-12-11T07:40:07.159Z</lastmod>
-  </url>
-  <url>
-    <loc>https://JFormoso.github.io/jformoso.github.io/talks/spss-a-r-2018/index.html</loc>
-    <lastmod>2024-12-11T07:40:07.168Z</lastmod>
-  </url>
-  <url>
-    <loc>https://JFormoso.github.io/jformoso.github.io/talks/elife-2024/index.html</loc>
-    <lastmod>2024-12-11T07:40:07.166Z</lastmod>
+    <loc>https://JFormoso.github.io/jformoso.github.io/talks/open-sesame-2024/index.html</loc>
+    <lastmod>2024-12-11T07:46:35.369Z</lastmod>
   </url>
   <url>
     <loc>https://JFormoso.github.io/jformoso.github.io/talks/csv-conf-2023/index.html</loc>
-    <lastmod>2024-12-11T07:40:07.162Z</lastmod>
+    <lastmod>2024-12-11T07:46:35.365Z</lastmod>
+  </url>
+  <url>
+    <loc>https://JFormoso.github.io/jformoso.github.io/talks/elife-2024/index.html</loc>
+    <lastmod>2024-12-11T07:46:35.369Z</lastmod>
+  </url>
+  <url>
+    <loc>https://JFormoso.github.io/jformoso.github.io/talks/spss-a-r-2018/index.html</loc>
+    <lastmod>2024-12-11T07:46:35.372Z</lastmod>
+  </url>
+  <url>
+    <loc>https://JFormoso.github.io/jformoso.github.io/talks/ciencia-datos-psico-2023/index.html</loc>
+    <lastmod>2024-12-11T07:46:35.362Z</lastmod>
+  </url>
+  <url>
+    <loc>https://JFormoso.github.io/jformoso.github.io/talks/introduction-to-r-2023/index.html</loc>
+    <lastmod>2024-12-11T07:46:35.369Z</lastmod>
+  </url>
+  <url>
+    <loc>https://JFormoso.github.io/jformoso.github.io/talks/alta-ca-2024/index.html</loc>
+    <lastmod>2024-12-11T07:46:35.362Z</lastmod>
+  </url>
+  <url>
+    <loc>https://JFormoso.github.io/jformoso.github.io/talks/dont-use-this-code-2024/index.html</loc>
+    <lastmod>2024-12-11T07:46:35.368Z</lastmod>
+  </url>
+  <url>
+    <loc>https://JFormoso.github.io/jformoso.github.io/talks/how-to-teach-programing-2023/index.html</loc>
+    <lastmod>2024-12-11T07:46:35.369Z</lastmod>
+  </url>
+  <url>
+    <loc>https://JFormoso.github.io/jformoso.github.io/talks/quarto-rladiesba-2024/index.html</loc>
+    <lastmod>2024-12-11T07:46:35.370Z</lastmod>
+  </url>
+  <url>
+    <loc>https://JFormoso.github.io/jformoso.github.io/talks/dplyr-rladiesba-2020/index.html</loc>
+    <lastmod>2024-12-11T07:46:35.368Z</lastmod>
   </url>
   <url>
     <loc>https://JFormoso.github.io/jformoso.github.io/talks/quest-2024/index.html</loc>
-    <lastmod>2024-12-11T07:40:07.168Z</lastmod>
+    <lastmod>2024-12-11T07:46:35.371Z</lastmod>
   </url>
   <url>
     <loc>https://JFormoso.github.io/jformoso.github.io/talks.html</loc>
-    <lastmod>2024-12-11T07:40:07.149Z</lastmod>
+    <lastmod>2024-12-11T07:46:35.362Z</lastmod>
   </url>
   <url>
     <loc>https://JFormoso.github.io/jformoso.github.io/posts/2024-09-18-posit-conf-2024/index.html</loc>
-    <lastmod>2024-12-11T07:40:07.149Z</lastmod>
+    <lastmod>2024-12-11T07:46:35.361Z</lastmod>
   </url>
   <url>
     <loc>https://JFormoso.github.io/jformoso.github.io/index.html</loc>
-    <lastmod>2024-12-11T07:40:07.149Z</lastmod>
+    <lastmod>2024-12-11T07:46:35.361Z</lastmod>
   </url>
 </urlset>
