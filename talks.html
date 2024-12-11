@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Jesica Formoso">
-<meta name="dcterms.date" content="2023-08-18">
 
-<title>What I learned at NumFocus DISC Unconf 2023 – Jesica Formoso</title>
+<title>Talks, Workshops, and Courses – Jesica Formoso</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,22 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-c75bcb89907db7808f0349b764a1a524.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-c75bcb89907db7808f0349b764a1a524.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,9 +68,67 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
 
-<link rel="stylesheet" href="../../styles.css">
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -80,7 +138,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Jesica Formoso</span>
     </a>
   </div>
@@ -91,19 +149,19 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../posts.html"> 
+    <a class="nav-link" href="./posts.html"> 
 <span class="menu-text">Posts</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../talks.html"> 
+    <a class="nav-link active" href="./talks.html" aria-current="page"> 
 <span class="menu-text">Talks/workshops</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../cv.html"> 
+    <a class="nav-link" href="./cv.html"> 
 <span class="menu-text">CV</span></a>
   </li>  
 </ul>
@@ -131,50 +189,25 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#knowhow-everything-you-wanted-to-know-about-applying-for-grants-but-didnt-ask" id="toc-knowhow-everything-you-wanted-to-know-about-applying-for-grants-but-didnt-ask" class="nav-link active" data-scroll-target="#knowhow-everything-you-wanted-to-know-about-applying-for-grants-but-didnt-ask">Knowhow: everything you wanted to know about applying for grants but didn’t ask</a></li>
-  <li><a href="#a-memorable-experience" id="toc-a-memorable-experience" class="nav-link" data-scroll-target="#a-memorable-experience">A Memorable Experience</a></li>
-  <li><a href="#why-you-should-attend-the-disc-unconf" id="toc-why-you-should-attend-the-disc-unconf" class="nav-link" data-scroll-target="#why-you-should-attend-the-disc-unconf">Why You Should Attend the DISC Unconf</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">What I learned at NumFocus DISC Unconf 2023</h1>
-  <div class="quarto-categories">
-    <div class="quarto-category">Conference</div>
-    <div class="quarto-category">Diversity &amp; Inclusion</div>
-    <div class="quarto-category">Open-source</div>
-  </div>
-  </div>
+<h1 class="title">Talks, Workshops, and Courses</h1>
+</div>
 
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Jesica Formoso </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">August 18, 2023</p>
-    </div>
-  </div>
   
     
   </div>
@@ -184,28 +217,292 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>In September 2023, I had the opportunity to attend the <a href="https://numfocus.org/">NumFocus DISC Unconference</a>—a gathering dedicated to creating a more equitable open-source data science community. As someone committed to promoting open practices in research, data, and scientific computing in Latin America, this event offered a unique space to connect with leaders in these fields and work together on meaningful projects.</p>
-<p>The open-source community remains relatively homogenous, which limits its potential. Events like the DISC Unconf provide a space to brainstorm how to make it more representative and inclusve. My role at the event was as a contributor, and I focused on a project that resonates deeply with my experiences as a researcher from the global south: <a href="https://numfocus.github.io/disc-unconference-2023-projects/en/hidden-curriculum.html">Knowhow: everything you wanted to know about applying for grants but didn’t ask</a>.</p>
-<section id="knowhow-everything-you-wanted-to-know-about-applying-for-grants-but-didnt-ask" class="level2">
-<h2 class="anchored" data-anchor-id="knowhow-everything-you-wanted-to-know-about-applying-for-grants-but-didnt-ask">Knowhow: everything you wanted to know about applying for grants but didn’t ask</h2>
-<p>This project aimed to tackle a critical barrier faced by researchers from underrepresented regions when applying for grants from the global north. For many of us, the application process often feels foreign and inaccessible due to cultural and systemic differences. These challenges discourage talented researchers from applying, perpetuating inequality in access to resources.</p>
-<p>The project’s goal was to design a curriculum and coaching program to support potential grantees in navigating the grant process. From identifying suitable funding opportunities to crafting proposals, creating budgets, and building collaborations, the program seeks to level the playing field and enable fairer engagement.</p>
-<p>I collaborated with an incredible team, including Laura Ación, Jessica Greene, Barbara Wilk, Kate Hertweck, Yo Yehudi, Tania Allard, and Mariana Meireles. Working alongside individuals from diverse backgrounds was inspiring. Their varied perspectives challenged my thinking and enriched the project in ways I hadn’t anticipated.</p>
-</section>
-<section id="a-memorable-experience" class="level2">
-<h2 class="anchored" data-anchor-id="a-memorable-experience">A Memorable Experience</h2>
-<p>The unconference was a fantastic experience. I met leaders in the open-source world, learned about initiatives making these communities more accessible, and participated in a project that I believe could have a tangible impact on researchers in my region. The brainstorming sessions and collaborative work stood out as particularly productive and inspiring.</p>
-<p>As a researcher from Argentina, I appreciated the opportunity to share my experiences and perspectives. One key takeaway was the importance of having participants from underrepresented regions in decision-making spaces. Solutions to our challenges must include our voices to be truly effective and relevant.</p>
-<p>I’m especially excited that the <a href="https://numfocus.github.io/disc-unconference-2025/">DISC Unconf 2025</a> will take place in São Paulo, Brazil. This move will bring more Latin American researchers to the table and foster regional collaboration.</p>
-</section>
-<section id="why-you-should-attend-the-disc-unconf" class="level2">
-<h2 class="anchored" data-anchor-id="why-you-should-attend-the-disc-unconf">Why You Should Attend the DISC Unconf</h2>
-<p>If you are part of a group that is underrepresented in open-source or scientific computing communities, I highly recommend attending a DISC Unconf. It’s a unique opportunity to connect with like-minded individuals, contribute to impactful projects, and ensure your voice is part of the conversation. Beyond networking, it’s a chance to help shape the future of open practices in a way that benefits everyone.</p>
 
 
-</section>
 
-</main> <!-- /main -->
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1770768000000" data-listing-file-modified-sort="1733895223454" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="160">
+<div class="thumbnail">
+<p><a href="./talks/quarto-rladiesba-2024/index.html" class="no-external"></a></p><a href="./talks/quarto-rladiesba-2024/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./talks/quarto-rladiesba-2024/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./talks/quarto-rladiesba-2024/index.html" class="no-external">Introduction to Quarto</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./talks/quarto-rladiesba-2024/index.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./talks/quarto-rladiesba-2024/index.html" class="no-external">The R-Ladies Buenos Aires workshop <strong>Transform Your Data into Visual Stories with Quarto</strong> presents an introduction to Quarto, an open-source publishing system designed to…</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./talks/quarto-rladiesba-2024/index.html" class="no-external">
+<div class="listing-date">
+Feb 11, 2026
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1754697600000" data-listing-file-modified-sort="1733895223454" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="60">
+<div class="thumbnail">
+<p><a href="./talks/ttt-2024/index.html" class="no-external"></a></p><a href="./talks/ttt-2024/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./talks/ttt-2024/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./talks/ttt-2024/index.html" class="no-external">The Carpentries and MetaDocencia’s Instructor Training</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./talks/ttt-2024/index.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./talks/ttt-2024/index.html" class="no-external">During 2024, I participated as a trainer in the context of Intructor Training with The Carpentries curriculum. Instructor Training familiarizes trainees with evidence-based…</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./talks/ttt-2024/index.html" class="no-external">
+<div class="listing-date">
+Aug 9, 2025
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1754438400000" data-listing-file-modified-sort="1733895223453" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="165">
+<div class="thumbnail">
+<p><a href="./talks/alta-ca-2024/index.html" class="no-external"></a></p><a href="./talks/alta-ca-2024/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./talks/alta-ca-2024/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./talks/alta-ca-2024/index.html" class="no-external">ALTa Ciencia Abierta (Latin America Transforms to Open Science)</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./talks/alta-ca-2024/index.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./talks/alta-ca-2024/index.html" class="no-external">The ALTa Ciencia Abierta course is designed to provide a comprehensive introduction to open science practices, focusing on key topics like reproducible research, open data…</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./talks/alta-ca-2024/index.html" class="no-external">
+<div class="listing-date">
+Aug 6, 2025
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-listing-date-sort="1754352000000" data-listing-file-modified-sort="1733895223453" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="49">
+<div class="thumbnail">
+<p><a href="./talks/elife-2024/index.html" class="no-external"></a></p><a href="./talks/elife-2024/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./talks/elife-2024/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./talks/elife-2024/index.html" class="no-external">Promoting Open Science in and from the Global South</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./talks/elife-2024/index.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./talks/elife-2024/index.html" class="no-external">In this first webinar from eLife’s Global South Committee for Open Science, we explored the challenges faced in this region and shared our collective vision for enhancing…</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./talks/elife-2024/index.html" class="no-external">
+<div class="listing-date">
+Aug 5, 2025
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="4" data-listing-date-sort="1754265600000" data-listing-file-modified-sort="1733895223454" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="69">
+<div class="thumbnail">
+<p><a href="./talks/quest-2024/index.html" class="no-external"></a></p><a href="./talks/quest-2024/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./talks/quest-2024/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./talks/quest-2024/index.html" class="no-external">Responsible Research &amp; Decolonisation from a Latin American Perspective</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./talks/quest-2024/index.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./talks/quest-2024/index.html" class="no-external">AS part of MetaDocencia, I was part of the organizing committee for the <strong>Summer School/Alumni Seminar: Decolonizing Global Health with a focus on Biomedical Sciences…</strong></a>
+</div>
+</div>
+<div class="metadata">
+<a href="./talks/quest-2024/index.html" class="no-external">
+<div class="listing-date">
+Aug 4, 2025
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="5" data-listing-date-sort="1743724800000" data-listing-file-modified-sort="1733895223453" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="117">
+<div class="thumbnail">
+<p><a href="./talks/csv-conf-2023/index.html" class="no-external"></a></p><a href="./talks/csv-conf-2023/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./talks/csv-conf-2023/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./talks/csv-conf-2023/index.html" class="no-external">Communities of practice in Latin America and their influence on the dissemination of open science</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./talks/csv-conf-2023/index.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./talks/csv-conf-2023/index.html" class="no-external">In this talk, which was presented in the csv,conf 2023, we analize what is the role of communities of practice in the dissemination and implementation of open science…</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./talks/csv-conf-2023/index.html" class="no-external">
+<div class="listing-date">
+Apr 4, 2025
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="6" data-listing-date-sort="1722729600000" data-listing-file-modified-sort="1733895223454" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="100">
+<div class="thumbnail">
+<p><a href="./talks/how-to-teach-programing-2023/index.html" class="no-external"></a></p><a href="./talks/how-to-teach-programing-2023/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./talks/how-to-teach-programing-2023/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./talks/how-to-teach-programing-2023/index.html" class="no-external">How to Teach Programming Online</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./talks/how-to-teach-programing-2023/index.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./talks/how-to-teach-programing-2023/index.html" class="no-external">During this workshop, we introduce the participant to evidence-based strategies to teach programming online effectively.</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./talks/how-to-teach-programing-2023/index.html" class="no-external">
+<div class="listing-date">
+Aug 4, 2024
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="7" data-listing-date-sort="1717459200000" data-listing-file-modified-sort="1733895223453" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="75">
+<div class="thumbnail">
+<p><a href="./talks/dont-use-this-code-2024/index.html" class="no-external"></a></p><a href="./talks/dont-use-this-code-2024/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./talks/dont-use-this-code-2024/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./talks/dont-use-this-code-2024/index.html" class="no-external">Insights and Innovations in Virtual Training | DUTC/NASA TOPS Talks</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./talks/dont-use-this-code-2024/index.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./talks/dont-use-this-code-2024/index.html" class="no-external">During this community event organized by Don’t Use This Code in the context of the NASA TOPS inciative, I participated of a round-table discussion regarding innovations in…</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./talks/dont-use-this-code-2024/index.html" class="no-external">
+<div class="listing-date">
+Jun 4, 2024
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="8" data-listing-date-sort="1628035200000" data-listing-file-modified-sort="1733895223454" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<div class="thumbnail">
+<p><a href="./talks/introduction-to-r-2023/index.html" class="no-external"></a></p><a href="./talks/introduction-to-r-2023/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./talks/introduction-to-r-2023/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./talks/introduction-to-r-2023/index.html" class="no-external">Introduction to R</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./talks/introduction-to-r-2023/index.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./talks/introduction-to-r-2023/index.html" class="no-external"></a>
+</div>
+</div>
+<div class="metadata">
+<a href="./talks/introduction-to-r-2023/index.html" class="no-external">
+<div class="listing-date">
+Aug 4, 2021
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="9" data-listing-date-sort="1628035200000" data-listing-file-modified-sort="1733895223453" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="76">
+<div class="thumbnail">
+<p><a href="./talks/dplyr-rladiesba-2020/index.html" class="no-external"></a></p><a href="./talks/dplyr-rladiesba-2020/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./talks/dplyr-rladiesba-2020/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./talks/dplyr-rladiesba-2020/index.html" class="no-external">Dplyr workshop</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./talks/dplyr-rladiesba-2020/index.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./talks/dplyr-rladiesba-2020/index.html" class="no-external">This is a 2 hour workshop for R-Ladies Buenos Aires about manipulation of tabular data with <strong>dplyr</strong>. This is one of the core packages of the tidyverse, a collection of R…</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./talks/dplyr-rladiesba-2020/index.html" class="no-external">
+<div class="listing-date">
+Aug 4, 2021
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="10" data-listing-date-sort="1564876800000" data-listing-file-modified-sort="1733895223454" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="22">
+<div class="thumbnail">
+<p><a href="./talks/spss-a-r-2018/index.html" class="no-external"></a></p><a href="./talks/spss-a-r-2018/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./talks/spss-a-r-2018/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./talks/spss-a-r-2018/index.html" class="no-external">From SPSS to R</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./talks/spss-a-r-2018/index.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./talks/spss-a-r-2018/index.html" class="no-external">This is a 2 hour workshop for R-Ladies Buenos Aires planned for researcherd transitioning from SPSS to R.</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./talks/spss-a-r-2018/index.html" class="no-external">
+<div class="listing-date">
+Aug 4, 2019
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
