@@ -9,6 +9,7 @@
   {
     "listing": "/talks.html",
     "items": [
+      "/talks/nasa-2i2c-2024/index.html",
       "/talks/quarto-rladiesba-2024/index.html",
       "/talks/ttt-2024/index.html",
       "/talks/alta-ca-2024/index.html",
@@ -19,7 +20,7 @@
       "/talks/code-for-all-2023/index.html",
       "/talks/quest-2024/index.html",
       "/talks/dont-use-this-code-2024/index.html",
-      "/talks/ucla-2024/index.html",
+      "/talks/ucla-2023/index.html",
       "/talks/csv-conf-2023/index.html",
       "/talks/how-to-teach-programing-2023/index.html",
       "/talks/introduction-to-r-2023/index.html",
