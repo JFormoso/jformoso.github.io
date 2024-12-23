@@ -1,12 +1,5 @@
 [
   {
-    "listing": "/posts.html",
-    "items": [
-      "/posts/2024-09-18-posit-conf-2024/index.html",
-      "/posts/2023-08-18-disc-unconf-2023/index.html"
-    ]
-  },
-  {
     "listing": "/talks.html",
     "items": [
       "/talks/quarto-rladiesba-2024/index.html",
@@ -26,6 +19,14 @@
       "/talks/introduction-to-r-2023/index.html",
       "/talks/dplyr-rladiesba-2020/index.html",
       "/talks/spss-a-r-2018/index.html"
+    ]
+  },
+  {
+    "listing": "/posts.html",
+    "items": [
+      "/posts/2024-12-20-r-en-red/index.html",
+      "/posts/2024-09-18-posit-conf-2024/index.html",
+      "/posts/2023-08-18-disc-unconf-2023/index.html"
     ]
   }
 ]
