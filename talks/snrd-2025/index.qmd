@@ -2,7 +2,6 @@
 authors: [Jesica Formoso]
 date: "2025-04-10"
 title: Políticas Relacionadas con Repositorios de Datos Científicos: Argentina
-subtitle: Policies related to scientific data repositories: Argentina
 image: snrd.jpg
 ---
 
