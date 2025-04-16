@@ -12,6 +12,7 @@
   {
     "listing": "/talks.html",
     "items": [
+      "/talks/snrd-2025/index.html",
       "/talks/quarto-rladiesba-2024/index.html",
       "/talks/ttt-2024/index.html",
       "/talks/alta-ca-2024/index.html",
