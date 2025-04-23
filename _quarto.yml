@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: docs
+  resources:
+    - google1234567890abcdef.html
 
 website:
   title: "Jesica Formoso"
