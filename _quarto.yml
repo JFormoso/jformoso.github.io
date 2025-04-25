@@ -5,6 +5,7 @@ project:
     - google1234567890abcdef.html
 
 website:
+  site-url: https://jformoso.github.io/
   title: "Jesica Formoso"
   navbar:
     left:
