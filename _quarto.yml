@@ -6,6 +6,7 @@ project:
 
 website:
   site-url: https://jformoso.github.io/
+  favicon: images/favicon.png
   title: "Jesica Formoso"
   navbar:
     left:
