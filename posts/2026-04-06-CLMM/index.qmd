@@ -1,0 +1,380 @@
+---
+title: "Modelos mixtos de enlace acumulativo (CLMM): un tutorial paso a paso en R️"
+author: "Jesica Formoso"
+date: "2026-04-06"
+slug: tutorial-CLMM
+categories:
+  - Tutorial
+  - Estadística
+  - Datos ordinales
+  - Medidas repetidas
+tags:
+  - Tutorial
+  - Estadística
+  - Datos ordinales
+  - Medidas repetidas
+description: ""
+type: post
+---
+
+![](../../images/clmm.jpg)
+
+## ¿Cuándo usar los Modelos mixtos de enlace acumulativo (CLMM)?
+
+En investigación en áreas como educación, salud, psicología, ciencias sociales es muy común recoger respuestas en escalas tipo Likert o en categorías ordenadas como *"nunca / a veces / siempre"*, *"nada importante a muy importante"*, *"no conozco la práctica / la conozco / la implemento"*. Estas variables son **ordinales**: las categorías tienen un orden, pero no sabemos si la distancia entre ellas es uniforme o comparable. Por ejemplo, si mi escala tiene 3 niveles ¿tiene sentido asumir que la distancia entre "nunca" y "a veces" es exactamente igual a la distancia entre "a veces" y "siempre"? Probablemente no.
+
+Ahora bien, tratar estas variables como numéricas no es siempre incorrecto. Con escalas de muchos niveles, distribuciones razonablemente simétricas y sin violaciones de supuestos, un modelo lineal puede dar resultados perfectamente válidos y es una opción legítima. El problema aparece cuando la escala tiene **pocos niveles**, cuando la **distribución está muy sesgada**, o cuando al modelarla **se violan supuestos** de los modelos lineales. En esos casos, forzar una variable ordinal dentro de un modelo lineal puede distorsionar los resultados.
+
+Para estas situaciones, los **Cumulative Link Mixed Models (CLMM)** son una alternativa más apropiada. Son modelos de regresión diseñados específicamente para variables de respuesta ordinales en diseños con medidas repetidas o datos agrupados, y no requieren ese supuesto de equidistancia.
+
+---
+
+## 0. Setup
+
+```{r}
+# Instalar paquetes si no los instalaste antes
+if (!requireNamespace("ordinal", quietly = TRUE)) install.packages("ordinal")
+if (!requireNamespace("emmeans", quietly = TRUE)) install.packages("emmeans")
+if (!requireNamespace("tidyverse", quietly = TRUE)) install.packages("tidyverse")
+
+# Cargar paquetes
+library(tidyverse)
+library(ordinal)
+library(emmeans)
+```
+
+
+---
+
+## 1. ¿Qué es un CLMM?
+
+Un **modelo de enlace acumulativo** (*CLM*) modela la probabilidad acumulada de estar *en o por debajo de* una categoría ordinal dada. En lugar de predecir un valor numérico, predice qué tan probable es que una respuesta caiga en las categorías más bajas o más altas de la escala.
+
+Para entender la idea, pensemos en un ejemplo concreto. Supongamos que le preguntamos a un grupo de estudiantes cómo se sienten antes de rendir un examen: *tranquilo*, *algo nervioso*, o *muy nervioso*. Antes de un taller de técnicas de estudio, casi todos caen en las dos últimas categorías. Después de participar del taller, muchos se mueven hacia *tranquilo* o *algo nervioso*. Un modelo lineal te diría algo como "el promedio bajó 0.4 puntos", lo cual no es muy informativo cuando nuestra escala tiene tres categorías y no sabemos bien qué significa "medio nervioso". El CLM, en cambio, nos permite responder las preguntas ¿aumentaron las chances de estar en una categoría más tranquila después del taller? Si el resultado es significativo y el el tamaño del efecto (odds ratio) es, digamos, 3.2, podemos decir que tras el taller las chances de reportar menor nerviosismo fueron tres veces más altas que antes. 
+
+
+Para una variable con *K* categorías, el modelo estima *K–1* umbrales (*thresholds*), uno por cada punto de corte de la escala, y el efecto de los predictores sobre esas probabilidades. La forma general es:
+
+$$\text{logit}[P(Y \leq k)] = \theta_k - \mathbf{x}^\top \boldsymbol{\beta}$$
+
+Donde:
+- $\theta_k$ son los umbrales entre categorías (un intercepto por cada corte)
+- $\boldsymbol{\beta}$ son los coeficientes de los predictores
+- El signo negativo hace que valores más altos del predictor se asocien con categorías más altas de la respuesta
+
+El supuesto central del modelo es el de **proporcionalidad de los odds**: el efecto del predictor es el mismo a través de todos los puntos de corte de la escala. Dicho de otro modo, el predictor "desplaza" la distribución de respuestas de manera uniforme, sin importar en qué par de categorías estemos mirando. Es un supuesto razonable en muchos contextos, pero vale la pena verificarlo, y lo vamos a hacer más adelante.
+
+La versión **mixta** del CLM, **CLMM**, simplemente agrega un **intercepto aleatorio por participante**. Esto es necesario cuando cada persona responde múltiples ítems o en múltiples momentos (por ejemplo, pre y post test). Sin ese componente aleatorio, estaríamos ignorando que las respuestas de una misma persona no son independientes entre sí.
+
+---
+
+## 2. Contexto del ejemplo
+
+Imaginemos una **evaluación de capacitación** en la que medimos, antes y después del taller, el conocimiento de los participantes sobre distintas prácticas de trabajo. Para cada práctica, los participantes eligen una de tres categorías:
+
+| Código | Etiqueta |
+|--------|----------|
+| 1 | No conozco esta práctica |
+| 2 | La conozco, pero nunca la implementé |
+| 3 | La he implementado |
+
+Tenemos **40 participantes**, **4 prácticas**, y dos momentos de evaluación (**pre** y **post**).
+
+---
+
+## 3. Simulación del dataset
+
+```{r, echo=TRUE, warning=FALSE, message=FALSE}
+
+# Reproducibilidad
+set.seed(42)
+
+# Parámetros
+n_participantes <- 150
+practicas <- c("Práctica A", "Práctica B")
+tiempos <- c("pre", "post")
+
+# Creamos el dataset en formato largo
+library(tidyverse)
+
+df <- expand.grid(
+  id          = 1:n_participantes,
+  practica    = practicas,
+  tiempo      = tiempos
+) |>
+  arrange(id, practica, tiempo)
+
+# Simulamos respuestas ordinales (1, 2, 3)
+# En "post", las probabilidades se desplazan hacia categorías más altas
+simular_respuesta <- function(tiempo, practica) {
+  if (tiempo == "pre") {
+    probs <- c(0.50, 0.35, 0.15)
+  } else {
+    # El efecto del taller varía un poco por práctica
+    probs <- case_when(
+      practica == "Práctica A" ~ list(c(0.15, 0.35, 0.50)),
+      practica == "Práctica B" ~ list(c(0.25, 0.40, 0.35))
+    )[[1]]
+  }
+  sample(1:3, 1, prob = probs)
+}
+
+df <- df |>
+  rowwise() |>
+  mutate(respuesta = simular_respuesta(tiempo, practica)) |>
+  ungroup()
+
+# Convertimos a factor ordinal
+df <- df |>
+  mutate(
+    respuesta_ord = factor(
+      respuesta,
+      levels = 1:3,
+      labels = c("No conozco", "Conozco, no implementé", "Implementé"),
+      ordered = TRUE
+    ),
+    tiempo   = factor(tiempo, levels = c("pre", "post")),
+    practica = factor(practica)
+  )
+
+glimpse(df)
+
+```
+
+Antes de modelar, siempre conviene visualizar los datos.
+
+```{r, echo=TRUE, warning=FALSE, message=FALSE}
+
+# Frecuencias por tiempo y práctica
+df |>
+  count(tiempo, practica, respuesta_ord) |>
+  group_by(tiempo, practica) |>
+  mutate(pct = n / sum(n) * 100) |>
+  ggplot(aes(x = respuesta_ord, y = pct, fill = tiempo)) +
+  geom_col(position = "dodge") +
+  facet_wrap(~practica, ncol = 2) +
+  scale_fill_manual(values = c("pre" = "#7393B3", "post" = "#2E8B57")) +
+  labs(
+    title = "Distribución de respuestas por práctica y momento de evaluación",
+    x     = "Respuesta",
+    y     = "Porcentaje (%)",
+    fill  = "Evaluación"
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(axis.text.x = element_text(angle = 20, hjust = 1))
+
+
+```
+
+---
+
+## 5. Estrategia de selección de modelos
+
+Seguimos una estrategia **jerárquica**: partimos del modelo más simple e incorporamos predictores uno a uno, evaluando si el ajuste mejora con **pruebas de razón de verosimilitud (LRT)**.
+
+```{r, echo=TRUE, warning=FALSE, message=FALSE}
+library(ordinal)
+
+# Paso 1: Modelo nulo (solo intercepto aleatorio)
+m0 <- clmm(respuesta_ord ~ 1 + (1 | id), data = df)
+
+# Paso 2: Agregar tiempo
+m1 <- clmm(respuesta_ord ~ tiempo + (1 | id), data = df)
+
+# Paso 3: Agregar práctica
+m2 <- clmm(respuesta_ord ~ tiempo + practica + (1 | id), data = df)
+
+# Paso 4: Agregar la interacción tiempo × práctica
+m3 <- clmm(respuesta_ord ~ tiempo * practica + (1 | id), data = df)
+
+# Comparación con LRT
+anova(m0, m1, m2, m3)
+```
+
+**¿Cómo interpretar la tabla?**  
+
+Buscamos el modelo donde el p-valor del LRT sea significativo (usualmente < 0.05). Retenemos el **modelo más parsimonioso** (más simple) que mejore significativamente el ajuste. Por ejemplo, la interacción `tiempo × práctica` no mejora significativamente el ajuste, nos quedamos con `m2`.
+
+Sin embargo, en este caso en particular:
+
+- m0 → m1: agregar tiempo baja el AIC de 707 a 659, y el LRT es significativo (p < 0.001). El momento de evaluación (pre vs. post) importa muchísimo.
+- m1 → m2: agregar la práctica hace que el AIC baje 2 puntos (659 → 657), y el LRT sigue siendo significativo (p = 0.046). Las prácticas difieren entre sí.
+- m2 → m3: agregar la interacción tiempo × práctica hace que el AIC baje de 657 a 648, y el LRT es significativo (p = 0.002). Esto indica que el efecto del taller no fue igual para todas las prácticas, en algunas el cambio fue mayor que en otras.
+
+Conclusión: el modelo final es m3, el que incluye la interacción. Todos los pasos mejoraron el ajuste significativamente, así que ninguno se descarta.
+
+
+---
+
+## 6. Verificación del supuesto de odds proporcionales
+
+El supuesto de **proporcionalidad de los odds** establece que el efecto de los predictores es constante a lo largo de todos los puntos de corte de la escala. Si se viola, el modelo no es apropiado.
+
+Lo testeamos con un LRT comparando el modelo proporcional vs. uno que permite efectos distintos por umbral (modelo nominal). Esto se hace con modelos `clm` (sin efectos aleatorios) por limitaciones computacionales.
+
+```{r, echo=TRUE, warning=FALSE, message=FALSE}
+
+# Modelo proporcional (cumulative link)
+m_prop <- clm(respuesta_ord ~ tiempo * practica, data = df)
+
+# Modelo no restringido (nominal)
+m_nom  <- clm(respuesta_ord ~ 1, nominal = ~ tiempo * practica, data = df)
+
+# LRT: si p > 0.05, el supuesto se sostiene
+anova(m_prop, m_nom)
+```
+> El p-valor es **mayor a 0.05**, por lo tanto, no hay evidencia para rechazar el supuesto de proporcionalidad y podemos proceder con el modelo CLMM estándar.
+
+---
+
+## 7. Interpretación de resultados: odds ratios
+
+Una vez seleccionado el modelo final, extraemos los **odds ratios (OR)** con sus IC 95%. Un OR > 1 indica mayor probabilidad de estar en una categoría más alta.
+
+```{r, echo=TRUE, warning=FALSE, message=FALSE}
+# Usamos el modelo final (supongamos que m3 fue el mejor)
+modelo_final <- m3
+
+# Coeficientes en escala log-odds
+summary(modelo_final)
+
+# Intervalos de confianza en log-odds
+ci <- confint(modelo_final)
+
+# Convertimos a data frame
+ci_df <- as.data.frame(ci)
+ci_df$term <- rownames(ci_df)
+
+# Unimos con coeficientes
+or_tabla <- data.frame(
+  term = rownames(cf),
+  OR   = exp(cf[, "Estimate"])
+) |>
+  dplyr::left_join(ci_df, by = "term") |>
+  dplyr::rename(
+    IC_low  = `2.5 %`,
+    IC_high = `97.5 %`
+  ) |>
+  dplyr::mutate(
+    IC_low  = exp(IC_low),
+    IC_high = exp(IC_high)
+  ) |>
+  dplyr::filter(!grepl("\\|", term))  # sacar umbrales
+
+or_tabla
+
+
+
+```
+
+**¿Cómo leer un OR en este contexto?**
+
+**`tiempopost` (OR = 7.66, IC: 4.86 – 12.08):** para la Práctica A (categoría de referencia), las chances de estar en una categoría más alta de conocimiento después del taller fueron casi **8 veces mayores** que antes. El IC no incluye el 1, así que el efecto es estadísticamente significativo.
+
+**`practicaPráctica B` (OR = 1.22, IC: 0.79 – 1.88):** en el momento pre (categoría de referencia), no hay diferencia significativa en el nivel de conocimiento entre ambas prácticas, el IC incluye el 1. Arrancan parejas.
+
+**`tiempopost:practicaPráctica B` (OR = 0.28, IC: 0.15 – 0.51):** el efecto del taller fue significativamente menor para la Práctica B que para la A. Para obtener el efecto total del taller sobre la Práctica B, se combinan ambos coeficientes: OR = 7.66 × 0.28 ≈ **2.14**. Es decir, en la Práctica B, las chances (odds) acumuladas de estar en una categoría más alta en post vs. pre son aproximadamente 2.14 veces mayores, mientras que en la Práctica A se multiplicaron por casi 8.
+
+Como regla general: un **OR > 1** indica mayor probabilidad de estar en una categoría más alta; **OR = 1** indica ausencia de efecto; y un **IC 95% que no incluye el 1** señala un efecto estadísticamente significativo.
+
+
+---
+
+## 8. Comparaciones pareadas entre prácticas
+
+Para saber si las prácticas difieren entre sí, usamos comparaciones múltiples con ajuste de Tukey mediante el paquete emmeans. 
+
+Como la interacción es significativa, el efecto de la práctica no es el mismo en los dos momentos en el pre y en el post las prácticas se comportan distinto. Por eso no tiene sentido comparar las prácticas colapsando sobre el tiempo: estaríamos promediando algo que varía. Lo correcto es compararlas por separado en cada momento.
+
+
+```{r, echo=TRUE, warning=FALSE, message=FALSE}
+
+library(emmeans)
+
+# Comparación entre prácticas en cada momento por separado
+emm <- emmeans(modelo_final, ~ practica | tiempo, mode = "linear.predictor")
+
+pares <- pairs(emm, adjust = "tukey")
+
+confint(pares, type = "response") |>
+  as_tibble() |>
+  mutate(across(where(is.numeric), ~round(., 3)))
+
+```
+Un detalle importante: en modelos ordinales acumulativos, el predictor lineal interno apunta hacia las categorías bajas de la escala, lo que hace que la dirección de los contrastes sea la siguiente:
+
+- **Pre (OR = 1.22, IC: 0.79 – 1.88)**: antes del taller, las chances de estar en una categoría **más baja** son similares entre ambas prácticas 
+- **Post (OR = 0.34, IC: 0.22 – 0.52)**: después del taller, las chances de estar en una categoría más **baja** son significativamente menores (el OR es menor a 1 y el IC no lo incluye) en la Práctica A que en la Práctica B.
+
+Si queremos invertir la dirección del contraste, usamos reverse = TRUE en pairs(): valores mayores a 1 indican que la Práctica A tiene mayores chances de estar en categorías más altas.
+
+```{r, echo=TRUE, warning=FALSE, message=FALSE}
+
+
+pares <- pairs(emm, adjust = "tukey", reverse = TRUE)
+
+confint(pares, type = "response") |>
+  as_tibble() |>
+  mutate(across(where(is.numeric), ~round(., 3)))
+
+```
+
+**Post (OR = 2.96, IC: 1.92 – 4.59)**: después del taller, las chances de estar en una categoría más alta son casi 3 veces mayores en la Práctica A que en la B. Esto es consistente con lo que vimos en el gráfico descriptivo: la Práctica A pasó de un 12% a un 59% en la categoría "Implementé", mientras que la Práctica B tuvo un cambio mucho más modesto.
+
+---
+
+## 9. Visualización de resultados
+
+```{r, echo=TRUE, warning=FALSE, message=FALSE}
+
+
+or_plot_data <- or_tabla |>
+  mutate(term = str_replace_all(term, c(
+    "tiempo"   = "Tiempo: ",
+    "practica" = "Práctica: ",
+    ":"        = "×"
+  )))
+
+ggplot(or_plot_data, aes(x = OR, y = reorder(term, OR))) +
+  geom_vline(xintercept = 1, linetype = "dashed", color = "gray50") +
+  geom_errorbarh(aes(xmin = IC_low, xmax = IC_high),
+                 height = 0.25, color = "#7393B3", linewidth = 0.8) +
+  geom_point(size = 3, color = "#2E8B57") +
+  scale_x_log10() +
+  labs(
+    title = "Odds Ratios del modelo CLMM final",
+    x     = "Odds Ratio (escala logarítmica)",
+    y     = NULL
+  ) +
+  theme_minimal(base_size = 13)
+
+```
+
+
+---
+
+## 10. Versiones de los paquetes usadas en este tutorial
+
+```{r, echo=TRUE, warning=FALSE, message=FALSE}
+
+# Versiones usadas en este tutorial
+sessionInfo()
+
+```
+
+
+
+---
+
+## Referencias
+
+- Christensen, R. H. B. (2023). *ordinal: Regression Models for Ordinal Data*. R package. https://cran.r-project.org/package=ordinal
+- Lenth, R. V. (2024). *emmeans: Estimated Marginal Means*. R package. https://cran.r-project.org/package=emmeans
+- Agresti, A. (2010). *Analysis of Ordinal Categorical Data* (2nd ed.). Wiley.
+- McCullagh, P. (1980). Regression models for ordinal data. *Journal of the Royal Statistical Society: Series B*, 42(2), 109–127.
+
+---
+
+*¿Preguntas o sugerencias? Dejá un issue [aquí](https://github.com/JFormoso/jformoso.github.io/issues) o escribime a [jesica.formoso@gmail.com](mailto:jesica.formoso@gmail.com) con tus comentarios.*
+
+
