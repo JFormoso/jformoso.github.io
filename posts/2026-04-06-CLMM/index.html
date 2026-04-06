@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.36">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Jesica Formoso">
+<meta name="dcterms.date" content="2026-04-06">
+
+<title>Modelos mixtos de enlace acumulativo (CLMM): un tutorial paso a paso en R️ – Jesica Formoso</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-be3771519f21acc1c5b6733774c6dcd8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Jesica Formoso</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../posts.html"> 
+<span class="menu-text">Posts</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../talks.html"> 
+<span class="menu-text">Talks/workshops</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../cv.html"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/jformoso/"> <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/jesica-formoso-16ab4649/"> <i class="bi bi-linkedin" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/JesiFormoso/"> <i class="bi bi-twitter" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://orcid.org/0000-0003-3062-4036"> 
+<span class="menu-text"><i class="ai  ai-orcid" aria-label="orcid"></i></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#cuándo-usar-los-modelos-mixtos-de-enlace-acumulativo-clmm" id="toc-cuándo-usar-los-modelos-mixtos-de-enlace-acumulativo-clmm" class="nav-link active" data-scroll-target="#cuándo-usar-los-modelos-mixtos-de-enlace-acumulativo-clmm">¿Cuándo usar los Modelos mixtos de enlace acumulativo (CLMM)?</a></li>
+  <li><a href="#setup" id="toc-setup" class="nav-link" data-scroll-target="#setup">0. Setup</a></li>
+  <li><a href="#qué-es-un-clmm" id="toc-qué-es-un-clmm" class="nav-link" data-scroll-target="#qué-es-un-clmm">1. ¿Qué es un CLMM?</a></li>
+  <li><a href="#contexto-del-ejemplo" id="toc-contexto-del-ejemplo" class="nav-link" data-scroll-target="#contexto-del-ejemplo">2. Contexto del ejemplo</a></li>
+  <li><a href="#simulación-del-dataset" id="toc-simulación-del-dataset" class="nav-link" data-scroll-target="#simulación-del-dataset">3. Simulación del dataset</a></li>
+  <li><a href="#estrategia-de-selección-de-modelos" id="toc-estrategia-de-selección-de-modelos" class="nav-link" data-scroll-target="#estrategia-de-selección-de-modelos">5. Estrategia de selección de modelos</a></li>
+  <li><a href="#verificación-del-supuesto-de-odds-proporcionales" id="toc-verificación-del-supuesto-de-odds-proporcionales" class="nav-link" data-scroll-target="#verificación-del-supuesto-de-odds-proporcionales">6. Verificación del supuesto de odds proporcionales</a></li>
+  <li><a href="#interpretación-de-resultados-odds-ratios" id="toc-interpretación-de-resultados-odds-ratios" class="nav-link" data-scroll-target="#interpretación-de-resultados-odds-ratios">7. Interpretación de resultados: odds ratios</a></li>
+  <li><a href="#comparaciones-pareadas-entre-prácticas" id="toc-comparaciones-pareadas-entre-prácticas" class="nav-link" data-scroll-target="#comparaciones-pareadas-entre-prácticas">8. Comparaciones pareadas entre prácticas</a></li>
+  <li><a href="#visualización-de-resultados" id="toc-visualización-de-resultados" class="nav-link" data-scroll-target="#visualización-de-resultados">9. Visualización de resultados</a></li>
+  <li><a href="#versiones-de-los-paquetes-usadas-en-este-tutorial" id="toc-versiones-de-los-paquetes-usadas-en-este-tutorial" class="nav-link" data-scroll-target="#versiones-de-los-paquetes-usadas-en-este-tutorial">10. Versiones de los paquetes usadas en este tutorial</a></li>
+  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias">Referencias</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Modelos mixtos de enlace acumulativo (CLMM): un tutorial paso a paso en R️</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Tutorial</div>
+    <div class="quarto-category">Estadística</div>
+    <div class="quarto-category">Datos ordinales</div>
+    <div class="quarto-category">Medidas repetidas</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Jesica Formoso </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">April 6, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><img src="../../images/clmm.jpg" class="img-fluid"></p>
+<section id="cuándo-usar-los-modelos-mixtos-de-enlace-acumulativo-clmm" class="level2">
+<h2 class="anchored" data-anchor-id="cuándo-usar-los-modelos-mixtos-de-enlace-acumulativo-clmm">¿Cuándo usar los Modelos mixtos de enlace acumulativo (CLMM)?</h2>
+<p>En investigación en áreas como educación, salud, psicología, ciencias sociales es muy común recoger respuestas en escalas tipo Likert o en categorías ordenadas como <em>“nunca / a veces / siempre”</em>, <em>“nada importante a muy importante”</em>, <em>“no conozco la práctica / la conozco / la implemento”</em>. Estas variables son <strong>ordinales</strong>: las categorías tienen un orden, pero no sabemos si la distancia entre ellas es uniforme o comparable. Por ejemplo, si mi escala tiene 3 niveles ¿tiene sentido asumir que la distancia entre “nunca” y “a veces” es exactamente igual a la distancia entre “a veces” y “siempre”? Probablemente no.</p>
+<p>Ahora bien, tratar estas variables como numéricas no es siempre incorrecto. Con escalas de muchos niveles, distribuciones razonablemente simétricas y sin violaciones de supuestos, un modelo lineal puede dar resultados perfectamente válidos y es una opción legítima. El problema aparece cuando la escala tiene <strong>pocos niveles</strong>, cuando la <strong>distribución está muy sesgada</strong>, o cuando al modelarla <strong>se violan supuestos</strong> de los modelos lineales. En esos casos, forzar una variable ordinal dentro de un modelo lineal puede distorsionar los resultados.</p>
+<p>Para estas situaciones, los <strong>Cumulative Link Mixed Models (CLMM)</strong> son una alternativa más apropiada. Son modelos de regresión diseñados específicamente para variables de respuesta ordinales en diseños con medidas repetidas o datos agrupados, y no requieren ese supuesto de equidistancia.</p>
+<hr>
+</section>
+<section id="setup" class="level2">
+<h2 class="anchored" data-anchor-id="setup">0. Setup</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Instalar paquetes si no los instalaste antes</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">requireNamespace</span>(<span class="st">"ordinal"</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) <span class="fu">install.packages</span>(<span class="st">"ordinal"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">requireNamespace</span>(<span class="st">"emmeans"</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) <span class="fu">install.packages</span>(<span class="st">"emmeans"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">requireNamespace</span>(<span class="st">"tidyverse"</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) <span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Cargar paquetes</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.2.1     ✔ readr     2.2.0
+✔ forcats   1.0.1     ✔ stringr   1.6.0
+✔ ggplot2   4.0.2     ✔ tibble    3.3.1
+✔ lubridate 1.9.5     ✔ tidyr     1.3.2
+✔ purrr     1.2.1     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ordinal)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'ordinal'
+
+The following object is masked from 'package:dplyr':
+
+    slice</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(emmeans)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Welcome to emmeans.
+Caution: You lose important information if you filter this package's results.
+See '? untidy'</code></pre>
+</div>
+</div>
+<hr>
+</section>
+<section id="qué-es-un-clmm" class="level2">
+<h2 class="anchored" data-anchor-id="qué-es-un-clmm">1. ¿Qué es un CLMM?</h2>
+<p>Un <strong>modelo de enlace acumulativo</strong> (<em>CLM</em>) modela la probabilidad acumulada de estar <em>en o por debajo de</em> una categoría ordinal dada. En lugar de predecir un valor numérico, predice qué tan probable es que una respuesta caiga en las categorías más bajas o más altas de la escala.</p>
+<p>Para entender la idea, pensemos en un ejemplo concreto. Supongamos que le preguntamos a un grupo de estudiantes cómo se sienten antes de rendir un examen: <em>tranquilo</em>, <em>algo nervioso</em>, o <em>muy nervioso</em>. Antes de un taller de técnicas de estudio, casi todos caen en las dos últimas categorías. Después de participar del taller, muchos se mueven hacia <em>tranquilo</em> o <em>algo nervioso</em>. Un modelo lineal te diría algo como “el promedio bajó 0.4 puntos”, lo cual no es muy informativo cuando nuestra escala tiene tres categorías y no sabemos bien qué significa “medio nervioso”. El CLM, en cambio, nos permite responder las preguntas ¿aumentaron las chances de estar en una categoría más tranquila después del taller? Si el resultado es significativo y el el tamaño del efecto (odds ratio) es, digamos, 3.2, podemos decir que tras el taller las chances de reportar menor nerviosismo fueron tres veces más altas que antes.</p>
+<p>Para una variable con <em>K</em> categorías, el modelo estima <em>K–1</em> umbrales (<em>thresholds</em>), uno por cada punto de corte de la escala, y el efecto de los predictores sobre esas probabilidades. La forma general es:</p>
+<p><span class="math display">\[\text{logit}[P(Y \leq k)] = \theta_k - \mathbf{x}^\top \boldsymbol{\beta}\]</span></p>
+<p>Donde: - <span class="math inline">\(\theta_k\)</span> son los umbrales entre categorías (un intercepto por cada corte) - <span class="math inline">\(\boldsymbol{\beta}\)</span> son los coeficientes de los predictores - El signo negativo hace que valores más altos del predictor se asocien con categorías más altas de la respuesta</p>
+<p>El supuesto central del modelo es el de <strong>proporcionalidad de los odds</strong>: el efecto del predictor es el mismo a través de todos los puntos de corte de la escala. Dicho de otro modo, el predictor “desplaza” la distribución de respuestas de manera uniforme, sin importar en qué par de categorías estemos mirando. Es un supuesto razonable en muchos contextos, pero vale la pena verificarlo, y lo vamos a hacer más adelante.</p>
+<p>La versión <strong>mixta</strong> del CLM, <strong>CLMM</strong>, simplemente agrega un <strong>intercepto aleatorio por participante</strong>. Esto es necesario cuando cada persona responde múltiples ítems o en múltiples momentos (por ejemplo, pre y post test). Sin ese componente aleatorio, estaríamos ignorando que las respuestas de una misma persona no son independientes entre sí.</p>
+<hr>
+</section>
+<section id="contexto-del-ejemplo" class="level2">
+<h2 class="anchored" data-anchor-id="contexto-del-ejemplo">2. Contexto del ejemplo</h2>
+<p>Imaginemos una <strong>evaluación de capacitación</strong> en la que medimos, antes y después del taller, el conocimiento de los participantes sobre distintas prácticas de trabajo. Para cada práctica, los participantes eligen una de tres categorías:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Código</th>
+<th>Etiqueta</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>No conozco esta práctica</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>La conozco, pero nunca la implementé</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>La he implementado</td>
+</tr>
+</tbody>
+</table>
+<p>Tenemos <strong>40 participantes</strong>, <strong>4 prácticas</strong>, y dos momentos de evaluación (<strong>pre</strong> y <strong>post</strong>).</p>
+<hr>
+</section>
+<section id="simulación-del-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="simulación-del-dataset">3. Simulación del dataset</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Reproducibilidad</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Parámetros</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>n_participantes <span class="ot">&lt;-</span> <span class="dv">150</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>practicas <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Práctica A"</span>, <span class="st">"Práctica B"</span>)</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>tiempos <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"pre"</span>, <span class="st">"post"</span>)</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Creamos el dataset en formato largo</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">expand.grid</span>(</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">id          =</span> <span class="dv">1</span><span class="sc">:</span>n_participantes,</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">practica    =</span> practicas,</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>  <span class="at">tiempo      =</span> tiempos</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>) <span class="sc">|&gt;</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(id, practica, tiempo)</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Simulamos respuestas ordinales (1, 2, 3)</span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a><span class="co"># En "post", las probabilidades se desplazan hacia categorías más altas</span></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>simular_respuesta <span class="ot">&lt;-</span> <span class="cf">function</span>(tiempo, practica) {</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (tiempo <span class="sc">==</span> <span class="st">"pre"</span>) {</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>    probs <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">0.50</span>, <span class="fl">0.35</span>, <span class="fl">0.15</span>)</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>    <span class="co"># El efecto del taller varía un poco por práctica</span></span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>    probs <span class="ot">&lt;-</span> <span class="fu">case_when</span>(</span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>      practica <span class="sc">==</span> <span class="st">"Práctica A"</span> <span class="sc">~</span> <span class="fu">list</span>(<span class="fu">c</span>(<span class="fl">0.15</span>, <span class="fl">0.35</span>, <span class="fl">0.50</span>)),</span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>      practica <span class="sc">==</span> <span class="st">"Práctica B"</span> <span class="sc">~</span> <span class="fu">list</span>(<span class="fu">c</span>(<span class="fl">0.25</span>, <span class="fl">0.40</span>, <span class="fl">0.35</span>))</span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>    )[[<span class="dv">1</span>]]</span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, <span class="dv">1</span>, <span class="at">prob =</span> probs)</span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span></span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rowwise</span>() <span class="sc">|&gt;</span></span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">respuesta =</span> <span class="fu">simular_respuesta</span>(tiempo, practica)) <span class="sc">|&gt;</span></span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a><span class="co"># Convertimos a factor ordinal</span></span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span></span>
+<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a>    <span class="at">respuesta_ord =</span> <span class="fu">factor</span>(</span>
+<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a>      respuesta,</span>
+<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a>      <span class="at">levels =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>,</span>
+<span id="cb7-45"><a href="#cb7-45" aria-hidden="true" tabindex="-1"></a>      <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"No conozco"</span>, <span class="st">"Conozco, no implementé"</span>, <span class="st">"Implementé"</span>),</span>
+<span id="cb7-46"><a href="#cb7-46" aria-hidden="true" tabindex="-1"></a>      <span class="at">ordered =</span> <span class="cn">TRUE</span></span>
+<span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb7-48"><a href="#cb7-48" aria-hidden="true" tabindex="-1"></a>    <span class="at">tiempo   =</span> <span class="fu">factor</span>(tiempo, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"pre"</span>, <span class="st">"post"</span>)),</span>
+<span id="cb7-49"><a href="#cb7-49" aria-hidden="true" tabindex="-1"></a>    <span class="at">practica =</span> <span class="fu">factor</span>(practica)</span>
+<span id="cb7-50"><a href="#cb7-50" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb7-51"><a href="#cb7-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-52"><a href="#cb7-52" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 600
+Columns: 5
+$ id            &lt;int&gt; 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5,…
+$ practica      &lt;fct&gt; Práctica A, Práctica A, Práctica B, Práctica B, Práctica…
+$ tiempo        &lt;fct&gt; pre, post, pre, post, pre, post, pre, post, pre, post, p…
+$ respuesta     &lt;int&gt; 3, 1, 1, 1, 2, 2, 2, 2, 2, 2, 1, 3, 3, 3, 1, 1, 3, 3, 1,…
+$ respuesta_ord &lt;ord&gt; "Implementé", "No conozco", "No conozco", "No conozco", …</code></pre>
+</div>
+</div>
+<p>Antes de modelar, siempre conviene visualizar los datos.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Frecuencias por tiempo y práctica</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>df <span class="sc">|&gt;</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(tiempo, practica, respuesta_ord) <span class="sc">|&gt;</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(tiempo, practica) <span class="sc">|&gt;</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">pct =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n) <span class="sc">*</span> <span class="dv">100</span>) <span class="sc">|&gt;</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> respuesta_ord, <span class="at">y =</span> pct, <span class="at">fill =</span> tiempo)) <span class="sc">+</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">position =</span> <span class="st">"dodge"</span>) <span class="sc">+</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>practica, <span class="at">ncol =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"pre"</span> <span class="ot">=</span> <span class="st">"#7393B3"</span>, <span class="st">"post"</span> <span class="ot">=</span> <span class="st">"#2E8B57"</span>)) <span class="sc">+</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Distribución de respuestas por práctica y momento de evaluación"</span>,</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">x     =</span> <span class="st">"Respuesta"</span>,</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">y     =</span> <span class="st">"Porcentaje (%)"</span>,</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill  =</span> <span class="st">"Evaluación"</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">13</span>) <span class="sc">+</span></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">20</span>, <span class="at">hjust =</span> <span class="dv">1</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="estrategia-de-selección-de-modelos" class="level2">
+<h2 class="anchored" data-anchor-id="estrategia-de-selección-de-modelos">5. Estrategia de selección de modelos</h2>
+<p>Seguimos una estrategia <strong>jerárquica</strong>: partimos del modelo más simple e incorporamos predictores uno a uno, evaluando si el ajuste mejora con <strong>pruebas de razón de verosimilitud (LRT)</strong>.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ordinal)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Paso 1: Modelo nulo (solo intercepto aleatorio)</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>m0 <span class="ot">&lt;-</span> <span class="fu">clmm</span>(respuesta_ord <span class="sc">~</span> <span class="dv">1</span> <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> id), <span class="at">data =</span> df)</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Paso 2: Agregar tiempo</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>m1 <span class="ot">&lt;-</span> <span class="fu">clmm</span>(respuesta_ord <span class="sc">~</span> tiempo <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> id), <span class="at">data =</span> df)</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Paso 3: Agregar práctica</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>m2 <span class="ot">&lt;-</span> <span class="fu">clmm</span>(respuesta_ord <span class="sc">~</span> tiempo <span class="sc">+</span> practica <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> id), <span class="at">data =</span> df)</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Paso 4: Agregar la interacción tiempo × práctica</span></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>m3 <span class="ot">&lt;-</span> <span class="fu">clmm</span>(respuesta_ord <span class="sc">~</span> tiempo <span class="sc">*</span> practica <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> id), <span class="at">data =</span> df)</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Comparación con LRT</span></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(m0, m1, m2, m3)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Likelihood ratio tests of cumulative link models:
+ 
+   formula:                                     link: threshold:
+m0 respuesta_ord ~ 1 + (1 | id)                 logit flexible  
+m1 respuesta_ord ~ tiempo + (1 | id)            logit flexible  
+m2 respuesta_ord ~ tiempo + practica + (1 | id) logit flexible  
+m3 respuesta_ord ~ tiempo * practica + (1 | id) logit flexible  
+
+   no.par    AIC  logLik LR.stat df Pr(&gt;Chisq)    
+m0      3 1319.0 -656.52                          
+m1      4 1246.2 -619.09 74.8503  1  &lt; 2.2e-16 ***
+m2      5 1239.9 -614.94  8.3049  1   0.003954 ** 
+m3      6 1224.9 -606.43 17.0152  1  3.708e-05 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+<p><strong>¿Cómo interpretar la tabla?</strong></p>
+<p>Buscamos el modelo donde el p-valor del LRT sea significativo (usualmente &lt; 0.05). Retenemos el <strong>modelo más parsimonioso</strong> (más simple) que mejore significativamente el ajuste. Por ejemplo, la interacción <code>tiempo × práctica</code> no mejora significativamente el ajuste, nos quedamos con <code>m2</code>.</p>
+<p>Sin embargo, en este caso en particular:</p>
+<ul>
+<li>m0 → m1: agregar tiempo baja el AIC de 707 a 659, y el LRT es significativo (p &lt; 0.001). El momento de evaluación (pre vs.&nbsp;post) importa muchísimo.</li>
+<li>m1 → m2: agregar la práctica hace que el AIC baje 2 puntos (659 → 657), y el LRT sigue siendo significativo (p = 0.046). Las prácticas difieren entre sí.</li>
+<li>m2 → m3: agregar la interacción tiempo × práctica hace que el AIC baje de 657 a 648, y el LRT es significativo (p = 0.002). Esto indica que el efecto del taller no fue igual para todas las prácticas, en algunas el cambio fue mayor que en otras.</li>
+</ul>
+<p>Conclusión: el modelo final es m3, el que incluye la interacción. Todos los pasos mejoraron el ajuste significativamente, así que ninguno se descarta.</p>
+<hr>
+</section>
+<section id="verificación-del-supuesto-de-odds-proporcionales" class="level2">
+<h2 class="anchored" data-anchor-id="verificación-del-supuesto-de-odds-proporcionales">6. Verificación del supuesto de odds proporcionales</h2>
+<p>El supuesto de <strong>proporcionalidad de los odds</strong> establece que el efecto de los predictores es constante a lo largo de todos los puntos de corte de la escala. Si se viola, el modelo no es apropiado.</p>
+<p>Lo testeamos con un LRT comparando el modelo proporcional vs.&nbsp;uno que permite efectos distintos por umbral (modelo nominal). Esto se hace con modelos <code>clm</code> (sin efectos aleatorios) por limitaciones computacionales.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Modelo proporcional (cumulative link)</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>m_prop <span class="ot">&lt;-</span> <span class="fu">clm</span>(respuesta_ord <span class="sc">~</span> tiempo <span class="sc">*</span> practica, <span class="at">data =</span> df)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Modelo no restringido (nominal)</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>m_nom  <span class="ot">&lt;-</span> <span class="fu">clm</span>(respuesta_ord <span class="sc">~</span> <span class="dv">1</span>, <span class="at">nominal =</span> <span class="sc">~</span> tiempo <span class="sc">*</span> practica, <span class="at">data =</span> df)</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="co"># LRT: si p &gt; 0.05, el supuesto se sostiene</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(m_prop, m_nom)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Likelihood ratio tests of cumulative link models:
+ 
+       formula:                          nominal:           link: threshold:
+m_prop respuesta_ord ~ tiempo * practica ~1                 logit flexible  
+m_nom  respuesta_ord ~ 1                 ~tiempo * practica logit flexible  
+
+       no.par    AIC  logLik LR.stat df Pr(&gt;Chisq)
+m_prop      5 1222.9 -606.43                      
+m_nom       8 1224.8 -604.42  4.0252  3     0.2588</code></pre>
+</div>
+</div>
+<blockquote class="blockquote">
+<p>El p-valor es <strong>mayor a 0.05</strong>, por lo tanto, no hay evidencia para rechazar el supuesto de proporcionalidad y podemos proceder con el modelo CLMM estándar.</p>
+</blockquote>
+<hr>
+</section>
+<section id="interpretación-de-resultados-odds-ratios" class="level2">
+<h2 class="anchored" data-anchor-id="interpretación-de-resultados-odds-ratios">7. Interpretación de resultados: odds ratios</h2>
+<p>Una vez seleccionado el modelo final, extraemos los <strong>odds ratios (OR)</strong> con sus IC 95%. Un OR &gt; 1 indica mayor probabilidad de estar en una categoría más alta.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Usamos el modelo final (supongamos que m3 fue el mejor)</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>modelo_final <span class="ot">&lt;-</span> m3</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Coeficientes en escala log-odds</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(modelo_final)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Cumulative Link Mixed Model fitted with the Laplace approximation
+
+formula: respuesta_ord ~ tiempo * practica + (1 | id)
+data:    df
+
+ link  threshold nobs logLik  AIC     niter    max.grad cond.H 
+ logit flexible  600  -606.43 1224.86 457(518) 2.85e-07 3.3e+06
+
+Random effects:
+ Groups Name        Variance  Std.Dev. 
+ id     (Intercept) 5.436e-09 7.373e-05
+Number of groups:  id 150 
+
+Coefficients:
+                              Estimate Std. Error z value Pr(&gt;|z|)    
+tiempopost                      2.0362     0.2323   8.766  &lt; 2e-16 ***
+practicaPráctica B              0.1981     0.2198   0.901    0.368    
+tiempopost:practicaPráctica B  -1.2842     0.3131  -4.101 4.11e-05 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Threshold coefficients:
+                                  Estimate Std. Error z value
+No conozco|Conozco, no implementé   0.1624     0.1565   1.037
+Conozco, no implementé|Implementé   1.7684     0.1748  10.115</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>cf <span class="ot">&lt;-</span> <span class="fu">summary</span>(modelo_final)<span class="sc">$</span>coefficients</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Intervalos de confianza en log-odds</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>ci <span class="ot">&lt;-</span> <span class="fu">confint</span>(modelo_final)</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Convertimos a data frame</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>ci_df <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(ci)</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>ci_df<span class="sc">$</span>term <span class="ot">&lt;-</span> <span class="fu">rownames</span>(ci_df)</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Unimos con coeficientes</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>or_tabla <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">term =</span> <span class="fu">rownames</span>(cf),</span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">OR   =</span> <span class="fu">exp</span>(cf[, <span class="st">"Estimate"</span>])</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>) <span class="sc">|&gt;</span></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">left_join</span>(ci_df, <span class="at">by =</span> <span class="st">"term"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">rename</span>(</span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">IC_low  =</span> <span class="st">`</span><span class="at">2.5 %</span><span class="st">`</span>,</span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">IC_high =</span> <span class="st">`</span><span class="at">97.5 %</span><span class="st">`</span></span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(</span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">IC_low  =</span> <span class="fu">exp</span>(IC_low),</span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">IC_high =</span> <span class="fu">exp</span>(IC_high)</span>
+<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(<span class="sc">!</span><span class="fu">grepl</span>(<span class="st">"</span><span class="sc">\\</span><span class="st">|"</span>, term))  <span class="co"># sacar umbrales</span></span>
+<span id="cb16-25"><a href="#cb16-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-26"><a href="#cb16-26" aria-hidden="true" tabindex="-1"></a>or_tabla</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                           term        OR    IC_low    IC_high
+1                    tiempopost 7.6616211 4.8595317 12.0794434
+2            practicaPráctica B 1.2190401 0.7922886  1.8756533
+3 tiempopost:practicaPráctica B 0.2768747 0.1498834  0.5114615</code></pre>
+</div>
+</div>
+<p><strong>¿Cómo leer un OR en este contexto?</strong></p>
+<p><strong><code>tiempopost</code> (OR = 7.66, IC: 4.86 – 12.08):</strong> para la Práctica A (categoría de referencia), las chances de estar en una categoría más alta de conocimiento después del taller fueron casi <strong>8 veces mayores</strong> que antes. El IC no incluye el 1, así que el efecto es estadísticamente significativo.</p>
+<p><strong><code>practicaPráctica B</code> (OR = 1.22, IC: 0.79 – 1.88):</strong> en el momento pre (categoría de referencia), no hay diferencia significativa en el nivel de conocimiento entre ambas prácticas, el IC incluye el 1. Arrancan parejas.</p>
+<p><strong><code>tiempopost:practicaPráctica B</code> (OR = 0.28, IC: 0.15 – 0.51):</strong> el efecto del taller fue significativamente menor para la Práctica B que para la A. Para obtener el efecto total del taller sobre la Práctica B, se combinan ambos coeficientes: OR = 7.66 × 0.28 ≈ <strong>2.14</strong>. Es decir, en la Práctica B, las chances (odds) acumuladas de estar en una categoría más alta en post vs.&nbsp;pre son aproximadamente 2.14 veces mayores, mientras que en la Práctica A se multiplicaron por casi 8.</p>
+<p>Como regla general: un <strong>OR &gt; 1</strong> indica mayor probabilidad de estar en una categoría más alta; <strong>OR = 1</strong> indica ausencia de efecto; y un <strong>IC 95% que no incluye el 1</strong> señala un efecto estadísticamente significativo.</p>
+<hr>
+</section>
+<section id="comparaciones-pareadas-entre-prácticas" class="level2">
+<h2 class="anchored" data-anchor-id="comparaciones-pareadas-entre-prácticas">8. Comparaciones pareadas entre prácticas</h2>
+<p>Para saber si las prácticas difieren entre sí, usamos comparaciones múltiples con ajuste de Tukey mediante el paquete emmeans.</p>
+<p>Como la interacción es significativa, el efecto de la práctica no es el mismo en los dos momentos en el pre y en el post las prácticas se comportan distinto. Por eso no tiene sentido comparar las prácticas colapsando sobre el tiempo: estaríamos promediando algo que varía. Lo correcto es compararlas por separado en cada momento.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(emmeans)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Comparación entre prácticas en cada momento por separado</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>emm <span class="ot">&lt;-</span> <span class="fu">emmeans</span>(modelo_final, <span class="sc">~</span> practica <span class="sc">|</span> tiempo, <span class="at">mode =</span> <span class="st">"linear.predictor"</span>)</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>pares <span class="ot">&lt;-</span> <span class="fu">pairs</span>(emm, <span class="at">adjust =</span> <span class="st">"tukey"</span>)</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="fu">confint</span>(pares, <span class="at">type =</span> <span class="st">"response"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_tibble</span>() <span class="sc">|&gt;</span></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">where</span>(is.numeric), <span class="sc">~</span><span class="fu">round</span>(., <span class="dv">3</span>)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 7
+  contrast                tiempo odds.ratio    SE    df asymp.LCL asymp.UCL
+  &lt;fct&gt;                   &lt;fct&gt;       &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
+1 Práctica A / Práctica B pre         1.22  0.268   Inf     0.792     1.88 
+2 Práctica A / Práctica B post        0.338 0.075   Inf     0.218     0.522</code></pre>
+</div>
+</div>
+<p>Un detalle importante: en modelos ordinales acumulativos, el predictor lineal interno apunta hacia las categorías bajas de la escala, lo que hace que la dirección de los contrastes sea la siguiente:</p>
+<ul>
+<li><strong>Pre (OR = 1.22, IC: 0.79 – 1.88)</strong>: antes del taller, las chances de estar en una categoría <strong>más baja</strong> son similares entre ambas prácticas</li>
+<li><strong>Post (OR = 0.34, IC: 0.22 – 0.52)</strong>: después del taller, las chances de estar en una categoría más <strong>baja</strong> son significativamente menores (el OR es menor a 1 y el IC no lo incluye) en la Práctica A que en la Práctica B.</li>
+</ul>
+<p>Si queremos invertir la dirección del contraste, usamos reverse = TRUE en pairs(): valores mayores a 1 indican que la Práctica A tiene mayores chances de estar en categorías más altas.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>pares <span class="ot">&lt;-</span> <span class="fu">pairs</span>(emm, <span class="at">adjust =</span> <span class="st">"tukey"</span>, <span class="at">reverse =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="fu">confint</span>(pares, <span class="at">type =</span> <span class="st">"response"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_tibble</span>() <span class="sc">|&gt;</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">where</span>(is.numeric), <span class="sc">~</span><span class="fu">round</span>(., <span class="dv">3</span>)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 7
+  contrast                tiempo odds.ratio    SE    df asymp.LCL asymp.UCL
+  &lt;fct&gt;                   &lt;fct&gt;       &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
+1 Práctica B / Práctica A pre          0.82 0.18    Inf     0.533      1.26
+2 Práctica B / Práctica A post         2.96 0.658   Inf     1.92       4.58</code></pre>
+</div>
+</div>
+<p><strong>Post (OR = 2.96, IC: 1.92 – 4.59)</strong>: después del taller, las chances de estar en una categoría más alta son casi 3 veces mayores en la Práctica A que en la B. Esto es consistente con lo que vimos en el gráfico descriptivo: la Práctica A pasó de un 12% a un 59% en la categoría “Implementé”, mientras que la Práctica B tuvo un cambio mucho más modesto.</p>
+<hr>
+</section>
+<section id="visualización-de-resultados" class="level2">
+<h2 class="anchored" data-anchor-id="visualización-de-resultados">9. Visualización de resultados</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>or_plot_data <span class="ot">&lt;-</span> or_tabla <span class="sc">|&gt;</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">term =</span> <span class="fu">str_replace_all</span>(term, <span class="fu">c</span>(</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"tiempo"</span>   <span class="ot">=</span> <span class="st">"Tiempo: "</span>,</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"practica"</span> <span class="ot">=</span> <span class="st">"Práctica: "</span>,</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">":"</span>        <span class="ot">=</span> <span class="st">"×"</span></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>  )))</span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(or_plot_data, <span class="fu">aes</span>(<span class="at">x =</span> OR, <span class="at">y =</span> <span class="fu">reorder</span>(term, OR))) <span class="sc">+</span></span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">1</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">color =</span> <span class="st">"gray50"</span>) <span class="sc">+</span></span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_errorbarh</span>(<span class="fu">aes</span>(<span class="at">xmin =</span> IC_low, <span class="at">xmax =</span> IC_high),</span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>                 <span class="at">height =</span> <span class="fl">0.25</span>, <span class="at">color =</span> <span class="st">"#7393B3"</span>, <span class="at">linewidth =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">3</span>, <span class="at">color =</span> <span class="st">"#2E8B57"</span>) <span class="sc">+</span></span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_log10</span>() <span class="sc">+</span></span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Odds Ratios del modelo CLMM final"</span>,</span>
+<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">x     =</span> <span class="st">"Odds Ratio (escala logarítmica)"</span>,</span>
+<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">y     =</span> <span class="cn">NULL</span></span>
+<span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb22-19"><a href="#cb22-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">13</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="versiones-de-los-paquetes-usadas-en-este-tutorial" class="level2">
+<h2 class="anchored" data-anchor-id="versiones-de-los-paquetes-usadas-en-este-tutorial">10. Versiones de los paquetes usadas en este tutorial</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Versiones usadas en este tutorial</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>R version 4.4.0 (2024-04-24)
+Platform: x86_64-pc-linux-gnu
+Running under: Ubuntu 24.04.4 LTS
+
+Matrix products: default
+BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
+LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.26.so;  LAPACK version 3.12.0
+
+locale:
+ [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       
+ [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   
+ [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          
+[10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   
+
+time zone: UTC
+tzcode source: system (glibc)
+
+attached base packages:
+[1] stats     graphics  grDevices datasets  utils     methods   base     
+
+other attached packages:
+ [1] emmeans_2.0.2      ordinal_2025.12-29 lubridate_1.9.5    forcats_1.0.1     
+ [5] stringr_1.6.0      dplyr_1.2.1        purrr_1.2.1        readr_2.2.0       
+ [9] tidyr_1.3.2        tibble_3.3.1       ggplot2_4.0.2      tidyverse_2.0.0   
+
+loaded via a namespace (and not attached):
+ [1] Matrix_1.7-3        gtable_0.3.6        jsonlite_2.0.0     
+ [4] ucminf_1.2.3        compiler_4.4.0      renv_1.0.11        
+ [7] tidyselect_1.2.1    scales_1.4.0        yaml_2.3.12        
+[10] fastmap_1.2.0       lattice_0.22-7      R6_2.6.1           
+[13] labeling_0.4.3      generics_0.1.4      knitr_1.51         
+[16] MASS_7.3-65         tzdb_0.5.0          pillar_1.11.1      
+[19] RColorBrewer_1.1-3  rlang_1.1.7         utf8_1.2.6         
+[22] stringi_1.8.7       xfun_0.57           S7_0.2.1           
+[25] timechange_0.4.0    estimability_1.5.1  cli_3.6.5          
+[28] withr_3.0.2         magrittr_2.0.5      digest_0.6.39      
+[31] grid_4.4.0          mvtnorm_1.3-6       hms_1.1.4          
+[34] lifecycle_1.0.5     nlme_3.1-168        vctrs_0.7.2        
+[37] evaluate_1.0.5      glue_1.8.0          farver_2.1.2       
+[40] numDeriv_2016.8-1.1 rmarkdown_2.31      tools_4.4.0        
+[43] pkgconfig_2.0.3     htmltools_0.5.9    </code></pre>
+</div>
+</div>
+<hr>
+</section>
+<section id="referencias" class="level2">
+<h2 class="anchored" data-anchor-id="referencias">Referencias</h2>
+<ul>
+<li>Christensen, R. H. B. (2023). <em>ordinal: Regression Models for Ordinal Data</em>. R package. https://cran.r-project.org/package=ordinal</li>
+<li>Lenth, R. V. (2024). <em>emmeans: Estimated Marginal Means</em>. R package. https://cran.r-project.org/package=emmeans</li>
+<li>Agresti, A. (2010). <em>Analysis of Ordinal Categorical Data</em> (2nd ed.). Wiley.</li>
+<li>McCullagh, P. (1980). Regression models for ordinal data. <em>Journal of the Royal Statistical Society: Series B</em>, 42(2), 109–127.</li>
+</ul>
+<hr>
+<p><em>¿Preguntas o sugerencias? Dejá un issue <a href="https://github.com/JFormoso/jformoso.github.io/issues">aquí</a> o escribime a <a href="mailto:jesica.formoso@gmail.com">jesica.formoso@gmail.com</a> con tus comentarios.</em></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/jformoso\.github\.io\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
