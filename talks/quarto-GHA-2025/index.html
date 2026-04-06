@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-12-10">
 
-<title>Jesica Formoso</title>
+<title>Automating Report Publishing with Quarto and GitHub Actions — A LatinR 2025 Tutorial Recap – Jesica Formoso</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,25 +27,26 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./images/favicon.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-be3771519f21acc1c5b6733774c6dcd8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-be3771519f21acc1c5b6733774c6dcd8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -74,17 +76,17 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Jesica Formoso</span>
     </a>
   </div>
@@ -95,19 +97,19 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./posts.html"> 
+    <a class="nav-link" href="../../posts.html"> 
 <span class="menu-text">Posts</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./talks.html"> 
+    <a class="nav-link" href="../../talks.html"> 
 <span class="menu-text">Talks/workshops</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./cv.html"> 
+    <a class="nav-link" href="../../cv.html"> 
 <span class="menu-text">CV</span></a>
   </li>  
 </ul>
@@ -142,46 +144,78 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#the-problem-we-set-out-to-solve" id="toc-the-problem-we-set-out-to-solve" class="nav-link active" data-scroll-target="#the-problem-we-set-out-to-solve">The problem we set out to solve</a></li>
+  <li><a href="#how-it-went" id="toc-how-it-went" class="nav-link" data-scroll-target="#how-it-went">How it went</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<div class="quarto-about-trestles">
-  <div class="about-entity">
-    <img src="images/perfil.jpeg" class="about-image
-  rounded " style="width: 20em;">
+<main class="content" id="quarto-document-content">
+
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Jesica Formoso</h1>
+<h1 class="title">Automating Report Publishing with Quarto and GitHub Actions — A LatinR 2025 Tutorial Recap</h1>
 </div>
+
+
+
 <div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Authors</div>
+    <div class="quarto-title-meta-contents">
+             <p>Jesica Formoso </p>
+             <p>María Nanton </p>
+          </div>
   </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">December 10, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
 </header>
-    <div class="about-links">
-  <a href="https://github.com/JFormoso" class="about-link" rel="" target="">
-    <i class="bi bi-github"></i>
-     <span class="about-link-text">Github</span>
-  </a>
-  <a href="https://www.linkedin.com/in/jesica-formoso-16ab4649/" class="about-link" rel="" target="">
-    <i class="bi bi-linkedin"></i>
-     <span class="about-link-text">LinkedIn</span>
-  </a>
-  <a href="https://orcid.org/my-orcid?orcid=0000-0003-3062-4036" class="about-link" rel="" target="">
-     <span class="about-link-text"><i class="ai  ai-orcid" aria-label="orcid"></i> ORCID</span>
-  </a>
-  <a href="https://twitter.com/JesiFormoso/" class="about-link" rel="" target="">
-    <i class="bi bi-twitter"></i>
-     <span class="about-link-text">twitter</span>
-  </a>
-</div>
-  </div>
-  <div class="about-contents"><main class="content" id="quarto-document-content">
-<p>Hi everyone, I’m Jesica! I’m a Data Scientist, a Tenured Researcher at the National Scientific and Technical Research Council (<a href="https://www.conicet.gov.ar/?lan=en">CONICET</a>) in Argentina, and the Impact Measurement Coordinator at <a href="https://www.metadocencia.org/">MetaDocencia</a>, an organization that aims to promote Open Science in Latin America. Since 2019, I have been teaching and developing curricula for courses in statistics, programming, data science, and data visualization at the University of Buenos Aires (UBA), National Agricultural Technology Institute (INTA), and the University Institute of the Italian Hospital of Buenos Aires. I also serve as an advisor for research projects within Doctoral and Masters graduate programs in Psychology, Neuropsychology and Neuroscience at the University of Buenos Aires, the Latin American Faculty of Social Sciences (FLACSO), and the National University of Flores (UFLO), among others.As an organizer of <a href="https://rladiesba.netlify.app/">R-Ladies Buenos Aires</a> I work to foster diversity and inclusion in the tech and data science communities.</p>
 
 
-</main></div>
-</div>
- <!-- /main -->
+<p>At LatinR 2025, María Nanton and I ran a 3-hour hands-on tutorial on automating the publication of data dashboards using Quarto and GitHub Actions.</p>
+<section id="the-problem-we-set-out-to-solve" class="level2">
+<h2 class="anchored" data-anchor-id="the-problem-we-set-out-to-solve">The problem we set out to solve</h2>
+<p>We’ve all been there: manually re-running a script, re-rendering a report, and uploading it somewhere every time new data comes in. The goal of this tutorial was to show that this whole process can be automated, so that reports stay up to date without lifting a finger after the initial setup.</p>
+</section>
+<section id="how-it-went" class="level2">
+<h2 class="anchored" data-anchor-id="how-it-went">How it went</h2>
+<p>The tutorial was aimed at R and Quarto users with basic Git/GitHub familiarity but no prior experience with GitHub Actions. We started by introducing key concepts (CI/CD, virtual machines, renv, and GitHub Pages) before writing a single line of code.</p>
+<p>From there, we moved into guided practice. Our starting point was a Google Form feeding responses into a public Google Sheet, with a Quarto dashboard already reading from it. Step by step, participants wired everything together using GitHub Actions: first triggering the workflow manually, then on every push, and finally on a schedule.</p>
+<p>By the end of the session, everyone had written a YAML workflow file from scratch, published their dashboard to GitHub Pages, and set it up to run automatically using cron syntax.</p>
+<p>Sharing this with the LatinR community was a wonderful experience. Participants were engaged and curious throughout, asking sharp questions at every stage. The feedback was overwhelmingly positive — the main ask being more time to keep exploring. Exactly the kind of response that makes you want to run it again!</p>
+<p>You can find the materials and session recording below:</p>
+<p>📁 <a href="https://jformoso.github.io/quarto-GHA/">Tutorial materials</a> 🎥 <a href="https://youtu.be/Sh1parb4lWk?si=E4JiGSrUhmpHCHV8">Session recording</a></p>
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     

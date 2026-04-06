@@ -1,10 +1,164 @@
 [
   {
+    "objectID": "posts/2025-03-28-khipu-2025-ES/index.html",
+    "href": "posts/2025-03-28-khipu-2025-ES/index.html",
+    "title": "Asístí a Khipu 2025!🎉️",
+    "section": "",
+    "text": "A principios de este mes, tuve la oportunidad de asistir a Khipu, la conferencia de Inteligencia Artificial (IA) y Aprendizaje Automático más grande de América Latina.\nEste año fue la cuarta edición de Khipu y la primera en realizarse fuera de Uruguay. Tuvo lugar en Santiago de Chile, reuniendo a cientos de investigadores, profesionales y estudiantes de toda la región (y fuera de ella también).\nKhipu es mucho más que una conferencia: es un espacio para aprender, compartir y construir comunidad en torno a la IA en América Latina. El programa está cuidadosamente diseñado para ofrecer contenidos a una una audiencia muy variada. Las charlas siguen una estructura progresiva: las sesiones iniciales fueron más generales y accesibles, aunque rigurosas y siempre a cargo de personas expertas, y, a medida que fue avanzando la semana, los contenidos se volvieron más técnico y especializado.\nPor ejemplo, algunas de las charlas que más disfruté fueron Fundamentos de Machine Learning y Deep Learning I por Jorge Pérez, Fundamentos de ML y DL II por Alfredo Canziani, y Fundamentos de Procesamiento de Lenguaje Natural por Isabelle Augenstein. El segundo día, Petar Veličković dio una excelente presentación sobre Geometric Deep Learning. El jueves tuvimos sesiones paralelas sobre ciberseguridad, aprendizaje automático en economía, visión por computadora, IA y derechos humanos, entre otros temas.\nLa conferencia también ofreció tutoriales de distintos niveles de dificultad sobre temas como aprendizaje automático, procesamiento de lenguaje natural, ética en IA, entre otros. Los materiales estaban cuidadosamente preparados, incluyendo Jupyter notebooks bien documentadas que podías llevarte y seguir explorando por tu cuenta. También hubo sesiones de pósters, donde las y los asistentes podían presentar sus trabajos y recibir feedback en un ambiente amigable.\nUna de las cosas que más me llamó la atención fue el clima cálido y amigable. Es un excelente lugar para conocer personas que trabajan con IA en distintos sectores, explorar colaboraciones y sentirse parte de una comunidad latinoamericana en crecimiento."
+  },
+  {
+    "objectID": "posts/2025-03-28-khipu-2025-ES/index.html#estás-pensando-en-asistir-a-la-próxima-edición",
+    "href": "posts/2025-03-28-khipu-2025-ES/index.html#estás-pensando-en-asistir-a-la-próxima-edición",
+    "title": "Asístí a Khipu 2025!🎉️",
+    "section": "✍️ ¿Estás pensando en asistir a la próxima edición?",
+    "text": "✍️ ¿Estás pensando en asistir a la próxima edición?\nQuizás te estés preguntando cómo hacer para asistir a la próxima edición de Khipu. A diferencia de muchas conferencias, no se trata simplemente de registrarse y pagar una inscripción. En su lugar, se aplica contando tu trayectoria, motivación y qué esperás aportar o aprender. Si tu aplicación es aceptada, también podés solicitar apoyo económico para cubrir gastos de viaje y alojamiento. El objetivo es eliminar barreras económicas para que participar sea accesible para todes.\n¿Y qué hace que una aplicación sea buena? No lo sé con certeza—quizás debería haberle preguntado a alguien del comité organizador—pero pienso que se valora tu potencial para compartir lo que aprendas y actuar como multiplicador en tu comunidad. Si sos docente o participás en comunidades de práctica, eso probablemente sume, no dejes de mencionarlo. Si estás trabajando en proyectos que requieren IA y podrían beneficiarse de tu participación en la conferencia, da detalles al respecto, incluí enlaces a recursos o repositorios relevantes."
+  },
+  {
+    "objectID": "posts/2025-03-28-khipu-2025-ES/index.html#tengo-que-saber-inglés",
+    "href": "posts/2025-03-28-khipu-2025-ES/index.html#tengo-que-saber-inglés",
+    "title": "Asístí a Khipu 2025!🎉️",
+    "section": "🌐 ¿Tengo que saber inglés?",
+    "text": "🌐 ¿Tengo que saber inglés?\nUna limitación importante de Khipu es que todo es en inglés. Este año el equipo organizador incorporó subtítulos automáticos, lo cual definitiviamente ayuda si el inglés no es tu idioma nativo, pero todavía no es un evento que recomendaría a alguien sin conocimientos del idioma. Dicho esto, el equipo claramente es consciente de esta barrera. Khipu está pensado para Latinoamérica y hay un interés genuino en hacerlo más accesible para personas que no hablan inglés en el futuro."
+  },
+  {
+    "objectID": "posts/2025-03-28-khipu-2025-ES/index.html#lo-que-me-llevé",
+    "href": "posts/2025-03-28-khipu-2025-ES/index.html#lo-que-me-llevé",
+    "title": "Asístí a Khipu 2025!🎉️",
+    "section": "Lo que me llevé",
+    "text": "Lo que me llevé\nAprendí muchísimo, conocí gente muy interesante, tomé demasiado café y comí demasiada azúcar. Pero, sobre todo, lo que más me quedó fue la dimensión humana: las limitaciones de las tecnologías actuales, y cómo las personas reflexionan críticamente sobre ellas y trabajan para superarlas.\n¿Qué pasa cuando trabajás con datos sensibles y privados que no se pueden compartir con modelos grandes en plataformas externas, y tu institución tiene infraestructura y financiamiento limitados? Proyectos como los que presentaron Leonardo Lombardi (QuantIT), Aiala Rosá (Universidad de la República), Victor Mireless (UNAM) y Juan Reutter (PUC, Chile) sobre IA y Derechos Humanos son un claro ejemplo.\n¿Qué pasa si necesitás un modelo cuyas decisiones sean comprensibles/explicables? Por ejemplo, en el ámbito médico, donde tanto profesionales como pacientes deberían poder entender la lógica detrás de un diagnóstico? Charlas como la de René Vidal (Universidad de Pensilvania) sobre explicabilidad abordaron ese tema.\nOtras sesiones exploraron temas críticos como los sesgos y la gobernanza de la IA, destacando la importancia de la equidad y la transparencia en el desarrollo e implementación de modelos. Como parte del cierre, hubo una muy interesante sesión sobre equidad de género y mujeres en la IA a cargo de Catherine D’Ignazio (MIT) e Ivana Feldgeber (DataGenero).\nEn resumen, un recordatorio de que la IA, como cualquier tecnología, no es neutral. Refleja los valores, prioridades y perspectivas de quienes la desarrollan. Por eso son tan importantes espacios como Khipu: para asegurar que América Latina no sea solo consumidora de IA, sino también protagonista en dar forma a su futuro.\nPodés ver la mayoría de las charlas en el canal de YouTube de Khipu."
+  },
+  {
+    "objectID": "posts/2024-12-20-r-en-red/index.html",
+    "href": "posts/2024-12-20-r-en-red/index.html",
+    "title": "R en Red: ARcenso, Opportunities, and Community",
+    "section": "",
+    "text": "Last week, I had the privilege of co-organizing a talk as part of the Buenos Aires chapter of R-Ladies, in collaboration with R en Buenos Aires. Together with María Nanton and Betsy Cohen, we showcased some incredible events and working groups we’ve been part of that not only offer formative experiences but also encourage active participation and community-building.\nOur goal was to inspire members of our community to apply and get involved in initiatives that promote personal and professional growth—and help strengthen our collective network. Many attendees shared that they were unfamiliar with some of the conferences and events we presented or didn’t realize they could apply for financial support or travel grants to participate. This realization was empowering for many, as it helped them see these opportunities as something within their reach.\nThe diversity in the room was amazing—we connected with people working in areas like census data, health data, and academic research. There were attendees who were just starting their journey with R, as well as seasoned users eager to share their experiences. The feedback we received was overwhelmingly positive, and the enthusiasm in the room reinforced the importance of creating spaces like this.\n\nWe wrapped up the evening with an end-of-year toast and a networking session, which allowed us to continue building connections in a relaxed and celebratory atmosphere. 🍾\nIf you missed the talk, you can check out the slides here: Slides\n💜 Stay connected with the R-Ladies Buenos Aires network: 🐦 Twitter: @RLadiesBA 🌐 Website: https://rladiesba.netlify.app/\nLet’s continue growing together, discovering opportunities, and making the R community an even more inclusive and enriching space! 💪💜"
+  },
+  {
+    "objectID": "posts/2025-03-28-khipu-2025/index.html",
+    "href": "posts/2025-03-28-khipu-2025/index.html",
+    "title": "Khipu 2025️ 🖥🎉️",
+    "section": "",
+    "text": "Earlier this month, I had the chance to attend Khipu, the largest Artificial Intelligence (AI) and Machine Learning gathering in Latin America.\nThis year marked the fourth edition of Khipu—and the first to take place outside of Uruguay. It was held in Santiago, Chile, bringing together hundreds of researchers, professionals, and students from across the region and beyond.\nKhipu is more than just a conference: it’s a space for learning, sharing, and building community around AI in Latin America. The program is thoughtfully designed to offer content for a wide range of audiences. Talks follow a progressive structure: early sessions are more general and accessible, yet rigorous and engaging, and always led by experts.\nFor example, some of the opening lectures I really enjoyed were ML & DL Foundamentals I by Jorge Perez, ML & DL Foundamentals II by Alfredo Canziani and Natural Language Processing Fundamentals by Isabelle Augenstein. As the week went on, content became increasingly technical and specialized. On the second day, Petar Veličković gave a fantastic lecture on Geometric Deep Learning. By Thursday, we had parallel sessions on cybersecurity, ML in economics, computer vision, AI and human rights, among others.\nThe conference also offered tutorials at different difficulty levels on various topics such as in machine learning, natural language processing, AI ethics, or technical toolkits. Materials were carefully prepared, including well documented Jupyter notebooks you could take home and continue learning on your own. There were also poster sessions, where attendees could present their work and get feedback in a friendly environment.\nOne of the things that stood out the most to me was the welcoming and warm atmosphere. It’s a great place to meet people who are working in AI across different sectors, to explore collaborations, and to feel part of a growing Latin American AI community."
+  },
+  {
+    "objectID": "posts/2025-03-28-khipu-2025/index.html#want-to-attend-the-next-event",
+    "href": "posts/2025-03-28-khipu-2025/index.html#want-to-attend-the-next-event",
+    "title": "Khipu 2025️ 🖥🎉️",
+    "section": "✍️ Want to attend the next event?",
+    "text": "✍️ Want to attend the next event?\nYou might be wondering how to attend the next Khipu. Unlike many conferences, you don’t simply register and pay a fee. Instead, you apply, sharing your background, motivation, and what you hope to contribute or learn. If selected, you can also apply for financial support to cover travel and accommodation. The goal is to make participation accessible and remove financial barriers.\nWhat makes a good application? I’m not entirely sure—maybe I should’ve asked someone from the organizing committee—but I believe they value your potential to share what you learn and act as a multiplier in your community. If you’re involved in teaching or in communities of practice, that’s probably a plus. If you’re working on projects that require AI and could benefit from your attendance, mention them! Include links to relevant resources or repositories."
+  },
+  {
+    "objectID": "posts/2025-03-28-khipu-2025/index.html#language-access",
+    "href": "posts/2025-03-28-khipu-2025/index.html#language-access",
+    "title": "Khipu 2025️ 🖥🎉️",
+    "section": "🌐 Language access",
+    "text": "🌐 Language access\nA significant limitation: everything is in English. This year, the organizing team added automatic captioning, which helps, but it’s still not an event I would recommend to someone with no English at all. That said, the team is clearly aware of this barrier. Khipu is made for Latin Americans, and there’s a genuine interest in making it more accessible for non-English speakers in the future."
+  },
+  {
+    "objectID": "posts/2025-03-28-khipu-2025/index.html#what-i-took-with-me",
+    "href": "posts/2025-03-28-khipu-2025/index.html#what-i-took-with-me",
+    "title": "Khipu 2025️ 🖥🎉️",
+    "section": "What I took with me",
+    "text": "What I took with me\nI learned a lot, met incredible people, drank way too much coffee and ate way too much sugar. But most of all, what stayed with me was the human dimension: the limitations of current technologies, and how people reflect critically on them and work to overcome them.\nWhat happens when you’re working with sensitive, private data that can’t be shared with large models on external platforms, and your institution has limited infrastructure and funding? Projects like the ones presented by Leonardo Lombardi (QuantIT), Aiala Rosá (Universidad de la República), Victor Mireless (UNAM) and Juan Reutter (PUC, Chile) on AI and Human Rights are a clear example.\nWhat if you need a model whose decisions are understandable and accountable—like in a medical setting, where both doctor and patient should be able to understand the logic behind a diagnosis? Talks like the one by René Vidal (University of Pennsylvania) on explainability touched on that.\nOther sessions explored critical topics such as bias and AI governance, highlighting the importance of fairness and transparency in model development and deployment. As part of the closing event, Catherine D’Ignazio (MIT) and Ivana Feldgeber (DataGenero) delivered a powerful session on gender equity and women in AI.\nBasically, a reminder that AI, like any technology, is not neutral. It reflects the values, priorities, and perspectives of those who build it. That’s why spaces like Khipu matter: to ensure Latin America is not just a consumer of AI, but also a key player in shaping its future.\nYou can watch most of the talks on Khipu’s youtube channel"
+  },
+  {
+    "objectID": "talks/dont-use-this-code-2024/index.html",
+    "href": "talks/dont-use-this-code-2024/index.html",
+    "title": "Insights and Innovations in Virtual Training | DUTC/NASA TOPS Talks",
+    "section": "",
+    "text": "During this community event organized by Don’t Use This Code in the context of the NASA TOPS inciative, I participated of a round-table discussion regarding innovations in virtual tranings with Brian Knosp, Scientific Applications Software Engineer at NASA’s Jet Propulsion Laboratory, Kenji Nomura, High School STEM teacher currently serving as an Albert Einstein Distinguished Educator fellow at NASA in the Science Activation (SciAct) program, and James Powel from Don’t Use This Code.\nFind the recording here."
+  },
+  {
+    "objectID": "talks/ciencia-datos-psico-2023/index.html",
+    "href": "talks/ciencia-datos-psico-2023/index.html",
+    "title": "Pre-Congress Workshop - “Data Science for Psychologist (with R and RStudio)”",
+    "section": "",
+    "text": "This was a pre-congress workshop taught during the 16th International Congress of Research and Professional Practice in Psychology held in the University of Buenos Aires. The objective was to introduce participants to the fundamental concepts and tools of data science applied to psychological research using R. It was tailored for researchers, practitioners, and students who wish to enhance their skills in data analysis and visualization within the field of psychology.\nFind the slides here."
+  },
+  {
+    "objectID": "talks/ucla-2023/index.html",
+    "href": "talks/ucla-2023/index.html",
+    "title": "A Path to Open, Inclusive, and Collaborative Science for Librarians",
+    "section": "",
+    "text": "In 2023, Irene and I received an award to participate in the UCLA-IMLS Open Science for Librarians Collaborative Lesson Development Workshop, a project sponsored by The Carpentries. This opportunity provided us with specialized training to develop our proposed lesson, “A Path to Open, Inclusive, and Collaborative Science for Librarians”.\nDuring the workshop, we gained insights into lesson design and community-driven curriculum development. The program emphasized inclusivity and collaboration. As a result of this workshop, we’ve been working on the lesson, which is now available in a Pre-Alpha state. You can check out the progress:\n\nGitHub Repository.\nLesson Website."
+  },
+  {
+    "objectID": "talks/code-for-all-2023/index.html",
+    "href": "talks/code-for-all-2023/index.html",
+    "title": "Mapping open-science communities, organizations & events in Latin America (Lightning Talk)",
+    "section": "",
+    "text": "The session showcases MetaDocencia’s initiative to make information available regarding resources, events, workshops, funding opportunities, and open science communities in Latin America through a collaborative repository. This repository will be available to anyone who wants to access resources on open science, get in touch with other regional and local actors in Latin America, or participate in the dissemination of open practices. This project was presented in Code for All’s 2023 Summit (september 18-21).\nFind the recording here."
+  },
+  {
+    "objectID": "talks/latinr-2025-readability/index.html",
+    "href": "talks/latinr-2025-readability/index.html",
+    "title": "Readability Metrics for Spanish Texts - readabilityes (Lightning Talk)",
+    "section": "",
+    "text": "We are a team from the Centro Interdisciplinario de Investigaciones en Psicología Matemática y Experimental (CIIPME–CONICET) and at LatinR2025 we presented readabilityes, an R package we are currently working on which focuses on the computation of readability metrics for Spanish texts."
+  },
+  {
+    "objectID": "talks/latinr-2025-readability/index.html#what-is-readability",
+    "href": "talks/latinr-2025-readability/index.html#what-is-readability",
+    "title": "Readability Metrics for Spanish Texts - readabilityes (Lightning Talk)",
+    "section": "What is readability?",
+    "text": "What is readability?\nIn simple terms, readability is about how easy a text is to understand. It is a property of a text that indicates how quickly and comfortably can read and process what is written."
+  },
+  {
+    "objectID": "talks/latinr-2025-readability/index.html#why-does-readability-matter",
+    "href": "talks/latinr-2025-readability/index.html#why-does-readability-matter",
+    "title": "Readability Metrics for Spanish Texts - readabilityes (Lightning Talk)",
+    "section": "Why does readability matter?",
+    "text": "Why does readability matter?\nReadability metrics are useful when you want your text to reach people. They help evaluate and adapt content so it is accessible to readers with different levels of education and reading skills.\nThis makes them especially valuable in areas such as education, medicine and public health, legal and administrative communications, scientific communication and outreach."
+  },
+  {
+    "objectID": "talks/latinr-2025-readability/index.html#about-readabilityes",
+    "href": "talks/latinr-2025-readability/index.html#about-readabilityes",
+    "title": "Readability Metrics for Spanish Texts - readabilityes (Lightning Talk)",
+    "section": "About readabilityes",
+    "text": "About readabilityes\nSpanish comes with its own quirks. Its phonology and spelling rules make automatic syllabification harder than it might seem, and that’s a key step for many readability formulas. On top of that, there aren’t many open, easy-to-use tools in R that handle this.\nOur goal is to build a tool that is both practical and reproducible, making readability analysis in Spanish easier to run and easier to share.\nSome of the things we’re aiming for:\n\nRule-based syllabification designed specifically for Spanish\nNo external dependencies or downloadable models\nSmooth integration with the tidyverse ecosystem\n\nThe project is still evolving, and one of the next steps is adding support for Catalan.\nYou can check out the presentation slides and video, as well as the repository for the preliminary version of the package following these links."
+  },
+  {
+    "objectID": "talks/alta-ca-2024/index.html",
+    "href": "talks/alta-ca-2024/index.html",
+    "title": "ALTa Ciencia Abierta (Latin America Transforms to Open Science)",
+    "section": "",
+    "text": "The ALTa Ciencia Abierta course is designed to provide a comprehensive introduction to open science practices, focusing on key topics like reproducible research, open data, and collaborative workflows, for Spanish-speaking communities. It aims to equip researchers with the tools and knowledge to make their work more transparent, accessible, and reproducible.\nDuring 2024, I had the pleasure of teaching the module on open code in the three editions of the course, alongside Patricia Loto. In this module, we explored best practices for sharing and collaborating on code, ensuring that research processes remain open, reproducible, and easy for others to follow.\nThis course is part of a broader initiative supported by NASA - NASA TOPS - which promotes open science and collaboration across the global research community. MetaDocencia’s participation in this initiative is a significant step towards fostering a more inclusive and transparent scientific community, ensuring that research is accessible and reproducible for everyone, regardless of location or resources.\n\nLink to the website\nLink to the Open Code module"
+  },
+  {
+    "objectID": "talks/opensesame-2024/index.html",
+    "href": "talks/opensesame-2024/index.html",
+    "title": "Introduction to OpenSesame",
+    "section": "",
+    "text": "This presentation was an introductory workshop on OpenSesame designed for researchers in Cognitive Psychology and Education. OpenSesame is open-source software created to design experiments and research tasks.\nDuring the workshop, we explored:\n\nThe interface and basic features of OpenSesame.\nHow to configure the structure of an experimental task.\nStimulus presentation to participants.\nResponse collection and data recording.\n\nYou can find the slides here."
+  },
+  {
+    "objectID": "talks/spss-a-r-2018/index.html",
+    "href": "talks/spss-a-r-2018/index.html",
+    "title": "From SPSS to R",
+    "section": "",
+    "text": "This is a 2 hour workshop for R-Ladies Buenos Aires planned for researcherd transitioning from SPSS to R.\nFind the recording here."
+  },
+  {
+    "objectID": "talks/quarto-rladiesba-2024/index.html",
+    "href": "talks/quarto-rladiesba-2024/index.html",
+    "title": "Introduction to Quarto",
+    "section": "",
+    "text": "The R-Ladies Buenos Aires workshop Transform Your Data into Visual Stories with Quarto presents an introduction to Quarto, an open-source publishing system designed to create dynamic and reproducible scientific and technical documents. It explores practical examples of its use in reproducible reports, covering topics such as integrating code and text, customizing output formats, and using parameters to create parameterized reports. This introductory workshop is aimed at individuals with a basic knowledge of R and little to no previous experience with Quarto.\nLearning Objectives:\n\nGet familiar with Quarto as a dynamic and reproducible publishing tool that expands the capabilities of RMarkdown.\nIdentify the possibilities it offers for creating scientific and technical documents, such as reports, presentations, and websites.\nLearn how to combine explanatory text with executable code to generate reports that automatically update results.\nUnderstand how to use parameters in Quarto to efficiently create different versions of the same document.\n\nFind recording and materials here."
+  },
+  {
+    "objectID": "talks/quest-2024/index.html",
+    "href": "talks/quest-2024/index.html",
+    "title": "Responsible Research & Decolonisation from a Latin American Perspective",
+    "section": "",
+    "text": "As part of MetaDocencia, I was part of the organizing committee for the Summer School/Alumni Seminar: Decolonizing Global Health with a focus on Biomedical Sciences, Research and Education that took place in the Quest Center of the Berlin Institute of Health and Charité, where I also participated as a Lecturer talking about responsible research & decolonisation from a Latin American perspective, together with Laura Ación, Laura Ascenzi, and Karina formoso.\nYou can find the slides here. Additional information can be found in this blogpost."
+  },
+  {
     "objectID": "posts.html",
     "href": "posts.html",
     "title": "Blog posts",
     "section": "",
-    "text": "Asístí a Khipu 2025!🎉️\n\n\n\nConferencia\n\nInteligencia artificial\n\nCódigo abierto\n\n\n\n\n\n\n\n\n\nMar 28, 2025\n\n\nJesica Formoso\n\n\n\n\n\n\n\n\n\n\n\n\nKhipu 2025️ 🖥🎉️\n\n\n\nConference\n\nArtificial Intelligence\n\nOpen-source\n\n\n\n\n\n\n\n\n\nMar 28, 2025\n\n\nJesica Formoso\n\n\n\n\n\n\n\n\n\n\n\n\nR en Red: ARcenso, Opportunities, and Community\n\n\n\nTalk\n\nR\n\nOpen-source\n\n\n\n\n\n\n\n\n\nDec 20, 2024\n\n\nJesica Formoso\n\n\n\n\n\n\n\n\n\n\n\n\nPosit::Conf(2024): R, Community, and Learning\n\n\n\nConference\n\nR\n\nOpen-source\n\n\n\n\n\n\n\n\n\nSep 18, 2024\n\n\nJesica Formoso\n\n\n\n\n\n\n\n\n\n\n\n\nWhat I learned at NumFocus DISC Unconf 2023\n\n\n\nConference\n\nDiversity & Inclusion\n\nOpen-source\n\n\n\n\n\n\n\n\n\nAug 18, 2023\n\n\nJesica Formoso\n\n\n\n\n\nNo matching items"
+    "text": "Khipu 2025️ 🖥🎉️\n\n\n\nConference\n\nArtificial Intelligence\n\nOpen-source\n\n\n\n\n\n\n\n\n\nMar 28, 2025\n\n\nJesica Formoso\n\n\n\n\n\n\n\n\n\n\n\n\nAsístí a Khipu 2025!🎉️\n\n\n\nConferencia\n\nInteligencia artificial\n\nCódigo abierto\n\n\n\n\n\n\n\n\n\nMar 28, 2025\n\n\nJesica Formoso\n\n\n\n\n\n\n\n\n\n\n\n\nR en Red: ARcenso, Opportunities, and Community\n\n\n\nTalk\n\nR\n\nOpen-source\n\n\n\n\n\n\n\n\n\nDec 20, 2024\n\n\nJesica Formoso\n\n\n\n\n\n\n\n\n\n\n\n\nPosit::Conf(2024): R, Community, and Learning\n\n\n\nConference\n\nR\n\nOpen-source\n\n\n\n\n\n\n\n\n\nSep 18, 2024\n\n\nJesica Formoso\n\n\n\n\n\n\n\n\n\n\n\n\nWhat I learned at NumFocus DISC Unconf 2023\n\n\n\nConference\n\nDiversity & Inclusion\n\nOpen-source\n\n\n\n\n\n\n\n\n\nAug 18, 2023\n\n\nJesica Formoso\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "cv.html",
@@ -70,116 +224,18 @@
     "text": "Selected awards and scholarships\nKHIPU 2025\n\nLatin American Meeting in Artificial Intelligence, Santiago, Chile Selected to participate in this highly competitive event, recognized for academic excellence and contributions to diversity in AI research.\n\nPosit Opportunity Scholarship (2024)\n\nPosit::conf(2024), Seattle, USA Awarded funding to attend the Posit Conference 2024. Covered travel, accommodation, meals, and conference fees.\n\nExternal Fellowship for Young Researchers (2023)\n\nNational Scientific and Technical Research Council (CONICET)- Awarded funding to conduct research under the supervision of Dr. Gracia Jiménez Fernández at the Department of Developmental and Educational Psychology, Faculty of Educational Sciences, University of Granada, Spain. This prestigious program supports the training of early-career researchers at leading international research institutions.\n\nDISC Unconference 2023\n\nNumFOCUS, Amsterdam, Netherlands. Invited and funded to attend the Diversity & Inclusion in Scientific Computing Unconference, a collaborative event focused on creating scalable solutions and resources to promote diversity and inclusion in open-source scientific computing.\n\nPostdoctoral Fellowship (2017)\n\nNational Scientific and Technical Research Council (CONICET)\n\nIBRO Travel Grant (2014)\n\nInternational Brain Research Organization. Awarded funding to attend the School of Neuroinformatics and Computational Neuroscience, 2014.\n\nDoctoral Fellowship (2013)\n\nSecretary of Science and Technology, University of Buenos Aires (UBACyT)"
   },
   {
-    "objectID": "posts/2025-03-28-khipu-2025/index.html",
-    "href": "posts/2025-03-28-khipu-2025/index.html",
-    "title": "Khipu 2025️ 🖥🎉️",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Jesica Formoso",
     "section": "",
-    "text": "Earlier this month, I had the chance to attend Khipu, the largest Artificial Intelligence (AI) and Machine Learning gathering in Latin America.\nThis year marked the fourth edition of Khipu—and the first to take place outside of Uruguay. It was held in Santiago, Chile, bringing together hundreds of researchers, professionals, and students from across the region and beyond.\nKhipu is more than just a conference: it’s a space for learning, sharing, and building community around AI in Latin America. The program is thoughtfully designed to offer content for a wide range of audiences. Talks follow a progressive structure: early sessions are more general and accessible, yet rigorous and engaging, and always led by experts.\nFor example, some of the opening lectures I really enjoyed were ML & DL Foundamentals I by Jorge Perez, ML & DL Foundamentals II by Alfredo Canziani and Natural Language Processing Fundamentals by Isabelle Augenstein. As the week went on, content became increasingly technical and specialized. On the second day, Petar Veličković gave a fantastic lecture on Geometric Deep Learning. By Thursday, we had parallel sessions on cybersecurity, ML in economics, computer vision, AI and human rights, among others.\nThe conference also offered tutorials at different difficulty levels on various topics such as in machine learning, natural language processing, AI ethics, or technical toolkits. Materials were carefully prepared, including well documented Jupyter notebooks you could take home and continue learning on your own. There were also poster sessions, where attendees could present their work and get feedback in a friendly environment.\nOne of the things that stood out the most to me was the welcoming and warm atmosphere. It’s a great place to meet people who are working in AI across different sectors, to explore collaborations, and to feel part of a growing Latin American AI community."
+    "text": "Hi everyone, I’m Jesica! I’m a Data Scientist, a Tenured Researcher at the National Scientific and Technical Research Council (CONICET) in Argentina, and the Impact Measurement Coordinator at MetaDocencia, an organization that aims to promote Open Science in Latin America. Since 2019, I have been teaching and developing curricula for courses in statistics, programming, data science, and data visualization at the University of Buenos Aires (UBA), National Agricultural Technology Institute (INTA), and the University Institute of the Italian Hospital of Buenos Aires. I also serve as an advisor for research projects within Doctoral and Masters graduate programs in Psychology, Neuropsychology and Neuroscience at the University of Buenos Aires, the Latin American Faculty of Social Sciences (FLACSO), and the National University of Flores (UFLO), among others.As an organizer of R-Ladies Buenos Aires I work to foster diversity and inclusion in the tech and data science communities."
   },
   {
-    "objectID": "posts/2025-03-28-khipu-2025/index.html#want-to-attend-the-next-event",
-    "href": "posts/2025-03-28-khipu-2025/index.html#want-to-attend-the-next-event",
-    "title": "Khipu 2025️ 🖥🎉️",
-    "section": "✍️ Want to attend the next event?",
-    "text": "✍️ Want to attend the next event?\nYou might be wondering how to attend the next Khipu. Unlike many conferences, you don’t simply register and pay a fee. Instead, you apply, sharing your background, motivation, and what you hope to contribute or learn. If selected, you can also apply for financial support to cover travel and accommodation. The goal is to make participation accessible and remove financial barriers.\nWhat makes a good application? I’m not entirely sure—maybe I should’ve asked someone from the organizing committee—but I believe they value your potential to share what you learn and act as a multiplier in your community. If you’re involved in teaching or in communities of practice, that’s probably a plus. If you’re working on projects that require AI and could benefit from your attendance, mention them! Include links to relevant resources or repositories."
-  },
-  {
-    "objectID": "posts/2025-03-28-khipu-2025/index.html#language-access",
-    "href": "posts/2025-03-28-khipu-2025/index.html#language-access",
-    "title": "Khipu 2025️ 🖥🎉️",
-    "section": "🌐 Language access",
-    "text": "🌐 Language access\nA significant limitation: everything is in English. This year, the organizing team added automatic captioning, which helps, but it’s still not an event I would recommend to someone with no English at all. That said, the team is clearly aware of this barrier. Khipu is made for Latin Americans, and there’s a genuine interest in making it more accessible for non-English speakers in the future."
-  },
-  {
-    "objectID": "posts/2025-03-28-khipu-2025/index.html#what-i-took-with-me",
-    "href": "posts/2025-03-28-khipu-2025/index.html#what-i-took-with-me",
-    "title": "Khipu 2025️ 🖥🎉️",
-    "section": "What I took with me",
-    "text": "What I took with me\nI learned a lot, met incredible people, drank way too much coffee and ate way too much sugar. But most of all, what stayed with me was the human dimension: the limitations of current technologies, and how people reflect critically on them and work to overcome them.\nWhat happens when you’re working with sensitive, private data that can’t be shared with large models on external platforms, and your institution has limited infrastructure and funding? Projects like the ones presented by Leonardo Lombardi (QuantIT), Aiala Rosá (Universidad de la República), Victor Mireless (UNAM) and Juan Reutter (PUC, Chile) on AI and Human Rights are a clear example.\nWhat if you need a model whose decisions are understandable and accountable—like in a medical setting, where both doctor and patient should be able to understand the logic behind a diagnosis? Talks like the one by René Vidal (University of Pennsylvania) on explainability touched on that.\nOther sessions explored critical topics such as bias and AI governance, highlighting the importance of fairness and transparency in model development and deployment. As part of the closing event, Catherine D’Ignazio (MIT) and Ivana Feldgeber (DataGenero) delivered a powerful session on gender equity and women in AI.\nBasically, a reminder that AI, like any technology, is not neutral. It reflects the values, priorities, and perspectives of those who build it. That’s why spaces like Khipu matter: to ensure Latin America is not just a consumer of AI, but also a key player in shaping its future.\nYou can watch most of the talks on Khipu’s youtube channel"
-  },
-  {
-    "objectID": "posts/2025-03-28-khipu-2025-ES/index.html",
-    "href": "posts/2025-03-28-khipu-2025-ES/index.html",
-    "title": "Asístí a Khipu 2025!🎉️",
+    "objectID": "talks.html",
+    "href": "talks.html",
+    "title": "Talks, Workshops, and Courses",
     "section": "",
-    "text": "A principios de este mes, tuve la oportunidad de asistir a Khipu, la conferencia de Inteligencia Artificial (IA) y Aprendizaje Automático más grande de América Latina.\nEste año fue la cuarta edición de Khipu y la primera en realizarse fuera de Uruguay. Tuvo lugar en Santiago de Chile, reuniendo a cientos de investigadores, profesionales y estudiantes de toda la región (y fuera de ella también).\nKhipu es mucho más que una conferencia: es un espacio para aprender, compartir y construir comunidad en torno a la IA en América Latina. El programa está cuidadosamente diseñado para ofrecer contenidos a una una audiencia muy variada. Las charlas siguen una estructura progresiva: las sesiones iniciales fueron más generales y accesibles, aunque rigurosas y siempre a cargo de personas expertas, y, a medida que fue avanzando la semana, los contenidos se volvieron más técnico y especializado.\nPor ejemplo, algunas de las charlas que más disfruté fueron Fundamentos de Machine Learning y Deep Learning I por Jorge Pérez, Fundamentos de ML y DL II por Alfredo Canziani, y Fundamentos de Procesamiento de Lenguaje Natural por Isabelle Augenstein. El segundo día, Petar Veličković dio una excelente presentación sobre Geometric Deep Learning. El jueves tuvimos sesiones paralelas sobre ciberseguridad, aprendizaje automático en economía, visión por computadora, IA y derechos humanos, entre otros temas.\nLa conferencia también ofreció tutoriales de distintos niveles de dificultad sobre temas como aprendizaje automático, procesamiento de lenguaje natural, ética en IA, entre otros. Los materiales estaban cuidadosamente preparados, incluyendo Jupyter notebooks bien documentadas que podías llevarte y seguir explorando por tu cuenta. También hubo sesiones de pósters, donde las y los asistentes podían presentar sus trabajos y recibir feedback en un ambiente amigable.\nUna de las cosas que más me llamó la atención fue el clima cálido y amigable. Es un excelente lugar para conocer personas que trabajan con IA en distintos sectores, explorar colaboraciones y sentirse parte de una comunidad latinoamericana en crecimiento."
-  },
-  {
-    "objectID": "posts/2025-03-28-khipu-2025-ES/index.html#estás-pensando-en-asistir-a-la-próxima-edición",
-    "href": "posts/2025-03-28-khipu-2025-ES/index.html#estás-pensando-en-asistir-a-la-próxima-edición",
-    "title": "Asístí a Khipu 2025!🎉️",
-    "section": "✍️ ¿Estás pensando en asistir a la próxima edición?",
-    "text": "✍️ ¿Estás pensando en asistir a la próxima edición?\nQuizás te estés preguntando cómo hacer para asistir a la próxima edición de Khipu. A diferencia de muchas conferencias, no se trata simplemente de registrarse y pagar una inscripción. En su lugar, se aplica contando tu trayectoria, motivación y qué esperás aportar o aprender. Si tu aplicación es aceptada, también podés solicitar apoyo económico para cubrir gastos de viaje y alojamiento. El objetivo es eliminar barreras económicas para que participar sea accesible para todes.\n¿Y qué hace que una aplicación sea buena? No lo sé con certeza—quizás debería haberle preguntado a alguien del comité organizador—pero pienso que se valora tu potencial para compartir lo que aprendas y actuar como multiplicador en tu comunidad. Si sos docente o participás en comunidades de práctica, eso probablemente sume, no dejes de mencionarlo. Si estás trabajando en proyectos que requieren IA y podrían beneficiarse de tu participación en la conferencia, da detalles al respecto, incluí enlaces a recursos o repositorios relevantes."
-  },
-  {
-    "objectID": "posts/2025-03-28-khipu-2025-ES/index.html#tengo-que-saber-inglés",
-    "href": "posts/2025-03-28-khipu-2025-ES/index.html#tengo-que-saber-inglés",
-    "title": "Asístí a Khipu 2025!🎉️",
-    "section": "🌐 ¿Tengo que saber inglés?",
-    "text": "🌐 ¿Tengo que saber inglés?\nUna limitación importante de Khipu es que todo es en inglés. Este año el equipo organizador incorporó subtítulos automáticos, lo cual definitiviamente ayuda si el inglés no es tu idioma nativo, pero todavía no es un evento que recomendaría a alguien sin conocimientos del idioma. Dicho esto, el equipo claramente es consciente de esta barrera. Khipu está pensado para Latinoamérica y hay un interés genuino en hacerlo más accesible para personas que no hablan inglés en el futuro."
-  },
-  {
-    "objectID": "posts/2025-03-28-khipu-2025-ES/index.html#lo-que-me-llevé",
-    "href": "posts/2025-03-28-khipu-2025-ES/index.html#lo-que-me-llevé",
-    "title": "Asístí a Khipu 2025!🎉️",
-    "section": "Lo que me llevé",
-    "text": "Lo que me llevé\nAprendí muchísimo, conocí gente muy interesante, tomé demasiado café y comí demasiada azúcar. Pero, sobre todo, lo que más me quedó fue la dimensión humana: las limitaciones de las tecnologías actuales, y cómo las personas reflexionan críticamente sobre ellas y trabajan para superarlas.\n¿Qué pasa cuando trabajás con datos sensibles y privados que no se pueden compartir con modelos grandes en plataformas externas, y tu institución tiene infraestructura y financiamiento limitados? Proyectos como los que presentaron Leonardo Lombardi (QuantIT), Aiala Rosá (Universidad de la República), Victor Mireless (UNAM) y Juan Reutter (PUC, Chile) sobre IA y Derechos Humanos son un claro ejemplo.\n¿Qué pasa si necesitás un modelo cuyas decisiones sean comprensibles/explicables? Por ejemplo, en el ámbito médico, donde tanto profesionales como pacientes deberían poder entender la lógica detrás de un diagnóstico? Charlas como la de René Vidal (Universidad de Pensilvania) sobre explicabilidad abordaron ese tema.\nOtras sesiones exploraron temas críticos como los sesgos y la gobernanza de la IA, destacando la importancia de la equidad y la transparencia en el desarrollo e implementación de modelos. Como parte del cierre, hubo una muy interesante sesión sobre equidad de género y mujeres en la IA a cargo de Catherine D’Ignazio (MIT) e Ivana Feldgeber (DataGenero).\nEn resumen, un recordatorio de que la IA, como cualquier tecnología, no es neutral. Refleja los valores, prioridades y perspectivas de quienes la desarrollan. Por eso son tan importantes espacios como Khipu: para asegurar que América Latina no sea solo consumidora de IA, sino también protagonista en dar forma a su futuro.\nPodés ver la mayoría de las charlas en el canal de YouTube de Khipu."
-  },
-  {
-    "objectID": "posts/2024-12-20-r-en-red/index.html",
-    "href": "posts/2024-12-20-r-en-red/index.html",
-    "title": "R en Red: ARcenso, Opportunities, and Community",
-    "section": "",
-    "text": "Last week, I had the privilege of co-organizing a talk as part of the Buenos Aires chapter of R-Ladies, in collaboration with R en Buenos Aires. Together with María Nanton and Betsy Cohen, we showcased some incredible events and working groups we’ve been part of that not only offer formative experiences but also encourage active participation and community-building.\nOur goal was to inspire members of our community to apply and get involved in initiatives that promote personal and professional growth—and help strengthen our collective network. Many attendees shared that they were unfamiliar with some of the conferences and events we presented or didn’t realize they could apply for financial support or travel grants to participate. This realization was empowering for many, as it helped them see these opportunities as something within their reach.\nThe diversity in the room was amazing—we connected with people working in areas like census data, health data, and academic research. There were attendees who were just starting their journey with R, as well as seasoned users eager to share their experiences. The feedback we received was overwhelmingly positive, and the enthusiasm in the room reinforced the importance of creating spaces like this.\n\nWe wrapped up the evening with an end-of-year toast and a networking session, which allowed us to continue building connections in a relaxed and celebratory atmosphere. 🍾\nIf you missed the talk, you can check out the slides here: Slides\n💜 Stay connected with the R-Ladies Buenos Aires network: 🐦 Twitter: @RLadiesBA 🌐 Website: https://rladiesba.netlify.app/\nLet’s continue growing together, discovering opportunities, and making the R community an even more inclusive and enriching space! 💪💜"
-  },
-  {
-    "objectID": "talks/snrd-2025/index.html",
-    "href": "talks/snrd-2025/index.html",
-    "title": "Políticas Relacionadas con Repositorios de Datos Científicos en Argentina",
-    "section": "",
-    "text": "La apertura de datos científicos es clave para una ciencia más transparente, colaborativa y reproducible. Permite validar resultados, evitar la duplicación de esfuerzos y potenciar nuevas investigaciones a partir de datos ya generados. Pero para que esto sea posible, no alcanza con la voluntad individual: hacen falta políticas públicas claras, sistemas robustos y un entorno que reconozca y valore estas prácticas.\nEn el primer WDS Webinar Series on International Repository-related Policies, organizado por el World Data System (WDS), compartí el caso argentino: la Ley 26.899, su implementación y el funcionamiento del Sistema Nacional de Repositorios Digitales. También presentaron Juan Sebastián González Sanabria (UPTC) y Fernando Piraquive Piraquive (Universidad Distrital FJC) sobre el contexto colombiano. El encuentro fue moderado por Bianca Amaro, presidenta de LA Referencia, una red fundamental para dar visibilidad a la producción científica en América Latina. Entre todo, tuvimos la oportunidad de hablar sobre cómo, a pesar de los marcos normativos, quienes investigan enfrentan múltiples barreras para implementar prácticas abiertas: falta de capacitación, infraestructura limitada, y sobre todo, sistemas de evaluación que siguen priorizando la publicación tradicional por sobre el compartir datos o resultados intermedios. Sin incentivos reales ni apoyo institucional, es difícil que la apertura se vuelva la norma.En este contexto, la construcción de una comunidad científica regional es fundamental. Una red que impulse la cooperación por sobre la competencia, y que fortalezca una ciencia abierta situada, que dialogue con las necesidades y potencialidades de nuestros territorios.\nSi te interesa conocer más al respecto, podés encontrar la grabación 👉aquí👈."
-  },
-  {
-    "objectID": "talks/ttt-2024/index.html",
-    "href": "talks/ttt-2024/index.html",
-    "title": "The Carpentries and MetaDocencia’s Instructor Training",
-    "section": "",
-    "text": "During 2024, I participated as a trainer in the context of Intructor Training with The Carpentries curriculum. Instructor Training familiarizes trainees with evidence-based teaching practices, helps them develop strategies for fostering a positive learning environment in workshops, and offers opportunities to practice and enhance their teaching skills.\nFind the materials in English here.\nFind the materials in Spanish here:\n\nDay 1\nDay 2\nDay 3\nDay 4"
-  },
-  {
-    "objectID": "talks/elife-2024/index.html",
-    "href": "talks/elife-2024/index.html",
-    "title": "Promoting Open Science in and from the Global South",
-    "section": "",
-    "text": "In this first webinar from eLife’s Global South Committee for Open Science, we explored the challenges faced in this region and shared our collective vision for enhancing Open Science infrastructure and promotion. I participated as a guest panellists together with Emmanuel Boakye and Hu Chuan-Peng.\nFind the recording here."
-  },
-  {
-    "objectID": "talks/how-to-teach-programing-2023/index.html",
-    "href": "talks/how-to-teach-programing-2023/index.html",
-    "title": "How to Teach Programming Online",
-    "section": "",
-    "text": "During this workshop, we introduce the participant to evidence-based strategies to teach programming online effectively.\nObjective: To introduce techniques and good practices to design your programming courses and evaluate students.\nDuring this online workshop:\n\nWe show you how to design programming courses in an efficient and productive way.\nWe talk about the utility of peer-review and the importance of feedback, and how to implement these practices.\nWe present different types of assessment. For example, fill-in the blanks, faded examples, etc.\nWe recap good programming practices and how to promote them among your students.\n\nMaterials can be found here:\n\nCourse overview\nSlides\nRecording"
-  },
-  {
-    "objectID": "talks/spss-a-r-2018/index.html",
-    "href": "talks/spss-a-r-2018/index.html",
-    "title": "From SPSS to R",
-    "section": "",
-    "text": "This is a 2 hour workshop for R-Ladies Buenos Aires planned for researcherd transitioning from SPSS to R.\nFind the recording here."
-  },
-  {
-    "objectID": "talks/code-for-all-2023/index.html",
-    "href": "talks/code-for-all-2023/index.html",
-    "title": "Mapping open-science communities, organizations & events in Latin America (Lightning Talk)",
-    "section": "",
-    "text": "The session showcases MetaDocencia’s initiative to make information available regarding resources, events, workshops, funding opportunities, and open science communities in Latin America through a collaborative repository. This repository will be available to anyone who wants to access resources on open science, get in touch with other regional and local actors in Latin America, or participate in the dissemination of open practices. This project was presented in Code for All’s 2023 Summit (september 18-21).\nFind the recording here."
-  },
-  {
-    "objectID": "talks/ciencia-datos-psico-2023/index.html",
-    "href": "talks/ciencia-datos-psico-2023/index.html",
-    "title": "Pre-Congress Workshop - “Data Science for Psychologist (with R and RStudio)”",
-    "section": "",
-    "text": "This was a pre-congress workshop taught during the 16th International Congress of Research and Professional Practice in Psychology held in the University of Buenos Aires. The objective was to introduce participants to the fundamental concepts and tools of data science applied to psychological research using R. It was tailored for researchers, practitioners, and students who wish to enhance their skills in data analysis and visualization within the field of psychology.\nFind the slides here."
+    "text": "Automating Report Publishing with Quarto and GitHub Actions — A LatinR 2025 Tutorial Recap\n\n\n\n\n\n\n\n\n\nDec 10, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nReadability Metrics for Spanish Texts - readabilityes (Lightning Talk)\n\n\n\n\n\n\n\n\n\nNov 11, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nPolíticas Relacionadas con Repositorios de Datos Científicos en Argentina\n\n\n\n\n\n\n\n\n\nApr 10, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to Quarto\n\n\n\n\n\n\n\n\n\nNov 26, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe Carpentries and MetaDocencia’s Instructor Training\n\n\n\n\n\n\n\n\n\nOct 1, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nALTa Ciencia Abierta (Latin America Transforms to Open Science)\n\n\n\n\n\n\n\n\n\nJun 20, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nInsights and Innovations in Virtual Training | DUTC/NASA TOPS Talks\n\n\n\n\n\n\n\n\n\nJun 4, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nNASA TOPS-T Reproducibly Analyzing Wildfire, Drought, and Flood Risk with NASA Earthdata Cloud\n\n\n\n\n\n\n\n\n\nMay 26, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nPromoting Open Science in and from the Global South\n\n\n\n\n\n\n\n\n\nMay 20, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nResponsible Research & Decolonisation from a Latin American Perspective\n\n\n\n\n\n\n\n\n\nApr 20, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to OpenSesame\n\n\n\n\n\n\n\n\n\nApr 20, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nA Path to Open, Inclusive, and Collaborative Science for Librarians\n\n\n\n\n\n\n\n\n\nFeb 8, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nA Shiny app for mapping open-science communities, organizations & events in Latin America (Lightning Talk)\n\n\n\n\n\n\n\n\n\nDec 11, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\nPre-Congress Workshop - “Data Science for Psychologist (with R and RStudio)”\n\n\n\n\n\n\n\n\n\nNov 20, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\nMapping open-science communities, organizations & events in Latin America (Lightning Talk)\n\n\n\n\n\n\n\n\n\nAug 20, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\nCommunities of practice in Latin America and their influence on the dissemination of open science\n\n\n\n\n\n\n\n\n\nApr 28, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow to Teach Programming Online\n\n\n\n\n\n\n\n\n\nApr 20, 2023\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to R\n\n\n\n\n\n\n\n\n\nAug 4, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\nDplyr workshop\n\n\n\n\n\n\n\n\n\nApr 20, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\nFrom SPSS to R\n\n\n\n\n\n\n\n\n\nApr 30, 2018\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "talks/csv-conf-2023/index.html",
@@ -189,39 +245,18 @@
     "text": "In this talk, which was presented in the csv,conf 2023, we analize what is the role of communities of practice in the dissemination and implementation of open science practices in general, and specifically, in the Latin American region. To this end, we conducted an exploratory analysis of the evolution of the use of the terms “open science” and “open science” over time from 2012 to the present. Where information was available, the representation of each region was studied. Finally, a social network analysis was performed to identify influential users and clusters of users and then the association of these with communities of practice was studied.\nThe recording is available here.\nMore information can be found in this blogpost."
   },
   {
-    "objectID": "talks/quarto-rladiesba-2024/index.html",
-    "href": "talks/quarto-rladiesba-2024/index.html",
-    "title": "Introduction to Quarto",
-    "section": "",
-    "text": "The R-Ladies Buenos Aires workshop Transform Your Data into Visual Stories with Quarto presents an introduction to Quarto, an open-source publishing system designed to create dynamic and reproducible scientific and technical documents. It explores practical examples of its use in reproducible reports, covering topics such as integrating code and text, customizing output formats, and using parameters to create parameterized reports. This introductory workshop is aimed at individuals with a basic knowledge of R and little to no previous experience with Quarto.\nLearning Objectives:\n\nGet familiar with Quarto as a dynamic and reproducible publishing tool that expands the capabilities of RMarkdown.\nIdentify the possibilities it offers for creating scientific and technical documents, such as reports, presentations, and websites.\nLearn how to combine explanatory text with executable code to generate reports that automatically update results.\nUnderstand how to use parameters in Quarto to efficiently create different versions of the same document.\n\nFind recording and materials here."
-  },
-  {
-    "objectID": "talks/latinr-2023/index.html",
-    "href": "talks/latinr-2023/index.html",
-    "title": "A Shiny app for mapping open-science communities, organizations & events in Latin America (Lightning Talk)",
-    "section": "",
-    "text": "The presentation “A Shiny App for Mapping Open-Science Communities, Organizations & Events in Latin America” highlighted the challenges of limited resources and spaces in Spanish for open science in Latin America, as well as the difficulty of identifying active communities and networks practicing open science in the region.\nIt emphasized the lack of a centralized, up-to-date repository to facilitate access to key information about resources, events, and communities, which hinders collaboration and knowledge exchange.\nAs a solution, the presentation proposed the development of a collaborative repository accessible through a Shiny application. This repository aims to centralize and map open science resources and communities in the region, enabling users to connect with local and regional initiatives, access resources, and actively participate in promoting open science practices.\nThe app is envisioned as not only a useful tool for researchers and organizations but also a bridge to foster collaboration and visibility for open science across Latin America.\nAn initial version can be found here.\nYou can find the presentation slides here."
-  },
-  {
-    "objectID": "talks/ucla-2023/index.html",
-    "href": "talks/ucla-2023/index.html",
-    "title": "A Path to Open, Inclusive, and Collaborative Science for Librarians",
-    "section": "",
-    "text": "In 2023, Irene and I received an award to participate in the UCLA-IMLS Open Science for Librarians Collaborative Lesson Development Workshop, a project sponsored by The Carpentries. This opportunity provided us with specialized training to develop our proposed lesson, “A Path to Open, Inclusive, and Collaborative Science for Librarians”.\nDuring the workshop, we gained insights into lesson design and community-driven curriculum development. The program emphasized inclusivity and collaboration. As a result of this workshop, we’ve been working on the lesson, which is now available in a Pre-Alpha state. You can check out the progress:\n\nGitHub Repository.\nLesson Website."
-  },
-  {
-    "objectID": "talks/opensesame-2024/index.html",
-    "href": "talks/opensesame-2024/index.html",
-    "title": "Introduction to OpenSesame",
-    "section": "",
-    "text": "This presentation was an introductory workshop on OpenSesame designed for researchers in Cognitive Psychology and Education. OpenSesame is open-source software created to design experiments and research tasks.\nDuring the workshop, we explored:\n\nThe interface and basic features of OpenSesame.\nHow to configure the structure of an experimental task.\nStimulus presentation to participants.\nResponse collection and data recording.\n\nYou can find the slides here."
-  },
-  {
     "objectID": "talks/dplyr-rladiesba-2020/index.html",
     "href": "talks/dplyr-rladiesba-2020/index.html",
     "title": "Dplyr workshop",
     "section": "",
     "text": "This is a 2 hour workshop for R-Ladies Buenos Aires about manipulation of tabular data with dplyr. This is one of the core packages of the tidyverse, a collection of R packages designed for data science. It provides a set of functions that make it easier to filter, arrange, summarize, and transform data. Together with the pipe operator (%&gt;%), they allows users to chain operations together in a clear and concise way.\nFind the recording and materials here."
+  },
+  {
+    "objectID": "talks/ttt-2024/index.html",
+    "href": "talks/ttt-2024/index.html",
+    "title": "The Carpentries and MetaDocencia’s Instructor Training",
+    "section": "",
+    "text": "During 2024, I participated as a trainer in the context of Intructor Training with The Carpentries curriculum. Instructor Training familiarizes trainees with evidence-based teaching practices, helps them develop strategies for fostering a positive learning environment in workshops, and offers opportunities to practice and enhance their teaching skills.\nFind the materials in English here.\nFind the materials in Spanish here:\n\nDay 1\nDay 2\nDay 3\nDay 4"
   },
   {
     "objectID": "talks/nasa-2i2c-2024/index.html",
@@ -231,25 +266,53 @@
     "text": "I am part of the development team for ScienceCore: Climate Risk, a learning module under NASA’s Transform to Open Science (TOPS) initiative. This project aims to teach participants how to identify, analyze, visualize, and report on climate data available through the NASA Earthdata Cloud to assess risks related to wildfires, droughts, and floods in the context of climate change.\nIn collaboration with MetaDocencia and 2i2c, we are creating open, reproducible, and accessible materials in both English and Spanish. The module leverages open-source tools to promote open science practices and cloud-based intensive computing. It empowers learners to analyze regional and global environmental risks using open science-based, reproducible workflows.\nThe materials can be found in this GitHub repository and this Jupyter book."
   },
   {
-    "objectID": "talks/quest-2024/index.html",
-    "href": "talks/quest-2024/index.html",
-    "title": "Responsible Research & Decolonisation from a Latin American Perspective",
+    "objectID": "talks/latinr-2023/index.html",
+    "href": "talks/latinr-2023/index.html",
+    "title": "A Shiny app for mapping open-science communities, organizations & events in Latin America (Lightning Talk)",
     "section": "",
-    "text": "As part of MetaDocencia, I was part of the organizing committee for the Summer School/Alumni Seminar: Decolonizing Global Health with a focus on Biomedical Sciences, Research and Education that took place in the Quest Center of the Berlin Institute of Health and Charité, where I also participated as a Lecturer talking about responsible research & decolonisation from a Latin American perspective, together with Laura Ación, Laura Ascenzi, and Karina formoso.\nYou can find the slides here. Additional information can be found in this blogpost."
+    "text": "The presentation “A Shiny App for Mapping Open-Science Communities, Organizations & Events in Latin America” highlighted the challenges of limited resources and spaces in Spanish for open science in Latin America, as well as the difficulty of identifying active communities and networks practicing open science in the region.\nIt emphasized the lack of a centralized, up-to-date repository to facilitate access to key information about resources, events, and communities, which hinders collaboration and knowledge exchange.\nAs a solution, the presentation proposed the development of a collaborative repository accessible through a Shiny application. This repository aims to centralize and map open science resources and communities in the region, enabling users to connect with local and regional initiatives, access resources, and actively participate in promoting open science practices.\nThe app is envisioned as not only a useful tool for researchers and organizations but also a bridge to foster collaboration and visibility for open science across Latin America.\nAn initial version can be found here.\nYou can find the presentation slides here."
   },
   {
-    "objectID": "talks/dont-use-this-code-2024/index.html",
-    "href": "talks/dont-use-this-code-2024/index.html",
-    "title": "Insights and Innovations in Virtual Training | DUTC/NASA TOPS Talks",
+    "objectID": "talks/how-to-teach-programing-2023/index.html",
+    "href": "talks/how-to-teach-programing-2023/index.html",
+    "title": "How to Teach Programming Online",
     "section": "",
-    "text": "During this community event organized by Don’t Use This Code in the context of the NASA TOPS inciative, I participated of a round-table discussion regarding innovations in virtual tranings with Brian Knosp, Scientific Applications Software Engineer at NASA’s Jet Propulsion Laboratory, Kenji Nomura, High School STEM teacher currently serving as an Albert Einstein Distinguished Educator fellow at NASA in the Science Activation (SciAct) program, and James Powel from Don’t Use This Code.\nFind the recording here."
+    "text": "During this workshop, we introduce the participant to evidence-based strategies to teach programming online effectively.\nObjective: To introduce techniques and good practices to design your programming courses and evaluate students.\nDuring this online workshop:\n\nWe show you how to design programming courses in an efficient and productive way.\nWe talk about the utility of peer-review and the importance of feedback, and how to implement these practices.\nWe present different types of assessment. For example, fill-in the blanks, faded examples, etc.\nWe recap good programming practices and how to promote them among your students.\n\nMaterials can be found here:\n\nCourse overview\nSlides\nRecording"
   },
   {
-    "objectID": "talks/alta-ca-2024/index.html",
-    "href": "talks/alta-ca-2024/index.html",
-    "title": "ALTa Ciencia Abierta (Latin America Transforms to Open Science)",
+    "objectID": "talks/quarto-GHA-2025/index.html",
+    "href": "talks/quarto-GHA-2025/index.html",
+    "title": "Automating Report Publishing with Quarto and GitHub Actions — A LatinR 2025 Tutorial Recap",
     "section": "",
-    "text": "The ALTa Ciencia Abierta course is designed to provide a comprehensive introduction to open science practices, focusing on key topics like reproducible research, open data, and collaborative workflows, for Spanish-speaking communities. It aims to equip researchers with the tools and knowledge to make their work more transparent, accessible, and reproducible.\nDuring 2024, I had the pleasure of teaching the module on open code in the three editions of the course, alongside Patricia Loto. In this module, we explored best practices for sharing and collaborating on code, ensuring that research processes remain open, reproducible, and easy for others to follow.\nThis course is part of a broader initiative supported by NASA - NASA TOPS - which promotes open science and collaboration across the global research community. MetaDocencia’s participation in this initiative is a significant step towards fostering a more inclusive and transparent scientific community, ensuring that research is accessible and reproducible for everyone, regardless of location or resources.\n\nLink to the website\nLink to the Open Code module"
+    "text": "At LatinR 2025, María Nanton and I ran a 3-hour hands-on tutorial on automating the publication of data dashboards using Quarto and GitHub Actions."
+  },
+  {
+    "objectID": "talks/quarto-GHA-2025/index.html#the-problem-we-set-out-to-solve",
+    "href": "talks/quarto-GHA-2025/index.html#the-problem-we-set-out-to-solve",
+    "title": "Automating Report Publishing with Quarto and GitHub Actions — A LatinR 2025 Tutorial Recap",
+    "section": "The problem we set out to solve",
+    "text": "The problem we set out to solve\nWe’ve all been there: manually re-running a script, re-rendering a report, and uploading it somewhere every time new data comes in. The goal of this tutorial was to show that this whole process can be automated, so that reports stay up to date without lifting a finger after the initial setup."
+  },
+  {
+    "objectID": "talks/quarto-GHA-2025/index.html#how-it-went",
+    "href": "talks/quarto-GHA-2025/index.html#how-it-went",
+    "title": "Automating Report Publishing with Quarto and GitHub Actions — A LatinR 2025 Tutorial Recap",
+    "section": "How it went",
+    "text": "How it went\nThe tutorial was aimed at R and Quarto users with basic Git/GitHub familiarity but no prior experience with GitHub Actions. We started by introducing key concepts (CI/CD, virtual machines, renv, and GitHub Pages) before writing a single line of code.\nFrom there, we moved into guided practice. Our starting point was a Google Form feeding responses into a public Google Sheet, with a Quarto dashboard already reading from it. Step by step, participants wired everything together using GitHub Actions: first triggering the workflow manually, then on every push, and finally on a schedule.\nBy the end of the session, everyone had written a YAML workflow file from scratch, published their dashboard to GitHub Pages, and set it up to run automatically using cron syntax.\nSharing this with the LatinR community was a wonderful experience. Participants were engaged and curious throughout, asking sharp questions at every stage. The feedback was overwhelmingly positive — the main ask being more time to keep exploring. Exactly the kind of response that makes you want to run it again!\nYou can find the materials and session recording below:\n📁 Tutorial materials 🎥 Session recording"
+  },
+  {
+    "objectID": "talks/elife-2024/index.html",
+    "href": "talks/elife-2024/index.html",
+    "title": "Promoting Open Science in and from the Global South",
+    "section": "",
+    "text": "In this first webinar from eLife’s Global South Committee for Open Science, we explored the challenges faced in this region and shared our collective vision for enhancing Open Science infrastructure and promotion. I participated as a guest panellists together with Emmanuel Boakye and Hu Chuan-Peng.\nFind the recording here."
+  },
+  {
+    "objectID": "talks/snrd-2025/index.html",
+    "href": "talks/snrd-2025/index.html",
+    "title": "Políticas Relacionadas con Repositorios de Datos Científicos en Argentina",
+    "section": "",
+    "text": "La apertura de datos científicos es clave para una ciencia más transparente, colaborativa y reproducible. Permite validar resultados, evitar la duplicación de esfuerzos y potenciar nuevas investigaciones a partir de datos ya generados. Pero para que esto sea posible, no alcanza con la voluntad individual: hacen falta políticas públicas claras, sistemas robustos y un entorno que reconozca y valore estas prácticas.\nEn el primer WDS Webinar Series on International Repository-related Policies, organizado por el World Data System (WDS), compartí el caso argentino: la Ley 26.899, su implementación y el funcionamiento del Sistema Nacional de Repositorios Digitales. También presentaron Juan Sebastián González Sanabria (UPTC) y Fernando Piraquive Piraquive (Universidad Distrital FJC) sobre el contexto colombiano. El encuentro fue moderado por Bianca Amaro, presidenta de LA Referencia, una red fundamental para dar visibilidad a la producción científica en América Latina. Entre todo, tuvimos la oportunidad de hablar sobre cómo, a pesar de los marcos normativos, quienes investigan enfrentan múltiples barreras para implementar prácticas abiertas: falta de capacitación, infraestructura limitada, y sobre todo, sistemas de evaluación que siguen priorizando la publicación tradicional por sobre el compartir datos o resultados intermedios. Sin incentivos reales ni apoyo institucional, es difícil que la apertura se vuelva la norma.En este contexto, la construcción de una comunidad científica regional es fundamental. Una red que impulse la cooperación por sobre la competencia, y que fortalezca una ciencia abierta situada, que dialogue con las necesidades y potencialidades de nuestros territorios.\nSi te interesa conocer más al respecto, podés encontrar la grabación 👉aquí👈."
   },
   {
     "objectID": "posts/2024-09-18-posit-conf-2024/index.html",
@@ -320,19 +383,5 @@
     "title": "What I learned at NumFocus DISC Unconf 2023",
     "section": "Why You Should Attend the DISC Unconf",
     "text": "Why You Should Attend the DISC Unconf\nIf you are part of a group that is underrepresented in open-source or scientific computing communities, I highly recommend attending a DISC Unconf. It’s a unique opportunity to connect with like-minded individuals, contribute to impactful projects, and ensure your voice is part of the conversation. Beyond networking, it’s a chance to help shape the future of open practices in a way that benefits everyone."
-  },
-  {
-    "objectID": "talks.html",
-    "href": "talks.html",
-    "title": "Talks, Workshops, and Courses",
-    "section": "",
-    "text": "Políticas Relacionadas con Repositorios de Datos Científicos en Argentina\n\n\n\n\n\n\n\n\n\nApr 10, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to Quarto\n\n\n\n\n\n\n\n\n\nNov 26, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe Carpentries and MetaDocencia’s Instructor Training\n\n\n\n\n\n\n\n\n\nOct 1, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nALTa Ciencia Abierta (Latin America Transforms to Open Science)\n\n\n\n\n\n\n\n\n\nJun 20, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nInsights and Innovations in Virtual Training | DUTC/NASA TOPS Talks\n\n\n\n\n\n\n\n\n\nJun 4, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nNASA TOPS-T Reproducibly Analyzing Wildfire, Drought, and Flood Risk with NASA Earthdata Cloud\n\n\n\n\n\n\n\n\n\nMay 26, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nPromoting Open Science in and from the Global South\n\n\n\n\n\n\n\n\n\nMay 20, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to OpenSesame\n\n\n\n\n\n\n\n\n\nApr 20, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nResponsible Research & Decolonisation from a Latin American Perspective\n\n\n\n\n\n\n\n\n\nApr 20, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nA Path to Open, Inclusive, and Collaborative Science for Librarians\n\n\n\n\n\n\n\n\n\nFeb 8, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nA Shiny app for mapping open-science communities, organizations & events in Latin America (Lightning Talk)\n\n\n\n\n\n\n\n\n\nDec 11, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\nPre-Congress Workshop - “Data Science for Psychologist (with R and RStudio)”\n\n\n\n\n\n\n\n\n\nNov 20, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\nMapping open-science communities, organizations & events in Latin America (Lightning Talk)\n\n\n\n\n\n\n\n\n\nAug 20, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\nCommunities of practice in Latin America and their influence on the dissemination of open science\n\n\n\n\n\n\n\n\n\nApr 28, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow to Teach Programming Online\n\n\n\n\n\n\n\n\n\nApr 20, 2023\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to R\n\n\n\n\n\n\n\n\n\nAug 4, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\nDplyr workshop\n\n\n\n\n\n\n\n\n\nApr 20, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\nFrom SPSS to R\n\n\n\n\n\n\n\n\n\nApr 30, 2018\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Jesica Formoso",
-    "section": "",
-    "text": "Hi everyone, I’m Jesica! I’m a Data Scientist, a Tenured Researcher at the National Scientific and Technical Research Council (CONICET) in Argentina, and the Impact Measurement Coordinator at MetaDocencia, an organization that aims to promote Open Science in Latin America. Since 2019, I have been teaching and developing curricula for courses in statistics, programming, data science, and data visualization at the University of Buenos Aires (UBA), National Agricultural Technology Institute (INTA), and the University Institute of the Italian Hospital of Buenos Aires. I also serve as an advisor for research projects within Doctoral and Masters graduate programs in Psychology, Neuropsychology and Neuroscience at the University of Buenos Aires, the Latin American Faculty of Social Sciences (FLACSO), and the National University of Flores (UFLO), among others.As an organizer of R-Ladies Buenos Aires I work to foster diversity and inclusion in the tech and data science communities."
   }
 ]
