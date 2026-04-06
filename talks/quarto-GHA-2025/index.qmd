@@ -1,0 +1,28 @@
+---
+authors: [Jesica Formoso, María Nanton]
+date: "2025-12-10"
+title: Automating Report Publishing with Quarto and GitHub Actions — A LatinR 2025 Tutorial Recap
+image: rladies1.png
+---
+
+
+At LatinR 2025, María Nanton and I ran a 3-hour hands-on tutorial on automating the publication of data dashboards using Quarto and GitHub Actions.
+
+## The problem we set out to solve
+
+We've all been there: manually re-running a script, re-rendering a report, and uploading it somewhere every time new data comes in. The goal of this tutorial was to show that this whole process can be automated, so that reports stay up to date without lifting a finger after the initial setup.
+
+## How it went
+
+The tutorial was aimed at R and Quarto users with basic Git/GitHub familiarity but no prior experience with GitHub Actions. We started by introducing key concepts (CI/CD, virtual machines, renv, and GitHub Pages) before writing a single line of code.
+
+From there, we moved into guided practice. Our starting point was a Google Form feeding responses into a public Google Sheet, with a Quarto dashboard already reading from it. Step by step, participants wired everything together using GitHub Actions: first triggering the workflow manually, then on every push, and finally on a schedule.
+
+By the end of the session, everyone had written a YAML workflow file from scratch, published their dashboard to GitHub Pages, and set it up to run automatically using cron syntax.
+
+Sharing this with the LatinR community was a wonderful experience. Participants were engaged and curious throughout, asking sharp questions at every stage. The feedback was overwhelmingly positive — the main ask being more time to keep exploring. Exactly the kind of response that makes you want to run it again!
+
+You can find the materials and session recording below:
+
+📁 [Tutorial materials](https://jformoso.github.io/quarto-GHA/)
+🎥 [Session recording](https://youtu.be/Sh1parb4lWk?si=E4JiGSrUhmpHCHV8)

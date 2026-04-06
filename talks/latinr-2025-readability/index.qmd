@@ -1,0 +1,36 @@
+---
+authors: [Jesica Formoso, Sofía Ortiz, Brenda Gomez Muiño, Juan Pablo Barreyro]
+date: "2025-11-11"
+title: Readability Metrics for Spanish Texts: readabilityes (Lightning Talk)
+image: latinr.jpg
+---
+
+We are a team from the Centro Interdisciplinario de Investigaciones en Psicología Matemática y Experimental (CIIPME–CONICET) and at [**LatinR2025**](https://latin-r.com/) we presented _readabilityes_, an R package we are currently working on which focuses on the computation of readability metrics for Spanish texts.
+
+## What is readability?
+
+In simple terms, readability is about how easy a text is to understand. It is a property of a text that indicates how quickly and comfortably can read and process what is written.
+
+## Why does readability matter?
+
+Readability metrics are useful when you want your text to reach people. They help evaluate and adapt content so it is accessible to readers with different levels of education and reading skills. 
+
+This makes them especially valuable in areas such as education, medicine and public health, legal and administrative communications, scientific communication and outreach.
+
+
+## About readabilityes
+
+Spanish comes with its own quirks. Its phonology and spelling rules make automatic syllabification harder than it might seem, and that’s a key step for many readability formulas.
+On top of that, there aren’t many open, easy-to-use tools in R that handle this.
+
+Our goal is to build a tool that is both practical and reproducible,  making readability analysis in Spanish easier to run and easier to share.
+
+Some of the things we’re aiming for:
+
+- Rule-based syllabification designed specifically for Spanish
+- No external dependencies or downloadable models
+- Smooth integration with the tidyverse ecosystem
+
+The project is still evolving, and one of the next steps is adding support for Catalan.
+
+You can check out the presentation  [slides](https://jformoso.github.io/latinr2025-readabilityes/#/title-slide) and [video](https://www.youtube.com/watch?v=w_aJYPCrAQY), as well as the [repository](https://github.com/JFormoso/readabilityes) for the preliminary version of the package following these links. 
