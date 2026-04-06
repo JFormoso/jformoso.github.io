@@ -1,7 +1,7 @@
 ---
 authors: [Jesica Formoso, Sofía Ortiz, Brenda Gomez Muiño, Juan Pablo Barreyro]
 date: "2025-11-11"
-title: Readability Metrics for Spanish Texts: readabilityes (Lightning Talk)
+title: Readability Metrics for Spanish Texts  - readabilityes (Lightning Talk)
 image: latinr.jpg
 ---
 
