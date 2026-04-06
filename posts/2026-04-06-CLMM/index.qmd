@@ -237,6 +237,7 @@ modelo_final <- m3
 
 # Coeficientes en escala log-odds
 summary(modelo_final)
+cf <- summary(modelo_final)$coefficients
 
 # Intervalos de confianza en log-odds
 ci <- confint(modelo_final)
