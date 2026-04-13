@@ -53,7 +53,7 @@ library(emmeans)
 
 Un **modelo de enlace acumulativo** (*CLM*) modela la probabilidad acumulada de estar *en o por debajo de* una categoría ordinal dada. En lugar de predecir un valor numérico, predice qué tan probable es que una respuesta caiga en las categorías más bajas o más altas de la escala.
 
-Para entender la idea, pensemos en un ejemplo concreto. Supongamos que le preguntamos a un grupo de estudiantes cómo se sienten antes de rendir un examen: *tranquilo*, *algo nervioso*, o *muy nervioso*. Antes de un taller de técnicas de estudio, casi todos caen en las dos últimas categorías. Después de participar del taller, muchos se mueven hacia *tranquilo* o *algo nervioso*. Un modelo lineal te diría algo como "el promedio bajó 0.4 puntos", lo cual no es muy informativo cuando nuestra escala tiene tres categorías y no sabemos bien qué significa "medio nervioso". El CLM, en cambio, nos permite responder las preguntas ¿aumentaron las chances de estar en una categoría más tranquila después del taller? Si el resultado es significativo y el el tamaño del efecto (odds ratio) es, digamos, 3.2, podemos decir que tras el taller las chances de reportar menor nerviosismo fueron tres veces más altas que antes. 
+Para entender la idea, pensemos en un ejemplo concreto. Supongamos que le preguntamos a un grupo de estudiantes cómo se sienten antes de rendir un examen: *tranquilo*, *algo nervioso*, o *muy nervioso*. Antes de un taller de técnicas de estudio, casi todos caen en las dos últimas categorías. Después de participar del taller, muchos se mueven hacia *tranquilo* o *algo nervioso*. Un modelo lineal te diría algo como "el promedio bajó 0.4 puntos", lo cual no es muy informativo cuando nuestra escala tiene tres categorías y no sabemos bien qué significa "medio nervioso". El CLM, en cambio, nos permite responder la pregunta ¿aumentaron las chances de estar en una categoría más tranquila después del taller? Si el resultado es significativo y el tamaño del efecto (odds ratio) es, digamos, 3.2, podemos decir que tras el taller las chances de reportar menor nerviosismo fueron tres veces más altas que antes. 
 
 
 Para una variable con *K* categorías, el modelo estima *K–1* umbrales (*thresholds*), uno por cada punto de corte de la escala, y el efecto de los predictores sobre esas probabilidades. La forma general es:
@@ -61,8 +61,11 @@ Para una variable con *K* categorías, el modelo estima *K–1* umbrales (*thres
 $$\text{logit}[P(Y \leq k)] = \theta_k - \mathbf{x}^\top \boldsymbol{\beta}$$
 
 Donde:
+
 - $\theta_k$ son los umbrales entre categorías (un intercepto por cada corte)
+
 - $\boldsymbol{\beta}$ son los coeficientes de los predictores
+
 - El signo negativo hace que valores más altos del predictor se asocien con categorías más altas de la respuesta
 
 El supuesto central del modelo es el de **proporcionalidad de los odds**: el efecto del predictor es el mismo a través de todos los puntos de corte de la escala. Dicho de otro modo, el predictor "desplaza" la distribución de respuestas de manera uniforme, sin importar en qué par de categorías estemos mirando. Es un supuesto razonable en muchos contextos, pero vale la pena verificarlo, y lo vamos a hacer más adelante.
