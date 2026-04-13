@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.36">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -77,10 +77,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-be3771519f21acc1c5b6733774c6dcd8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-4897d45d2f75ed4f519693be625836c5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -293,10 +293,15 @@ window.Quarto = {
 <section id="qué-es-un-clmm" class="level2">
 <h2 class="anchored" data-anchor-id="qué-es-un-clmm">1. ¿Qué es un CLMM?</h2>
 <p>Un <strong>modelo de enlace acumulativo</strong> (<em>CLM</em>) modela la probabilidad acumulada de estar <em>en o por debajo de</em> una categoría ordinal dada. En lugar de predecir un valor numérico, predice qué tan probable es que una respuesta caiga en las categorías más bajas o más altas de la escala.</p>
-<p>Para entender la idea, pensemos en un ejemplo concreto. Supongamos que le preguntamos a un grupo de estudiantes cómo se sienten antes de rendir un examen: <em>tranquilo</em>, <em>algo nervioso</em>, o <em>muy nervioso</em>. Antes de un taller de técnicas de estudio, casi todos caen en las dos últimas categorías. Después de participar del taller, muchos se mueven hacia <em>tranquilo</em> o <em>algo nervioso</em>. Un modelo lineal te diría algo como “el promedio bajó 0.4 puntos”, lo cual no es muy informativo cuando nuestra escala tiene tres categorías y no sabemos bien qué significa “medio nervioso”. El CLM, en cambio, nos permite responder las preguntas ¿aumentaron las chances de estar en una categoría más tranquila después del taller? Si el resultado es significativo y el el tamaño del efecto (odds ratio) es, digamos, 3.2, podemos decir que tras el taller las chances de reportar menor nerviosismo fueron tres veces más altas que antes.</p>
+<p>Para entender la idea, pensemos en un ejemplo concreto. Supongamos que le preguntamos a un grupo de estudiantes cómo se sienten antes de rendir un examen: <em>tranquilo</em>, <em>algo nervioso</em>, o <em>muy nervioso</em>. Antes de un taller de técnicas de estudio, casi todos caen en las dos últimas categorías. Después de participar del taller, muchos se mueven hacia <em>tranquilo</em> o <em>algo nervioso</em>. Un modelo lineal te diría algo como “el promedio bajó 0.4 puntos”, lo cual no es muy informativo cuando nuestra escala tiene tres categorías y no sabemos bien qué significa “medio nervioso”. El CLM, en cambio, nos permite responder la pregunta ¿aumentaron las chances de estar en una categoría más tranquila después del taller? Si el resultado es significativo y el tamaño del efecto (odds ratio) es, digamos, 3.2, podemos decir que tras el taller las chances de reportar menor nerviosismo fueron tres veces más altas que antes.</p>
 <p>Para una variable con <em>K</em> categorías, el modelo estima <em>K–1</em> umbrales (<em>thresholds</em>), uno por cada punto de corte de la escala, y el efecto de los predictores sobre esas probabilidades. La forma general es:</p>
 <p><span class="math display">\[\text{logit}[P(Y \leq k)] = \theta_k - \mathbf{x}^\top \boldsymbol{\beta}\]</span></p>
-<p>Donde: - <span class="math inline">\(\theta_k\)</span> son los umbrales entre categorías (un intercepto por cada corte) - <span class="math inline">\(\boldsymbol{\beta}\)</span> son los coeficientes de los predictores - El signo negativo hace que valores más altos del predictor se asocien con categorías más altas de la respuesta</p>
+<p>Donde:</p>
+<ul>
+<li><p><span class="math inline">\(\theta_k\)</span> son los umbrales entre categorías (un intercepto por cada corte)</p></li>
+<li><p><span class="math inline">\(\boldsymbol{\beta}\)</span> son los coeficientes de los predictores</p></li>
+<li><p>El signo negativo hace que valores más altos del predictor se asocien con categorías más altas de la respuesta</p></li>
+</ul>
 <p>El supuesto central del modelo es el de <strong>proporcionalidad de los odds</strong>: el efecto del predictor es el mismo a través de todos los puntos de corte de la escala. Dicho de otro modo, el predictor “desplaza” la distribución de respuestas de manera uniforme, sin importar en qué par de categorías estemos mirando. Es un supuesto razonable en muchos contextos, pero vale la pena verificarlo, y lo vamos a hacer más adelante.</p>
 <p>La versión <strong>mixta</strong> del CLM, <strong>CLMM</strong>, simplemente agrega un <strong>intercepto aleatorio por participante</strong>. Esto es necesario cuando cada persona responde múltiples ítems o en múltiples momentos (por ejemplo, pre y post test). Sin ese componente aleatorio, estaríamos ignorando que las respuestas de una misma persona no son independientes entre sí.</p>
 <hr>
