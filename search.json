@@ -1,10 +1,395 @@
 [
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Jesica Formoso",
+    "section": "",
+    "text": "Hi everyone, I’m Jesica! I’m a Data Scientist, a Tenured Researcher at the National Scientific and Technical Research Council (CONICET) in Argentina, and the Impact Measurement Coordinator at MetaDocencia, an organization that aims to promote Open Science in Latin America. Since 2019, I have been teaching and developing curricula for courses in statistics, programming, data science, and data visualization at the University of Buenos Aires (UBA), National Agricultural Technology Institute (INTA), and the University Institute of the Italian Hospital of Buenos Aires. I also serve as an advisor for research projects within Doctoral and Masters graduate programs in Psychology, Neuropsychology and Neuroscience at the University of Buenos Aires, the Latin American Faculty of Social Sciences (FLACSO), and the National University of Flores (UFLO), among others.As an organizer of R-Ladies Buenos Aires I work to foster diversity and inclusion in the tech and data science communities."
+  },
+  {
     "objectID": "talks.html",
     "href": "talks.html",
     "title": "Talks, Workshops, and Courses",
     "section": "",
-    "text": "Automating Report Publishing with Quarto and GitHub Actions — A LatinR 2025 Tutorial Recap\n\n\n\n\n\n\n\n\n\nDec 10, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nReadability Metrics for Spanish Texts - readabilityes (Lightning Talk)\n\n\n\n\n\n\n\n\n\nNov 11, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nPolíticas Relacionadas con Repositorios de Datos Científicos en Argentina\n\n\n\n\n\n\n\n\n\nApr 10, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to Quarto\n\n\n\n\n\n\n\n\n\nNov 26, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe Carpentries and MetaDocencia’s Instructor Training\n\n\n\n\n\n\n\n\n\nOct 1, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nALTa Ciencia Abierta (Latin America Transforms to Open Science)\n\n\n\n\n\n\n\n\n\nJun 20, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nInsights and Innovations in Virtual Training | DUTC/NASA TOPS Talks\n\n\n\n\n\n\n\n\n\nJun 4, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nNASA TOPS-T Reproducibly Analyzing Wildfire, Drought, and Flood Risk with NASA Earthdata Cloud\n\n\n\n\n\n\n\n\n\nMay 26, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nPromoting Open Science in and from the Global South\n\n\n\n\n\n\n\n\n\nMay 20, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nResponsible Research & Decolonisation from a Latin American Perspective\n\n\n\n\n\n\n\n\n\nApr 20, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to OpenSesame\n\n\n\n\n\n\n\n\n\nApr 20, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nA Path to Open, Inclusive, and Collaborative Science for Librarians\n\n\n\n\n\n\n\n\n\nFeb 8, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nA Shiny app for mapping open-science communities, organizations & events in Latin America (Lightning Talk)\n\n\n\n\n\n\n\n\n\nDec 11, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\nPre-Congress Workshop - “Data Science for Psychologist (with R and RStudio)”\n\n\n\n\n\n\n\n\n\nNov 20, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\nMapping open-science communities, organizations & events in Latin America (Lightning Talk)\n\n\n\n\n\n\n\n\n\nAug 20, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\nCommunities of practice in Latin America and their influence on the dissemination of open science\n\n\n\n\n\n\n\n\n\nApr 28, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow to Teach Programming Online\n\n\n\n\n\n\n\n\n\nApr 20, 2023\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to R\n\n\n\n\n\n\n\n\n\nAug 4, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\nDplyr workshop\n\n\n\n\n\n\n\n\n\nApr 20, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\nFrom SPSS to R\n\n\n\n\n\n\n\n\n\nApr 30, 2018\n\n\n\n\n\n\nNo matching items"
+    "text": "Automating Report Publishing with Quarto and GitHub Actions — A LatinR 2025 Tutorial Recap\n\n\n\n\n\n\n\n\n\nDec 10, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nReadability Metrics for Spanish Texts - readabilityes (Lightning Talk)\n\n\n\n\n\n\n\n\n\nNov 11, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nPolíticas Relacionadas con Repositorios de Datos Científicos en Argentina\n\n\n\n\n\n\n\n\n\nApr 10, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to Quarto\n\n\n\n\n\n\n\n\n\nNov 26, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe Carpentries and MetaDocencia’s Instructor Training\n\n\n\n\n\n\n\n\n\nOct 1, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nALTa Ciencia Abierta (Latin America Transforms to Open Science)\n\n\n\n\n\n\n\n\n\nJun 20, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nInsights and Innovations in Virtual Training | DUTC/NASA TOPS Talks\n\n\n\n\n\n\n\n\n\nJun 4, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nNASA TOPS-T Reproducibly Analyzing Wildfire, Drought, and Flood Risk with NASA Earthdata Cloud\n\n\n\n\n\n\n\n\n\nMay 26, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nPromoting Open Science in and from the Global South\n\n\n\n\n\n\n\n\n\nMay 20, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to OpenSesame\n\n\n\n\n\n\n\n\n\nApr 20, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nResponsible Research & Decolonisation from a Latin American Perspective\n\n\n\n\n\n\n\n\n\nApr 20, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nA Path to Open, Inclusive, and Collaborative Science for Librarians\n\n\n\n\n\n\n\n\n\nFeb 8, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nA Shiny app for mapping open-science communities, organizations & events in Latin America (Lightning Talk)\n\n\n\n\n\n\n\n\n\nDec 11, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\nPre-Congress Workshop - “Data Science for Psychologist (with R and RStudio)”\n\n\n\n\n\n\n\n\n\nNov 20, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\nMapping open-science communities, organizations & events in Latin America (Lightning Talk)\n\n\n\n\n\n\n\n\n\nAug 20, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\nCommunities of practice in Latin America and their influence on the dissemination of open science\n\n\n\n\n\n\n\n\n\nApr 28, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow to Teach Programming Online\n\n\n\n\n\n\n\n\n\nApr 20, 2023\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to R\n\n\n\n\n\n\n\n\n\nAug 4, 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\nDplyr workshop\n\n\n\n\n\n\n\n\n\nApr 20, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\nFrom SPSS to R\n\n\n\n\n\n\n\n\n\nApr 30, 2018\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/2025-03-28-khipu-2025/index.html",
+    "href": "posts/2025-03-28-khipu-2025/index.html",
+    "title": "Khipu 2025️ 🖥🎉️",
+    "section": "",
+    "text": "Earlier this month, I had the chance to attend Khipu, the largest Artificial Intelligence (AI) and Machine Learning gathering in Latin America.\nThis year marked the fourth edition of Khipu—and the first to take place outside of Uruguay. It was held in Santiago, Chile, bringing together hundreds of researchers, professionals, and students from across the region and beyond.\nKhipu is more than just a conference: it’s a space for learning, sharing, and building community around AI in Latin America. The program is thoughtfully designed to offer content for a wide range of audiences. Talks follow a progressive structure: early sessions are more general and accessible, yet rigorous and engaging, and always led by experts.\nFor example, some of the opening lectures I really enjoyed were ML & DL Foundamentals I by Jorge Perez, ML & DL Foundamentals II by Alfredo Canziani and Natural Language Processing Fundamentals by Isabelle Augenstein. As the week went on, content became increasingly technical and specialized. On the second day, Petar Veličković gave a fantastic lecture on Geometric Deep Learning. By Thursday, we had parallel sessions on cybersecurity, ML in economics, computer vision, AI and human rights, among others.\nThe conference also offered tutorials at different difficulty levels on various topics such as in machine learning, natural language processing, AI ethics, or technical toolkits. Materials were carefully prepared, including well documented Jupyter notebooks you could take home and continue learning on your own. There were also poster sessions, where attendees could present their work and get feedback in a friendly environment.\nOne of the things that stood out the most to me was the welcoming and warm atmosphere. It’s a great place to meet people who are working in AI across different sectors, to explore collaborations, and to feel part of a growing Latin American AI community."
+  },
+  {
+    "objectID": "posts/2025-03-28-khipu-2025/index.html#want-to-attend-the-next-event",
+    "href": "posts/2025-03-28-khipu-2025/index.html#want-to-attend-the-next-event",
+    "title": "Khipu 2025️ 🖥🎉️",
+    "section": "✍️ Want to attend the next event?",
+    "text": "✍️ Want to attend the next event?\nYou might be wondering how to attend the next Khipu. Unlike many conferences, you don’t simply register and pay a fee. Instead, you apply, sharing your background, motivation, and what you hope to contribute or learn. If selected, you can also apply for financial support to cover travel and accommodation. The goal is to make participation accessible and remove financial barriers.\nWhat makes a good application? I’m not entirely sure—maybe I should’ve asked someone from the organizing committee—but I believe they value your potential to share what you learn and act as a multiplier in your community. If you’re involved in teaching or in communities of practice, that’s probably a plus. If you’re working on projects that require AI and could benefit from your attendance, mention them! Include links to relevant resources or repositories."
+  },
+  {
+    "objectID": "posts/2025-03-28-khipu-2025/index.html#language-access",
+    "href": "posts/2025-03-28-khipu-2025/index.html#language-access",
+    "title": "Khipu 2025️ 🖥🎉️",
+    "section": "🌐 Language access",
+    "text": "🌐 Language access\nA significant limitation: everything is in English. This year, the organizing team added automatic captioning, which helps, but it’s still not an event I would recommend to someone with no English at all. That said, the team is clearly aware of this barrier. Khipu is made for Latin Americans, and there’s a genuine interest in making it more accessible for non-English speakers in the future."
+  },
+  {
+    "objectID": "posts/2025-03-28-khipu-2025/index.html#what-i-took-with-me",
+    "href": "posts/2025-03-28-khipu-2025/index.html#what-i-took-with-me",
+    "title": "Khipu 2025️ 🖥🎉️",
+    "section": "What I took with me",
+    "text": "What I took with me\nI learned a lot, met incredible people, drank way too much coffee and ate way too much sugar. But most of all, what stayed with me was the human dimension: the limitations of current technologies, and how people reflect critically on them and work to overcome them.\nWhat happens when you’re working with sensitive, private data that can’t be shared with large models on external platforms, and your institution has limited infrastructure and funding? Projects like the ones presented by Leonardo Lombardi (QuantIT), Aiala Rosá (Universidad de la República), Victor Mireless (UNAM) and Juan Reutter (PUC, Chile) on AI and Human Rights are a clear example.\nWhat if you need a model whose decisions are understandable and accountable—like in a medical setting, where both doctor and patient should be able to understand the logic behind a diagnosis? Talks like the one by René Vidal (University of Pennsylvania) on explainability touched on that.\nOther sessions explored critical topics such as bias and AI governance, highlighting the importance of fairness and transparency in model development and deployment. As part of the closing event, Catherine D’Ignazio (MIT) and Ivana Feldgeber (DataGenero) delivered a powerful session on gender equity and women in AI.\nBasically, a reminder that AI, like any technology, is not neutral. It reflects the values, priorities, and perspectives of those who build it. That’s why spaces like Khipu matter: to ensure Latin America is not just a consumer of AI, but also a key player in shaping its future.\nYou can watch most of the talks on Khipu’s youtube channel"
+  },
+  {
+    "objectID": "posts/2023-08-18-disc-unconf-2023/index.html",
+    "href": "posts/2023-08-18-disc-unconf-2023/index.html",
+    "title": "What I learned at NumFocus DISC Unconf 2023",
+    "section": "",
+    "text": "In September 2023, I had the opportunity to attend the NumFocus DISC Unconference—a gathering dedicated to creating a more equitable open-source data science community. As someone committed to promoting open practices in research, data, and scientific computing in Latin America, this event offered a unique space to connect with leaders in these fields and work together on meaningful projects.\nThe open-source community remains relatively homogenous, which limits its potential. Events like the DISC Unconf provide a space to brainstorm how to make it more representative and inclusve. My role at the event was as a contributor, and I focused on a project that resonates deeply with my experiences as a researcher from the global south: Knowhow: everything you wanted to know about applying for grants but didn’t ask."
+  },
+  {
+    "objectID": "posts/2023-08-18-disc-unconf-2023/index.html#knowhow-everything-you-wanted-to-know-about-applying-for-grants-but-didnt-ask",
+    "href": "posts/2023-08-18-disc-unconf-2023/index.html#knowhow-everything-you-wanted-to-know-about-applying-for-grants-but-didnt-ask",
+    "title": "What I learned at NumFocus DISC Unconf 2023",
+    "section": "Knowhow: everything you wanted to know about applying for grants but didn’t ask",
+    "text": "Knowhow: everything you wanted to know about applying for grants but didn’t ask\nThis project aimed to tackle a critical barrier faced by researchers from underrepresented regions when applying for grants from the global north. For many of us, the application process often feels foreign and inaccessible due to cultural and systemic differences. These challenges discourage talented researchers from applying, perpetuating inequality in access to resources.\nThe project’s goal was to design a curriculum and coaching program to support potential grantees in navigating the grant process. From identifying suitable funding opportunities to crafting proposals, creating budgets, and building collaborations, the program seeks to level the playing field and enable fairer engagement.\nI collaborated with an incredible team, including Laura Ación, Jessica Greene, Barbara Wilk, Kate Hertweck, Yo Yehudi, Tania Allard, and Mariana Meireles. Working alongside individuals from diverse backgrounds was inspiring. Their varied perspectives challenged my thinking and enriched the project in ways I hadn’t anticipated."
+  },
+  {
+    "objectID": "posts/2023-08-18-disc-unconf-2023/index.html#a-memorable-experience",
+    "href": "posts/2023-08-18-disc-unconf-2023/index.html#a-memorable-experience",
+    "title": "What I learned at NumFocus DISC Unconf 2023",
+    "section": "A Memorable Experience",
+    "text": "A Memorable Experience\nThe unconference was a fantastic experience. I met leaders in the open-source world, learned about initiatives making these communities more accessible, and participated in a project that I believe could have a tangible impact on researchers in my region. The brainstorming sessions and collaborative work stood out as particularly productive and inspiring.\nAs a researcher from Argentina, I appreciated the opportunity to share my experiences and perspectives. One key takeaway was the importance of having participants from underrepresented regions in decision-making spaces. Solutions to our challenges must include our voices to be truly effective and relevant.\nI’m especially excited that the DISC Unconf 2025 will take place in São Paulo, Brazil. This move will bring more Latin American researchers to the table and foster regional collaboration."
+  },
+  {
+    "objectID": "posts/2023-08-18-disc-unconf-2023/index.html#why-you-should-attend-the-disc-unconf",
+    "href": "posts/2023-08-18-disc-unconf-2023/index.html#why-you-should-attend-the-disc-unconf",
+    "title": "What I learned at NumFocus DISC Unconf 2023",
+    "section": "Why You Should Attend the DISC Unconf",
+    "text": "Why You Should Attend the DISC Unconf\nIf you are part of a group that is underrepresented in open-source or scientific computing communities, I highly recommend attending a DISC Unconf. It’s a unique opportunity to connect with like-minded individuals, contribute to impactful projects, and ensure your voice is part of the conversation. Beyond networking, it’s a chance to help shape the future of open practices in a way that benefits everyone."
+  },
+  {
+    "objectID": "posts/2024-09-18-posit-conf-2024/index.html",
+    "href": "posts/2024-09-18-posit-conf-2024/index.html",
+    "title": "Posit::Conf(2024): R, Community, and Learning",
+    "section": "",
+    "text": "This August, I had the incredible opportunity to attend Posit::conf(2024) in Seattle, thanks to the Opportunity Scholarship. From August 12 to 14, I joined a group of R enthusiasts, data scientists, and educators to learn, explore the latest advancements in data science, and connect with others in the R community."
+  },
+  {
+    "objectID": "posts/2024-09-18-posit-conf-2024/index.html#hi-positconf2024",
+    "href": "posts/2024-09-18-posit-conf-2024/index.html#hi-positconf2024",
+    "title": "Posit::Conf(2024): R, Community, and Learning",
+    "section": "",
+    "text": "This August, I had the incredible opportunity to attend Posit::conf(2024) in Seattle, thanks to the Opportunity Scholarship. From August 12 to 14, I joined a group of R enthusiasts, data scientists, and educators to learn, explore the latest advancements in data science, and connect with others in the R community."
+  },
+  {
+    "objectID": "posts/2024-09-18-posit-conf-2024/index.html#why-i-attended",
+    "href": "posts/2024-09-18-posit-conf-2024/index.html#why-i-attended",
+    "title": "Posit::Conf(2024): R, Community, and Learning",
+    "section": "Why I Attended",
+    "text": "Why I Attended\nAs a passionate R user and active member of the R community, attending Posit::Conf(2024) was a dream come true. I’ve spent years organizing events for R-Ladies Buenos Aires, teaching R in undergraduate and graduate programs, and creating Spanish-language learning materials. This conference offered the chance to deepen my skills, learn about the latest tools, and meet others who share my enthusiasm for all things R."
+  },
+  {
+    "objectID": "posts/2024-09-18-posit-conf-2024/index.html#workshops-and-events",
+    "href": "posts/2024-09-18-posit-conf-2024/index.html#workshops-and-events",
+    "title": "Posit::Conf(2024): R, Community, and Learning",
+    "section": "Workshops and events",
+    "text": "Workshops and events\nThe workshops at Posit Conf were a major highlight. I attended the Build a Dashboard with Quarto workshop, led by the amazing Mine Çetinkaya-Rundel, a developer educator at Posit, PBC. Mine’s teaching style is incredible, making the process of creating Quarto dashboards approachable and fun. If you’re curious about the workshop, check out the materials here.\nAnother standout moment was participating in the Tidyverse Developer Day. This event was an introduction to contributing to the Tidyverse ecosystem and showcased the supportive spirit of the community. Everyone was eager to help, share their thoughts, and encourage new contributors. You can read more about it here.\nThe conference was filled with inspiring talks and sessions, many of which focused on Quarto. These sessions directly connected to my professional work, and I’ve already shared some of what I learned in a workshop with R-Ladies Buenos Aires. If you know Spanish, you can check it out here. We’re even planning a follow-up workshop next year to explore Quarto dashboards in more depth!"
+  },
+  {
+    "objectID": "posts/2024-09-18-posit-conf-2024/index.html#building-community",
+    "href": "posts/2024-09-18-posit-conf-2024/index.html#building-community",
+    "title": "Posit::Conf(2024): R, Community, and Learning",
+    "section": "Building Community",
+    "text": "Building Community\nPosit Conf was not just about learning—it was also about connecting. I attended the Opportunity Scholar Lunch, where I met fellow scholars and Posit team members, including Hadley Wickham, Hannah Frick, Carlos Scheidegger, and the wonderful Kaia Cooper. The lunch was casual, fun, and an excellent chance to get to know each other a little bit.\nAnother memorable moment was meeting members of the rainbowR community, which supports LGBTQ+ individuals in the R community. Sharing stories and experiences over lunch with this group was both heartwarming and inspiring.\nThe atmosphere at Posit::conf(2024) was everything I hoped for. I met R enthusiasts from all over the world, spanning diverse disciplines, from academia to industry. It was a reminder of the incredible reach and versatility of the R community."
+  },
+  {
+    "objectID": "posts/2024-09-18-posit-conf-2024/index.html#resources",
+    "href": "posts/2024-09-18-posit-conf-2024/index.html#resources",
+    "title": "Posit::Conf(2024): R, Community, and Learning",
+    "section": "Resources",
+    "text": "Resources\nIf you’re curious about the workshops, the materials are available here. I highly recommend exploring them—they’re packed with useful information and practical tools that are worth checking out!\nIf you belong to an underrepresented group, don’t miss the chance to attend Posit::conf(2025). Be sure to check out the Opportunity Scholarship—it could be your gateway to an incredible experience!"
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "Jesica Formoso - CV",
+    "section": "",
+    "text": "I am currently a Tenured Researcher at CIIPME-CONICET and serve as the Impact Measurement Coordinator and Instructor at MetaDocencia, where I advocate for Open Science across Latin America and the Caribbean. I am actively involved in communities of practice that support data science education, including co-organizing the Buenos Aires chapter of R-Ladies. I have over a decade of teaching experience as a faculty member at the University of Buenos Aires and more than five years of experience designing and teaching courses on statistics, R programming, and data science. Additionally, I contribute to open educational resources by developing tutorials, workshops, and course materials for teaching R programming, data science, and statistics in Spanish. I am also an Instructor and Trainer for The Carpentries and RStudio (now Posit).\nDownload CV here"
+  },
+  {
+    "objectID": "cv.html#overview",
+    "href": "cv.html#overview",
+    "title": "Jesica Formoso - CV",
+    "section": "",
+    "text": "I am currently a Tenured Researcher at CIIPME-CONICET and serve as the Impact Measurement Coordinator and Instructor at MetaDocencia, where I advocate for Open Science across Latin America and the Caribbean. I am actively involved in communities of practice that support data science education, including co-organizing the Buenos Aires chapter of R-Ladies. I have over a decade of teaching experience as a faculty member at the University of Buenos Aires and more than five years of experience designing and teaching courses on statistics, R programming, and data science. Additionally, I contribute to open educational resources by developing tutorials, workshops, and course materials for teaching R programming, data science, and statistics in Spanish. I am also an Instructor and Trainer for The Carpentries and RStudio (now Posit).\nDownload CV here"
+  },
+  {
+    "objectID": "cv.html#selected-education",
+    "href": "cv.html#selected-education",
+    "title": "Jesica Formoso - CV",
+    "section": "Selected education",
+    "text": "Selected education\nPh.D., Ethical, Humanistic, and Social Medical Sciences (2017)\n\nEmphasis: Cognitive Development of Mathematical Skills in Children.\nSchool of Medicine\nUniversity of Buenos Aires\n\nSpecialization in Statistics for Health Sciences (2018)\n\nInstitute of Calculus\nSchool of Exact and Natural Sciences\nUniversity of Buenos Aires\n\nSpecialization in Neuropsychology (2018)\n\nSchool of Psychology\nUniversity of Buenos Aires\n\nB.S., Psychology (2008)\n\nSchool of Psychology\nUniversity of Buenos Aires"
+  },
+  {
+    "objectID": "cv.html#selected-research-experience",
+    "href": "cv.html#selected-research-experience",
+    "title": "Jesica Formoso - CV",
+    "section": "Selected research experience",
+    "text": "Selected research experience\nTenured Researcher (2019-2022) - Cognitive Studies lab at the Psychological Research Institute, School of Psychology, University of Buenos Aires (UBA) - National Scientific and Technical Research Council (CONICET)\nTenured Researcher (2023-present) - Interdisciplinary Center for Research in Mathematical and Experimental Psychology “Dr. Horacio J. A. Rimoldi” (CIIPME) - National Scientific and Technical Research Council (CONICET)"
+  },
+  {
+    "objectID": "cv.html#selected-teaching-experience",
+    "href": "cv.html#selected-teaching-experience",
+    "title": "Jesica Formoso - CV",
+    "section": "Selected teaching experience",
+    "text": "Selected teaching experience\nInstructor and Trainer (2020 - present) - Data Carpentry & The Carpentries - RStudio (Posit)\nLead Instructor (2018 - 2024) - R programming, Data analysis and visualization courses for graduate psychology and health students - UBA; Italian Hospital University Institute\nAssistant Teaching Professor (2013 - 2024) - Statistics, BSc. in Psyhology, School of Psychology, UBA - Neurophysiology, BSc. in Psyhology, School of Psychology, UBA"
+  },
+  {
+    "objectID": "cv.html#selected-community-developments",
+    "href": "cv.html#selected-community-developments",
+    "title": "Jesica Formoso - CV",
+    "section": "Selected community developments",
+    "text": "Selected community developments\nMetaDocencia - Impact Measurement Coordinator/Instructor (2022 - present)\nMetaDocencia is an organization committed to advancing Open Science practices across Latin America and the Caribbean. Its work focuses on capacity-building, adapting and creating educational resources in Spanish, and fostering a network of regional communities and stakeholders. Currently, it is part of the NASA TOPS initiative and serves as the contextualizer for NASA materials in Spanish.\nR-Ladies Buenos Aires - organizer/Instructor (2020 - present)\nR-Ladies is an international initiative dedicated to promoting diversity and inclusion within the R programming community. The Buenos Aires chapter organizes 3 to 6 events annually, featuring activities such as technical skill-building workshops, short presentations by members and guest speakers, as well as community-building and networking opportunities.\nLatinR - organizer committee (2023)\nLatin American Conference about the Use of R for Research + Development"
+  },
+  {
+    "objectID": "cv.html#selected-talks-and-presentations",
+    "href": "cv.html#selected-talks-and-presentations",
+    "title": "Jesica Formoso - CV",
+    "section": "Selected talks and presentations",
+    "text": "Selected talks and presentations\nCollective Creation of Open Science (2024). Guest pannelist in the seminar Promoting Open Science in and from the Global South (first webinar from eLife’s Global South Committee for Open Science)\nInsights and Innovation in Virtual Training (2024). Guest panellist in this webinar organized by Don’t Use This Code and the NASA TOPS iniciative.\nResponsible Reseach & Decolonisation from a Latin American Perspective (2024). Guest pannelist and organizer in the Summer School/Alumni Seminar: Decolonizing Global Health with a focus on Biomedical Sciences, Reseach and Education organized by Berlin Institute of Health, Charité, Quest Center and MetaDocencia.\nMapping Open-Science Communities, Organizations & Events in Latin America (2023). Lightning Talk within the Code for All Summit 2023.\nA Shiny-app for Mapping Open-Science Communities, Organizations & Events in Latin America (2023). LatinR 2023: Latin American conference about the use of R in research and development.\nCommunities of Practice in Latin America and their Influence on the Dissemination of Open-Science (2023). csv,conf,v7."
+  },
+  {
+    "objectID": "cv.html#peer-reviewed-publications",
+    "href": "cv.html#peer-reviewed-publications",
+    "title": "Jesica Formoso - CV",
+    "section": "Peer-reviewed publications",
+    "text": "Peer-reviewed publications\nMost of my peer-reviewd publications can be found in my google scholar profile."
+  },
+  {
+    "objectID": "cv.html#selected-awards-and-scholarships",
+    "href": "cv.html#selected-awards-and-scholarships",
+    "title": "Jesica Formoso - CV",
+    "section": "Selected awards and scholarships",
+    "text": "Selected awards and scholarships\nKHIPU 2025\n\nLatin American Meeting in Artificial Intelligence, Santiago, Chile Selected to participate in this highly competitive event, recognized for academic excellence and contributions to diversity in AI research.\n\nPosit Opportunity Scholarship (2024)\n\nPosit::conf(2024), Seattle, USA Awarded funding to attend the Posit Conference 2024. Covered travel, accommodation, meals, and conference fees.\n\nExternal Fellowship for Young Researchers (2023)\n\nNational Scientific and Technical Research Council (CONICET)- Awarded funding to conduct research under the supervision of Dr. Gracia Jiménez Fernández at the Department of Developmental and Educational Psychology, Faculty of Educational Sciences, University of Granada, Spain. This prestigious program supports the training of early-career researchers at leading international research institutions.\n\nDISC Unconference 2023\n\nNumFOCUS, Amsterdam, Netherlands. Invited and funded to attend the Diversity & Inclusion in Scientific Computing Unconference, a collaborative event focused on creating scalable solutions and resources to promote diversity and inclusion in open-source scientific computing.\n\nPostdoctoral Fellowship (2017)\n\nNational Scientific and Technical Research Council (CONICET)\n\nIBRO Travel Grant (2014)\n\nInternational Brain Research Organization. Awarded funding to attend the School of Neuroinformatics and Computational Neuroscience, 2014.\n\nDoctoral Fellowship (2013)\n\nSecretary of Science and Technology, University of Buenos Aires (UBACyT)"
+  },
+  {
+    "objectID": "talks/dont-use-this-code-2024/index.html",
+    "href": "talks/dont-use-this-code-2024/index.html",
+    "title": "Insights and Innovations in Virtual Training | DUTC/NASA TOPS Talks",
+    "section": "",
+    "text": "During this community event organized by Don’t Use This Code in the context of the NASA TOPS inciative, I participated of a round-table discussion regarding innovations in virtual tranings with Brian Knosp, Scientific Applications Software Engineer at NASA’s Jet Propulsion Laboratory, Kenji Nomura, High School STEM teacher currently serving as an Albert Einstein Distinguished Educator fellow at NASA in the Science Activation (SciAct) program, and James Powel from Don’t Use This Code.\nFind the recording here."
+  },
+  {
+    "objectID": "talks/latinr-2023/index.html",
+    "href": "talks/latinr-2023/index.html",
+    "title": "A Shiny app for mapping open-science communities, organizations & events in Latin America (Lightning Talk)",
+    "section": "",
+    "text": "The presentation “A Shiny App for Mapping Open-Science Communities, Organizations & Events in Latin America” highlighted the challenges of limited resources and spaces in Spanish for open science in Latin America, as well as the difficulty of identifying active communities and networks practicing open science in the region.\nIt emphasized the lack of a centralized, up-to-date repository to facilitate access to key information about resources, events, and communities, which hinders collaboration and knowledge exchange.\nAs a solution, the presentation proposed the development of a collaborative repository accessible through a Shiny application. This repository aims to centralize and map open science resources and communities in the region, enabling users to connect with local and regional initiatives, access resources, and actively participate in promoting open science practices.\nThe app is envisioned as not only a useful tool for researchers and organizations but also a bridge to foster collaboration and visibility for open science across Latin America.\nAn initial version can be found here.\nYou can find the presentation slides here."
+  },
+  {
+    "objectID": "talks/ciencia-datos-psico-2023/index.html",
+    "href": "talks/ciencia-datos-psico-2023/index.html",
+    "title": "Pre-Congress Workshop - “Data Science for Psychologist (with R and RStudio)”",
+    "section": "",
+    "text": "This was a pre-congress workshop taught during the 16th International Congress of Research and Professional Practice in Psychology held in the University of Buenos Aires. The objective was to introduce participants to the fundamental concepts and tools of data science applied to psychological research using R. It was tailored for researchers, practitioners, and students who wish to enhance their skills in data analysis and visualization within the field of psychology.\nFind the slides here."
+  },
+  {
+    "objectID": "talks/ucla-2023/index.html",
+    "href": "talks/ucla-2023/index.html",
+    "title": "A Path to Open, Inclusive, and Collaborative Science for Librarians",
+    "section": "",
+    "text": "In 2023, Irene and I received an award to participate in the UCLA-IMLS Open Science for Librarians Collaborative Lesson Development Workshop, a project sponsored by The Carpentries. This opportunity provided us with specialized training to develop our proposed lesson, “A Path to Open, Inclusive, and Collaborative Science for Librarians”.\nDuring the workshop, we gained insights into lesson design and community-driven curriculum development. The program emphasized inclusivity and collaboration. As a result of this workshop, we’ve been working on the lesson, which is now available in a Pre-Alpha state. You can check out the progress:\n\nGitHub Repository.\nLesson Website."
+  },
+  {
+    "objectID": "talks/quest-2024/index.html",
+    "href": "talks/quest-2024/index.html",
+    "title": "Responsible Research & Decolonisation from a Latin American Perspective",
+    "section": "",
+    "text": "As part of MetaDocencia, I was part of the organizing committee for the Summer School/Alumni Seminar: Decolonizing Global Health with a focus on Biomedical Sciences, Research and Education that took place in the Quest Center of the Berlin Institute of Health and Charité, where I also participated as a Lecturer talking about responsible research & decolonisation from a Latin American perspective, together with Laura Ación, Laura Ascenzi, and Karina formoso.\nYou can find the slides here. Additional information can be found in this blogpost."
+  },
+  {
+    "objectID": "talks/opensesame-2024/index.html",
+    "href": "talks/opensesame-2024/index.html",
+    "title": "Introduction to OpenSesame",
+    "section": "",
+    "text": "This presentation was an introductory workshop on OpenSesame designed for researchers in Cognitive Psychology and Education. OpenSesame is open-source software created to design experiments and research tasks.\nDuring the workshop, we explored:\n\nThe interface and basic features of OpenSesame.\nHow to configure the structure of an experimental task.\nStimulus presentation to participants.\nResponse collection and data recording.\n\nYou can find the slides here."
+  },
+  {
+    "objectID": "talks/code-for-all-2023/index.html",
+    "href": "talks/code-for-all-2023/index.html",
+    "title": "Mapping open-science communities, organizations & events in Latin America (Lightning Talk)",
+    "section": "",
+    "text": "The session showcases MetaDocencia’s initiative to make information available regarding resources, events, workshops, funding opportunities, and open science communities in Latin America through a collaborative repository. This repository will be available to anyone who wants to access resources on open science, get in touch with other regional and local actors in Latin America, or participate in the dissemination of open practices. This project was presented in Code for All’s 2023 Summit (september 18-21).\nFind the recording here."
+  },
+  {
+    "objectID": "talks/spss-a-r-2018/index.html",
+    "href": "talks/spss-a-r-2018/index.html",
+    "title": "From SPSS to R",
+    "section": "",
+    "text": "This is a 2 hour workshop for R-Ladies Buenos Aires planned for researcherd transitioning from SPSS to R.\nFind the recording here."
+  },
+  {
+    "objectID": "talks/quarto-GHA-2025/index.html",
+    "href": "talks/quarto-GHA-2025/index.html",
+    "title": "Automating Report Publishing with Quarto and GitHub Actions — A LatinR 2025 Tutorial Recap",
+    "section": "",
+    "text": "At LatinR 2025, María Nanton and I ran a 3-hour hands-on tutorial on automating the publication of data dashboards using Quarto and GitHub Actions."
+  },
+  {
+    "objectID": "talks/quarto-GHA-2025/index.html#the-problem-we-set-out-to-solve",
+    "href": "talks/quarto-GHA-2025/index.html#the-problem-we-set-out-to-solve",
+    "title": "Automating Report Publishing with Quarto and GitHub Actions — A LatinR 2025 Tutorial Recap",
+    "section": "The problem we set out to solve",
+    "text": "The problem we set out to solve\nWe’ve all been there: manually re-running a script, re-rendering a report, and uploading it somewhere every time new data comes in. The goal of this tutorial was to show that this whole process can be automated, so that reports stay up to date without lifting a finger after the initial setup."
+  },
+  {
+    "objectID": "talks/quarto-GHA-2025/index.html#how-it-went",
+    "href": "talks/quarto-GHA-2025/index.html#how-it-went",
+    "title": "Automating Report Publishing with Quarto and GitHub Actions — A LatinR 2025 Tutorial Recap",
+    "section": "How it went",
+    "text": "How it went\nThe tutorial was aimed at R and Quarto users with basic Git/GitHub familiarity but no prior experience with GitHub Actions. We started by introducing key concepts (CI/CD, virtual machines, renv, and GitHub Pages) before writing a single line of code.\nFrom there, we moved into guided practice. Our starting point was a Google Form feeding responses into a public Google Sheet, with a Quarto dashboard already reading from it. Step by step, participants wired everything together using GitHub Actions: first triggering the workflow manually, then on every push, and finally on a schedule.\nBy the end of the session, everyone had written a YAML workflow file from scratch, published their dashboard to GitHub Pages, and set it up to run automatically using cron syntax.\nSharing this with the LatinR community was a wonderful experience. Participants were engaged and curious throughout, asking sharp questions at every stage. The feedback was overwhelmingly positive — the main ask being more time to keep exploring. Exactly the kind of response that makes you want to run it again!\nYou can find the materials and session recording below:\n📁 Tutorial materials 🎥 Session recording"
+  },
+  {
+    "objectID": "talks/nasa-2i2c-2024/index.html",
+    "href": "talks/nasa-2i2c-2024/index.html",
+    "title": "NASA TOPS-T Reproducibly Analyzing Wildfire, Drought, and Flood Risk with NASA Earthdata Cloud",
+    "section": "",
+    "text": "I am part of the development team for ScienceCore: Climate Risk, a learning module under NASA’s Transform to Open Science (TOPS) initiative. This project aims to teach participants how to identify, analyze, visualize, and report on climate data available through the NASA Earthdata Cloud to assess risks related to wildfires, droughts, and floods in the context of climate change.\nIn collaboration with MetaDocencia and 2i2c, we are creating open, reproducible, and accessible materials in both English and Spanish. The module leverages open-source tools to promote open science practices and cloud-based intensive computing. It empowers learners to analyze regional and global environmental risks using open science-based, reproducible workflows.\nThe materials can be found in this GitHub repository and this Jupyter book."
+  },
+  {
+    "objectID": "talks/dplyr-rladiesba-2020/index.html",
+    "href": "talks/dplyr-rladiesba-2020/index.html",
+    "title": "Dplyr workshop",
+    "section": "",
+    "text": "This is a 2 hour workshop for R-Ladies Buenos Aires about manipulation of tabular data with dplyr. This is one of the core packages of the tidyverse, a collection of R packages designed for data science. It provides a set of functions that make it easier to filter, arrange, summarize, and transform data. Together with the pipe operator (%&gt;%), they allows users to chain operations together in a clear and concise way.\nFind the recording and materials here."
+  },
+  {
+    "objectID": "talks/ttt-2024/index.html",
+    "href": "talks/ttt-2024/index.html",
+    "title": "The Carpentries and MetaDocencia’s Instructor Training",
+    "section": "",
+    "text": "During 2024, I participated as a trainer in the context of Intructor Training with The Carpentries curriculum. Instructor Training familiarizes trainees with evidence-based teaching practices, helps them develop strategies for fostering a positive learning environment in workshops, and offers opportunities to practice and enhance their teaching skills.\nFind the materials in English here.\nFind the materials in Spanish here:\n\nDay 1\nDay 2\nDay 3\nDay 4"
+  },
+  {
+    "objectID": "talks/how-to-teach-programing-2023/index.html",
+    "href": "talks/how-to-teach-programing-2023/index.html",
+    "title": "How to Teach Programming Online",
+    "section": "",
+    "text": "During this workshop, we introduce the participant to evidence-based strategies to teach programming online effectively.\nObjective: To introduce techniques and good practices to design your programming courses and evaluate students.\nDuring this online workshop:\n\nWe show you how to design programming courses in an efficient and productive way.\nWe talk about the utility of peer-review and the importance of feedback, and how to implement these practices.\nWe present different types of assessment. For example, fill-in the blanks, faded examples, etc.\nWe recap good programming practices and how to promote them among your students.\n\nMaterials can be found here:\n\nCourse overview\nSlides\nRecording"
+  },
+  {
+    "objectID": "talks/snrd-2025/index.html",
+    "href": "talks/snrd-2025/index.html",
+    "title": "Políticas Relacionadas con Repositorios de Datos Científicos en Argentina",
+    "section": "",
+    "text": "La apertura de datos científicos es clave para una ciencia más transparente, colaborativa y reproducible. Permite validar resultados, evitar la duplicación de esfuerzos y potenciar nuevas investigaciones a partir de datos ya generados. Pero para que esto sea posible, no alcanza con la voluntad individual: hacen falta políticas públicas claras, sistemas robustos y un entorno que reconozca y valore estas prácticas.\nEn el primer WDS Webinar Series on International Repository-related Policies, organizado por el World Data System (WDS), compartí el caso argentino: la Ley 26.899, su implementación y el funcionamiento del Sistema Nacional de Repositorios Digitales. También presentaron Juan Sebastián González Sanabria (UPTC) y Fernando Piraquive Piraquive (Universidad Distrital FJC) sobre el contexto colombiano. El encuentro fue moderado por Bianca Amaro, presidenta de LA Referencia, una red fundamental para dar visibilidad a la producción científica en América Latina. Entre todo, tuvimos la oportunidad de hablar sobre cómo, a pesar de los marcos normativos, quienes investigan enfrentan múltiples barreras para implementar prácticas abiertas: falta de capacitación, infraestructura limitada, y sobre todo, sistemas de evaluación que siguen priorizando la publicación tradicional por sobre el compartir datos o resultados intermedios. Sin incentivos reales ni apoyo institucional, es difícil que la apertura se vuelva la norma.En este contexto, la construcción de una comunidad científica regional es fundamental. Una red que impulse la cooperación por sobre la competencia, y que fortalezca una ciencia abierta situada, que dialogue con las necesidades y potencialidades de nuestros territorios.\nSi te interesa conocer más al respecto, podés encontrar la grabación 👉aquí👈."
+  },
+  {
+    "objectID": "talks/csv-conf-2023/index.html",
+    "href": "talks/csv-conf-2023/index.html",
+    "title": "Communities of practice in Latin America and their influence on the dissemination of open science",
+    "section": "",
+    "text": "In this talk, which was presented in the csv,conf 2023, we analize what is the role of communities of practice in the dissemination and implementation of open science practices in general, and specifically, in the Latin American region. To this end, we conducted an exploratory analysis of the evolution of the use of the terms “open science” and “open science” over time from 2012 to the present. Where information was available, the representation of each region was studied. Finally, a social network analysis was performed to identify influential users and clusters of users and then the association of these with communities of practice was studied.\nThe recording is available here.\nMore information can be found in this blogpost."
+  },
+  {
+    "objectID": "talks/elife-2024/index.html",
+    "href": "talks/elife-2024/index.html",
+    "title": "Promoting Open Science in and from the Global South",
+    "section": "",
+    "text": "In this first webinar from eLife’s Global South Committee for Open Science, we explored the challenges faced in this region and shared our collective vision for enhancing Open Science infrastructure and promotion. I participated as a guest panellists together with Emmanuel Boakye and Hu Chuan-Peng.\nFind the recording here."
+  },
+  {
+    "objectID": "talks/quarto-rladiesba-2024/index.html",
+    "href": "talks/quarto-rladiesba-2024/index.html",
+    "title": "Introduction to Quarto",
+    "section": "",
+    "text": "The R-Ladies Buenos Aires workshop Transform Your Data into Visual Stories with Quarto presents an introduction to Quarto, an open-source publishing system designed to create dynamic and reproducible scientific and technical documents. It explores practical examples of its use in reproducible reports, covering topics such as integrating code and text, customizing output formats, and using parameters to create parameterized reports. This introductory workshop is aimed at individuals with a basic knowledge of R and little to no previous experience with Quarto.\nLearning Objectives:\n\nGet familiar with Quarto as a dynamic and reproducible publishing tool that expands the capabilities of RMarkdown.\nIdentify the possibilities it offers for creating scientific and technical documents, such as reports, presentations, and websites.\nLearn how to combine explanatory text with executable code to generate reports that automatically update results.\nUnderstand how to use parameters in Quarto to efficiently create different versions of the same document.\n\nFind recording and materials here."
+  },
+  {
+    "objectID": "talks/alta-ca-2024/index.html",
+    "href": "talks/alta-ca-2024/index.html",
+    "title": "ALTa Ciencia Abierta (Latin America Transforms to Open Science)",
+    "section": "",
+    "text": "The ALTa Ciencia Abierta course is designed to provide a comprehensive introduction to open science practices, focusing on key topics like reproducible research, open data, and collaborative workflows, for Spanish-speaking communities. It aims to equip researchers with the tools and knowledge to make their work more transparent, accessible, and reproducible.\nDuring 2024, I had the pleasure of teaching the module on open code in the three editions of the course, alongside Patricia Loto. In this module, we explored best practices for sharing and collaborating on code, ensuring that research processes remain open, reproducible, and easy for others to follow.\nThis course is part of a broader initiative supported by NASA - NASA TOPS - which promotes open science and collaboration across the global research community. MetaDocencia’s participation in this initiative is a significant step towards fostering a more inclusive and transparent scientific community, ensuring that research is accessible and reproducible for everyone, regardless of location or resources.\n\nLink to the website\nLink to the Open Code module"
+  },
+  {
+    "objectID": "talks/latinr-2025-readability/index.html",
+    "href": "talks/latinr-2025-readability/index.html",
+    "title": "Readability Metrics for Spanish Texts - readabilityes (Lightning Talk)",
+    "section": "",
+    "text": "We are a team from the Centro Interdisciplinario de Investigaciones en Psicología Matemática y Experimental (CIIPME–CONICET) and at LatinR2025 we presented readabilityes, an R package we are currently working on which focuses on the computation of readability metrics for Spanish texts."
+  },
+  {
+    "objectID": "talks/latinr-2025-readability/index.html#what-is-readability",
+    "href": "talks/latinr-2025-readability/index.html#what-is-readability",
+    "title": "Readability Metrics for Spanish Texts - readabilityes (Lightning Talk)",
+    "section": "What is readability?",
+    "text": "What is readability?\nIn simple terms, readability is about how easy a text is to understand. It is a property of a text that indicates how quickly and comfortably can read and process what is written."
+  },
+  {
+    "objectID": "talks/latinr-2025-readability/index.html#why-does-readability-matter",
+    "href": "talks/latinr-2025-readability/index.html#why-does-readability-matter",
+    "title": "Readability Metrics for Spanish Texts - readabilityes (Lightning Talk)",
+    "section": "Why does readability matter?",
+    "text": "Why does readability matter?\nReadability metrics are useful when you want your text to reach people. They help evaluate and adapt content so it is accessible to readers with different levels of education and reading skills.\nThis makes them especially valuable in areas such as education, medicine and public health, legal and administrative communications, scientific communication and outreach."
+  },
+  {
+    "objectID": "talks/latinr-2025-readability/index.html#about-readabilityes",
+    "href": "talks/latinr-2025-readability/index.html#about-readabilityes",
+    "title": "Readability Metrics for Spanish Texts - readabilityes (Lightning Talk)",
+    "section": "About readabilityes",
+    "text": "About readabilityes\nSpanish comes with its own quirks. Its phonology and spelling rules make automatic syllabification harder than it might seem, and that’s a key step for many readability formulas. On top of that, there aren’t many open, easy-to-use tools in R that handle this.\nOur goal is to build a tool that is both practical and reproducible, making readability analysis in Spanish easier to run and easier to share.\nSome of the things we’re aiming for:\n\nRule-based syllabification designed specifically for Spanish\nNo external dependencies or downloadable models\nSmooth integration with the tidyverse ecosystem\n\nThe project is still evolving, and one of the next steps is adding support for Catalan.\nYou can check out the presentation slides and video, as well as the repository for the preliminary version of the package following these links."
+  },
+  {
+    "objectID": "posts/2024-12-20-r-en-red/index.html",
+    "href": "posts/2024-12-20-r-en-red/index.html",
+    "title": "R en Red: ARcenso, Opportunities, and Community",
+    "section": "",
+    "text": "Last week, I had the privilege of co-organizing a talk as part of the Buenos Aires chapter of R-Ladies, in collaboration with R en Buenos Aires. Together with María Nanton and Betsy Cohen, we showcased some incredible events and working groups we’ve been part of that not only offer formative experiences but also encourage active participation and community-building.\nOur goal was to inspire members of our community to apply and get involved in initiatives that promote personal and professional growth—and help strengthen our collective network. Many attendees shared that they were unfamiliar with some of the conferences and events we presented or didn’t realize they could apply for financial support or travel grants to participate. This realization was empowering for many, as it helped them see these opportunities as something within their reach.\nThe diversity in the room was amazing—we connected with people working in areas like census data, health data, and academic research. There were attendees who were just starting their journey with R, as well as seasoned users eager to share their experiences. The feedback we received was overwhelmingly positive, and the enthusiasm in the room reinforced the importance of creating spaces like this.\n\nWe wrapped up the evening with an end-of-year toast and a networking session, which allowed us to continue building connections in a relaxed and celebratory atmosphere. 🍾\nIf you missed the talk, you can check out the slides here: Slides\n💜 Stay connected with the R-Ladies Buenos Aires network: 🐦 Twitter: @RLadiesBA 🌐 Website: https://rladiesba.netlify.app/\nLet’s continue growing together, discovering opportunities, and making the R community an even more inclusive and enriching space! 💪💜"
+  },
+  {
+    "objectID": "posts/2026-07-12-poder1/index.html#por-qué-calcular-el-tamaño-de-la-muestra",
+    "href": "posts/2026-07-12-poder1/index.html#por-qué-calcular-el-tamaño-de-la-muestra",
+    "title": "¿Cuántas observaciones necesito para poner a prueba mi hipótesis?",
+    "section": "Por qué calcular el tamaño de la muestra",
+    "text": "Por qué calcular el tamaño de la muestra\n¿Alguna vez te preguntaste cuántas observaciones necesitás para poner a prueba tu hipótesis? Me refiero a qué número concreto, defendible, que puedas escribir en un protocolo de investigación o justificar ante un comité de ética necesitás. Esa pregunta tiene respuesta, y se llama análisis de poder.\nLa intuición detrás es simple: si testeás muy pocos casos, corrés el riesgo de no detectar un efecto que realmente existe, aunque tu hipótesis sea correcta. Si testeás de más, estás gastando tiempo, plata, o exponiendo a más participantes de los necesarios a un estudio. El análisis de poder te da el n mínimo razonable para tener una buena chance de detectar el efecto que te interesa, dado lo que ya sabés (o suponés) sobre su tamaño.\nEl objetivo de este tutorial es entender cómo podemos calcularlo para los diseños más comunes (comparar dos grupos (t de Student), comparar más de dos grupos (ANOVA), correlación y regresión lineal) y como podemos aplicarlo usando R. En una segunda parte, vamos a extender esto a modelos mixtos, pero vayamos por partes."
+  },
+  {
+    "objectID": "posts/2026-07-12-poder1/index.html#la-lógica-de-la-prueba-de-hipótesis",
+    "href": "posts/2026-07-12-poder1/index.html#la-lógica-de-la-prueba-de-hipótesis",
+    "title": "¿Cuántas observaciones necesito para poner a prueba mi hipótesis?",
+    "section": "La lógica de la prueba de hipótesis",
+    "text": "La lógica de la prueba de hipótesis\nImaginemos que nos interesa saber si un método de enseñanza basado en práctica de recuperación (hacer que los estudiantes se autoevalúen activamente) produce mejores resultados en un examen que el método tradicional (relectura). No tenemos acceso a la población completa, no podemos testear a todos los estudiantes, pero podemos acceder a una muestra, y en base a ella tomar una decisión sobre nuestra hipótesis y esa decisión puede coincidir con la realidad o no.\nCuando realizamos un test de hipótesis, la decisión se toma en base a si la evidencia nos permite o no rechazar la llamada hipótesis nula o hipótesis del no efecto. En el caso de nuestro ejemplo:\n\n\\(H_0\\) (hipótesis nula): no hay diferencia en el puntaje promedio de examen entre el método tradicional y la práctica de recuperación. Es igual a decir que el método de estudio no tiene efecto sobre el puntaje promedio del examen.\n\\(H_1\\) (hipótesis alternativa): la práctica de recuperación produce un puntaje promedio distinto que el método tradicional, es decir, el método de estudio sí tiene un efecto sobre el puntaje promedio del examen.\n\nAhora, decidir rechazar o no rechazar \\(H_0\\) en base a una muestra siempre deja abierta la posibilidad de equivocarse y hay dos formas distintas de equivocarse:\n\nPodemos concluir que el nuevo método funciona mejor (hay diferencias en nuestra muestra) cuando en realidad no es así (no hay diferencias reales en la población): es un falso positivo.\n\nPodemos concluir que no hay evidencia de mejora (en nuestra muestra) cuando el método en realidad sí funciona: es un falso negativo.\n\nEntonces tenemos cuatro escenarios posibles:\n\n\n\n\n\n\n\n\n\nH0 es verdadera(los dos métodos son igual de efectivos)\nH0 es falsa(la práctica de recuperación sí funciona mejor)\n\n\n\n\nNo rechazo H0(concluyo “no hay evidencia de diferencia”)\nDecisión correcta — Nivel de confianza (1−\\(\\alpha\\))\nError de Tipo II — probabilidad \\(\\beta\\)\n\n\nRechazo H0(concluyo “la práctica de recuperación es mejor”)\nError de Tipo I — \\(\\alpha\\) (nivel de significación)\nDecisión correcta — Poder (1−\\(\\beta\\))\n\n\n\nError de Tipo I (\\(\\alpha\\)): rechazar \\(H_0\\) siendo verdadera, el falso positivo de arriba. La probabilidad de cometer este tipo de error es \\(\\alpha\\), es el nivel de significación que definimos nosotros de antemano y que, por convención, suele ser 0.05. Esto implica que aceptamos un 5% de probabilidad de recomendar el nuevo método sin que realmente sea mejor.\nNivel de confianza (1−\\(\\alpha\\)): el complemento del nivel de significación, y habla de la probabilidad de no rechazar \\(H_0\\) cuando efectivamente es verdadera. Con \\(\\alpha\\) = 0.05, el nivel de confianza es 95%.\nError de Tipo II (\\(\\beta\\)): Nos habla de la probabilidad de no rechazar \\(H_0\\) siendo falsa. Es el falso negativo. A diferencia de \\(\\alpha\\), \\(\\beta\\) no se fija de antemano, sino que depende del tamaño real de la diferencia entre métodos, del tamaño muestral y de la varianza. Por eso, en la mayoría de los casos, no se puede calcular \\(\\beta\\) con precisión sin antes asumir un tamaño del efecto específico.\nPoder (1−\\(\\beta\\)): es el complemento de \\(\\beta\\), la probabilidad de detectar correctamente que la práctica de recuperación sí funciona mejor, dado que efectivamente funciona mejor. Es el poder de nuestra prueba de hipótesis. Esta es la casilla que nos interesa maximizar, y es lo que vamos a calcular durante el resto del tutorial.\n\n\n\n\n\n\nNota\n\n\n\nLos riesgos de ambos errores están relacionados. A igual tamaño muestral, bajar \\(\\alpha\\) (exigir más evidencia antes de declarar que el método nuevo funciona) generalmente sube \\(\\beta\\) (aumenta el riesgo de no detectar una mejora real). La única forma de bajar ambos simultáneamente es aumentar el tamaño muestral, es decir, testear a más estudiantes. Y ese es, en el fondo, el problema que resuelve un análisis de poder: dado un \\(\\alpha\\) que estamos dispuestos a aceptar y una diferencia (efecto) que nos interesa detectar, ¿qué n necesitamos para tener un \\(\\beta\\) aceptablemente bajo?"
+  },
+  {
+    "objectID": "posts/2026-07-12-poder1/index.html#qué-es-el-poder-estadístico-de-la-prueba",
+    "href": "posts/2026-07-12-poder1/index.html#qué-es-el-poder-estadístico-de-la-prueba",
+    "title": "¿Cuántas observaciones necesito para poner a prueba mi hipótesis?",
+    "section": "¿Qué es el poder estadístico de la prueba?",
+    "text": "¿Qué es el poder estadístico de la prueba?\nSigamos con nuestro ejemplo. Supongamos que en base a una prueba piloto pequeña que realizamos, tenemos una primera estimación. El grupo que estudió con el método tradicional obtuvo un puntaje medio de 70 en el examen, con un desvío estándar de 10; en cambio, quienes utilizaron la práctica de recuperación obtuvieron un puntaje medio de 75 (mismo desvío). Con estos números ya podemos preguntarnos directamente cuántos estudiantes necesitamos para tener una buena chance de detectar esa diferencia de 5 puntos, si realmente existe en la población.\nEsa “buena chance” es el poder estadístico: la probabilidad de rechazar correctamente \\(H_0\\) cuando efectivamente existe un efecto real, en este caso, la probabilidad de que el estudio detecte la mejora de 5 puntos, dado que esa mejora realmente existe. Se calcula en función de cuatro elementos interrelacionados:\n\nEl tamaño del efecto: acá, los 5 puntos de diferencia entre medias, relativos a la variabilidad de los puntajes\nEl tamaño muestral (n): cuántos estudiantes por grupo\nEl nivel de significación (\\(\\alpha\\), típicamente .05)\nLa variabilidad de la variable de interés: el desvío estándar de 10 puntos\n\nFijados tres de estos cuatro valores, el cuarto queda determinado. Esto es exactamente lo que hacen las funciones de R que vamos a usar: les damos tres valores y nos devuelven el cuarto. Típicamente resolvemos el n necesario dado un poder deseado (convencionalmente .80)."
+  },
+  {
+    "objectID": "posts/2026-07-12-poder1/index.html#cálculo-del-poder-con-r",
+    "href": "posts/2026-07-12-poder1/index.html#cálculo-del-poder-con-r",
+    "title": "¿Cuántas observaciones necesito para poner a prueba mi hipótesis?",
+    "section": "Cálculo del poder con R",
+    "text": "Cálculo del poder con R\n\nAlgunas cuestiones claves antes de iniciar con el código\nPara este tutorial vamos a utilizar el paquete pwr(Champely 2020) ejecutado en R (R Core Team 2024).\n\n# Instalar el paquete si no lo instalaste antes\nif (!requireNamespace(\"pwr\", quietly = TRUE)) install.packages(\"pwr\")\n\n# Cargar el paquete\nlibrary(pwr)\n\nEste paquete implementa los cálculos de poder para los diseños clásicos, usando las convenciones y tamaños del efecto estandarizados que propuso Cohen (1988). Algo importante a tener en cuenta es que las funciones de pwr generalmente esperan tamaños del efecto estandarizados (d de Cohen, f de Cohen) como argumento, en lugar de estadísticos crudos como medias o desvíos directamente. Esto significa que antes de llamar a la función tenemos que convertir los datos del piloto a un tamaño del efecto estandarizado.\nPara el caso de dos grupos, la d de Cohen es la diferencia de medias dividida por el desvío estándar común.\n\\[d = \\frac{\\bar{x}_1 - \\bar{x}_2}{s}\\] Donde:\n\n\\(\\bar{x}_1\\) y \\(\\bar{x}_2\\) son las medias de los dos grupos que se comparan\n\\(s\\) es el desvío estándar de cada grupo (cuando son iguales, solo se utiliza uno de los valores)\n\nUn detalle importante! Si los dos grupos no tienen exactamente el mismo desvío estándar (como en nuestro ejemplo, donde asumimos homogeneidad de varianzas para simplificar), \\(s\\) no es simplemente el desvío de un grupo, es el desvío combinado, que pondera los desvíos de ambos grupos según su tamaño muestral:\n\\[s = \\sqrt{\\frac{(n_1-1)s_1^2 + (n_2-1)s_2^2}{n_1+n_2-2}}\\]\nDonde \\(n_1\\) y \\(n_2\\) son los tamaños muestrales de los grupos 1 y 2, y \\(s_1\\) y \\(s_2\\) son los desvíos estándar de cada grupo.\nCon los datos de nuestro estudio:\n\\[d = \\frac{\\bar{x}_1 - \\bar{x}_2}{s} = \\frac{75 - 70}{10} = 0.5\\]\nEste valor coincide con lo que Cohen (1988) definió como un efecto “mediano”. Pero acá no lo estamos tomando de una tabla de valores convencionales sino que lo derivamos directamente de nuestros datos piloto, que siempre es preferible a usar una convención genérica.\n\n\nPoder para un t-test de dos muestras\nCon d = 0.5 y queriendo 80% de poder con alfa = .05, le preguntamos directamente a R:\n\npwr.t.test(d = 0.5, sig.level = 0.05, power = 0.80, type = \"two.sample\")\n\n\n     Two-sample t test power calculation \n\n              n = 63.76561\n              d = 0.5\n      sig.level = 0.05\n          power = 0.8\n    alternative = two.sided\n\nNOTE: n is number in *each* group\n\n\nEn base a los datos que tenemos, el cálculo nos muestra que necesitamos aproximadamente 64 estudiantes por grupo (128 en total) para tener 80% de probabilidad de detectar una diferencia de 5 puntos, si esa diferencia efectivamente existe.\npwr.t.test() calcula el poder (o el n, o el tamaño del efecto, o el \\(\\alpha\\)) para tests t de una muestra o de dos muestras de igual tamaño, con argumentos n, d, sig.level, power y type (\"two.sample\", \"one.sample\", o \"paired\"). Se deja vacío (NULL) exactamente el que se quiere resolver. Si tuvieramos un n fijo (por ejemplo, porque la evaluación se realiza sobre un mismo curso y ese cursto tiene 40 estudiantes) y queremos saber qué poder tenemos con ese n, simplemente hacemos lo siguiente:\n\npwr.t.test(d = 0.5, sig.level = 0.05, n = 40, type = \"two.sample\")\n\n\n     Two-sample t test power calculation \n\n              n = 40\n              d = 0.5\n      sig.level = 0.05\n          power = 0.5981469\n    alternative = two.sided\n\nNOTE: n is number in *each* group\n\n\nSi quisieramos calcular el n para un tamaño de efecto más pequeño, simplemente cambiamos d:\n\npwr.t.test(d = 0.3, sig.level = 0.05, power = 0.80, type = \"two.sample\")\n\n\n     Two-sample t test power calculation \n\n              n = 175.3847\n              d = 0.3\n      sig.level = 0.05\n          power = 0.8\n    alternative = two.sided\n\nNOTE: n is number in *each* group\n\n\nPodemos ver que a igual \\(\\alpha\\) (.05) y poder (.80), para detectar un tamaño del efecto más pequeño, necesitamos una muestra muchísimo más grande. Los invito a probar distintos valores de d para ver cómo se modifica el n mínimo.\n\n\nPoder para un ANOVA de un factor\nSupongamos que queremos comparar no dos, sino tres métodos de estudio: además del tradicional y la práctica de recuperación, incluimos repetición espaciada (distribuir el estudio en el tiempo en vez de concentrarlo). Con tres grupos, un t-test ya no alcanza. Hace falta un ANOVA de un factor.\nLas hipótesis cambian de forma:\n\n\\(H_0\\): las medias de puntaje son iguales entre los tres métodos.\n\\(H_1\\): al menos una de las medias difiere de las demás.\n\nCon base en el piloto y en literatura sobre repetición espaciada, estimamos las tres medias: tradicional 70, práctica de recuperación 75, repetición espaciada 78. Mismo desvío estándar de 10 en los tres grupos.\nA diferencia de la d de Cohen (que compara exactamente dos medias), acá necesitamos un tamaño del efecto que resuma la dispersión de tres medias respecto de la variabilidad dentro de los grupos: la f de Cohen.\n\\[f = \\frac{\\sigma_{medias}}{\\sigma_{población}}\\]\nDonde:\n\n\\(\\sigma_{medias}\\) es el desvío estándar de las medias de los grupos\n\\(\\sigma_{población}\\) es el desvío estándar común dentro de los grupos\n\nCon las medias que estimamos antes, lo calculamos de la siguiente forma:\n\nmedias &lt;- c(70, 75, 78)\nsd_comun &lt;- 10\nk &lt;- length(medias)\n\nsigma_medias &lt;- sqrt(sum((medias - mean(medias))^2) / k)\nf &lt;- sigma_medias / sd_comun\nf\n\n[1] 0.3299832\n\n\nEsto da f ≈ 0.33. Este es el desvío estándar de las tres medias de grupo, relativo al desvío común dentro de los grupos. Con ese valor calculo el n necesario para poner a prueba mi hipótesis:\n\npwr.anova.test(k = 3, f = 0.33, power = 0.80, sig.level = 0.05)\n\n\n     Balanced one-way analysis of variance power calculation \n\n              k = 3\n              n = 30.51201\n              f = 0.33\n      sig.level = 0.05\n          power = 0.8\n\nNOTE: n is number in each group\n\n\nEl cálculo nos indica que necesitamos aproximadamente 31 estudiantes por grupo (93 en total). ¿Por qué necesitamos menos por grupo que en el t-test (64)? Porque la diferencia relativa entre el grupo más bajo y el más alto (70 a 78, 8 puntos) es proporcionalmente mayor que la diferencia de 5 puntos que comparamos antes. Y como venimos viendo, si el tamaño del efecto es más grande, necesitamos menos muestra para rechazar \\(H_0\\) si esta es falsa.\npwr.anova.test() toma k (número de grupos), n, f, sig.level y power, dejando NULL el que se quiere resolver, igual que las funciones anteriores.\nUna aclaración importante para no llevarse una idea equivocada: cuando el ANOVA es significativo y rechazamos \\(H_0\\), solo podemos concluir al menos una media difiere de las demás, no cuál. Si queremos saber específicamente si, por ejemplo, la repetición espaciada es mejor que la práctica de recuperación, y no solo que “alguno de los tres difiere”, vamos a necesitar comparaciones post-hoc entre pares de grupos, algo que quedan fuera del alcance de este tutorial.\n\nVisualizar la relación entre n y poder\nReportar un único número (n = 31) a veces esconde qué tan sensible es esa decisión a pequeños cambios en los supuestos. Una forma más completa de comunicar el análisis, sobre todo en un protocolo o un proyecto de investigación, es graficar cómo cambia el poder a medida que aumenta el tamaño muestral. El paquete pwr tiene soporte para esto vía plot() sobre el objeto devuelto (por defecto intenta usar ggplot2, si está instalado):\n\nresultado &lt;- pwr.anova.test(k = 3, f = 0.33, power = 0.80, sig.level = 0.05)\nplot(resultado)\n\n\n\n\n\n\n\n\nEsto es especialmente útil si nos preocupa que la diferencia real entre métodos sea algo menor a la estimada en el piloto. La curva muestra de un vistazo cuánto más n haría falta en ese escenario más conservador.\n\n\n\nPoder en correlación y regresión lineal\nHasta acá comparamos grupos categóricos (métodos de enseñanza). Pero también podría interesarnos preguntas como las siguientes:\n\n¿Las horas de estudio semanales se correlacionan con el puntaje de examen?\n¿Un modelo con varios predictores (horas de estudio y método de enseñanza) explica una proporción considerable de la variabilidad en el puntaje final?\n\nEstas dos preguntas requieren dos funciones distintas de pwr, ninguna de las cuales usa d ni f como tamaño del efecto.\nNuevamente, necesitamos tener una idea de cuál será el tamaño del efecto. Nuestras opciones son ir a la bibliografía y buscar tamaños del efecto para análisis similares reportados por otros estudios o realizar un estudio piloto para estimar esos valores. Otra alternativa es usar valores estándar y asumir un tamaño del efecto moderado (ej. una d de Cohen de 0.5), pero se recomienda evitar esta opción.\n\nPoder para una correlación\nAhora bien, digamos que a partir de nuestro estudio piloto estimamos una correlación de r = 0.35 entre horas de estudio semanales y puntaje. ¿Cuántos estudiantes necesitamos para un 80% de poder con un alfa = .05?\n\npwr.r.test(r = 0.35, sig.level = 0.05, power = 0.80)\n\n\n     approximate correlation power calculation (arctangh transformation) \n\n              n = 60.93514\n              r = 0.35\n      sig.level = 0.05\n          power = 0.8\n    alternative = two.sided\n\n\nEste cálculo indica que necesitamos aproximadamente 61 estudiantes para tener 80% de probabilidad de detectar una correlación de esa magnitud, si efectivamente existe.\nAcá el tamaño del efecto es directamente el coeficiente de correlación de Pearson, r (Cohen propuso r = 0.1 chico, 0.3 mediano, 0.5 grande como convención genérica, pero, igual que con la d, siempre es preferible derivar r de datos propios o estudios previos de otros grupos).\nUn detalle no tan obvio: como la distribución muestral de r no es normal (está acotada entre −1 y 1 y se vuelve más asimétrica cuanto más se aleja de 0), pwr.r.test() no calcula el poder sobre r directamente. Primero aplica la transformación Z de Fisher, que sí se distribuye aproximadamente normal, con una corrección de sesgo adicional, y calcula el poder sobre esa Z’ transformada.\n\n\nPoder para un modelo de regresión (modelo global)\nAhora nos interesa si saber si al incluir horas de estudio y método de enseñanza en un mismo modelo explican una proporción determinada de la varianza del puntaje del examen. En base al bibliografía previa, estimamos que, en conjunto, horas de estudio y método de enseñanza expliquen 20% de la variabilidad en el puntaje. En este caso calcularemos tamaño de la muestra para el modelo global, no para un predictor específico, y el tamaño del efecto que nos interesa es el \\(R^2\\) (que esperamos que sea de 0.20 0 20%). En la regresión lineal, la \\(H_0\\) es que \\(R^2\\) = 0. Tenemos que encontrar cuántas observaciones necesitamos para rechazar \\(H_0\\) si en la realidad \\(R^2\\) = 0.20.\nPara el modelo de regresión múltiple se usa la función pwr.f2.test(), que calcula el poder para el modelo lineal general, con el tamaño del efecto \\(f^2\\) definido a partir del \\(R^2\\):\n\\[f^2 = \\frac{R^2}{1-R^2}\\] En nuestro ejemplo:\n\nR2 &lt;- 0.20\nf2 &lt;- R2 / (1 - R2)\nf2\n\n[1] 0.25\n\n\nEsto da \\(f^2\\) = 0.25 (convenciones de Cohen: 0.02 chico, 0.15 mediano, 0.35 grande). Ahora lo usamos con u = 2 (los dos predictores, horas de estudio y método de estudio):\n\npwr.f2.test(u = 2, f2 = 0.25, sig.level = 0.05, power = 0.80)\n\n\n     Multiple regression power calculation \n\n              u = 2\n              v = 38.68562\n             f2 = 0.25\n      sig.level = 0.05\n          power = 0.8\n\n\n¡Importante! Este cálculo devuelve v (grados de libertad del denominador), no n directamente. Para obtener el tamaño muestral total hay que despejar:\n\\[n = v + u + 1\\]\n\nn_total &lt;- 38.68562 + 3 + 1\nn_total\n\n[1] 42.68562\n\n\nEntonces, en base al cálculo del poder estadístico, necesitamos 43 estudiantes en total para tener 80% de poder de detectar que el modelo completo explica una proporción de varianza distinta de cero, si el \\(R^2\\) real es de 0.20.\nComo mencioné antes, esto evalúa el modelo en conjunto, no dice si cada predictor individual (por ejemplo, el método de enseñanza controlando por las otras dos variables) es significativo por separado. Eso requeriría un \\(R^2\\) parcial, que queda fuera del alcance de este tutorial."
+  },
+  {
+    "objectID": "posts/2026-07-12-poder1/index.html#por-qué-este-tutorial-no-me-sirve-para-diseños-mixtos",
+    "href": "posts/2026-07-12-poder1/index.html#por-qué-este-tutorial-no-me-sirve-para-diseños-mixtos",
+    "title": "¿Cuántas observaciones necesito para poner a prueba mi hipótesis?",
+    "section": "¿Por qué este tutorial no me sirve para diseños mixtos?",
+    "text": "¿Por qué este tutorial no me sirve para diseños mixtos?\nEl diseño que planteamos para este tutorial tiene una propiedad conveniente: observaciones independientes (cada estudiante fue asignado a un solo método de estudio y no consideramos otras agrupaciones como escuelas o aulas) y puntajes que nos permiten asumir una distribución aproximadamente normal dentro de cada grupo. Bajo esas condiciones, la relación entre poder, n, tamaño del efecto y el \\(\\alpha\\) tiene una solución analítica, hay una fórmula que se puede despejar directamente. Esto es posible porque el diseño asume una sola fuente de variación aleatoria: la variabilidad entre estudiantes dentro de cada grupo. Ahora bien, esto no siempre se cumple. Si en cambio cada estudiante rindiera el examen varias veces, o los estudiantes estuvieran agrupados en distintas aulas o colegios, habría múltiples fuentes de variación aleatoria simultáneamente, y esa fórmula cerrada dejaría de aplicar. Sobre esto vamos a hablar es la segunda parte de este tutorial, con modelos mixtos y simulación de datos."
+  },
+  {
+    "objectID": "posts/2026-07-12-poder1/index.html#cómo-citar-este-tutorial",
+    "href": "posts/2026-07-12-poder1/index.html#cómo-citar-este-tutorial",
+    "title": "¿Cuántas observaciones necesito para poner a prueba mi hipótesis?",
+    "section": "Cómo citar este tutorial",
+    "text": "Cómo citar este tutorial\nSi te resultó útil te cuento que este tutorial está disponible bajo una licencia Creative Commons Attribution 4.0 International (CC BY 4.0). Esto quiere decir que podés compartirlo y adaptarlo libremente siempre que cites la fuente.\nFormoso, J. (2026, July 12). ¿Cuántas observaciones necesito para poner a prueba mi hipótesis? Cálculo del tamaño muestral - parte 1. Zenodo. https://doi.org/10.5281/zenodo.21326331\n\n¿Preguntas o sugerencias? Dejá un issue aquí o escribime a jesica.formoso@gmail.com con tus comentarios."
   },
   {
     "objectID": "posts/2025-03-28-khipu-2025-ES/index.html",
@@ -105,353 +490,10 @@
     "text": "Referencias\n\nChristensen, R. H. B. (2023). ordinal: Regression Models for Ordinal Data. R package. https://cran.r-project.org/package=ordinal\nLenth, R. V. (2024). emmeans: Estimated Marginal Means. R package. https://cran.r-project.org/package=emmeans\nAgresti, A. (2010). Analysis of Ordinal Categorical Data (2nd ed.). Wiley.\nMcCullagh, P. (1980). Regression models for ordinal data. Journal of the Royal Statistical Society: Series B, 42(2), 109–127.\n\n\n¿Preguntas o sugerencias? Dejá un issue aquí o escribime a jesica.formoso@gmail.com con tus comentarios."
   },
   {
-    "objectID": "posts/2023-08-18-disc-unconf-2023/index.html",
-    "href": "posts/2023-08-18-disc-unconf-2023/index.html",
-    "title": "What I learned at NumFocus DISC Unconf 2023",
-    "section": "",
-    "text": "In September 2023, I had the opportunity to attend the NumFocus DISC Unconference—a gathering dedicated to creating a more equitable open-source data science community. As someone committed to promoting open practices in research, data, and scientific computing in Latin America, this event offered a unique space to connect with leaders in these fields and work together on meaningful projects.\nThe open-source community remains relatively homogenous, which limits its potential. Events like the DISC Unconf provide a space to brainstorm how to make it more representative and inclusve. My role at the event was as a contributor, and I focused on a project that resonates deeply with my experiences as a researcher from the global south: Knowhow: everything you wanted to know about applying for grants but didn’t ask."
-  },
-  {
-    "objectID": "posts/2023-08-18-disc-unconf-2023/index.html#knowhow-everything-you-wanted-to-know-about-applying-for-grants-but-didnt-ask",
-    "href": "posts/2023-08-18-disc-unconf-2023/index.html#knowhow-everything-you-wanted-to-know-about-applying-for-grants-but-didnt-ask",
-    "title": "What I learned at NumFocus DISC Unconf 2023",
-    "section": "Knowhow: everything you wanted to know about applying for grants but didn’t ask",
-    "text": "Knowhow: everything you wanted to know about applying for grants but didn’t ask\nThis project aimed to tackle a critical barrier faced by researchers from underrepresented regions when applying for grants from the global north. For many of us, the application process often feels foreign and inaccessible due to cultural and systemic differences. These challenges discourage talented researchers from applying, perpetuating inequality in access to resources.\nThe project’s goal was to design a curriculum and coaching program to support potential grantees in navigating the grant process. From identifying suitable funding opportunities to crafting proposals, creating budgets, and building collaborations, the program seeks to level the playing field and enable fairer engagement.\nI collaborated with an incredible team, including Laura Ación, Jessica Greene, Barbara Wilk, Kate Hertweck, Yo Yehudi, Tania Allard, and Mariana Meireles. Working alongside individuals from diverse backgrounds was inspiring. Their varied perspectives challenged my thinking and enriched the project in ways I hadn’t anticipated."
-  },
-  {
-    "objectID": "posts/2023-08-18-disc-unconf-2023/index.html#a-memorable-experience",
-    "href": "posts/2023-08-18-disc-unconf-2023/index.html#a-memorable-experience",
-    "title": "What I learned at NumFocus DISC Unconf 2023",
-    "section": "A Memorable Experience",
-    "text": "A Memorable Experience\nThe unconference was a fantastic experience. I met leaders in the open-source world, learned about initiatives making these communities more accessible, and participated in a project that I believe could have a tangible impact on researchers in my region. The brainstorming sessions and collaborative work stood out as particularly productive and inspiring.\nAs a researcher from Argentina, I appreciated the opportunity to share my experiences and perspectives. One key takeaway was the importance of having participants from underrepresented regions in decision-making spaces. Solutions to our challenges must include our voices to be truly effective and relevant.\nI’m especially excited that the DISC Unconf 2025 will take place in São Paulo, Brazil. This move will bring more Latin American researchers to the table and foster regional collaboration."
-  },
-  {
-    "objectID": "posts/2023-08-18-disc-unconf-2023/index.html#why-you-should-attend-the-disc-unconf",
-    "href": "posts/2023-08-18-disc-unconf-2023/index.html#why-you-should-attend-the-disc-unconf",
-    "title": "What I learned at NumFocus DISC Unconf 2023",
-    "section": "Why You Should Attend the DISC Unconf",
-    "text": "Why You Should Attend the DISC Unconf\nIf you are part of a group that is underrepresented in open-source or scientific computing communities, I highly recommend attending a DISC Unconf. It’s a unique opportunity to connect with like-minded individuals, contribute to impactful projects, and ensure your voice is part of the conversation. Beyond networking, it’s a chance to help shape the future of open practices in a way that benefits everyone."
-  },
-  {
-    "objectID": "talks/how-to-teach-programing-2023/index.html",
-    "href": "talks/how-to-teach-programing-2023/index.html",
-    "title": "How to Teach Programming Online",
-    "section": "",
-    "text": "During this workshop, we introduce the participant to evidence-based strategies to teach programming online effectively.\nObjective: To introduce techniques and good practices to design your programming courses and evaluate students.\nDuring this online workshop:\n\nWe show you how to design programming courses in an efficient and productive way.\nWe talk about the utility of peer-review and the importance of feedback, and how to implement these practices.\nWe present different types of assessment. For example, fill-in the blanks, faded examples, etc.\nWe recap good programming practices and how to promote them among your students.\n\nMaterials can be found here:\n\nCourse overview\nSlides\nRecording"
-  },
-  {
-    "objectID": "talks/opensesame-2024/index.html",
-    "href": "talks/opensesame-2024/index.html",
-    "title": "Introduction to OpenSesame",
-    "section": "",
-    "text": "This presentation was an introductory workshop on OpenSesame designed for researchers in Cognitive Psychology and Education. OpenSesame is open-source software created to design experiments and research tasks.\nDuring the workshop, we explored:\n\nThe interface and basic features of OpenSesame.\nHow to configure the structure of an experimental task.\nStimulus presentation to participants.\nResponse collection and data recording.\n\nYou can find the slides here."
-  },
-  {
-    "objectID": "talks/ttt-2024/index.html",
-    "href": "talks/ttt-2024/index.html",
-    "title": "The Carpentries and MetaDocencia’s Instructor Training",
-    "section": "",
-    "text": "During 2024, I participated as a trainer in the context of Intructor Training with The Carpentries curriculum. Instructor Training familiarizes trainees with evidence-based teaching practices, helps them develop strategies for fostering a positive learning environment in workshops, and offers opportunities to practice and enhance their teaching skills.\nFind the materials in English here.\nFind the materials in Spanish here:\n\nDay 1\nDay 2\nDay 3\nDay 4"
-  },
-  {
-    "objectID": "talks/quarto-rladiesba-2024/index.html",
-    "href": "talks/quarto-rladiesba-2024/index.html",
-    "title": "Introduction to Quarto",
-    "section": "",
-    "text": "The R-Ladies Buenos Aires workshop Transform Your Data into Visual Stories with Quarto presents an introduction to Quarto, an open-source publishing system designed to create dynamic and reproducible scientific and technical documents. It explores practical examples of its use in reproducible reports, covering topics such as integrating code and text, customizing output formats, and using parameters to create parameterized reports. This introductory workshop is aimed at individuals with a basic knowledge of R and little to no previous experience with Quarto.\nLearning Objectives:\n\nGet familiar with Quarto as a dynamic and reproducible publishing tool that expands the capabilities of RMarkdown.\nIdentify the possibilities it offers for creating scientific and technical documents, such as reports, presentations, and websites.\nLearn how to combine explanatory text with executable code to generate reports that automatically update results.\nUnderstand how to use parameters in Quarto to efficiently create different versions of the same document.\n\nFind recording and materials here."
-  },
-  {
-    "objectID": "talks/quest-2024/index.html",
-    "href": "talks/quest-2024/index.html",
-    "title": "Responsible Research & Decolonisation from a Latin American Perspective",
-    "section": "",
-    "text": "As part of MetaDocencia, I was part of the organizing committee for the Summer School/Alumni Seminar: Decolonizing Global Health with a focus on Biomedical Sciences, Research and Education that took place in the Quest Center of the Berlin Institute of Health and Charité, where I also participated as a Lecturer talking about responsible research & decolonisation from a Latin American perspective, together with Laura Ación, Laura Ascenzi, and Karina formoso.\nYou can find the slides here. Additional information can be found in this blogpost."
-  },
-  {
-    "objectID": "talks/ucla-2023/index.html",
-    "href": "talks/ucla-2023/index.html",
-    "title": "A Path to Open, Inclusive, and Collaborative Science for Librarians",
-    "section": "",
-    "text": "In 2023, Irene and I received an award to participate in the UCLA-IMLS Open Science for Librarians Collaborative Lesson Development Workshop, a project sponsored by The Carpentries. This opportunity provided us with specialized training to develop our proposed lesson, “A Path to Open, Inclusive, and Collaborative Science for Librarians”.\nDuring the workshop, we gained insights into lesson design and community-driven curriculum development. The program emphasized inclusivity and collaboration. As a result of this workshop, we’ve been working on the lesson, which is now available in a Pre-Alpha state. You can check out the progress:\n\nGitHub Repository.\nLesson Website."
-  },
-  {
-    "objectID": "talks/quarto-GHA-2025/index.html",
-    "href": "talks/quarto-GHA-2025/index.html",
-    "title": "Automating Report Publishing with Quarto and GitHub Actions — A LatinR 2025 Tutorial Recap",
-    "section": "",
-    "text": "At LatinR 2025, María Nanton and I ran a 3-hour hands-on tutorial on automating the publication of data dashboards using Quarto and GitHub Actions."
-  },
-  {
-    "objectID": "talks/quarto-GHA-2025/index.html#the-problem-we-set-out-to-solve",
-    "href": "talks/quarto-GHA-2025/index.html#the-problem-we-set-out-to-solve",
-    "title": "Automating Report Publishing with Quarto and GitHub Actions — A LatinR 2025 Tutorial Recap",
-    "section": "The problem we set out to solve",
-    "text": "The problem we set out to solve\nWe’ve all been there: manually re-running a script, re-rendering a report, and uploading it somewhere every time new data comes in. The goal of this tutorial was to show that this whole process can be automated, so that reports stay up to date without lifting a finger after the initial setup."
-  },
-  {
-    "objectID": "talks/quarto-GHA-2025/index.html#how-it-went",
-    "href": "talks/quarto-GHA-2025/index.html#how-it-went",
-    "title": "Automating Report Publishing with Quarto and GitHub Actions — A LatinR 2025 Tutorial Recap",
-    "section": "How it went",
-    "text": "How it went\nThe tutorial was aimed at R and Quarto users with basic Git/GitHub familiarity but no prior experience with GitHub Actions. We started by introducing key concepts (CI/CD, virtual machines, renv, and GitHub Pages) before writing a single line of code.\nFrom there, we moved into guided practice. Our starting point was a Google Form feeding responses into a public Google Sheet, with a Quarto dashboard already reading from it. Step by step, participants wired everything together using GitHub Actions: first triggering the workflow manually, then on every push, and finally on a schedule.\nBy the end of the session, everyone had written a YAML workflow file from scratch, published their dashboard to GitHub Pages, and set it up to run automatically using cron syntax.\nSharing this with the LatinR community was a wonderful experience. Participants were engaged and curious throughout, asking sharp questions at every stage. The feedback was overwhelmingly positive — the main ask being more time to keep exploring. Exactly the kind of response that makes you want to run it again!\nYou can find the materials and session recording below:\n📁 Tutorial materials 🎥 Session recording"
-  },
-  {
-    "objectID": "talks/alta-ca-2024/index.html",
-    "href": "talks/alta-ca-2024/index.html",
-    "title": "ALTa Ciencia Abierta (Latin America Transforms to Open Science)",
-    "section": "",
-    "text": "The ALTa Ciencia Abierta course is designed to provide a comprehensive introduction to open science practices, focusing on key topics like reproducible research, open data, and collaborative workflows, for Spanish-speaking communities. It aims to equip researchers with the tools and knowledge to make their work more transparent, accessible, and reproducible.\nDuring 2024, I had the pleasure of teaching the module on open code in the three editions of the course, alongside Patricia Loto. In this module, we explored best practices for sharing and collaborating on code, ensuring that research processes remain open, reproducible, and easy for others to follow.\nThis course is part of a broader initiative supported by NASA - NASA TOPS - which promotes open science and collaboration across the global research community. MetaDocencia’s participation in this initiative is a significant step towards fostering a more inclusive and transparent scientific community, ensuring that research is accessible and reproducible for everyone, regardless of location or resources.\n\nLink to the website\nLink to the Open Code module"
-  },
-  {
-    "objectID": "talks/nasa-2i2c-2024/index.html",
-    "href": "talks/nasa-2i2c-2024/index.html",
-    "title": "NASA TOPS-T Reproducibly Analyzing Wildfire, Drought, and Flood Risk with NASA Earthdata Cloud",
-    "section": "",
-    "text": "I am part of the development team for ScienceCore: Climate Risk, a learning module under NASA’s Transform to Open Science (TOPS) initiative. This project aims to teach participants how to identify, analyze, visualize, and report on climate data available through the NASA Earthdata Cloud to assess risks related to wildfires, droughts, and floods in the context of climate change.\nIn collaboration with MetaDocencia and 2i2c, we are creating open, reproducible, and accessible materials in both English and Spanish. The module leverages open-source tools to promote open science practices and cloud-based intensive computing. It empowers learners to analyze regional and global environmental risks using open science-based, reproducible workflows.\nThe materials can be found in this GitHub repository and this Jupyter book."
-  },
-  {
-    "objectID": "cv.html",
-    "href": "cv.html",
-    "title": "Jesica Formoso - CV",
-    "section": "",
-    "text": "I am currently a Tenured Researcher at CIIPME-CONICET and serve as the Impact Measurement Coordinator and Instructor at MetaDocencia, where I advocate for Open Science across Latin America and the Caribbean. I am actively involved in communities of practice that support data science education, including co-organizing the Buenos Aires chapter of R-Ladies. I have over a decade of teaching experience as a faculty member at the University of Buenos Aires and more than five years of experience designing and teaching courses on statistics, R programming, and data science. Additionally, I contribute to open educational resources by developing tutorials, workshops, and course materials for teaching R programming, data science, and statistics in Spanish. I am also an Instructor and Trainer for The Carpentries and RStudio (now Posit).\nDownload CV here"
-  },
-  {
-    "objectID": "cv.html#overview",
-    "href": "cv.html#overview",
-    "title": "Jesica Formoso - CV",
-    "section": "",
-    "text": "I am currently a Tenured Researcher at CIIPME-CONICET and serve as the Impact Measurement Coordinator and Instructor at MetaDocencia, where I advocate for Open Science across Latin America and the Caribbean. I am actively involved in communities of practice that support data science education, including co-organizing the Buenos Aires chapter of R-Ladies. I have over a decade of teaching experience as a faculty member at the University of Buenos Aires and more than five years of experience designing and teaching courses on statistics, R programming, and data science. Additionally, I contribute to open educational resources by developing tutorials, workshops, and course materials for teaching R programming, data science, and statistics in Spanish. I am also an Instructor and Trainer for The Carpentries and RStudio (now Posit).\nDownload CV here"
-  },
-  {
-    "objectID": "cv.html#selected-education",
-    "href": "cv.html#selected-education",
-    "title": "Jesica Formoso - CV",
-    "section": "Selected education",
-    "text": "Selected education\nPh.D., Ethical, Humanistic, and Social Medical Sciences (2017)\n\nEmphasis: Cognitive Development of Mathematical Skills in Children.\nSchool of Medicine\nUniversity of Buenos Aires\n\nSpecialization in Statistics for Health Sciences (2018)\n\nInstitute of Calculus\nSchool of Exact and Natural Sciences\nUniversity of Buenos Aires\n\nSpecialization in Neuropsychology (2018)\n\nSchool of Psychology\nUniversity of Buenos Aires\n\nB.S., Psychology (2008)\n\nSchool of Psychology\nUniversity of Buenos Aires"
-  },
-  {
-    "objectID": "cv.html#selected-research-experience",
-    "href": "cv.html#selected-research-experience",
-    "title": "Jesica Formoso - CV",
-    "section": "Selected research experience",
-    "text": "Selected research experience\nTenured Researcher (2019-2022) - Cognitive Studies lab at the Psychological Research Institute, School of Psychology, University of Buenos Aires (UBA) - National Scientific and Technical Research Council (CONICET)\nTenured Researcher (2023-present) - Interdisciplinary Center for Research in Mathematical and Experimental Psychology “Dr. Horacio J. A. Rimoldi” (CIIPME) - National Scientific and Technical Research Council (CONICET)"
-  },
-  {
-    "objectID": "cv.html#selected-teaching-experience",
-    "href": "cv.html#selected-teaching-experience",
-    "title": "Jesica Formoso - CV",
-    "section": "Selected teaching experience",
-    "text": "Selected teaching experience\nInstructor and Trainer (2020 - present) - Data Carpentry & The Carpentries - RStudio (Posit)\nLead Instructor (2018 - 2024) - R programming, Data analysis and visualization courses for graduate psychology and health students - UBA; Italian Hospital University Institute\nAssistant Teaching Professor (2013 - 2024) - Statistics, BSc. in Psyhology, School of Psychology, UBA - Neurophysiology, BSc. in Psyhology, School of Psychology, UBA"
-  },
-  {
-    "objectID": "cv.html#selected-community-developments",
-    "href": "cv.html#selected-community-developments",
-    "title": "Jesica Formoso - CV",
-    "section": "Selected community developments",
-    "text": "Selected community developments\nMetaDocencia - Impact Measurement Coordinator/Instructor (2022 - present)\nMetaDocencia is an organization committed to advancing Open Science practices across Latin America and the Caribbean. Its work focuses on capacity-building, adapting and creating educational resources in Spanish, and fostering a network of regional communities and stakeholders. Currently, it is part of the NASA TOPS initiative and serves as the contextualizer for NASA materials in Spanish.\nR-Ladies Buenos Aires - organizer/Instructor (2020 - present)\nR-Ladies is an international initiative dedicated to promoting diversity and inclusion within the R programming community. The Buenos Aires chapter organizes 3 to 6 events annually, featuring activities such as technical skill-building workshops, short presentations by members and guest speakers, as well as community-building and networking opportunities.\nLatinR - organizer committee (2023)\nLatin American Conference about the Use of R for Research + Development"
-  },
-  {
-    "objectID": "cv.html#selected-talks-and-presentations",
-    "href": "cv.html#selected-talks-and-presentations",
-    "title": "Jesica Formoso - CV",
-    "section": "Selected talks and presentations",
-    "text": "Selected talks and presentations\nCollective Creation of Open Science (2024). Guest pannelist in the seminar Promoting Open Science in and from the Global South (first webinar from eLife’s Global South Committee for Open Science)\nInsights and Innovation in Virtual Training (2024). Guest panellist in this webinar organized by Don’t Use This Code and the NASA TOPS iniciative.\nResponsible Reseach & Decolonisation from a Latin American Perspective (2024). Guest pannelist and organizer in the Summer School/Alumni Seminar: Decolonizing Global Health with a focus on Biomedical Sciences, Reseach and Education organized by Berlin Institute of Health, Charité, Quest Center and MetaDocencia.\nMapping Open-Science Communities, Organizations & Events in Latin America (2023). Lightning Talk within the Code for All Summit 2023.\nA Shiny-app for Mapping Open-Science Communities, Organizations & Events in Latin America (2023). LatinR 2023: Latin American conference about the use of R in research and development.\nCommunities of Practice in Latin America and their Influence on the Dissemination of Open-Science (2023). csv,conf,v7."
-  },
-  {
-    "objectID": "cv.html#peer-reviewed-publications",
-    "href": "cv.html#peer-reviewed-publications",
-    "title": "Jesica Formoso - CV",
-    "section": "Peer-reviewed publications",
-    "text": "Peer-reviewed publications\nMost of my peer-reviewd publications can be found in my google scholar profile."
-  },
-  {
-    "objectID": "cv.html#selected-awards-and-scholarships",
-    "href": "cv.html#selected-awards-and-scholarships",
-    "title": "Jesica Formoso - CV",
-    "section": "Selected awards and scholarships",
-    "text": "Selected awards and scholarships\nKHIPU 2025\n\nLatin American Meeting in Artificial Intelligence, Santiago, Chile Selected to participate in this highly competitive event, recognized for academic excellence and contributions to diversity in AI research.\n\nPosit Opportunity Scholarship (2024)\n\nPosit::conf(2024), Seattle, USA Awarded funding to attend the Posit Conference 2024. Covered travel, accommodation, meals, and conference fees.\n\nExternal Fellowship for Young Researchers (2023)\n\nNational Scientific and Technical Research Council (CONICET)- Awarded funding to conduct research under the supervision of Dr. Gracia Jiménez Fernández at the Department of Developmental and Educational Psychology, Faculty of Educational Sciences, University of Granada, Spain. This prestigious program supports the training of early-career researchers at leading international research institutions.\n\nDISC Unconference 2023\n\nNumFOCUS, Amsterdam, Netherlands. Invited and funded to attend the Diversity & Inclusion in Scientific Computing Unconference, a collaborative event focused on creating scalable solutions and resources to promote diversity and inclusion in open-source scientific computing.\n\nPostdoctoral Fellowship (2017)\n\nNational Scientific and Technical Research Council (CONICET)\n\nIBRO Travel Grant (2014)\n\nInternational Brain Research Organization. Awarded funding to attend the School of Neuroinformatics and Computational Neuroscience, 2014.\n\nDoctoral Fellowship (2013)\n\nSecretary of Science and Technology, University of Buenos Aires (UBACyT)"
-  },
-  {
     "objectID": "posts.html",
     "href": "posts.html",
     "title": "Blog posts",
     "section": "",
-    "text": "Modelos mixtos de enlace acumulativo (CLMM): un tutorial paso a paso en R️\n\n\n\nTutorial\n\nEstadística\n\nDatos ordinales\n\nMedidas repetidas\n\n\n\n\n\n\n\n\n\nApr 6, 2026\n\n\nJesica Formoso\n\n\n\n\n\n\n\n\n\n\n\n\nKhipu 2025️ 🖥🎉️\n\n\n\nConference\n\nArtificial Intelligence\n\nOpen-source\n\n\n\n\n\n\n\n\n\nMar 28, 2025\n\n\nJesica Formoso\n\n\n\n\n\n\n\n\n\n\n\n\nAsístí a Khipu 2025!🎉️\n\n\n\nConferencia\n\nInteligencia artificial\n\nCódigo abierto\n\n\n\n\n\n\n\n\n\nMar 28, 2025\n\n\nJesica Formoso\n\n\n\n\n\n\n\n\n\n\n\n\nR en Red: ARcenso, Opportunities, and Community\n\n\n\nTalk\n\nR\n\nOpen-source\n\n\n\n\n\n\n\n\n\nDec 20, 2024\n\n\nJesica Formoso\n\n\n\n\n\n\n\n\n\n\n\n\nPosit::Conf(2024): R, Community, and Learning\n\n\n\nConference\n\nR\n\nOpen-source\n\n\n\n\n\n\n\n\n\nSep 18, 2024\n\n\nJesica Formoso\n\n\n\n\n\n\n\n\n\n\n\n\nWhat I learned at NumFocus DISC Unconf 2023\n\n\n\nConference\n\nDiversity & Inclusion\n\nOpen-source\n\n\n\n\n\n\n\n\n\nAug 18, 2023\n\n\nJesica Formoso\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "talks/snrd-2025/index.html",
-    "href": "talks/snrd-2025/index.html",
-    "title": "Políticas Relacionadas con Repositorios de Datos Científicos en Argentina",
-    "section": "",
-    "text": "La apertura de datos científicos es clave para una ciencia más transparente, colaborativa y reproducible. Permite validar resultados, evitar la duplicación de esfuerzos y potenciar nuevas investigaciones a partir de datos ya generados. Pero para que esto sea posible, no alcanza con la voluntad individual: hacen falta políticas públicas claras, sistemas robustos y un entorno que reconozca y valore estas prácticas.\nEn el primer WDS Webinar Series on International Repository-related Policies, organizado por el World Data System (WDS), compartí el caso argentino: la Ley 26.899, su implementación y el funcionamiento del Sistema Nacional de Repositorios Digitales. También presentaron Juan Sebastián González Sanabria (UPTC) y Fernando Piraquive Piraquive (Universidad Distrital FJC) sobre el contexto colombiano. El encuentro fue moderado por Bianca Amaro, presidenta de LA Referencia, una red fundamental para dar visibilidad a la producción científica en América Latina. Entre todo, tuvimos la oportunidad de hablar sobre cómo, a pesar de los marcos normativos, quienes investigan enfrentan múltiples barreras para implementar prácticas abiertas: falta de capacitación, infraestructura limitada, y sobre todo, sistemas de evaluación que siguen priorizando la publicación tradicional por sobre el compartir datos o resultados intermedios. Sin incentivos reales ni apoyo institucional, es difícil que la apertura se vuelva la norma.En este contexto, la construcción de una comunidad científica regional es fundamental. Una red que impulse la cooperación por sobre la competencia, y que fortalezca una ciencia abierta situada, que dialogue con las necesidades y potencialidades de nuestros territorios.\nSi te interesa conocer más al respecto, podés encontrar la grabación 👉aquí👈."
-  },
-  {
-    "objectID": "talks/code-for-all-2023/index.html",
-    "href": "talks/code-for-all-2023/index.html",
-    "title": "Mapping open-science communities, organizations & events in Latin America (Lightning Talk)",
-    "section": "",
-    "text": "The session showcases MetaDocencia’s initiative to make information available regarding resources, events, workshops, funding opportunities, and open science communities in Latin America through a collaborative repository. This repository will be available to anyone who wants to access resources on open science, get in touch with other regional and local actors in Latin America, or participate in the dissemination of open practices. This project was presented in Code for All’s 2023 Summit (september 18-21).\nFind the recording here."
-  },
-  {
-    "objectID": "talks/dont-use-this-code-2024/index.html",
-    "href": "talks/dont-use-this-code-2024/index.html",
-    "title": "Insights and Innovations in Virtual Training | DUTC/NASA TOPS Talks",
-    "section": "",
-    "text": "During this community event organized by Don’t Use This Code in the context of the NASA TOPS inciative, I participated of a round-table discussion regarding innovations in virtual tranings with Brian Knosp, Scientific Applications Software Engineer at NASA’s Jet Propulsion Laboratory, Kenji Nomura, High School STEM teacher currently serving as an Albert Einstein Distinguished Educator fellow at NASA in the Science Activation (SciAct) program, and James Powel from Don’t Use This Code.\nFind the recording here."
-  },
-  {
-    "objectID": "talks/dplyr-rladiesba-2020/index.html",
-    "href": "talks/dplyr-rladiesba-2020/index.html",
-    "title": "Dplyr workshop",
-    "section": "",
-    "text": "This is a 2 hour workshop for R-Ladies Buenos Aires about manipulation of tabular data with dplyr. This is one of the core packages of the tidyverse, a collection of R packages designed for data science. It provides a set of functions that make it easier to filter, arrange, summarize, and transform data. Together with the pipe operator (%&gt;%), they allows users to chain operations together in a clear and concise way.\nFind the recording and materials here."
-  },
-  {
-    "objectID": "talks/ciencia-datos-psico-2023/index.html",
-    "href": "talks/ciencia-datos-psico-2023/index.html",
-    "title": "Pre-Congress Workshop - “Data Science for Psychologist (with R and RStudio)”",
-    "section": "",
-    "text": "This was a pre-congress workshop taught during the 16th International Congress of Research and Professional Practice in Psychology held in the University of Buenos Aires. The objective was to introduce participants to the fundamental concepts and tools of data science applied to psychological research using R. It was tailored for researchers, practitioners, and students who wish to enhance their skills in data analysis and visualization within the field of psychology.\nFind the slides here."
-  },
-  {
-    "objectID": "talks/latinr-2025-readability/index.html",
-    "href": "talks/latinr-2025-readability/index.html",
-    "title": "Readability Metrics for Spanish Texts - readabilityes (Lightning Talk)",
-    "section": "",
-    "text": "We are a team from the Centro Interdisciplinario de Investigaciones en Psicología Matemática y Experimental (CIIPME–CONICET) and at LatinR2025 we presented readabilityes, an R package we are currently working on which focuses on the computation of readability metrics for Spanish texts."
-  },
-  {
-    "objectID": "talks/latinr-2025-readability/index.html#what-is-readability",
-    "href": "talks/latinr-2025-readability/index.html#what-is-readability",
-    "title": "Readability Metrics for Spanish Texts - readabilityes (Lightning Talk)",
-    "section": "What is readability?",
-    "text": "What is readability?\nIn simple terms, readability is about how easy a text is to understand. It is a property of a text that indicates how quickly and comfortably can read and process what is written."
-  },
-  {
-    "objectID": "talks/latinr-2025-readability/index.html#why-does-readability-matter",
-    "href": "talks/latinr-2025-readability/index.html#why-does-readability-matter",
-    "title": "Readability Metrics for Spanish Texts - readabilityes (Lightning Talk)",
-    "section": "Why does readability matter?",
-    "text": "Why does readability matter?\nReadability metrics are useful when you want your text to reach people. They help evaluate and adapt content so it is accessible to readers with different levels of education and reading skills.\nThis makes them especially valuable in areas such as education, medicine and public health, legal and administrative communications, scientific communication and outreach."
-  },
-  {
-    "objectID": "talks/latinr-2025-readability/index.html#about-readabilityes",
-    "href": "talks/latinr-2025-readability/index.html#about-readabilityes",
-    "title": "Readability Metrics for Spanish Texts - readabilityes (Lightning Talk)",
-    "section": "About readabilityes",
-    "text": "About readabilityes\nSpanish comes with its own quirks. Its phonology and spelling rules make automatic syllabification harder than it might seem, and that’s a key step for many readability formulas. On top of that, there aren’t many open, easy-to-use tools in R that handle this.\nOur goal is to build a tool that is both practical and reproducible, making readability analysis in Spanish easier to run and easier to share.\nSome of the things we’re aiming for:\n\nRule-based syllabification designed specifically for Spanish\nNo external dependencies or downloadable models\nSmooth integration with the tidyverse ecosystem\n\nThe project is still evolving, and one of the next steps is adding support for Catalan.\nYou can check out the presentation slides and video, as well as the repository for the preliminary version of the package following these links."
-  },
-  {
-    "objectID": "talks/csv-conf-2023/index.html",
-    "href": "talks/csv-conf-2023/index.html",
-    "title": "Communities of practice in Latin America and their influence on the dissemination of open science",
-    "section": "",
-    "text": "In this talk, which was presented in the csv,conf 2023, we analize what is the role of communities of practice in the dissemination and implementation of open science practices in general, and specifically, in the Latin American region. To this end, we conducted an exploratory analysis of the evolution of the use of the terms “open science” and “open science” over time from 2012 to the present. Where information was available, the representation of each region was studied. Finally, a social network analysis was performed to identify influential users and clusters of users and then the association of these with communities of practice was studied.\nThe recording is available here.\nMore information can be found in this blogpost."
-  },
-  {
-    "objectID": "talks/latinr-2023/index.html",
-    "href": "talks/latinr-2023/index.html",
-    "title": "A Shiny app for mapping open-science communities, organizations & events in Latin America (Lightning Talk)",
-    "section": "",
-    "text": "The presentation “A Shiny App for Mapping Open-Science Communities, Organizations & Events in Latin America” highlighted the challenges of limited resources and spaces in Spanish for open science in Latin America, as well as the difficulty of identifying active communities and networks practicing open science in the region.\nIt emphasized the lack of a centralized, up-to-date repository to facilitate access to key information about resources, events, and communities, which hinders collaboration and knowledge exchange.\nAs a solution, the presentation proposed the development of a collaborative repository accessible through a Shiny application. This repository aims to centralize and map open science resources and communities in the region, enabling users to connect with local and regional initiatives, access resources, and actively participate in promoting open science practices.\nThe app is envisioned as not only a useful tool for researchers and organizations but also a bridge to foster collaboration and visibility for open science across Latin America.\nAn initial version can be found here.\nYou can find the presentation slides here."
-  },
-  {
-    "objectID": "talks/spss-a-r-2018/index.html",
-    "href": "talks/spss-a-r-2018/index.html",
-    "title": "From SPSS to R",
-    "section": "",
-    "text": "This is a 2 hour workshop for R-Ladies Buenos Aires planned for researcherd transitioning from SPSS to R.\nFind the recording here."
-  },
-  {
-    "objectID": "talks/elife-2024/index.html",
-    "href": "talks/elife-2024/index.html",
-    "title": "Promoting Open Science in and from the Global South",
-    "section": "",
-    "text": "In this first webinar from eLife’s Global South Committee for Open Science, we explored the challenges faced in this region and shared our collective vision for enhancing Open Science infrastructure and promotion. I participated as a guest panellists together with Emmanuel Boakye and Hu Chuan-Peng.\nFind the recording here."
-  },
-  {
-    "objectID": "posts/2024-09-18-posit-conf-2024/index.html",
-    "href": "posts/2024-09-18-posit-conf-2024/index.html",
-    "title": "Posit::Conf(2024): R, Community, and Learning",
-    "section": "",
-    "text": "This August, I had the incredible opportunity to attend Posit::conf(2024) in Seattle, thanks to the Opportunity Scholarship. From August 12 to 14, I joined a group of R enthusiasts, data scientists, and educators to learn, explore the latest advancements in data science, and connect with others in the R community."
-  },
-  {
-    "objectID": "posts/2024-09-18-posit-conf-2024/index.html#hi-positconf2024",
-    "href": "posts/2024-09-18-posit-conf-2024/index.html#hi-positconf2024",
-    "title": "Posit::Conf(2024): R, Community, and Learning",
-    "section": "",
-    "text": "This August, I had the incredible opportunity to attend Posit::conf(2024) in Seattle, thanks to the Opportunity Scholarship. From August 12 to 14, I joined a group of R enthusiasts, data scientists, and educators to learn, explore the latest advancements in data science, and connect with others in the R community."
-  },
-  {
-    "objectID": "posts/2024-09-18-posit-conf-2024/index.html#why-i-attended",
-    "href": "posts/2024-09-18-posit-conf-2024/index.html#why-i-attended",
-    "title": "Posit::Conf(2024): R, Community, and Learning",
-    "section": "Why I Attended",
-    "text": "Why I Attended\nAs a passionate R user and active member of the R community, attending Posit::Conf(2024) was a dream come true. I’ve spent years organizing events for R-Ladies Buenos Aires, teaching R in undergraduate and graduate programs, and creating Spanish-language learning materials. This conference offered the chance to deepen my skills, learn about the latest tools, and meet others who share my enthusiasm for all things R."
-  },
-  {
-    "objectID": "posts/2024-09-18-posit-conf-2024/index.html#workshops-and-events",
-    "href": "posts/2024-09-18-posit-conf-2024/index.html#workshops-and-events",
-    "title": "Posit::Conf(2024): R, Community, and Learning",
-    "section": "Workshops and events",
-    "text": "Workshops and events\nThe workshops at Posit Conf were a major highlight. I attended the Build a Dashboard with Quarto workshop, led by the amazing Mine Çetinkaya-Rundel, a developer educator at Posit, PBC. Mine’s teaching style is incredible, making the process of creating Quarto dashboards approachable and fun. If you’re curious about the workshop, check out the materials here.\nAnother standout moment was participating in the Tidyverse Developer Day. This event was an introduction to contributing to the Tidyverse ecosystem and showcased the supportive spirit of the community. Everyone was eager to help, share their thoughts, and encourage new contributors. You can read more about it here.\nThe conference was filled with inspiring talks and sessions, many of which focused on Quarto. These sessions directly connected to my professional work, and I’ve already shared some of what I learned in a workshop with R-Ladies Buenos Aires. If you know Spanish, you can check it out here. We’re even planning a follow-up workshop next year to explore Quarto dashboards in more depth!"
-  },
-  {
-    "objectID": "posts/2024-09-18-posit-conf-2024/index.html#building-community",
-    "href": "posts/2024-09-18-posit-conf-2024/index.html#building-community",
-    "title": "Posit::Conf(2024): R, Community, and Learning",
-    "section": "Building Community",
-    "text": "Building Community\nPosit Conf was not just about learning—it was also about connecting. I attended the Opportunity Scholar Lunch, where I met fellow scholars and Posit team members, including Hadley Wickham, Hannah Frick, Carlos Scheidegger, and the wonderful Kaia Cooper. The lunch was casual, fun, and an excellent chance to get to know each other a little bit.\nAnother memorable moment was meeting members of the rainbowR community, which supports LGBTQ+ individuals in the R community. Sharing stories and experiences over lunch with this group was both heartwarming and inspiring.\nThe atmosphere at Posit::conf(2024) was everything I hoped for. I met R enthusiasts from all over the world, spanning diverse disciplines, from academia to industry. It was a reminder of the incredible reach and versatility of the R community."
-  },
-  {
-    "objectID": "posts/2024-09-18-posit-conf-2024/index.html#resources",
-    "href": "posts/2024-09-18-posit-conf-2024/index.html#resources",
-    "title": "Posit::Conf(2024): R, Community, and Learning",
-    "section": "Resources",
-    "text": "Resources\nIf you’re curious about the workshops, the materials are available here. I highly recommend exploring them—they’re packed with useful information and practical tools that are worth checking out!\nIf you belong to an underrepresented group, don’t miss the chance to attend Posit::conf(2025). Be sure to check out the Opportunity Scholarship—it could be your gateway to an incredible experience!"
-  },
-  {
-    "objectID": "posts/2025-03-28-khipu-2025/index.html",
-    "href": "posts/2025-03-28-khipu-2025/index.html",
-    "title": "Khipu 2025️ 🖥🎉️",
-    "section": "",
-    "text": "Earlier this month, I had the chance to attend Khipu, the largest Artificial Intelligence (AI) and Machine Learning gathering in Latin America.\nThis year marked the fourth edition of Khipu—and the first to take place outside of Uruguay. It was held in Santiago, Chile, bringing together hundreds of researchers, professionals, and students from across the region and beyond.\nKhipu is more than just a conference: it’s a space for learning, sharing, and building community around AI in Latin America. The program is thoughtfully designed to offer content for a wide range of audiences. Talks follow a progressive structure: early sessions are more general and accessible, yet rigorous and engaging, and always led by experts.\nFor example, some of the opening lectures I really enjoyed were ML & DL Foundamentals I by Jorge Perez, ML & DL Foundamentals II by Alfredo Canziani and Natural Language Processing Fundamentals by Isabelle Augenstein. As the week went on, content became increasingly technical and specialized. On the second day, Petar Veličković gave a fantastic lecture on Geometric Deep Learning. By Thursday, we had parallel sessions on cybersecurity, ML in economics, computer vision, AI and human rights, among others.\nThe conference also offered tutorials at different difficulty levels on various topics such as in machine learning, natural language processing, AI ethics, or technical toolkits. Materials were carefully prepared, including well documented Jupyter notebooks you could take home and continue learning on your own. There were also poster sessions, where attendees could present their work and get feedback in a friendly environment.\nOne of the things that stood out the most to me was the welcoming and warm atmosphere. It’s a great place to meet people who are working in AI across different sectors, to explore collaborations, and to feel part of a growing Latin American AI community."
-  },
-  {
-    "objectID": "posts/2025-03-28-khipu-2025/index.html#want-to-attend-the-next-event",
-    "href": "posts/2025-03-28-khipu-2025/index.html#want-to-attend-the-next-event",
-    "title": "Khipu 2025️ 🖥🎉️",
-    "section": "✍️ Want to attend the next event?",
-    "text": "✍️ Want to attend the next event?\nYou might be wondering how to attend the next Khipu. Unlike many conferences, you don’t simply register and pay a fee. Instead, you apply, sharing your background, motivation, and what you hope to contribute or learn. If selected, you can also apply for financial support to cover travel and accommodation. The goal is to make participation accessible and remove financial barriers.\nWhat makes a good application? I’m not entirely sure—maybe I should’ve asked someone from the organizing committee—but I believe they value your potential to share what you learn and act as a multiplier in your community. If you’re involved in teaching or in communities of practice, that’s probably a plus. If you’re working on projects that require AI and could benefit from your attendance, mention them! Include links to relevant resources or repositories."
-  },
-  {
-    "objectID": "posts/2025-03-28-khipu-2025/index.html#language-access",
-    "href": "posts/2025-03-28-khipu-2025/index.html#language-access",
-    "title": "Khipu 2025️ 🖥🎉️",
-    "section": "🌐 Language access",
-    "text": "🌐 Language access\nA significant limitation: everything is in English. This year, the organizing team added automatic captioning, which helps, but it’s still not an event I would recommend to someone with no English at all. That said, the team is clearly aware of this barrier. Khipu is made for Latin Americans, and there’s a genuine interest in making it more accessible for non-English speakers in the future."
-  },
-  {
-    "objectID": "posts/2025-03-28-khipu-2025/index.html#what-i-took-with-me",
-    "href": "posts/2025-03-28-khipu-2025/index.html#what-i-took-with-me",
-    "title": "Khipu 2025️ 🖥🎉️",
-    "section": "What I took with me",
-    "text": "What I took with me\nI learned a lot, met incredible people, drank way too much coffee and ate way too much sugar. But most of all, what stayed with me was the human dimension: the limitations of current technologies, and how people reflect critically on them and work to overcome them.\nWhat happens when you’re working with sensitive, private data that can’t be shared with large models on external platforms, and your institution has limited infrastructure and funding? Projects like the ones presented by Leonardo Lombardi (QuantIT), Aiala Rosá (Universidad de la República), Victor Mireless (UNAM) and Juan Reutter (PUC, Chile) on AI and Human Rights are a clear example.\nWhat if you need a model whose decisions are understandable and accountable—like in a medical setting, where both doctor and patient should be able to understand the logic behind a diagnosis? Talks like the one by René Vidal (University of Pennsylvania) on explainability touched on that.\nOther sessions explored critical topics such as bias and AI governance, highlighting the importance of fairness and transparency in model development and deployment. As part of the closing event, Catherine D’Ignazio (MIT) and Ivana Feldgeber (DataGenero) delivered a powerful session on gender equity and women in AI.\nBasically, a reminder that AI, like any technology, is not neutral. It reflects the values, priorities, and perspectives of those who build it. That’s why spaces like Khipu matter: to ensure Latin America is not just a consumer of AI, but also a key player in shaping its future.\nYou can watch most of the talks on Khipu’s youtube channel"
-  },
-  {
-    "objectID": "posts/2024-12-20-r-en-red/index.html",
-    "href": "posts/2024-12-20-r-en-red/index.html",
-    "title": "R en Red: ARcenso, Opportunities, and Community",
-    "section": "",
-    "text": "Last week, I had the privilege of co-organizing a talk as part of the Buenos Aires chapter of R-Ladies, in collaboration with R en Buenos Aires. Together with María Nanton and Betsy Cohen, we showcased some incredible events and working groups we’ve been part of that not only offer formative experiences but also encourage active participation and community-building.\nOur goal was to inspire members of our community to apply and get involved in initiatives that promote personal and professional growth—and help strengthen our collective network. Many attendees shared that they were unfamiliar with some of the conferences and events we presented or didn’t realize they could apply for financial support or travel grants to participate. This realization was empowering for many, as it helped them see these opportunities as something within their reach.\nThe diversity in the room was amazing—we connected with people working in areas like census data, health data, and academic research. There were attendees who were just starting their journey with R, as well as seasoned users eager to share their experiences. The feedback we received was overwhelmingly positive, and the enthusiasm in the room reinforced the importance of creating spaces like this.\n\nWe wrapped up the evening with an end-of-year toast and a networking session, which allowed us to continue building connections in a relaxed and celebratory atmosphere. 🍾\nIf you missed the talk, you can check out the slides here: Slides\n💜 Stay connected with the R-Ladies Buenos Aires network: 🐦 Twitter: @RLadiesBA 🌐 Website: https://rladiesba.netlify.app/\nLet’s continue growing together, discovering opportunities, and making the R community an even more inclusive and enriching space! 💪💜"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Jesica Formoso",
-    "section": "",
-    "text": "Hi everyone, I’m Jesica! I’m a Data Scientist, a Tenured Researcher at the National Scientific and Technical Research Council (CONICET) in Argentina, and the Impact Measurement Coordinator at MetaDocencia, an organization that aims to promote Open Science in Latin America. Since 2019, I have been teaching and developing curricula for courses in statistics, programming, data science, and data visualization at the University of Buenos Aires (UBA), National Agricultural Technology Institute (INTA), and the University Institute of the Italian Hospital of Buenos Aires. I also serve as an advisor for research projects within Doctoral and Masters graduate programs in Psychology, Neuropsychology and Neuroscience at the University of Buenos Aires, the Latin American Faculty of Social Sciences (FLACSO), and the National University of Flores (UFLO), among others.As an organizer of R-Ladies Buenos Aires I work to foster diversity and inclusion in the tech and data science communities."
+    "text": "¿Cuántas observaciones necesito para poner a prueba mi hipótesis?\n\n\nCálculo del tamaño muestral - Parte 1\n\n\n\nTutorial\n\nEstadística\n\n\n\n\n\n\n\n\n\nJul 12, 2026\n\n\nJesica Formoso\n\n\n\n\n\n\n\n\n\n\n\n\nModelos mixtos de enlace acumulativo (CLMM): un tutorial paso a paso en R️\n\n\n\n\n\n\nTutorial\n\nEstadística\n\nDatos ordinales\n\nMedidas repetidas\n\n\n\n\n\n\n\n\n\nApr 6, 2026\n\n\nJesica Formoso\n\n\n\n\n\n\n\n\n\n\n\n\nAsístí a Khipu 2025!🎉️\n\n\n\n\n\n\nConferencia\n\nInteligencia artificial\n\nCódigo abierto\n\n\n\n\n\n\n\n\n\nMar 28, 2025\n\n\nJesica Formoso\n\n\n\n\n\n\n\n\n\n\n\n\nKhipu 2025️ 🖥🎉️\n\n\n\n\n\n\nConference\n\nArtificial Intelligence\n\nOpen-source\n\n\n\n\n\n\n\n\n\nMar 28, 2025\n\n\nJesica Formoso\n\n\n\n\n\n\n\n\n\n\n\n\nR en Red: ARcenso, Opportunities, and Community\n\n\n\n\n\n\nTalk\n\nR\n\nOpen-source\n\n\n\n\n\n\n\n\n\nDec 20, 2024\n\n\nJesica Formoso\n\n\n\n\n\n\n\n\n\n\n\n\nPosit::Conf(2024): R, Community, and Learning\n\n\n\n\n\n\nConference\n\nR\n\nOpen-source\n\n\n\n\n\n\n\n\n\nSep 18, 2024\n\n\nJesica Formoso\n\n\n\n\n\n\n\n\n\n\n\n\nWhat I learned at NumFocus DISC Unconf 2023\n\n\n\n\n\n\nConference\n\nDiversity & Inclusion\n\nOpen-source\n\n\n\n\n\n\n\n\n\nAug 18, 2023\n\n\nJesica Formoso\n\n\n\n\n\nNo matching items"
   }
 ]
