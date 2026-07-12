@@ -2,7 +2,7 @@
 title: "Modelos mixtos de enlace acumulativo (CLMM): un tutorial paso a paso en R️"
 author: "Jesica Formoso"
 date: "2026-04-06"
-slug: tutorial-CLMM
+slug: tutorial-poder1
 categories:
   - Tutorial
   - Estadística
@@ -373,7 +373,7 @@ La línea punteada vertical en 1 es la referencia: puntos a la derecha indican m
 
 **Cómo citar este tutorial**
 
-Formoso, J. (2026, abril 7). Modelos mixtos de enlace acumulativo (CLMM): un tutorial paso a paso en R. Zenodo. https://doi.org/10.5281/zenodo.19445681
+Formoso, J. (2026, abril 7). Modelos mixtos de enlace acumulativo (CLMM): un tutorial paso a paso en R. Zenodo. [https://doi.org/10.5281/zenodo.19445681](https://doi.org/10.5281/zenodo.19445681)
 
 Este tutorial está disponible bajo una licencia [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). Podés compartirlo y adaptarlo libremente siempre que cites la fuente.
 

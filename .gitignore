@@ -8,3 +8,5 @@ _site/
 docs/
 .html
 
+
+**/*.quarto_ipynb
