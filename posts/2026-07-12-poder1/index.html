@@ -98,7 +98,7 @@ div.csl-indent {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-bba5ebae505b5c03f3f0d8040a416a6b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-c98d9d0b3b0a085d3ddf71e6e91476d8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -241,6 +241,7 @@ window.Quarto = {
   <li><a href="#poder-para-un-t-test-de-dos-muestras" id="toc-poder-para-un-t-test-de-dos-muestras" class="nav-link" data-scroll-target="#poder-para-un-t-test-de-dos-muestras">Poder para un t-test de dos muestras</a></li>
   <li><a href="#poder-para-un-anova-de-un-factor" id="toc-poder-para-un-anova-de-un-factor" class="nav-link" data-scroll-target="#poder-para-un-anova-de-un-factor">Poder para un ANOVA de un factor</a></li>
   <li><a href="#poder-en-correlación-y-regresión-lineal" id="toc-poder-en-correlación-y-regresión-lineal" class="nav-link" data-scroll-target="#poder-en-correlación-y-regresión-lineal">Poder en correlación y regresión lineal</a></li>
+  <li><a href="#poder-para-un-anova-de-dos-factores" id="toc-poder-para-un-anova-de-dos-factores" class="nav-link" data-scroll-target="#poder-para-un-anova-de-dos-factores">Poder para un ANOVA de dos factores</a></li>
   </ul></li>
   <li><a href="#por-qué-este-tutorial-no-me-sirve-para-diseños-mixtos" id="toc-por-qué-este-tutorial-no-me-sirve-para-diseños-mixtos" class="nav-link" data-scroll-target="#por-qué-este-tutorial-no-me-sirve-para-diseños-mixtos">¿Por qué este tutorial no me sirve para diseños mixtos?</a></li>
   <li><a href="#cómo-citar-este-tutorial" id="toc-cómo-citar-este-tutorial" class="nav-link" data-scroll-target="#cómo-citar-este-tutorial">Cómo citar este tutorial</a></li>
@@ -324,7 +325,7 @@ window.Quarto = {
 <tbody>
 <tr class="odd">
 <td><strong>No rechazo H0</strong><br>(concluyo “no hay evidencia de diferencia”)</td>
-<td>Decisión correcta — Nivel de confianza (1−<span class="math inline">\(\alpha\)</span>)</td>
+<td>Decisión correcta (1−<span class="math inline">\(\alpha\)</span>)</td>
 <td>Error de Tipo II — probabilidad <span class="math inline">\(\beta\)</span></td>
 </tr>
 <tr class="even">
@@ -335,7 +336,7 @@ window.Quarto = {
 </tbody>
 </table>
 <p><strong>Error de Tipo I (<span class="math inline">\(\alpha\)</span>):</strong> rechazar <span class="math inline">\(H_0\)</span> siendo verdadera, el falso positivo de arriba. La probabilidad de cometer este tipo de error es <span class="math inline">\(\alpha\)</span>, es el nivel de significación que definimos nosotros de antemano y que, por convención, suele ser 0.05. Esto implica que aceptamos un 5% de probabilidad de recomendar el nuevo método sin que realmente sea mejor.</p>
-<p><strong>Nivel de confianza (1−<span class="math inline">\(\alpha\)</span>):</strong> el complemento del nivel de significación, y habla de la probabilidad de no rechazar <span class="math inline">\(H_0\)</span> cuando efectivamente es verdadera. Con <span class="math inline">\(\alpha\)</span> = 0.05, el nivel de confianza es 95%.</p>
+<p><strong>1−<span class="math inline">\(\alpha\)</span>:</strong> el complemento del nivel de significación, y habla de la probabilidad de no rechazar <span class="math inline">\(H_0\)</span> cuando efectivamente es verdadera. Con <span class="math inline">\(\alpha\)</span> = 0.05, el nivel de confianza es 95%.</p>
 <p><strong>Error de Tipo II (<span class="math inline">\(\beta\)</span>):</strong> Nos habla de la probabilidad de no rechazar <span class="math inline">\(H_0\)</span> siendo falsa. Es el falso negativo. A diferencia de <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\beta\)</span> no se fija de antemano, sino que depende del tamaño real de la diferencia entre métodos, del tamaño muestral y de la varianza. Por eso, en la mayoría de los casos, no se puede calcular <span class="math inline">\(\beta\)</span> con precisión sin antes asumir un tamaño del efecto específico.</p>
 <p><strong>Poder (1−<span class="math inline">\(\beta\)</span>):</strong> es el complemento de <span class="math inline">\(\beta\)</span>, la probabilidad de detectar correctamente que la práctica de recuperación sí funciona mejor, dado que efectivamente funciona mejor. Es el <strong>poder</strong> de nuestra prueba de hipótesis. Esta es la casilla que nos interesa maximizar, y es lo que vamos a calcular durante el resto del tutorial.</p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -354,10 +355,10 @@ Nota
 </section>
 <section id="qué-es-el-poder-estadístico-de-la-prueba" class="level2">
 <h2 class="anchored" data-anchor-id="qué-es-el-poder-estadístico-de-la-prueba">¿Qué es el poder estadístico de la prueba?</h2>
-<p>Sigamos con nuestro ejemplo. Supongamos que en base a una prueba piloto pequeña que realizamos, tenemos una primera estimación. El grupo que estudió con el método tradicional obtuvo un puntaje medio de 70 en el examen, con un desvío estándar de 10; en cambio, quienes utilizaron la práctica de recuperación obtuvieron un puntaje medio de 75 (mismo desvío). Con estos números ya podemos preguntarnos directamente cuántos estudiantes necesitamos para tener una buena chance de detectar esa diferencia de 5 puntos, si realmente existe en la población.</p>
-<p>Esa “buena chance” es el poder estadístico: la probabilidad de rechazar correctamente <span class="math inline">\(H_0\)</span> cuando efectivamente existe un efecto real, en este caso, la probabilidad de que el estudio detecte la mejora de 5 puntos, dado que esa mejora realmente existe. Se calcula en función de cuatro elementos interrelacionados:</p>
+<p>Sigamos con nuestro ejemplo. Supongamos que en base a una prueba piloto pequeña que realizamos, tenemos una primera estimación. El grupo que estudió con el método tradicional obtuvo un puntaje medio de 68.5 en el examen, con un desvío estándar de 10; en cambio, quienes utilizaron la práctica de recuperación obtuvieron un puntaje medio de 73 (mismo desvío). Con estos números ya podemos preguntarnos directamente cuántos estudiantes necesitamos para tener una buena chance de detectar esa diferencia de 4.5 puntos, si realmente existe en la población.</p>
+<p>Esa “buena chance” es el poder estadístico: la probabilidad de rechazar correctamente <span class="math inline">\(H_0\)</span> cuando efectivamente existe un efecto real, en este caso, la probabilidad de que el estudio detecte la mejora de 4.5 puntos, dado que esa mejora realmente existe. Se calcula en función de cuatro elementos interrelacionados:</p>
 <ul>
-<li><strong>El tamaño del efecto</strong>: acá, los 5 puntos de diferencia entre medias, relativos a la variabilidad de los puntajes</li>
+<li><strong>El tamaño del efecto</strong>: acá, los 4.5 puntos de diferencia entre medias, relativos a la variabilidad de los puntajes</li>
 <li><strong>El tamaño muestral</strong> (n): cuántos estudiantes por grupo</li>
 <li><strong>El nivel de significación</strong> (<span class="math inline">\(\alpha\)</span>, típicamente .05)</li>
 <li><strong>La variabilidad</strong> de la variable de interés: el desvío estándar de 10 puntos</li>
@@ -381,26 +382,26 @@ Nota
 <p><span class="math display">\[d = \frac{\bar{x}_1 - \bar{x}_2}{s}\]</span> Donde:</p>
 <ul>
 <li><p><span class="math inline">\(\bar{x}_1\)</span> y <span class="math inline">\(\bar{x}_2\)</span> son las medias de los dos grupos que se comparan</p></li>
-<li><p><span class="math inline">\(s\)</span> es el desvío estándar de cada grupo (cuando son iguales, solo se utiliza uno de los valores)</p></li>
+<li><p><span class="math inline">\(s\)</span> es el desvío estándar combinado de ambos grupos</p></li>
 </ul>
-<p>Un detalle importante! Si los dos grupos no tienen exactamente el mismo desvío estándar (como en nuestro ejemplo, donde asumimos homogeneidad de varianzas para simplificar), <span class="math inline">\(s\)</span> no es simplemente el desvío de un grupo, es el desvío combinado, que pondera los desvíos de ambos grupos según su tamaño muestral:</p>
+<p>¡Un detalle importante! Cuando los desvíos son iguales en ambos grupos (varianza homogénea), el desvío estándar combinado es ese mismo valor. Si los dos grupos no tienen exactamente el mismo desvío estándar, el desvío combinado <span class="math inline">\(s\)</span> pondera los desvíos de ambos grupos según su tamaño muestral:</p>
 <p><span class="math display">\[s = \sqrt{\frac{(n_1-1)s_1^2 + (n_2-1)s_2^2}{n_1+n_2-2}}\]</span></p>
 <p>Donde <span class="math inline">\(n_1\)</span> y <span class="math inline">\(n_2\)</span> son los tamaños muestrales de los grupos 1 y 2, y <span class="math inline">\(s_1\)</span> y <span class="math inline">\(s_2\)</span> son los desvíos estándar de cada grupo.</p>
 <p>Con los datos de nuestro estudio:</p>
-<p><span class="math display">\[d = \frac{\bar{x}_1 - \bar{x}_2}{s} = \frac{75 - 70}{10} = 0.5\]</span></p>
-<p>Este valor coincide con lo que Cohen (1988) definió como un efecto “mediano”. Pero acá no lo estamos tomando de una tabla de valores convencionales sino que lo derivamos directamente de nuestros datos piloto, que siempre es preferible a usar una convención genérica.</p>
+<p><span class="math display">\[d = \frac{\bar{x}_1 - \bar{x}_2}{s} = \frac{73 - 68.5}{10} = 0.45\]</span></p>
+<p>Este valor coincide con lo que Cohen (1988) definió como un efecto “mediano”. Pero acá no lo estamos tomando de una tabla de valores convencionales sino que lo derivamos directamente de nuestros datos piloto. Esto siempre es preferible a usar una convención genérica.</p>
 </section>
 <section id="poder-para-un-t-test-de-dos-muestras" class="level3">
 <h3 class="anchored" data-anchor-id="poder-para-un-t-test-de-dos-muestras">Poder para un t-test de dos muestras</h3>
-<p>Con d = 0.5 y queriendo 80% de poder con alfa = .05, le preguntamos directamente a R:</p>
+<p>Con d = 0.45 y queriendo 80% de poder con alfa = .05, le preguntamos directamente a R:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pwr.t.test</span>(<span class="at">d =</span> <span class="fl">0.5</span>, <span class="at">sig.level =</span> <span class="fl">0.05</span>, <span class="at">power =</span> <span class="fl">0.80</span>, <span class="at">type =</span> <span class="st">"two.sample"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pwr.t.test</span>(<span class="at">d =</span> <span class="fl">0.45</span>, <span class="at">sig.level =</span> <span class="fl">0.05</span>, <span class="at">power =</span> <span class="fl">0.80</span>, <span class="at">type =</span> <span class="st">"two.sample"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
      Two-sample t test power calculation 
 
-              n = 63.76561
-              d = 0.5
+              n = 78.49162
+              d = 0.45
       sig.level = 0.05
           power = 0.8
     alternative = two.sided
@@ -408,24 +409,24 @@ Nota
 NOTE: n is number in *each* group</code></pre>
 </div>
 </div>
-<p>En base a los datos que tenemos, el cálculo nos muestra que necesitamos aproximadamente <strong>64 estudiantes por grupo</strong> (128 en total) para tener 80% de probabilidad de detectar una diferencia de 5 puntos, si esa diferencia efectivamente existe.</p>
-<p><code>pwr.t.test()</code> calcula el poder (o el n, o el tamaño del efecto, o el <span class="math inline">\(\alpha\)</span>) para tests t de una muestra o de dos muestras de igual tamaño, con argumentos <code>n</code>, <code>d</code>, <code>sig.level</code>, <code>power</code> y <code>type</code> (<code>"two.sample"</code>, <code>"one.sample"</code>, o <code>"paired"</code>). Se deja vacío (<code>NULL</code>) exactamente el que se quiere resolver. Si tuvieramos un n fijo (por ejemplo, porque la evaluación se realiza sobre un mismo curso y ese cursto tiene 40 estudiantes) y queremos saber qué poder tenemos con ese n, simplemente hacemos lo siguiente:</p>
+<p>En base a los datos que tenemos, el cálculo nos muestra que necesitamos aproximadamente <strong>78 estudiantes por grupo</strong> (156 en total) para tener 80% de probabilidad de detectar una diferencia de 4.5 puntos, si esa diferencia efectivamente existe.</p>
+<p><code>pwr.t.test()</code> calcula el poder (o el n, o el tamaño del efecto, o el <span class="math inline">\(\alpha\)</span>) para tests t de una muestra o de dos muestras de igual tamaño, con argumentos <code>n</code>, <code>d</code>, <code>sig.level</code>, <code>power</code> y <code>type</code> (<code>"two.sample"</code>, <code>"one.sample"</code>, o <code>"paired"</code>). Se deja vacío (<code>NULL</code>) exactamente el que se quiere resolver. Si tuvieramos un n fijo (por ejemplo, porque la evaluación se realiza sobre un mismo curso y ese curso tiene 40 estudiantes) y queremos saber qué poder tenemos con ese n, simplemente hacemos lo siguiente:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pwr.t.test</span>(<span class="at">d =</span> <span class="fl">0.5</span>, <span class="at">sig.level =</span> <span class="fl">0.05</span>, <span class="at">n =</span> <span class="dv">40</span>, <span class="at">type =</span> <span class="st">"two.sample"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pwr.t.test</span>(<span class="at">d =</span> <span class="fl">0.45</span>, <span class="at">sig.level =</span> <span class="fl">0.05</span>, <span class="at">n =</span> <span class="dv">40</span>, <span class="at">type =</span> <span class="st">"two.sample"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
      Two-sample t test power calculation 
 
               n = 40
-              d = 0.5
+              d = 0.45
       sig.level = 0.05
-          power = 0.5981469
+          power = 0.5110843
     alternative = two.sided
 
 NOTE: n is number in *each* group</code></pre>
 </div>
 </div>
-<p>Si quisieramos calcular el n para un tamaño de efecto más pequeño, simplemente cambiamos d:</p>
+<p>Si quisiéramos calcular el n para un tamaño de efecto más pequeño, simplemente cambiamos d:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pwr.t.test</span>(<span class="at">d =</span> <span class="fl">0.3</span>, <span class="at">sig.level =</span> <span class="fl">0.05</span>, <span class="at">power =</span> <span class="fl">0.80</span>, <span class="at">type =</span> <span class="st">"two.sample"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -441,7 +442,7 @@ NOTE: n is number in *each* group</code></pre>
 NOTE: n is number in *each* group</code></pre>
 </div>
 </div>
-<p>Podemos ver que a igual <span class="math inline">\(\alpha\)</span> (.05) y poder (.80), para detectar un tamaño del efecto más pequeño, necesitamos una muestra muchísimo más grande. Los invito a probar distintos valores de d para ver cómo se modifica el n mínimo.</p>
+<p>Podemos ver que a igual <span class="math inline">\(\alpha\)</span> (.05) y poder (.80), para detectar un tamaño del efecto más pequeño, necesitamos una muestra muchísimo más grande. Los invito a probar distintos valores de <em>d</em> para ver cómo se modifica el <em>n</em> mínimo.</p>
 </section>
 <section id="poder-para-un-anova-de-un-factor" class="level3">
 <h3 class="anchored" data-anchor-id="poder-para-un-anova-de-un-factor">Poder para un ANOVA de un factor</h3>
@@ -451,7 +452,7 @@ NOTE: n is number in *each* group</code></pre>
 <li><strong><span class="math inline">\(H_0\)</span>:</strong> las medias de puntaje son iguales entre los tres métodos.</li>
 <li><strong><span class="math inline">\(H_1\)</span>:</strong> al menos una de las medias difiere de las demás.</li>
 </ul>
-<p>Con base en el piloto y en literatura sobre repetición espaciada, estimamos las tres medias: tradicional 70, práctica de recuperación 75, repetición espaciada 78. Mismo desvío estándar de 10 en los tres grupos.</p>
+<p>Con base en el piloto y en literatura sobre repetición espaciada, estimamos las tres medias: tradicional 68.5, práctica de recuperación 73, repetición espaciada 77.5. Mismo desvío estándar de 10 en los tres grupos.</p>
 <p>A diferencia de la d de Cohen (que compara exactamente dos medias), acá necesitamos un tamaño del efecto que resuma la dispersión de tres medias respecto de la variabilidad dentro de los grupos: la <strong>f de Cohen</strong>.</p>
 <p><span class="math display">\[f = \frac{\sigma_{medias}}{\sigma_{población}}\]</span></p>
 <p>Donde:</p>
@@ -461,7 +462,7 @@ NOTE: n is number in *each* group</code></pre>
 </ul>
 <p>Con las medias que estimamos antes, lo calculamos de la siguiente forma:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>medias <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">70</span>, <span class="dv">75</span>, <span class="dv">78</span>)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>medias <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">68.5</span>, <span class="dv">73</span>, <span class="fl">77.5</span>)</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>sd_comun <span class="ot">&lt;-</span> <span class="dv">10</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>k <span class="ot">&lt;-</span> <span class="fu">length</span>(medias)</span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -469,33 +470,33 @@ NOTE: n is number in *each* group</code></pre>
 <span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>f <span class="ot">&lt;-</span> sigma_medias <span class="sc">/</span> sd_comun</span>
 <span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>f</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.3299832</code></pre>
+<pre><code>[1] 0.3674235</code></pre>
 </div>
 </div>
-<p>Esto da f ≈ 0.33. Este es el desvío estándar de las tres medias de grupo, relativo al desvío común dentro de los grupos. Con ese valor calculo el n necesario para poner a prueba mi hipótesis:</p>
+<p>Esto da f ≈ 0.37. Este es el desvío estándar de las tres medias de grupo, relativo al desvío común dentro de los grupos. Con ese valor calculo el <em>n</em> necesario para poner a prueba mi hipótesis:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pwr.anova.test</span>(<span class="at">k =</span> <span class="dv">3</span>, <span class="at">f =</span> <span class="fl">0.33</span>, <span class="at">power =</span> <span class="fl">0.80</span>, <span class="at">sig.level =</span> <span class="fl">0.05</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pwr.anova.test</span>(<span class="at">k =</span> <span class="dv">3</span>, <span class="at">f =</span> <span class="fl">0.37</span>, <span class="at">power =</span> <span class="fl">0.80</span>, <span class="at">sig.level =</span> <span class="fl">0.05</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
      Balanced one-way analysis of variance power calculation 
 
               k = 3
-              n = 30.51201
-              f = 0.33
+              n = 24.48593
+              f = 0.37
       sig.level = 0.05
           power = 0.8
 
 NOTE: n is number in each group</code></pre>
 </div>
 </div>
-<p>El cálculo nos indica que necesitamos aproximadamente <strong>31 estudiantes por grupo</strong> (93 en total). ¿Por qué necesitamos menos por grupo que en el t-test (64)? Porque la diferencia relativa entre el grupo más bajo y el más alto (70 a 78, 8 puntos) es proporcionalmente mayor que la diferencia de 5 puntos que comparamos antes. Y como venimos viendo, si el tamaño del efecto es más grande, necesitamos menos muestra para rechazar <span class="math inline">\(H_0\)</span> si esta es falsa.</p>
+<p>El cálculo nos indica que necesitamos aproximadamente <strong>25 estudiantes por grupo</strong> (75 en total). ¿Por qué necesitamos menos por grupo que en el t-test (n = 78)? Porque la diferencia relativa entre el grupo más bajo y el más alto (68.5 a 77.5, 9 puntos) es proporcionalmente mayor que la diferencia de 4.5 puntos que comparamos antes. Y como venimos viendo, si el tamaño del efecto es más grande, necesitamos menos muestra para rechazar <span class="math inline">\(H_0\)</span> si esta es falsa.</p>
 <p><code>pwr.anova.test()</code> toma <code>k</code> (número de grupos), <code>n</code>, <code>f</code>, <code>sig.level</code> y <code>power</code>, dejando <code>NULL</code> el que se quiere resolver, igual que las funciones anteriores.</p>
-<p>Una aclaración importante para no llevarse una idea equivocada: cuando el ANOVA es significativo y rechazamos <span class="math inline">\(H_0\)</span>, solo podemos concluir <strong>al menos una</strong> media difiere de las demás, no cuál. Si queremos saber específicamente si, por ejemplo, la repetición espaciada es mejor que la práctica de recuperación, y no solo que “alguno de los tres difiere”, vamos a necesitar comparaciones post-hoc entre pares de grupos, algo que quedan fuera del alcance de este tutorial.</p>
+<p>Una aclaración importante para no llevarse una idea equivocada: cuando el ANOVA es significativo y rechazamos <span class="math inline">\(H_0\)</span>, solo podemos concluir que <strong>al menos una media difiere de las demás</strong>, no cuál de ellas. Si queremos saber específicamente si, por ejemplo, la repetición espaciada es mejor que la práctica de recuperación, y no solo que “alguno de los tres métodos difiere de los otros”, vamos a necesitar comparaciones post-hoc entre pares de grupos, algo que quedan fuera del alcance de este tutorial.</p>
 <section id="visualizar-la-relación-entre-n-y-poder" class="level4">
 <h4 class="anchored" data-anchor-id="visualizar-la-relación-entre-n-y-poder">Visualizar la relación entre n y poder</h4>
-<p>Reportar un único número (n = 31) a veces esconde qué tan sensible es esa decisión a pequeños cambios en los supuestos. Una forma más completa de comunicar el análisis, sobre todo en un protocolo o un proyecto de investigación, es graficar cómo cambia el poder a medida que aumenta el tamaño muestral. El paquete <code>pwr</code> tiene soporte para esto vía <code>plot()</code> sobre el objeto devuelto (por defecto intenta usar <code>ggplot2</code>, si está instalado):</p>
+<p>Reportar un único número (n = 25 por grupo) a veces esconde qué tan sensible es esa decisión a pequeños cambios en los supuestos. Una forma más completa de comunicar el análisis, sobre todo en un protocolo o un proyecto de investigación, es graficar cómo cambia el poder a medida que aumenta el tamaño muestral. El paquete <code>pwr</code> permite hacer eso vía <code>plot()</code> sobre el objeto devuelto:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>resultado <span class="ot">&lt;-</span> <span class="fu">pwr.anova.test</span>(<span class="at">k =</span> <span class="dv">3</span>, <span class="at">f =</span> <span class="fl">0.33</span>, <span class="at">power =</span> <span class="fl">0.80</span>, <span class="at">sig.level =</span> <span class="fl">0.05</span>)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>resultado <span class="ot">&lt;-</span> <span class="fu">pwr.anova.test</span>(<span class="at">k =</span> <span class="dv">3</span>, <span class="at">f =</span> <span class="fl">0.37</span>, <span class="at">power =</span> <span class="fl">0.80</span>, <span class="at">sig.level =</span> <span class="fl">0.05</span>)</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(resultado)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
@@ -505,7 +506,7 @@ NOTE: n is number in each group</code></pre>
 </div>
 </div>
 </div>
-<p>Esto es especialmente útil si nos preocupa que la diferencia real entre métodos sea algo menor a la estimada en el piloto. La curva muestra de un vistazo cuánto más n haría falta en ese escenario más conservador.</p>
+<p>Esto es especialmente útil si nos preocupa que la diferencia real entre métodos sea algo menor a la estimada en el piloto. La curva muestra de un vistazo cuánto más <em>n</em> haría falta en un escenario más conservador.</p>
 </section>
 </section>
 <section id="poder-en-correlación-y-regresión-lineal" class="level3">
@@ -539,7 +540,7 @@ NOTE: n is number in each group</code></pre>
 </section>
 <section id="poder-para-un-modelo-de-regresión-modelo-global" class="level4">
 <h4 class="anchored" data-anchor-id="poder-para-un-modelo-de-regresión-modelo-global">Poder para un modelo de regresión (modelo global)</h4>
-<p>Ahora nos interesa si saber si al incluir horas de estudio y método de enseñanza en un mismo modelo explican una proporción determinada de la varianza del puntaje del examen. En base al bibliografía previa, estimamos que, en conjunto, horas de estudio y método de enseñanza expliquen 20% de la variabilidad en el puntaje. En este caso calcularemos tamaño de la muestra para el modelo global, no para un predictor específico, y el tamaño del efecto que nos interesa es el <span class="math inline">\(R^2\)</span> (que esperamos que sea de 0.20 0 20%). En la regresión lineal, la <span class="math inline">\(H_0\)</span> es que <span class="math inline">\(R^2\)</span> = 0. Tenemos que encontrar cuántas observaciones necesitamos para rechazar <span class="math inline">\(H_0\)</span> si en la realidad <span class="math inline">\(R^2\)</span> = 0.20.</p>
+<p>Ahora nos interesa si saber si al incluir horas de estudio y método de enseñanza en un mismo modelo explican una proporción determinada de la varianza del puntaje del examen. En base la bibliografía previa, estimamos que, en conjunto, horas de estudio y método de enseñanza expliquen 20% de la variabilidad en el puntaje. En este caso calcularemos tamaño de la muestra para el modelo global, no para un predictor específico, y el tamaño del efecto que nos interesa es el <span class="math inline">\(R^2\)</span> (que esperamos que sea de 0.20 0 20%). En la regresión lineal, la <span class="math inline">\(H_0\)</span> es que <span class="math inline">\(R^2\)</span> = 0. Tenemos que encontrar cuántas observaciones necesitamos para rechazar <span class="math inline">\(H_0\)</span> si en la realidad <span class="math inline">\(R^2\)</span> = 0.20.</p>
 <p>Para el modelo de regresión múltiple se usa la función <code>pwr.f2.test()</code>, que calcula el poder para el modelo lineal general, con el tamaño del efecto <span class="math inline">\(f^2\)</span> definido a partir del <span class="math inline">\(R^2\)</span>:</p>
 <p><span class="math display">\[f^2 = \frac{R^2}{1-R^2}\]</span> En nuestro ejemplo:</p>
 <div class="cell">
@@ -577,14 +578,276 @@ NOTE: n is number in each group</code></pre>
 <p>Como mencioné antes, esto evalúa el modelo en conjunto, no dice si cada predictor individual (por ejemplo, el método de enseñanza controlando por las otras dos variables) es significativo por separado. Eso requeriría un <span class="math inline">\(R^2\)</span> parcial, que queda fuera del alcance de este tutorial.</p>
 </section>
 </section>
+<section id="poder-para-un-anova-de-dos-factores" class="level3">
+<h3 class="anchored" data-anchor-id="poder-para-un-anova-de-dos-factores">Poder para un ANOVA de dos factores</h3>
+<p>Volvamos a ANOVA pero extendamos el modelo. Supongamos que además de comparar los tres métodos de estudio (tradicional, práctica de recuperación, repetición espaciada), nos interesa si la <strong>modalidad</strong> en la que se dicta el curso (presencial vs.&nbsp;virtual) también afecta el puntaje, y si el efecto del método de estudio depende de la modalidad (es decir, si hay <strong>interacción</strong> entre ambos factores). Pasamos así de un diseño de un factor con tres niveles a un <strong>diseño factorial 3×2</strong>: dos factores (método de estudio y modalidad), con tres y dos niveles respectivamente, cruzados entre sí.</p>
+<p>Con dos factores tenemos tres hipótesis (y tres pruebas F) en juego, porque ahora nos interesa conocer:</p>
+<ul>
+<li><p><strong>El efecto principal del método de estudio</strong>: si difieren los puntajes promedio entre los tres métodos, promediando sobre las dos modalidades.</p></li>
+<li><p><strong>El efecto principal de la modalidad</strong>: si difieren los puntajes promedio entre presencial y virtual, promediando sobre los tres métodos</p></li>
+<li><p><strong>La interacción método × modalidad</strong>: si el efecto del método de estudio es distinto según la modalidad (por ejemplo, que la repetición espaciada funcione mejor en modalidad virtual que presencial)</p></li>
+</ul>
+<p>Acá nos encontramos con un problema práctico: <code>pwr.anova.test()</code>, la función que usamos para el ANOVA de un factor, solo admite un argumento <code>k</code> (el número de grupos del <strong>único</strong> factor). No está pensada para diseños factoriales. El paquete <code>pwr</code> (que venimos usando en todo el tutorial) no tiene, al momento de escribir esto, una función dedicada a ANOVA de dos factores.</p>
+<p>Hay dos caminos razonables para resolver esto, y cada uno tiene ventajas y límites distintos. Veamos cada uno.</p>
+<section id="opción-1-el-paquete-pwr2" class="level4">
+<h4 class="anchored" data-anchor-id="opción-1-el-paquete-pwr2">Opción 1: el paquete <code>pwr2</code></h4>
+<p>El paquete <code>pwr2</code> <span class="citation" data-cites="pwr2">(<a href="#ref-pwr2" role="doc-biblioref">Lu et&nbsp;al. 2017</a>)</span> extiende la lógica de <code>pwr.anova.test()</code> a dos factores con las funciones <code>pwr.2way()</code> (poder dado un n objetivo) y <code>ss.2way()</code> (n dado un poder objetivo), usando los mismos ingredientes que ya conocemos: una f de Cohen por factor.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Advertencia
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>El paquete <code>pwr2</code> fue <strong>removido de CRAN</strong> (archivado el 27/05/2026) por un problema de contacto con el mantenedor, no por un problema del código en sí. Esto significa que <code>install.packages("pwr2")</code> ya no va a funcionar directamente. Para instalarlo hace falta traerlo del archivo de CRAN:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">requireNamespace</span>(<span class="st">"pwr2"</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) {</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">install.packages</span>(</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"https://cran.r-project.org/src/contrib/Archive/pwr2/pwr2_1.0.tar.gz"</span>,</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">repos =</span> <span class="cn">NULL</span>, <span class="at">type =</span> <span class="st">"source"</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Esta situación puede cambiar; antes de usarlo en un proyecto real conviene revisar el estado actual del paquete en CRAN.</p>
+</div>
+</div>
+<p>Para el factor <strong>método de estudio</strong>, reutilizamos el mismo f que calculamos antes (f ≈ 0.39). Para el factor <strong>modalidad</strong>, supongamos, en base al piloto, que el puntaje promedio es 75 en modalidad presencial y 71 en virtual, con el mismo desvío común de 10 puntos:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>medias_modalidad <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">75</span>, <span class="dv">71</span>)</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>sd_comun <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">length</span>(medias_modalidad)</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>sigma_medias_modalidad <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(<span class="fu">sum</span>((medias_modalidad <span class="sc">-</span> <span class="fu">mean</span>(medias_modalidad))<span class="sc">^</span><span class="dv">2</span>) <span class="sc">/</span> b)</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>f_modalidad <span class="ot">&lt;-</span> sigma_medias_modalidad <span class="sc">/</span> sd_comun</span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>f_modalidad</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.2</code></pre>
+</div>
+</div>
+<p>Esto da f ≈ 0.2, un efecto entre chico y mediano según las convenciones de Cohen. Con los dos tamaños del efecto (f del método ≈ 0.39, f de la modalidad ≈ 0.2), le pedimos a <code>ss.2way()</code> el n por celda necesario para 80% de poder:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pwr2)</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ss.2way</span>(<span class="at">a =</span> <span class="dv">3</span>, <span class="at">b =</span> <span class="dv">2</span>, <span class="at">alpha =</span> <span class="fl">0.05</span>, <span class="at">beta =</span> <span class="fl">0.20</span>, <span class="at">f.A =</span> <span class="fl">0.37</span>, <span class="at">f.B =</span> <span class="fl">0.20</span>, <span class="at">B =</span> <span class="dv">100</span>)</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a><span class="co"># a: cantidad de grupos del factor 1 (método de estudio)</span></span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a><span class="co"># b: cantidad de grupos del factor 2 (modalidad: virtual, presencial)</span></span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a><span class="co"># alpha: 0.05 (probabilidad de cometer error de tipo I)</span></span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a><span class="co"># beta: 0.20 (probabilidad de cometer error de tipo II, 1 - potencia)</span></span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a><span class="co"># f.A: tamaño del efecto del factor 1</span></span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a><span class="co"># f.B: tamaño del efecto del factor 2</span></span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a><span class="co"># B = techo de búsqueda: n máximo por celda que la función está # dispuesta a evaluar (busca de a 1, entre n=2 y n=B+1). Si el n # necesario superara B+1, la función devuelve B+1 sin avisar que # no llegó al poder pedido, así que conviene dejar un margen  holgado por encima del n esperado.</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><code>ss.2way()</code> internamente busca el n mínimo que llega a 80% de poder para cada factor por separado, quedándose con el más exigente de los dos. El resultado es <strong>n = 34 estudiantes por celda</strong>, es decir, 34 estudiantes en cada una de las 3×2 = 6 combinaciones de método y modalidad, <strong>204 en total</strong>.</p>
+<p><strong>Una limitación importante:</strong> <code>pwr.2way()</code> y <code>ss.2way()</code> solo calculan el poder para los <strong>efectos principales</strong> (método, modalidad), no para la <strong>interacción</strong> entre ellos. Si la pregunta de interés incluye la interacción, como en nuestro ejemplo, esta opción por sí sola no alcanza.</p>
+</section>
+<section id="opción-2-reutilizar-pwr.f2.test-incluye-la-interacción" class="level4">
+<h4 class="anchored" data-anchor-id="opción-2-reutilizar-pwr.f2.test-incluye-la-interacción">Opción 2: reutilizar <code>pwr.f2.test()</code> (incluye la interacción)</h4>
+<p>La alternativa es tratar el ANOVA de dos factores como un caso particular del modelo lineal general, igual que hicimos en la sección de regresión, y usar <code>pwr.f2.test()</code> una vez por cada término del modelo (método, modalidad, interacción).</p>
+<p>Esto pide dos pasos extra:</p>
+<ol type="1">
+<li><strong>Convertir el tamaño del efecto de cada término a <span class="math inline">\(f^2\)</span>.</strong> Si partimos de una f de Cohen (como la que ya calculamos para método y modalidad), es simplemente elevarla al cuadrado. Si en cambio partimos de un <span class="math inline">\(\eta^2\)</span> parcial (eta cuadrado parcial, otra medida común de tamaño del efecto en ANOVA), la conversión es:</li>
+</ol>
+<p><span class="math display">\[f^2 = \frac{\eta^2_{parcial}}{1-\eta^2_{parcial}}\]</span></p>
+<ol start="2" type="1">
+<li><strong>Calcular los grados de libertad <code>u</code> (numerador) de cada término a mano</strong>, algo que en un ANOVA de un factor o en regresión no hacía falta porque <code>pwr.anova.test()</code> y <code>pwr.f2.test()</code> ya lo resolvían con <code>k</code> o <code>u</code> directamente. Para un diseño a × b:</li>
+</ol>
+<ul>
+<li><p>Método (factor A, a=3 niveles): <span class="math inline">\(u_A = a - 1 = 2\)</span></p></li>
+<li><p>Modalidad (factor B, b=2 niveles): <span class="math inline">\(u_B = b - 1 = 1\)</span></p></li>
+<li><p>Interacción A×B: <span class="math inline">\(u_{AB} = (a-1)(b-1) = 2\)</span></p></li>
+</ul>
+<p>Para método y modalidad ya tenemos el tamaño del efecto. Para la interacción, necesitamos conocer las <strong>seis medias de celda</strong> (método × modalidad). Volvamos a nuestro estudio piloto:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>Presencial</th>
+<th>Virtual</th>
+<th>Media (método de estudio)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Tradicional</td>
+<td>72.0</td>
+<td>65.0</td>
+<td>68.5</td>
+</tr>
+<tr class="even">
+<td>Práctica de recuperación</td>
+<td>76.5</td>
+<td>69.5</td>
+<td>73.0</td>
+</tr>
+<tr class="odd">
+<td>Repetición espaciada</td>
+<td>76.5</td>
+<td>78.5</td>
+<td>77.5</td>
+</tr>
+<tr class="even">
+<td>Media (modalidad)</td>
+<td>75</td>
+<td>71</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Con la tabla de celdas, extraemos el efecto de interacción restando a cada celda la media general, el efecto de método y el efecto de modalidad. Usamos la misma lógica que ya veníamos aplicando para convertir un conjunto de medias en una f de Cohen (desvío estándar poblacional de los efectos, dividido por el desvío común), pero ahora aplicada a los seis residuos de interacción en lugar de a las medias marginales:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Medias de celda (metodo x modalidad)</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>celdas <span class="ot">&lt;-</span> <span class="fu">matrix</span>(</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(<span class="fl">72.0</span>, <span class="fl">65.0</span>,   <span class="co"># tradicional: presencial, virtual</span></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>    <span class="fl">76.5</span>, <span class="fl">69.5</span>,   <span class="co"># recuperacion:  presencial, virtual</span></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>    <span class="fl">76.5</span>, <span class="fl">78.5</span>),  <span class="co"># repeticion: presencial, virtual</span></span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">nrow =</span> <span class="dv">3</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">dimnames =</span> <span class="fu">list</span>(</span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">c</span>(<span class="st">"tradicional"</span>, <span class="st">"practica_recuperacion"</span>, <span class="st">"repeticion_espaciada"</span>),</span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">c</span>(<span class="st">"presencial"</span>, <span class="st">"virtual"</span>)</span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a>celdas</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                      presencial virtual
+tradicional                 72.0    65.0
+practica_recuperacion       76.5    69.5
+repeticion_espaciada        76.5    78.5</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>sd_comun <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>medias_metodo <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">68.5</span>, <span class="dv">73</span>, <span class="fl">77.5</span>)</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>medias_modalidad <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">75</span>, <span class="dv">71</span>)</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Media total de la variable. Si asumimos n balanceado por celdas, se puede obtener así:</span></span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>gran_media <span class="ot">&lt;-</span> <span class="fu">mean</span>(celdas)</span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a>efecto_metodo    <span class="ot">&lt;-</span> medias_metodo <span class="sc">-</span> gran_media</span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a>efecto_metodo</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] -4.5  0.0  4.5</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>efecto_modalidad <span class="ot">&lt;-</span> medias_modalidad <span class="sc">-</span> gran_media</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>efecto_modalidad</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  2 -2</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># residuo de interaccion = celda - gran media - efecto de fila - efecto de columna</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>interaccion <span class="ot">&lt;-</span> celdas <span class="sc">-</span> gran_media <span class="sc">-</span> <span class="fu">outer</span>(efecto_metodo, efecto_modalidad, <span class="st">"+"</span>)</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>interaccion</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                      presencial virtual
+tradicional                  1.5    -1.5
+practica_recuperacion        1.5    -1.5
+repeticion_espaciada        -3.0     3.0</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>f_interaccion <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(<span class="fu">mean</span>(interaccion<span class="sc">^</span><span class="dv">2</span>)) <span class="sc">/</span> sd_comun</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>f_interaccion</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.212132</code></pre>
+</div>
+</div>
+<p>Esto da <strong>f ≈ 0.21</strong> para la interacción (<span class="math inline">\(f^2\)</span> = 0.045). Con los tres tamaños del efecto ya calculados, corremos las tres pruebas:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Efecto principal del método (f = 0.37 -&gt; f2 = 0.39^2=0.1369)</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="fu">pwr.f2.test</span>(<span class="at">u =</span> <span class="dv">2</span>, <span class="at">f2 =</span> <span class="fl">0.1369</span>, <span class="at">sig.level =</span> <span class="fl">0.05</span>, <span class="at">power =</span> <span class="fl">0.80</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+     Multiple regression power calculation 
+
+              u = 2
+              v = 70.45775
+             f2 = 0.1369
+      sig.level = 0.05
+          power = 0.8</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Efecto principal de la modalidad (f = 0.20 -&gt; f2 = 0.20^2 = 0.04)</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="fu">pwr.f2.test</span>(<span class="at">u =</span> <span class="dv">1</span>, <span class="at">f2 =</span> <span class="fl">0.04</span>, <span class="at">sig.level =</span> <span class="fl">0.05</span>, <span class="at">power =</span> <span class="fl">0.80</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+     Multiple regression power calculation 
+
+              u = 1
+              v = 196.1606
+             f2 = 0.04
+      sig.level = 0.05
+          power = 0.8</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Interacción método x modalidad (f2 = 0.045)</span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="fu">pwr.f2.test</span>(<span class="at">u =</span> <span class="dv">2</span>, <span class="at">f2 =</span> <span class="fl">0.045</span>, <span class="at">sig.level =</span> <span class="fl">0.05</span>, <span class="at">power =</span> <span class="fl">0.80</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+     Multiple regression power calculation 
+
+              u = 2
+              v = 214.1281
+             f2 = 0.045
+      sig.level = 0.05
+          power = 0.8</code></pre>
+</div>
+</div>
+<p>Igual que en la sección de regresión, cada llamada devuelve <code>v</code> (grados de libertad del denominador), y hay que despejar el n total con <span class="math inline">\(n = v + u + 1\)</span>.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Término</th>
+<th><span class="math inline">\(f^2\)</span></th>
+<th>u</th>
+<th>v necesario</th>
+<th>N total aproximado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Método de estudio</td>
+<td>0.137</td>
+<td>2</td>
+<td>70.46</td>
+<td>73</td>
+</tr>
+<tr class="even">
+<td>Modalidad</td>
+<td>0.040</td>
+<td>1</td>
+<td>196.16</td>
+<td>198</td>
+</tr>
+<tr class="odd">
+<td>Interacción método × modalidad</td>
+<td>0.045</td>
+<td>2</td>
+<td>214.12</td>
+<td>217</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Importante
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Cada término pide un N distinto. Si queremos tener 80% de poder para <strong>los tres</strong> al mismo tiempo, necesitamos el N más exigente, en este caso <strong>217</strong>, impuesto por la <strong>interacción</strong>.</p>
+</div>
+</div>
+</section>
+</section>
 </section>
 <section id="por-qué-este-tutorial-no-me-sirve-para-diseños-mixtos" class="level2">
 <h2 class="anchored" data-anchor-id="por-qué-este-tutorial-no-me-sirve-para-diseños-mixtos">¿Por qué este tutorial no me sirve para diseños mixtos?</h2>
-<p>El diseño que planteamos para este tutorial tiene una propiedad conveniente: observaciones independientes (cada estudiante fue asignado a un solo método de estudio y no consideramos otras agrupaciones como escuelas o aulas) y puntajes que nos permiten asumir una distribución aproximadamente normal dentro de cada grupo. Bajo esas condiciones, la relación entre poder, n, tamaño del efecto y el <span class="math inline">\(\alpha\)</span> tiene una solución analítica, hay una fórmula que se puede despejar directamente. Esto es posible porque el diseño asume <strong>una sola fuente de variación aleatoria</strong>: la variabilidad entre estudiantes dentro de cada grupo. Ahora bien, esto no siempre se cumple. Si en cambio cada estudiante rindiera el examen varias veces, o los estudiantes estuvieran agrupados en distintas aulas o colegios, habría múltiples fuentes de variación aleatoria simultáneamente, y esa fórmula cerrada dejaría de aplicar. Sobre esto vamos a hablar es la segunda parte de este tutorial, con modelos mixtos y simulación de datos.</p>
+<p>El diseño que planteamos para este tutorial tiene una propiedad conveniente: observaciones independientes (cada estudiante fue asignado a un solo método de estudio y no consideramos otras agrupaciones como escuelas o aulas) y puntajes que nos permiten asumir una distribución aproximadamente normal dentro de cada grupo. Bajo esas condiciones, la relación entre poder, n, tamaño del efecto y el <span class="math inline">\(\alpha\)</span> tiene una solución analítica, hay una fórmula que se puede despejar directamente. Esto es posible porque el diseño asume <strong>una sola fuente de variación aleatoria</strong>: la variabilidad entre estudiantes dentro de cada grupo. Ahora bien, esto no siempre se cumple. Si en cambio cada estudiante rindiera el examen varias veces, o los estudiantes estuvieran agrupados en distintas aulas o colegios, habría múltiples fuentes de variación aleatoria simultáneamente, y esa fórmula cerrada dejaría de aplicar. Sobre esto vamos a hablar en la segunda parte de este tutorial, con modelos mixtos y simulación de datos.</p>
 </section>
 <section id="cómo-citar-este-tutorial" class="level2">
 <h2 class="anchored" data-anchor-id="cómo-citar-este-tutorial">Cómo citar este tutorial</h2>
-<p>Si te resultó útil te cuento que este tutorial está disponible bajo una licencia Creative Commons Attribution 4.0 International (CC BY 4.0). Esto quiere decir que podés compartirlo y adaptarlo libremente siempre que cites la fuente.</p>
+<p>Si te resultó útil te cuento que este tutorial está disponible bajo una licencia <a href="https://creativecommons.org/licenses/by/4.0/deed.es">Creative Commons Attribution 4.0 International (CC BY 4.0)</a>. Esto quiere decir que podés compartirlo y adaptarlo libremente siempre que cites la fuente.</p>
 <p>Formoso, J. (2026, July 12). ¿Cuántas observaciones necesito para poner a prueba mi hipótesis? Cálculo del tamaño muestral - parte 1. Zenodo. <a href="https://doi.org/10.5281/zenodo.21326331">https://doi.org/10.5281/zenodo.21326331</a></p>
 <hr>
 <p><em>¿Preguntas o sugerencias? Dejá un issue <a href="https://github.com/JFormoso/jformoso.github.io/issues">aquí</a> o escribime a <a href="mailto:jesica.formoso@gmail.com">jesica.formoso@gmail.com</a> con tus comentarios.</em></p>
@@ -599,6 +862,9 @@ Champely, Stephane. 2020. <em>pwr: Basic Functions for Power Analysis</em>. <a h
 </div>
 <div id="ref-cohen1988statistical" class="csl-entry" role="listitem">
 Cohen, Jacob. 1988. <em>Statistical Power Analysis for the Behavioral Sciences</em>. 2nd ed. Lawrence Erlbaum Associates.
+</div>
+<div id="ref-pwr2" class="csl-entry" role="listitem">
+Lu, Peng, Jun Liu, y Devin C. Koestler. 2017. <em>pwr2: Power and Sample Size Analysis for One-way and Two-way ANOVA Models</em>. <a href="https://CRAN.R-project.org/package=pwr2">https://CRAN.R-project.org/package=pwr2</a>.
 </div>
 <div id="ref-rcoreteam2024r" class="csl-entry" role="listitem">
 R Core Team. 2024. <em>R: A Language and Environment for Statistical Computing</em>. R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>.
