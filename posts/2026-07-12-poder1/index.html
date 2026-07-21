@@ -551,15 +551,33 @@ NOTE: n is number in each group</code></pre>
 <pre><code>[1] 0.25</code></pre>
 </div>
 </div>
-<p>Esto da <span class="math inline">\(f^2\)</span> = 0.25 (convenciones de Cohen: 0.02 chico, 0.15 mediano, 0.35 grande). Ahora lo usamos con u = 2 (los dos predictores, horas de estudio y método de estudio):</p>
+<p>Esto da <span class="math inline">\(f^2\)</span> = 0.25 (convenciones de Cohen: 0.02 chico, 0.15 mediano, 0.35 grande). Ahora lo usamos con u = 3 grados de libertad del numerador.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Nota
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><em>u</em> representa los <strong>grados de libertad del modelo</strong>, es decir, cuántos parámetros nuevos estamos estimando respecto al modelo nulo. Y ahí hay una trampa: no todos los predictores “cuestan” 1 grado de libertad.</p>
+<ul>
+<li>Un predictor numérico continuo (como horas de estudio) siempre suma 1.</li>
+<li>Un predictor categórico con k niveles no suma 1, sino k − 1.</li>
+</ul>
+<p>En nuestro ejemplo, método de estudio es una variable categórica con tres niveles (tradicional, práctica de recuperación, repetición espaciada), por lo que suma 3-1 = 2 grados de libertad.</p>
+</div>
+</div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pwr.f2.test</span>(<span class="at">u =</span> <span class="dv">2</span>, <span class="at">f2 =</span> <span class="fl">0.25</span>, <span class="at">sig.level =</span> <span class="fl">0.05</span>, <span class="at">power =</span> <span class="fl">0.80</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pwr.f2.test</span>(<span class="at">u =</span> <span class="dv">3</span>, <span class="at">f2 =</span> <span class="fl">0.25</span>, <span class="at">sig.level =</span> <span class="fl">0.05</span>, <span class="at">power =</span> <span class="fl">0.80</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
      Multiple regression power calculation 
 
-              u = 2
-              v = 38.68562
+              u = 3
+              v = 43.70444
              f2 = 0.25
       sig.level = 0.05
           power = 0.8</code></pre>
@@ -568,13 +586,13 @@ NOTE: n is number in each group</code></pre>
 <p>¡Importante! Este cálculo devuelve <code>v</code> (grados de libertad del denominador), no <code>n</code> directamente. Para obtener el tamaño muestral total hay que despejar:</p>
 <p><span class="math display">\[n = v + u + 1\]</span></p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>n_total <span class="ot">&lt;-</span> <span class="fl">38.68562</span> <span class="sc">+</span> <span class="dv">3</span> <span class="sc">+</span> <span class="dv">1</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>n_total <span class="ot">&lt;-</span> <span class="fl">43.70444</span> <span class="sc">+</span> <span class="dv">3</span> <span class="sc">+</span> <span class="dv">1</span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>n_total</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 42.68562</code></pre>
+<pre><code>[1] 47.70444</code></pre>
 </div>
 </div>
-<p>Entonces, en base al cálculo del poder estadístico, necesitamos <strong>43 estudiantes en total</strong> para tener 80% de poder de detectar que el modelo completo explica una proporción de varianza distinta de cero, si el <span class="math inline">\(R^2\)</span> real es de 0.20.</p>
+<p>Entonces, en base al cálculo del poder estadístico, necesitamos <strong>48 estudiantes en total</strong> para tener 80% de poder de detectar que el modelo completo explica una proporción de varianza distinta de cero, si el <span class="math inline">\(R^2\)</span> real es de 0.20.</p>
 <p>Como mencioné antes, esto evalúa el modelo en conjunto, no dice si cada predictor individual (por ejemplo, el método de enseñanza controlando por las otras dos variables) es significativo por separado. Eso requeriría un <span class="math inline">\(R^2\)</span> parcial, que queda fuera del alcance de este tutorial.</p>
 </section>
 </section>
@@ -753,7 +771,7 @@ repeticion_espaciada        -3.0     3.0</code></pre>
 </div>
 <p>Esto da <strong>f ≈ 0.21</strong> para la interacción (<span class="math inline">\(f^2\)</span> = 0.045). Con los tres tamaños del efecto ya calculados, corremos las tres pruebas:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Efecto principal del método (f = 0.37 -&gt; f2 = 0.39^2=0.1369)</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Efecto principal del método (f = 0.37 -&gt; f2 = 0.37^2=0.1369)</span></span>
 <span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="fu">pwr.f2.test</span>(<span class="at">u =</span> <span class="dv">2</span>, <span class="at">f2 =</span> <span class="fl">0.1369</span>, <span class="at">sig.level =</span> <span class="fl">0.05</span>, <span class="at">power =</span> <span class="fl">0.80</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
