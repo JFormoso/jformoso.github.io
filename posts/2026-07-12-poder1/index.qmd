@@ -275,13 +275,24 @@ f2 <- R2 / (1 - R2)
 f2
 ```
 
-Esto da $f^2$ = 0.25 (convenciones de Cohen: 0.02 chico, 0.15 mediano, 0.35 grande). Ahora lo usamos con u = 2 (los dos predictores, horas de estudio y método de estudio):
+Esto da $f^2$ = 0.25 (convenciones de Cohen: 0.02 chico, 0.15 mediano, 0.35 grande). Ahora lo usamos con u = 3 grados de libertad del numerador.  
+
+:::{.callout-note}
+
+*u* representa los **grados de libertad del modelo**, es decir, cuántos parámetros nuevos estamos estimando respecto al modelo nulo. Y ahí hay una trampa: no todos los predictores "cuestan" 1 grado de libertad.
+
+- Un predictor numérico continuo (como horas de estudio) siempre suma 1.
+- Un predictor categórico con k niveles no suma 1, sino k − 1.
+
+En nuestro ejemplo, método de estudio es una variable categórica con tres niveles (tradicional, práctica de recuperación, repetición espaciada), por lo que suma 3-1 = 2 grados de libertad. 
+
+:::
 
 
 ```{r}
 #| label: pwr-f2-test
 #| eval: true
-pwr.f2.test(u = 2, f2 = 0.25, sig.level = 0.05, power = 0.80)
+pwr.f2.test(u = 3, f2 = 0.25, sig.level = 0.05, power = 0.80)
 ```
 
 ¡Importante! Este cálculo devuelve `v` (grados de libertad del denominador), no `n` directamente. Para obtener el tamaño muestral total hay que despejar:
@@ -291,11 +302,11 @@ $$n = v + u + 1$$
 ```{r}
 #| label: calcular-n-total-regresion
 #| eval: true
-n_total <- 38.68562 + 3 + 1
+n_total <- 43.70444 + 3 + 1
 n_total
 ```
 
-Entonces, en base al cálculo del poder estadístico, necesitamos **43 estudiantes en total** para tener 80% de poder de detectar que el modelo completo explica una proporción de varianza distinta de cero, si el $R^2$ real es de 0.20. 
+Entonces, en base al cálculo del poder estadístico, necesitamos **48 estudiantes en total** para tener 80% de poder de detectar que el modelo completo explica una proporción de varianza distinta de cero, si el $R^2$ real es de 0.20. 
 
 Como mencioné antes, esto evalúa el modelo en conjunto, no dice si cada predictor individual (por ejemplo, el método de enseñanza controlando por las otras dos variables) es significativo por separado. Eso requeriría un $R^2$ parcial, que queda fuera del alcance de este tutorial.
 
@@ -457,7 +468,7 @@ Esto da **f ≈ 0.21** para la interacción ($f^2$ = 0.045). Con los tres tamañ
 ```{r}
 #| label: pwr-f2-test-2way
 
-# Efecto principal del método (f = 0.37 -> f2 = 0.39^2=0.1369)
+# Efecto principal del método (f = 0.37 -> f2 = 0.37^2=0.1369)
 pwr.f2.test(u = 2, f2 = 0.1369, sig.level = 0.05, power = 0.80)
 
 # Efecto principal de la modalidad (f = 0.20 -> f2 = 0.20^2 = 0.04)
