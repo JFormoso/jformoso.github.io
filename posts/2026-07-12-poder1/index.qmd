@@ -5,17 +5,9 @@ author: "Jesica Formoso"
 date: "2026-07-12"
 bibliography: references.bib
 lang: es 
-slug: tutorial-CLMM
-categories:
-  - Tutorial
-  - Estadística
-tags:
-  - Tutorial
-  - Estadística
-  - Cálculo del tamaño de la muestra
-  - Cálculo del poder estadístico
-description: ""
-type: post
+format: 
+  typst:
+    toc: true
 ---
 
 ![](../../images/poder1.png)
