@@ -5,12 +5,15 @@ author: "Jesica Formoso"
 date: "2026-07-26"
 bibliography: references.bib
 lang: es 
-execute: 
-  warning: false
-  message: false
-format: 
-  html:
-    toc: true
+slug: tutorial-poder2
+categories:
+  - Tutorial
+  - Estadística
+tags:
+  - Tutorial
+  - Estadística
+description: ""
+type: post
 ---
 
 ![](../../images/poder2.png)
