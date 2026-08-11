@@ -1708,7 +1708,7 @@
     },
     "simr": {
       "Package": "simr",
-      "Version": "1.0.9",
+      "Version": "1.0.10",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1730,7 +1730,7 @@
         "stringr",
         "utils"
       ],
-      "Hash": "a14ec6e927b5d6b8b9ef5606e8357f0c"
+      "Hash": "ca54962eaf6e6f7f69bdf14efc555668"
     },
     "stringi": {
       "Package": "stringi",
