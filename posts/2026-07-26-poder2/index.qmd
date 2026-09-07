@@ -111,7 +111,8 @@ Vamos a poner en práctica los cuatro pasos para el siguiente diseño: el métod
 
 Para ello vamos a usar el paquete `lme4` [@bates2015lme4] para especificar el modelo mixto, y `simr` [@green2016simr] para simular datos a partir de ese modelo y estimar el poder.
 
-```{r}
+```{r, message=FALSE, warning=FALSE}
+
 # install.packages(c("lme4", "simr"))
 library(lme4)
 library(simr)
@@ -238,7 +239,7 @@ set.seed(222) # para que puedas reproducir el ejemplo
 
 prueba_interaccion <- fixed("metodoespaciada:numero_examen", "z")
 
-resultado_piloto <- powerSim(modelo, test = prueba_interaccion, nsim = 100)
+resultado_piloto <- powerSim(modelo, test = prueba_interaccion, nsim = 100, progress = FALSE)
 resultado_piloto
 
 ```
@@ -268,7 +269,8 @@ curva_poder <- powerCurve(
   test    = prueba_interaccion,
   along   = "comision",
   breaks  = c(6, 10, 14, 18, 22, 26, 30), # Distintas cantidades de comisiones
-  nsim    = 100
+  nsim    = 100,
+  progress = FALSE
 )
 
 plot(curva_poder)
@@ -281,7 +283,8 @@ Probemos otra cosa. ¡Aumentemos el número de estudiantes por comisión!
 
 
 ```{r}
-modelo_extendido_estudiante <- extend(modelo, along = "estudiante", n = 192)  # 32 por comisión, 6 comisiones
+modelo_extendido_estudiante <- extend(modelo, along = "estudiante", n = 192)  
+# 32 por comisión, 6 comisiones
 
 curva_poder_estudiante <- powerCurve(
   modelo_extendido_estudiante,
@@ -293,6 +296,7 @@ curva_poder_estudiante <- powerCurve(
 
 plot(curva_poder_estudiante)
 curva_poder_estudiante
+
 ```
 El gráfico permite inferir que con 24 estudiantes por comisión, 6 comisiones, 3 evaluaciones por estudiante, tenemos un poder superior al 80%. ¡Confirmemoslo! A continuación encontrarás el código integrado, armado desde cero. 
 
@@ -334,7 +338,7 @@ modelo_24 <- makeLmer(
   data    = datos
 )
 
-# Poder puntual para esta configuracion (144 estudiantes en total)
+# Poder puntual para esta configuración (144 estudiantes en total)
 prueba_interaccion <- fixed("metodoespaciada:numero_examen", "z")
 
 resultado_24 <- powerSim(modelo_24, test = prueba_interaccion, nsim = 1000)
@@ -342,12 +346,13 @@ resultado_24
 ```
 Confirmamos nuestro análisis anterior. ¡Perfecto! Ahora nos queda un último paso: reportar el análisis que hicimos.
 
-### ¿Cómo reportar el cáculo del tamaño muestral?
+### Cómo reportar el cálculo del tamaño muestral
 
-Aquí les dejo un texto ejemplo de cómo contar el análisis que hicimos para un preregistro. No es un texto estándar. Lo importante es incluir todos los componentes que usamos para simular los datos y calcular el poder, incluyendo las distintas fuentes de variabilidad y la hipótesis que nos interesa testear:  
+Aquí les dejo un texto ejemplo de cómo contar el análisis que hicimos para un preregistro. No es un texto estándar, se puede modificar. Lo importante es incluir todos los componentes que usamos para simular los datos y calcular el poder, incluyendo las distintas fuentes de variabilidad y la hipótesis que nos interesa testear:  
 
+::: {.callout-note appearance="simple" icon="false"}
 
-*El tamaño muestral se determinó mediante un análisis de poder por simulación (Monte Carlo) usando el paquete `simr` en R, sobre un modelo lineal mixto especificado con `lme4`. El diseño incluyó 6 comisiones (2 por cada uno de los 3 métodos de estudio: tradicional, práctica de recuperación, repetición espaciada), 24 estudiantes por comisión (144 estudiantes en total), evaluados en 3 exámenes a lo largo del cuatrimestre.
+El tamaño muestral se determinó mediante un análisis de poder por simulación (Monte Carlo) usando el paquete `simr` en R, sobre un modelo lineal mixto especificado con `lme4`. El diseño incluyó 6 comisiones (2 por cada uno de los 3 métodos de estudio: tradicional, práctica de recuperación, repetición espaciada), 24 estudiantes por comisión (144 estudiantes en total), evaluados en 3 exámenes a lo largo del cuatrimestre.
 
 Modelo: puntaje ~ metodo * numero_examen + (1 + numero_examen | estudiante) + (1 | comision).
 
@@ -355,25 +360,24 @@ Hipótesis a testear: que el puntaje de los estudiantes bajo repetición espacia
 
 A partir de *los resultados obtenidos en un estudio piloto/a partir de los valores reportados por autor (año)* se asumen medias de 68.5, 73 y 77.5 en el examen 1 para tradicional, recuperación y espaciada respectivamente; mejoras de 2, 3 y 5 puntos por examen; desvío estándar entre estudiantes de 8 (intercepto) y 1.5 (pendiente), sin correlación entre ambos; desvío estándar entre comisiones de 4; desvío residual de 6.
 
-Con este diseño, y basado en 1000 simulaciones, el poder estimado para detectar el efecto de interés es de 89.5% (IC 95%: 87.4%–91.3%). El código completo utilizado para este análisis de poder está disponible en [enlace al repositorio / material suplementario].*
+Con este diseño, y basado en 1000 simulaciones, el poder estimado para detectar el efecto de interés es de 89.5% (IC 95%: 87.4%–91.3%). El código completo utilizado para este análisis de poder está disponible en [enlace al repositorio / material suplementario].
 
 :::
 
 ## Agradecimientos
 
-Además de los textos citados a los largo del tutorial, usé como referencia los siguientes materiales:
+Además de los textos citados a lo largo del tutorial, usé como referencia los siguientes materiales:
 
 - El tutorial [Power Analysis with simr](https://humburg.github.io/Power-Analysis/simr_power_analysis.html) de Peter Humburg.
-- El tutorial [A-Priori Power Analysis for Multilevel Models](https://thechangelab.stanford.edu/tutorials/power-analysis/a-priori-power-analysis-for-multilevel-models/) del grupo The Change Lab de la universidad de Stanford. 
+- El tutorial [A-Priori Power Analysis for Multilevel Models](https://thechangelab.stanford.edu/tutorials/power-analysis/a-priori-power-analysis-for-multilevel-models/) del grupo The Change Lab de la Universidad de Stanford. 
 
-Además, agradezco a mi directora de posdoc y carrera, [Débora Burín](https://www.linkedin.com/in/d-i-burin-644ba52/), que me contagió el amor por los análisis reproducibles y que se sentó varias veces y con muchísima paciencia a interpretar líneas de código y explicarme cómo hacer estos cálculos.  
-
+Quiero agradecer especialmente a mi directora de posdoctorado y de carrera, [Débora Burín](https://www.linkedin.com/in/d-i-burin-644ba52/), quien me contagió el entusiasmo por los análisis reproducibles y se sentó conmigo, en más de una ocasión y con enorme paciencia, a desentrañar líneas de código y ayudarme a entender cómo realizar e interpretar estos cálculos.
 
 ## Cómo citar este tutorial
 
-Si te resultó útil te cuento que este tutorial está disponible bajo una licencia [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.es). Esto quiere decir que podés compartirlo y adaptarlo libremente siempre que cites la fuente.
+Si te resultó útil, este tutorial está disponible bajo una licencia [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.es). Esto quiere decir que podés compartirlo y adaptarlo libremente siempre que cites la fuente.
 
-Formoso, J. (2026, July 12). ¿Cuántas observaciones necesito para poner a prueba mi hipótesis? Cálculo del tamaño muestral - parte 1. Zenodo. [https://doi.org/10.5281/zenodo.21326331](https://doi.org/10.5281/zenodo.21326331)
+Formoso, J. (2026, July 12). ¿Cuántas observaciones necesito para poner a prueba mi hipótesis? Cálculo del tamaño muestral. Zenodo. [https://doi.org/10.5281/zenodo.21326331](https://doi.org/10.5281/zenodo.21326331)
 
 
 ---
