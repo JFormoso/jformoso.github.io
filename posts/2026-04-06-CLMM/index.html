@@ -83,7 +83,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-6ac2aec46ad7f46b16024ee4409aa65c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-3e9b1289f5f353c49b617ce48ad2bc38.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -523,7 +523,7 @@ formula: respuesta_ord ~ tiempo * practica + (1 | id)
 data:    df
 
  link  threshold nobs logLik  AIC     niter    max.grad cond.H 
- logit flexible  600  -606.43 1224.86 457(518) 2.85e-07 3.3e+06
+ logit flexible  600  -606.43 1224.86 457(518) 3.55e-07 4.5e+05
 
 Random effects:
  Groups Name        Variance  Std.Dev. 
@@ -540,7 +540,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 Threshold coefficients:
                                   Estimate Std. Error z value
-No conozco|Conozco, no implementé   0.1624     0.1565   1.037
+No conozco|Conozco, no implementé   0.1624     0.1565   1.038
 Conozco, no implementé|Implementé   1.7684     0.1748  10.115</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>cf <span class="ot">&lt;-</span> <span class="fu">summary</span>(m3)<span class="sc">$</span>coefficients</span>
@@ -571,9 +571,9 @@ Conozco, no implementé|Implementé   1.7684     0.1748  10.115</code></pre>
 <span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a>or_tabla</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>                           term        OR    IC_low    IC_high
-1                    tiempopost 7.6616211 4.8595317 12.0794434
-2            practicaPráctica B 1.2190401 0.7922886  1.8756533
-3 tiempopost:practicaPráctica B 0.2768747 0.1498834  0.5114615</code></pre>
+1                    tiempopost 7.6616211 4.8596028 12.0792667
+2            practicaPráctica B 1.2190401 0.7922984  1.8756301
+3 tiempopost:practicaPráctica B 0.2768747 0.1498867  0.5114504</code></pre>
 </div>
 </div>
 <p><strong>En el caso de nuestros datos:</strong></p>
