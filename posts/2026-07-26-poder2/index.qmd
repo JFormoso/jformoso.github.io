@@ -20,7 +20,7 @@ type: post
 
 ## Retomando donde dejamos en la Parte 1 del tutorial
 
-En la [Parte 1](./poder1.qmd), calcular el poder era resolver una ecuación: dados $\alpha$, el tamaño del efecto ($d$, $f$, $r$ o $R^2$) y $n$, existe una expresión matemática exacta que despeja el cuarto valor. Eso funciona porque nuestro diseño incluía observaciones independientes y, por lo tanto, el modelo tenía **una sola fuente de variación aleatoria**. En nuestro ejemplo, queriamos conocer el efecto de 2 o 3 métodos de estudio distintos sobre el rendimiento de un grupo de estudiantes en un examen. Cada estudiante rindió el examen una vez, y utilizó un solo método de estudio, y esa fue toda la aleatoriedad que tuvimos que modelar. Bajo esas condiciones, el poder tiene una fórmula cerrada y paquetes como `pwr` o `pwr2` la resuelven directamente.
+En la [Parte 1](https://jformoso.github.io/posts/2026-07-12-poder1/), calcular el poder era resolver una ecuación: dados $\alpha$, el tamaño del efecto ($d$, $f$, $r$ o $R^2$) y $n$, existe una expresión matemática exacta que despeja el cuarto valor. Eso funciona porque nuestro diseño incluía observaciones independientes y, por lo tanto, el modelo tenía **una sola fuente de variación aleatoria**. En nuestro ejemplo, queríamos conocer el efecto de 2 o 3 métodos de estudio distintos sobre el rendimiento de un grupo de estudiantes en un examen. Cada estudiante rindió el examen una vez, y utilizó un solo método de estudio, y esa fue toda la aleatoriedad que tuvimos que modelar. Bajo esas condiciones, el poder tiene una fórmula cerrada y paquetes como `pwr` o `pwr2` la resuelven directamente.
 
 Ahora imaginemos el mismo estudio, pero cada estudiante rinde el examen tres veces a lo largo del año, y además administramos la prueba en muchas comisiones distintas. Tenemos **múltiples fuentes de variabilidad aleatoria**:
 
@@ -36,13 +36,13 @@ Entonces ¿qué hacemos?. Antes de meternos de lleno con el método, definamos a
 
 ## ¿Cuándo necesito un modelo mixto?
 
-La señal más clara de que necesitás un modelo mixto es que tus observaciones **no son todas independientes entre sí**. Dicho de otra forma, necesitás un modelo mixto si sabér el valor de una observación te da información sobre otra observación del mismo grupo, aunque el valor en la variable de interés (en este caso, método de estudio) sea distinto. Esto sucede típicamente en dos situaciones que muchas veces se combinan.
+La señal más clara de que necesitás un modelo mixto es que tus observaciones **no son todas independientes entre sí**. Dicho de otra forma, necesitás un modelo mixto si saber el valor de una observación te da información sobre otra observación del mismo grupo, aunque el valor en la variable de interés (en este caso, método de estudio) sea distinto. Esto sucede típicamente en dos situaciones que muchas veces se combinan.
 
 ### 1. Medidas repetidas
 
 Supongamos que, en lugar de que cada estudiante rinda el examen una sola vez, le pedimos que lo rinda **tres veces** a lo largo del cuatrimestre, para ver si el método de estudio mejora el desempeño con el tiempo. Ahora tenemos 3 observaciones por estudiante, y esas 3 observaciones (¡esto es lo importante!) **se parecen más entre sí que las observaciones de dos estudiantes distintos**. Un estudiante que rinde bien en el primer examen probablemente también rinda relativamente bien en el segundo y el tercero, más allá del método de estudio que le tocó. De igual forma, un estudiante que rinde mal en el primer examen, probablemente también rinda relativamente mal en los otros dos. 
 
-Si tuvieramos 40 estudiantes, cada uno evaluado 3 veces, y tomaramos las 120 medidas resultantes como si fueran independientes, estaríamos **inflando artificialmente el tamaño de la muestra** y, con eso, subestimando el error real de nuestras estimaciones.
+Si tuviéramos 40 estudiantes, cada uno evaluado 3 veces, y tomáramos las 120 medidas resultantes como si fueran independientes, estaríamos **inflando artificialmente el tamaño de la muestra** y, con eso, subestimando el error real de nuestras estimaciones.
 
 ### 2. Datos anidados o jerárquicos
 
@@ -211,7 +211,7 @@ sigma_residual <- 6
 
 ```
 
-También tenemos que indicar la **matríz de varianza y covarianza del intercepto y la pendiente aleatoria por estudiante**. Es una matriz de 2x2 porque estudiante tiene dos efectos aleatorios: intercepto (1) y pendiente de numero_examen. La diagonal son las varianzas: le asigno un desvió estándar de 8 (varianza = $8^2$ = 64) a la variación entre estudiantes en su nivel de partida (algunos estudiantes rinden mejor que otros en el examen 1, más allá del método) y un desvío estándar de 1.5 (varianza = $1.5^2$ = 2.25 a la variación entre estudiante en su ritmo de mejora). Fuera de la diagonal va la covarianza entre ambos: asumimos que el nivel de partida de un estudiante no predice qué tan rápido va a mejorar, por lo tengo le asignamos 0.
+También tenemos que indicar la **matriz de varianza y covarianza del intercepto y la pendiente aleatoria por estudiante**. Es una matriz de 2x2 porque estudiante tiene dos efectos aleatorios: intercepto (1) y pendiente de numero_examen. La diagonal son las varianzas: le asigno un desvío estándar de 8 (varianza = $8^2$ = 64) a la variación entre estudiantes en su nivel de partida (algunos estudiantes rinden mejor que otros en el examen 1, más allá del método) y un desvío estándar de 1.5 (varianza = $1.5^2$ = 2.25 a la variación entre estudiante en su ritmo de mejora). Fuera de la diagonal va la covarianza entre ambos: asumimos que el nivel de partida de un estudiante no predice qué tan rápido va a mejorar, por lo tengo le asignamos 0.
 La **varianza asociada a la comisión** es un único número porque comisión tiene un único efecto aleatorio en nuestro modelo, el intercepto. Suponemos un desvío de 4, una varianza de 16.
 Finalmente, el **sigma residual** es el devío del "ruido" que queda despues de descontar el efecto del método, la tendencia general y las desviaciones propias de cada estudiante y cada comisión. La variabilidad de cada examen puntual que no se explica por nada sistemático (por ejemplo, si tuvo un buen o un mal día el estudiante).
 
@@ -346,7 +346,7 @@ resultado_24
 ```
 Confirmamos nuestro análisis anterior. ¡Perfecto! Ahora nos queda un último paso: reportar el análisis que hicimos.
 
-### Cómo reportar el cálculo del tamaño muestral
+### ¿Cómo reportar el cálculo del tamaño muestral?
 
 Aquí les dejo un texto ejemplo de cómo contar el análisis que hicimos para un preregistro. No es un texto estándar, se puede modificar. Lo importante es incluir todos los componentes que usamos para simular los datos y calcular el poder, incluyendo las distintas fuentes de variabilidad y la hipótesis que nos interesa testear:  
 
