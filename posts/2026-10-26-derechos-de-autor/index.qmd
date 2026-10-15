@@ -1,0 +1,172 @@
+---
+title: "Copyright y Creative Commons en Argentina: ¿qué cambia?"
+subtitle: "Cosas a tener en cuenta antes de generar o reutilizar materiales abiertos"
+author: "Jesica Formoso"
+date: "2026-10-15"
+categories: ["Creative Commons", "derecho de autor", "educación abierta", "Argentina"]
+lang: es
+toc: true
+toc-depth: 2
+format:
+  html:
+    code-fold: true
+    anchor-sections: true
+image: "images/derechos-de-autor.jpg"
+image-alt: "Pila de libros abiertos"
+image-caption: 'Foto de [Gülfer ERGİN](https://unsplash.com/es/@gulfergin_01) en [Unsplash](https://unsplash.com/es/fotos/pila-de-libros-abiertos-en-rustica-LUGuCtvlk1Q)'
+---
+
+
+
+
+Imaginemos una situación bastante habitual: estamos preparando una clase y encontramos una ilustración que explica muy bien un concepto, un capítulo que querríamos compartir con nuestros estudiantes y un recurso educativo en inglés que sería útil traducir al español. ¿Podemos hacerlo?
+
+Es tentador pensar que, si algo está disponible gratuitamente en Internet, podemos utilizarlo. O que alcanza con mencionar a su autor. Pero que una obra sea gratuita, que podamos acceder a ella y que tengamos permiso para reutilizarla son cosas diferentes. Y aquí es donde entra a jugar el el derecho de autor, las licencias abiertas y, particularmente, las licencias [Creative Commons](https://creativecommons.org/). 
+
+En este posteo vamos a repasar los conceptos principales del copyright, con ejemplos de educación e investigación y especial atención a **Argentina**, cuya legislación presenta algunas particularidades interesantes. 
+
+## ¿Para qué existe el derecho de autor?
+
+Cuando alguien escribe una novela, toma una fotografía o produce un video educativo, crea una obra que puede tener valor cultural, educativo y económico. El **derecho de autor** reconoce determinadas facultades sobre esas obras, de modo que sus titulares (quienes las crearon) puedan decidir, por ejemplo, quién puede reproducirlas, distribuirlas, traducirlas o adaptarlas.
+
+En Argentina, la principal norma que regula el derecho de autor es la [Ley 11.723 de Propiedad Intelectual](https://www.argentina.gob.ar/normativa/nacional/42755/actualizacion). Para entenderla, conviene distinguir dos dimensiones:
+
+- **Derechos patrimoniales:** se relacionan con la explotación económica y la autorización de ciertos usos de una obra. Por ejemplo, una escritora puede autorizar a una editorial a publicar su libro o a otra persona a traducirlo.
+
+- **Derechos morales:** protegen aspectos de la relación entre el autor y su creación, como el reconocimiento de su autoría y la integridad de la obra. Por ejemplo, reproducir una fotografía atribuyéndosela a otra persona afecta el reconocimiento de la autoría.
+
+La Ley 11.723 de Propiedad Intelectual contempla ambos tipos de derechos.
+Sin embargo, el propósito del derecho de autor no es solamente proteger intereses individuales, también busca equilibrar esos intereses con la importancia de garantizar el acceso social a la cultura y al conocimiento. De ahí que esos derechos patrimoniales no duran para siempre y existen situaciones en las que podemos utilizar obras protegidas sin pedir permiso. 
+
+## ¿Qué está protegido y qué no?
+
+Una distinción fundamental es que **el derecho de autor protege las expresiones originales, no las ideas, teorías, métodos o hechos en sí mismos**.
+Supongamos que una investigadora propone una teoría sobre el aprendizaje. Podemos estudiarla, discutirla, intentar reproducir sus hallazgos y explicarla con nuestras propias palabras. Lo que no podemos hacer libremente es copiar extensamente el texto original donde se presenta esa teoría, porque su redacción puede estar protegida.
+Lo mismo ocurre con los datos: el hecho de que una encuesta haya encontrado que el 60% de sus participantes utiliza cierta tecnología no pertenece, como dato, a la persona que lo reportó. Pero un informe con una selección y organización original de contenidos, ilustraciones o textos puede incluir elementos protegidos. Además, para compartir bases de datos pueden existir restricciones **distintas del copyright**, como obligaciones de confidencialidad y protección de datos personales.
+
+La legislación argentina reconoce numerosas clases de obras, entre ellas textos, música, fotografías, películas, dibujos y programas informáticos. No es necesario que una obra tenga valor artístico extraordinario para que pueda estar protegida.
+
+### ¿Y las patentes y las marcas?
+
+El copyright es una forma de **propiedad intelectual**, pero no la única. Las protecciones se aplican a objetos distintos:
+
+| Mecanismo | ¿Qué protege? | Ejemplo |
+|---|---|---|
+| Derecho de autor | Expresiones originales de obras | El texto de un manual o una ilustración |
+| Patente | Invenciones que cumplen requisitos legales | Un dispositivo técnico novedoso |
+| Marca | Signos que distinguen productos o servicios | El nombre y logotipo de una empresa |
+
+Un mismo proyecto puede involucrar más de una protección: el código de un software puede estar protegido por derecho de autor, mientras que su nombre comercial puede funcionar como marca. Una licencia abierta sobre el manual de ese software **no concede automáticamente** derechos sobre la marca o una invención patentada.
+
+## ¿Hay que registrar una obra para tener derechos?
+
+Uno de los principios del sistema internacional de derecho de autor es la **protección sin formalidades**. El [Convenio de Berna](https://www.wipo.int/treaties/es/ip/berne/), del que Argentina forma parte, establece que el goce y ejercicio de los derechos no deben subordinarse al cumplimiento de formalidades. Así, como principio general, una obra original no necesita llevar el símbolo © ni pasar primero por un trámite administrativo para estar protegida.
+
+En Argentina, los derechos de autor también nacen con la creación de una obra original. Este principio es consistente con el Convenio de Berna.
+
+Sin embargo, que una obra esté protegida automáticamente no significa que el registro sea irrelevante. La Ley 11.723 establece obligaciones de depósito e inscripción para determinadas obras publicadas. 
+Al mismo tiempo, la Dirección Nacional del Derecho de Autor reconoce expresamente que los derechos nacen con la creación y que el registro tiene carácter declarativo. Es decir, el registro no es lo que crea el derecho, aunque puede tener efectos jurídicos importantes, especialmente para acreditar titularidad y hacer valer derechos frente a terceros.
+
+¿Y si creamos una obra como parte de nuestro trabajo?
+
+Imaginemos que una docente desarrolla un manual para una materia universitaria. Ella escribió los textos, preparó las actividades y diseñó los ejemplos. ¿Puede publicarlo en su página personal bajo una licencia Creative Commons?
+
+La respuesta depende de quién tenga los derechos patrimoniales sobre ese material.
+
+En Argentina, la autoría y la titularidad de los derechos patrimoniales no siempre coinciden. Por ejemplo, una persona puede ser autora de una obra y haber cedido contractualmente ciertos derechos a una editorial o institución.
+
+Esto no significa que las universidades sean automáticamente titulares de todos los materiales que producen sus docentes. La situación depende del tipo de obra, los contratos y las disposiciones aplicables. La legislación también contempla reglas especiales para determinados casos, como el software desarrollado por empleados contratados para esa finalidad.
+
+Una recomendación práctica: antes de publicar bajo licencias abiertas un material producido en el marco de una relación laboral o un contrato, conviene revisar si existen cláusulas sobre propiedad intelectual, cesión de derechos, exclusividad o autorización para publicar y reutilizar los contenidos.
+
+Y, si estamos participando en el diseño de un contrato para desarrollar recursos educativos, podemos proponer que se incluya expresamente una cláusula que permita publicarlos bajo una licencia Creative Commons.
+
+De esta manera, la posibilidad de compartir, traducir y adaptar los materiales queda contemplada desde el inicio del proyecto, en lugar de depender de autorizaciones posteriores.
+
+## ¿Qué significa que una obra esté en dominio público?
+
+Como vimos antes, los derechos patrimoniales tienen una duración limitada. En Argentina, para una obra de autoría individual, la regla general es la vida del autor más **70 años**, computados desde el 1 de enero del año siguiente a su fallecimiento; hay reglas especiales para ciertos tipos de obras y situaciones ([Ley 11.723](https://www.argentina.gob.ar/normativa/nacional/42755/actualizacion)).
+
+Al terminar esa protección, la obra ingresa al **dominio público**: ya no es necesario obtener la autorización de los antiguos titulares de los derechos patrimoniales para realizar usos que esos derechos antes controlaban.
+
+Por ejemplo, podríamos preparar una edición de una novela clásica cuyos derechos patrimoniales hayan expirado. 
+
+Pero ¡ojo! En Argentina existe un régimen que sorprende a quienes aprendieron que “dominio público” equivale a “uso completamente gratuito”. El [Decreto-Ley 1.224/1958](https://www.argentina.gob.ar/normativa/nacional/37242/actualizacion) estableció el **dominio público pagante** que implica que determinados aprovechamientos de obras cuyos derechos patrimoniales expiraron pueden estar sujetos a un gravamen destinado al Fondo Nacional de las Artes.
+
+Por ejemplo, una editorial que quiera explotar comercialmente una obra clásica puede tener que considerar ese régimen, aunque ya no necesite pedir permiso a los herederos del autor. La reglamentación contempla condiciones y exenciones; no significa que toda lectura, cita o utilización de una obra de dominio público genere automáticamente un pago.
+
+La enseñanza más importante es que **la ausencia de derechos patrimoniales exclusivos y la ausencia de cualquier cargo económico son cuestiones distintas**. Por eso, para una reutilización concreta conviene comprobar la normativa aplicable y su vigencia.
+
+## ¿Podemos utilizar obras protegidas sin pedir permiso?
+
+Sí, en ciertos casos. Las leyes establecen **excepciones y limitaciones** que permiten algunos usos sin solicitar autorización, aunque una obra todavía esté protegida.
+
+Volvamos a la docente que prepara una clase. Quiere comentar un párrafo de un libro para analizarlo con sus estudiantes. En Argentina, el [artículo 10 de la Ley 11.723](https://www.argentina.gob.ar/normativa/nacional/42755/actualizacion) permite incorporar partes de obras ajenas en comentarios, críticas o notas con fines didácticos o científicos, dentro de ciertas condiciones. Menciona hasta **1.000 palabras** de obras literarias o científicas, pero exige también que se utilicen **solo las partes indispensables** para esa finalidad.
+
+Eso no equivale a un permiso general para copiar mil palabras de cualquier libro en cualquier contexto. Menos aún significa que se pueda escanear y publicar un capítulo completo simplemente porque se lo utilizará en una clase. También hay que considerar las restantes condiciones de la ley y el caso concreto.
+
+
+## ¿Dónde entran las licencias Creative Commons?
+
+Hasta ahora vimos tres situaciones distintas:
+
+- una obra puede estar protegida, pero una **excepción legal** permite cierto uso
+- una obra puede haber ingresado al **dominio público**, aunque en Argentina haya que considerar el régimen de dominio público pagante
+- una obra protegida puede tener una **licencia abierta** que concede permisos adicionales
+
+[Creative Commons](https://creativecommons.org/) entra en el tercer caso. Sus licencias estandarizadas permiten a quienes tienen los derechos autorizar anticipadamente la copia, distribución y, según la licencia, adaptación de sus obras. No hay que contactar individualmente al titular para cada uso ya autorizado, siempre que se cumplan las condiciones.
+
+Supongamos que la docente encuentra un material educativo en inglés bajo [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.es). Puede traducirlo, adaptar ejemplos al contexto argentino y publicar esa adaptación, incluso para un uso comercial, siempre que cumpla las condiciones de la licencia. Entre ellas  reconocer a quienes crearon el original, linkear la licencia al trabajo, conservar la información relevante de atribución e indicar que hizo cambios. No debe sugerir que los autores originales avalan la nueva versión.
+
+Pero si el mismo recurso tuviera una licencia **CC BY-ND 4.0**, la licencia por sí sola **no permitiría compartir públicamente una traducción**, porque ND restringe la distribución de material adaptado. Habría que pedir una autorización adicional o contar con otra base legal que habilite ese uso.
+
+Las seis licencias CC combinan condiciones diferentes:
+
+| Licencia | ¿Permite compartir adaptaciones? | Condición adicional destacada |
+|---|---|---|
+| CC BY | Sí | Atribución |
+| CC BY-SA | Sí | Compartir adaptaciones bajo una licencia compatible |
+| CC BY-NC | Sí | Solo usos no comerciales |
+| CC BY-NC-SA | Sí | No comercial y compartir igual |
+| CC BY-ND | No, bajo la licencia estándar | Sin distribuir adaptaciones |
+| CC BY-NC-ND | No, bajo la licencia estándar | No comercial y sin distribuir adaptaciones |
+
+Todas exigen atribución. Las licencias CC **no anulan excepciones legales** por lo que si un uso ya está permitido por una excepción aplicable, no hace falta apoyarse en la licencia para justificarlo. Tampoco conceden automáticamente derechos de imagen, privacidad, marcas u otros derechos de terceros ([Creative Commons, CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.es)).
+
+## Compartir una obra propia: un ejemplo práctico
+
+Imaginemos que escribimos un manual de estadística y queremos que otras personas puedan traducirlo y adaptarlo para sus cursos. Podemos publicar el texto original bajo **CC BY 4.0**, siempre que tengamos los derechos necesarios.
+
+Pero supongamos que el manual incluye una ilustración tomada de un libro comercial. No podemos conceder a terceros derechos sobre esa ilustración solo porque la incluimos en nuestro trabajo. Necesitaríamos una autorización adecuada, reemplazarla por un recurso compatible o identificar claramente que ese componente no está cubierto por la licencia general.
+
+Una declaración posible sería:
+
+> Salvo indicación en contrario, los contenidos originales de este material se distribuyen bajo [Creative Commons Atribución 4.0 Internacional (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.es). Los materiales de terceros conservan sus respectivas licencias y condiciones de uso, identificadas junto a cada recurso.
+
+Cuando adaptamos materiales de otras personas, también conviene identificar la fuente original, sus autores, su licencia y las modificaciones realizadas. Esto es importante legalmente y facilita que quienes reutilicen nuestra versión puedan reconstruir su procedencia.
+
+## Algunas ideas para llevarse
+
+La legislación de derecho de autor determina qué está protegido, durante cuánto tiempo, quién puede autorizar determinados usos y qué excepciones existen. Creative Commons **no reemplaza** esas reglas, sino que permite que los titulares/autores compartan parte de sus facultades por adelantado.
+
+El caso argentino muestra por qué importa conocer el contexto jurídico. El sistema de excepciones específicas, las disposiciones sobre registro y el dominio público pagante pueden producir resultados distintos de los que esperamos si tomamos como referencia exclusiva los materiales de otros países.
+
+Para quienes trabajamos en educación e investigación, esta discusión tiene consecuencias prácticas. Un recurso puede estar disponible gratuitamente y aun así no permitir su traducción o adaptación. En cambio, una licencia abierta bien elegida puede facilitar que otras personas produzcan versiones accesibles, adapten ejemplos culturales o reutilicen un material en nuevos contextos.
+
+**Promover el conocimiento abierto no es solo hacer que algo pueda leerse: también es facilitar, cuando corresponde, que otras personas puedan utilizarlo y construir a partir de ello.**
+
+## Fuentes y lecturas recomendadas
+
+- [República Argentina. Ley 11.723 de Propiedad Intelectual (texto actualizado)](https://www.argentina.gob.ar/normativa/nacional/42755/actualizacion).
+- [República Argentina. Decreto-Ley 1.224/1958, Fondo Nacional de las Artes (texto actualizado)](https://www.argentina.gob.ar/normativa/nacional/37242/actualizacion).
+- [Organización Mundial de la Propiedad Intelectual. Convenio de Berna](https://www.wipo.int/treaties/es/ip/berne/).
+- [U.S. Copyright Office. Fair Use Index](https://www.copyright.gov/fair-use/).
+- [Creative Commons. Licencia Atribución 4.0 Internacional](https://creativecommons.org/licenses/by/4.0/deed.es).
+- [Creative Commons. Preguntas frecuentes](https://creativecommons.org/faq/).
+- Creative Commons Certificate for Educators, Unidad 2: *Copyright Law* (material del curso).
+
+::: {.callout-note title="Sobre esta publicación"}
+Este artículo fue elaborado como parte del *Creative Commons Certificate for Educators*. Se enfoca en la legislación argentina y tiene fines educativos; No constituye asesoramiento jurídico.
+
+**Copyright y Creative Commons en Argentina: ¿qué cambia?** © 2026 Jesica Formoso. Salvo indicación en contrario, el texto original de esta entrada se distribuye bajo [Creative Commons Atribución 4.0 Internacional (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.es). Las obras de terceros linkeadas o citadas mantienen sus propios derechos y licencias.
+:::
