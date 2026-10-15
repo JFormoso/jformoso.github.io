@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.18">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -98,10 +98,10 @@ div.csl-indent {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-3e9b1289f5f353c49b617ce48ad2bc38.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-55617497126496852ff9f5a59253c640.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/quarto-contrib/academicons-1.9.4/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/academicons-1.9.4/size.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -251,7 +251,7 @@ window.Quarto = {
   <li><a href="#especificamos-el-modelo-con-makelmer" id="toc-especificamos-el-modelo-con-makelmer" class="nav-link" data-scroll-target="#especificamos-el-modelo-con-makelmer">Especificamos el modelo con <code>makeLmer()</code></a></li>
   <li><a href="#calculamos-el-poder-para-nuestro-diseño-con-powersim" id="toc-calculamos-el-poder-para-nuestro-diseño-con-powersim" class="nav-link" data-scroll-target="#calculamos-el-poder-para-nuestro-diseño-con-powersim">Calculamos el poder para nuestro diseño con <code>powerSim()</code></a></li>
   <li><a href="#extendemos-el-diseño-y-trazamos-la-curva-de-poder" id="toc-extendemos-el-diseño-y-trazamos-la-curva-de-poder" class="nav-link" data-scroll-target="#extendemos-el-diseño-y-trazamos-la-curva-de-poder">Extendemos el diseño y trazamos la curva de poder</a></li>
-  <li><a href="#cómo-reportar-el-cálculo-del-tamaño-muestral" id="toc-cómo-reportar-el-cálculo-del-tamaño-muestral" class="nav-link" data-scroll-target="#cómo-reportar-el-cálculo-del-tamaño-muestral">Cómo reportar el cálculo del tamaño muestral</a></li>
+  <li><a href="#cómo-reportar-el-cálculo-del-tamaño-muestral" id="toc-cómo-reportar-el-cálculo-del-tamaño-muestral" class="nav-link" data-scroll-target="#cómo-reportar-el-cálculo-del-tamaño-muestral">¿Cómo reportar el cálculo del tamaño muestral?</a></li>
   </ul></li>
   <li><a href="#agradecimientos" id="toc-agradecimientos" class="nav-link" data-scroll-target="#agradecimientos">Agradecimientos</a></li>
   <li><a href="#cómo-citar-este-tutorial" id="toc-cómo-citar-este-tutorial" class="nav-link" data-scroll-target="#cómo-citar-este-tutorial">Cómo citar este tutorial</a></li>
@@ -300,7 +300,7 @@ window.Quarto = {
 <p><img src="../../images/poder2.png" class="img-fluid"></p>
 <section id="retomando-donde-dejamos-en-la-parte-1-del-tutorial" class="level2">
 <h2 class="anchored" data-anchor-id="retomando-donde-dejamos-en-la-parte-1-del-tutorial">Retomando donde dejamos en la Parte 1 del tutorial</h2>
-<p>En la <a href="./poder1.qmd">Parte 1</a>, calcular el poder era resolver una ecuación: dados <span class="math inline">\(\alpha\)</span>, el tamaño del efecto (<span class="math inline">\(d\)</span>, <span class="math inline">\(f\)</span>, <span class="math inline">\(r\)</span> o <span class="math inline">\(R^2\)</span>) y <span class="math inline">\(n\)</span>, existe una expresión matemática exacta que despeja el cuarto valor. Eso funciona porque nuestro diseño incluía observaciones independientes y, por lo tanto, el modelo tenía <strong>una sola fuente de variación aleatoria</strong>. En nuestro ejemplo, queriamos conocer el efecto de 2 o 3 métodos de estudio distintos sobre el rendimiento de un grupo de estudiantes en un examen. Cada estudiante rindió el examen una vez, y utilizó un solo método de estudio, y esa fue toda la aleatoriedad que tuvimos que modelar. Bajo esas condiciones, el poder tiene una fórmula cerrada y paquetes como <code>pwr</code> o <code>pwr2</code> la resuelven directamente.</p>
+<p>En la <a href="https://jformoso.github.io/posts/2026-07-12-poder1/">Parte 1</a>, calcular el poder era resolver una ecuación: dados <span class="math inline">\(\alpha\)</span>, el tamaño del efecto (<span class="math inline">\(d\)</span>, <span class="math inline">\(f\)</span>, <span class="math inline">\(r\)</span> o <span class="math inline">\(R^2\)</span>) y <span class="math inline">\(n\)</span>, existe una expresión matemática exacta que despeja el cuarto valor. Eso funciona porque nuestro diseño incluía observaciones independientes y, por lo tanto, el modelo tenía <strong>una sola fuente de variación aleatoria</strong>. En nuestro ejemplo, queríamos conocer el efecto de 2 o 3 métodos de estudio distintos sobre el rendimiento de un grupo de estudiantes en un examen. Cada estudiante rindió el examen una vez, y utilizó un solo método de estudio, y esa fue toda la aleatoriedad que tuvimos que modelar. Bajo esas condiciones, el poder tiene una fórmula cerrada y paquetes como <code>pwr</code> o <code>pwr2</code> la resuelven directamente.</p>
 <p>Ahora imaginemos el mismo estudio, pero cada estudiante rinde el examen tres veces a lo largo del año, y además administramos la prueba en muchas comisiones distintas. Tenemos <strong>múltiples fuentes de variabilidad aleatoria</strong>:</p>
 <ul>
 <li>Cuánto varían los estudiantes entre sí (algunos rinden mejor que otros en general).</li>
@@ -313,11 +313,11 @@ window.Quarto = {
 </section>
 <section id="cuándo-necesito-un-modelo-mixto" class="level2">
 <h2 class="anchored" data-anchor-id="cuándo-necesito-un-modelo-mixto">¿Cuándo necesito un modelo mixto?</h2>
-<p>La señal más clara de que necesitás un modelo mixto es que tus observaciones <strong>no son todas independientes entre sí</strong>. Dicho de otra forma, necesitás un modelo mixto si sabér el valor de una observación te da información sobre otra observación del mismo grupo, aunque el valor en la variable de interés (en este caso, método de estudio) sea distinto. Esto sucede típicamente en dos situaciones que muchas veces se combinan.</p>
+<p>La señal más clara de que necesitás un modelo mixto es que tus observaciones <strong>no son todas independientes entre sí</strong>. Dicho de otra forma, necesitás un modelo mixto si saber el valor de una observación te da información sobre otra observación del mismo grupo, aunque el valor en la variable de interés (en este caso, método de estudio) sea distinto. Esto sucede típicamente en dos situaciones que muchas veces se combinan.</p>
 <section id="medidas-repetidas" class="level3">
 <h3 class="anchored" data-anchor-id="medidas-repetidas">1. Medidas repetidas</h3>
 <p>Supongamos que, en lugar de que cada estudiante rinda el examen una sola vez, le pedimos que lo rinda <strong>tres veces</strong> a lo largo del cuatrimestre, para ver si el método de estudio mejora el desempeño con el tiempo. Ahora tenemos 3 observaciones por estudiante, y esas 3 observaciones (¡esto es lo importante!) <strong>se parecen más entre sí que las observaciones de dos estudiantes distintos</strong>. Un estudiante que rinde bien en el primer examen probablemente también rinda relativamente bien en el segundo y el tercero, más allá del método de estudio que le tocó. De igual forma, un estudiante que rinde mal en el primer examen, probablemente también rinda relativamente mal en los otros dos.</p>
-<p>Si tuvieramos 40 estudiantes, cada uno evaluado 3 veces, y tomaramos las 120 medidas resultantes como si fueran independientes, estaríamos <strong>inflando artificialmente el tamaño de la muestra</strong> y, con eso, subestimando el error real de nuestras estimaciones.</p>
+<p>Si tuviéramos 40 estudiantes, cada uno evaluado 3 veces, y tomáramos las 120 medidas resultantes como si fueran independientes, estaríamos <strong>inflando artificialmente el tamaño de la muestra</strong> y, con eso, subestimando el error real de nuestras estimaciones.</p>
 </section>
 <section id="datos-anidados-o-jerárquicos" class="level3">
 <h3 class="anchored" data-anchor-id="datos-anidados-o-jerárquicos">2. Datos anidados o jerárquicos</h3>
@@ -527,7 +527,7 @@ Nota
 <span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Desvío residual (examen a examen, dentro del propio estudiante)</span></span>
 <span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>sigma_residual <span class="ot">&lt;-</span> <span class="dv">6</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>También tenemos que indicar la <strong>matríz de varianza y covarianza del intercepto y la pendiente aleatoria por estudiante</strong>. Es una matriz de 2x2 porque estudiante tiene dos efectos aleatorios: intercepto (1) y pendiente de numero_examen. La diagonal son las varianzas: le asigno un desvió estándar de 8 (varianza = <span class="math inline">\(8^2\)</span> = 64) a la variación entre estudiantes en su nivel de partida (algunos estudiantes rinden mejor que otros en el examen 1, más allá del método) y un desvío estándar de 1.5 (varianza = <span class="math inline">\(1.5^2\)</span> = 2.25 a la variación entre estudiante en su ritmo de mejora). Fuera de la diagonal va la covarianza entre ambos: asumimos que el nivel de partida de un estudiante no predice qué tan rápido va a mejorar, por lo tengo le asignamos 0. La <strong>varianza asociada a la comisión</strong> es un único número porque comisión tiene un único efecto aleatorio en nuestro modelo, el intercepto. Suponemos un desvío de 4, una varianza de 16. Finalmente, el <strong>sigma residual</strong> es el devío del “ruido” que queda despues de descontar el efecto del método, la tendencia general y las desviaciones propias de cada estudiante y cada comisión. La variabilidad de cada examen puntual que no se explica por nada sistemático (por ejemplo, si tuvo un buen o un mal día el estudiante).</p>
+<p>También tenemos que indicar la <strong>matriz de varianza y covarianza del intercepto y la pendiente aleatoria por estudiante</strong>. Es una matriz de 2x2 porque estudiante tiene dos efectos aleatorios: intercepto (1) y pendiente de numero_examen. La diagonal son las varianzas: le asigno un desvío estándar de 8 (varianza = <span class="math inline">\(8^2\)</span> = 64) a la variación entre estudiantes en su nivel de partida (algunos estudiantes rinden mejor que otros en el examen 1, más allá del método) y un desvío estándar de 1.5 (varianza = <span class="math inline">\(1.5^2\)</span> = 2.25 a la variación entre estudiante en su ritmo de mejora). Fuera de la diagonal va la covarianza entre ambos: asumimos que el nivel de partida de un estudiante no predice qué tan rápido va a mejorar, por lo tengo le asignamos 0. La <strong>varianza asociada a la comisión</strong> es un único número porque comisión tiene un único efecto aleatorio en nuestro modelo, el intercepto. Suponemos un desvío de 4, una varianza de 16. Finalmente, el <strong>sigma residual</strong> es el devío del “ruido” que queda despues de descontar el efecto del método, la tendencia general y las desviaciones propias de cada estudiante y cada comisión. La variabilidad de cada examen puntual que no se explica por nada sistemático (por ejemplo, si tuvo un buen o un mal día el estudiante).</p>
 <p>Con todos esos valores definidos, ya podemos simular nuestro modelo con <code>makeLmer()</code>.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>modelo <span class="ot">&lt;-</span> <span class="fu">makeLmer</span>(</span>
@@ -544,7 +544,7 @@ Nota
 Formula: puntaje ~ metodo * numero_examen + (1 + numero_examen | estudiante) +  
     (1 | comision)
    Data: datos
-REML criterion at convergence: 956.3287
+REML criterion at convergence: 1009.581
 Random effects:
  Groups     Name          Std.Dev. Corr 
  estudiante (Intercept)   8.0           
@@ -581,7 +581,7 @@ Test: z-test
 
 Based on 100 simulations, (0 errors, 2 warnings, 48 messages)
 
-Time elapsed: 0 h 0 m 3 s</code></pre>
+Time elapsed: 0 h 0 m 4 s</code></pre>
 </div>
 </div>
 <p>Con las 6 comisiones (48 estudiantes, 144 observaciones), el poder ronda el <strong>50%</strong>, muy por debajo del 80% que buscamos. Para poner a prueba la hipótesis que nos interesa, con un diseño así de chico no alcanza.</p>
@@ -636,9 +636,9 @@ by number of levels in comision:
      26: 95.00% (88.72, 98.36) - 624 rows
      30: 95.00% (88.72, 98.36) - 720 rows
 
-(0 errors, 6 warnings, 51 messages)
+(0 errors, 5 warnings, 52 messages)
 
-Time elapsed: 0 h 0 m 15 s</code></pre>
+Time elapsed: 0 h 0 m 19 s</code></pre>
 </div>
 </div>
 <p>En 14 comisiones el poder todavía no llega el 80%, mientras que con 18 comisiones lo supera. Podriamos calcular el poder exacto para 17 comisiones (te invito a hacer la prueba).</p>
@@ -680,9 +680,9 @@ by number of levels in estudiante:
     168: 93.00% (86.11, 97.14) - 504 rows
     192: 96.00% (90.07, 98.90) - 576 rows
 
-(0 errors, 14 warnings, 55 messages)
+(0 errors, 13 warnings, 57 messages)
 
-Time elapsed: 0 h 0 m 16 s</code></pre>
+Time elapsed: 0 h 0 m 19 s</code></pre>
 </div>
 </div>
 <p>El gráfico permite inferir que con 24 estudiantes por comisión, 6 comisiones, 3 evaluaciones por estudiante, tenemos un poder superior al 80%. ¡Confirmemoslo! A continuación encontrarás el código integrado, armado desde cero.</p>
@@ -741,13 +741,13 @@ Test: z-test
 
 Based on 1000 simulations, (0 errors, 21 warnings, 298 messages)
 
-Time elapsed: 0 h 0 m 42 s</code></pre>
+Time elapsed: 0 h 0 m 49 s</code></pre>
 </div>
 </div>
 <p>Confirmamos nuestro análisis anterior. ¡Perfecto! Ahora nos queda un último paso: reportar el análisis que hicimos.</p>
 </section>
 <section id="cómo-reportar-el-cálculo-del-tamaño-muestral" class="level3">
-<h3 class="anchored" data-anchor-id="cómo-reportar-el-cálculo-del-tamaño-muestral">Cómo reportar el cálculo del tamaño muestral</h3>
+<h3 class="anchored" data-anchor-id="cómo-reportar-el-cálculo-del-tamaño-muestral">¿Cómo reportar el cálculo del tamaño muestral?</h3>
 <p>Aquí les dejo un texto ejemplo de cómo contar el análisis que hicimos para un preregistro. No es un texto estándar, se puede modificar. Lo importante es incluir todos los componentes que usamos para simular los datos y calcular el poder, incluyendo las distintas fuentes de variabilidad y la hipótesis que nos interesa testear:</p>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
