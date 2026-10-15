@@ -11,7 +11,7 @@ format:
   html:
     code-fold: true
     anchor-sections: true
-image: "images/derechos-de-autor.jpg"
+image: "../../images/derechos-de-autor.jpg"
 image-alt: "Pila de libros abiertos"
 image-caption: 'Foto de [Gülfer ERGİN](https://unsplash.com/es/@gulfergin_01) en [Unsplash](https://unsplash.com/es/fotos/pila-de-libros-abiertos-en-rustica-LUGuCtvlk1Q)'
 ---
