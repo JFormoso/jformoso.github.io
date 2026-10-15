@@ -544,7 +544,7 @@ Nota
 Formula: puntaje ~ metodo * numero_examen + (1 + numero_examen | estudiante) +  
     (1 | comision)
    Data: datos
-REML criterion at convergence: 1009.581
+REML criterion at convergence: 1013.085
 Random effects:
  Groups     Name          Std.Dev. Corr 
  estudiante (Intercept)   8.0           
@@ -581,7 +581,7 @@ Test: z-test
 
 Based on 100 simulations, (0 errors, 2 warnings, 48 messages)
 
-Time elapsed: 0 h 0 m 4 s</code></pre>
+Time elapsed: 0 h 0 m 5 s</code></pre>
 </div>
 </div>
 <p>Con las 6 comisiones (48 estudiantes, 144 observaciones), el poder ronda el <strong>50%</strong>, muy por debajo del 80% que buscamos. Para poner a prueba la hipótesis que nos interesa, con un diseño así de chico no alcanza.</p>
@@ -636,9 +636,9 @@ by number of levels in comision:
      26: 95.00% (88.72, 98.36) - 624 rows
      30: 95.00% (88.72, 98.36) - 720 rows
 
-(0 errors, 5 warnings, 52 messages)
+(0 errors, 6 warnings, 51 messages)
 
-Time elapsed: 0 h 0 m 19 s</code></pre>
+Time elapsed: 0 h 0 m 25 s</code></pre>
 </div>
 </div>
 <p>En 14 comisiones el poder todavía no llega el 80%, mientras que con 18 comisiones lo supera. Podriamos calcular el poder exacto para 17 comisiones (te invito a hacer la prueba).</p>
@@ -680,9 +680,9 @@ by number of levels in estudiante:
     168: 93.00% (86.11, 97.14) - 504 rows
     192: 96.00% (90.07, 98.90) - 576 rows
 
-(0 errors, 13 warnings, 57 messages)
+(0 errors, 14 warnings, 55 messages)
 
-Time elapsed: 0 h 0 m 19 s</code></pre>
+Time elapsed: 0 h 0 m 25 s</code></pre>
 </div>
 </div>
 <p>El gráfico permite inferir que con 24 estudiantes por comisión, 6 comisiones, 3 evaluaciones por estudiante, tenemos un poder superior al 80%. ¡Confirmemoslo! A continuación encontrarás el código integrado, armado desde cero.</p>
@@ -741,7 +741,7 @@ Test: z-test
 
 Based on 1000 simulations, (0 errors, 21 warnings, 298 messages)
 
-Time elapsed: 0 h 0 m 49 s</code></pre>
+Time elapsed: 0 h 1 m 4 s</code></pre>
 </div>
 </div>
 <p>Confirmamos nuestro análisis anterior. ¡Perfecto! Ahora nos queda un último paso: reportar el análisis que hicimos.</p>
