@@ -51,6 +51,7 @@ description-es: description in es
 author-es: author in es
 lang: en
 
-
+execute:
+  freeze: auto
 
 
