@@ -1,0 +1,159 @@
+---
+title: "Licencias Creative Commons: ¿qué podemos hacer con los materiales que compartimos?"
+subtitle: "Una guía para docentes e investigadores que quieren reutilizar, adaptar y publicar recursos abiertos"
+author: "Jesica Formoso"
+date: "2026-11-02"
+categories: ["Creative Commons", "licencias abiertas", "educación abierta", "investigación", "Argentina"]
+lang: es
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    number-sections: false
+    code-fold: false
+    link-external-newwindow: true
+image: "../../images/creative.jpg"
+image-alt: "Libros apilados"
+image-caption: 'Foto de [Nikita Rashnii](https://unsplash.com/es/@megaviolence) en [Unsplash](https://unsplash.com/es/fotos/una-pared-cubierta-con-muchos-libros-coloridos-qrZb0p421Uw?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink)'
+license: "CC BY 4.0"
+---
+
+Imaginemos que estamos organizando un taller y encontramos una presentación muy buena, publicada por otra universidad. Queremos traducirla al español, reemplazar algunos ejemplos por otros más cercanos a nuestro contexto y distribuir la versión adaptada entre participantes. El archivo está online y se puede descargar sin pagar. ¿Eso significa que podemos hacer todo lo anterior?
+
+En [un posteo anterior sobre derechos de autor en Argentina](https://jformoso.github.io/posts/2026-10-26-derechos-de-autor/) vimos que **poder acceder gratuitamente a un material no equivale a tener permiso para reutilizarlo**. También repasamos qué protege el derecho de autor, qué excepciones existen y por qué es importante distinguir entre la autoría de una obra y la titularidad de los derechos para licenciarla.
+
+En esta segunda parte quiero detenerme en una herramienta que puede facilitar mucho el trabajo de quienes enseñamos, investigamos y producimos materiales de formación: las **licencias [Creative Commons](https://creativecommons.org/)**. Estas licencias no reemplazan el derecho de autor. Funcionan precisamente porque el derecho de autor reconoce facultades que sus titulares pueden decidir compartir. Nos permiten comunicar de antemano qué usos autorizamos, sin que cada persona tenga que pedir permiso por separado.
+
+Vamos a ver qué significan las distintas licencias, cómo se diferencian de las herramientas de dominio público y qué conviene revisar antes de publicar o reutilizar un recurso.
+
+## Tres capas de una misma licencia
+
+Las licencias CC fueron diseñadas para que las condiciones de uso puedan comprenderse desde tres perspectivas complementarias:
+
+1. **Código legal (*legal code*)**: el texto jurídico completo de la licencia. Es la versión que establece los términos jurídicamente operativos.
+2. **Resumen legible por personas (*commons deed*)**: una explicación accesible de lo que se permite y se exige. Es útil para una consulta rápida, pero **no reemplaza** el código legal.
+3. **Capa legible por máquinas (*machine-readable*)**: metadatos que permiten que plataformas, buscadores y otras herramientas identifiquen los permisos asociados al material.
+
+
+La combinación de las tres capas hace que la licencia resulte útil para personas, instituciones y sistemas informáticos. Para profundizar, se puede consultar la [explicación oficial de Creative Commons sobre las tres capas](https://creativecommons.org/legal-code-defined/).
+
+## Cuatro elementos: ¿qué podemos hacer con una obra?
+
+Las licencias CC se construyen combinando **cuatro elementos**, identificados con siglas e íconos. Todos aparecen en el [material gráfico oficial de Creative Commons](https://creativecommons.org/mission/downloads/).
+
+| Ícono | Elemento | ¿Qué significa? |
+|:--:|---|---|
+| ![BY](https://mirrors.creativecommons.org/presskit/icons/by.svg){width=34px} | **BY — Atribución** | Es necesario reconocer la autoría y proporcionar la información de atribución correspondiente. Está presente en las seis licencias. |
+| ![SA](https://mirrors.creativecommons.org/presskit/icons/sa.svg){width=34px} | **SA — CompartirIgual** | Si se comparte una adaptación, hay que distribuirla bajo la misma licencia o una compatible. |
+| ![NC](https://mirrors.creativecommons.org/presskit/icons/nc.svg){width=34px} | **NC — NoComercial** | No se autorizan usos dirigidos principalmente a obtener una ventaja comercial o compensación monetaria; para esos usos hace falta otro permiso. |
+| ![ND](https://mirrors.creativecommons.org/presskit/icons/nd.svg){width=34px} | **ND — SinDerivadas** | Se puede compartir el material sin adaptar, pero no compartir una versión adaptada basándose únicamente en esa licencia. |
+
+¡Importante! **no comercial** no significa necesariamente **sin cobrar**, y tampoco depende solo de si quien utiliza el recurso es una universidad, una empresa o una organización sin fines de lucro. Importan las características concretas del uso. A su vez, **ND no prohíbe todo cambio privado**. La restricción relevante es compartir una adaptación; además, no impide los usos que estén cubiertos por excepciones legales.
+
+## Seis licencias, seis formas de compartir
+
+Todas las licencias exigen atribución. Lo que cambia es si autorizan usos comerciales y si permiten compartir adaptaciones, y bajo qué condiciones.
+
+| Licencia | ¿Permite usos comerciales? | ¿Permite compartir adaptaciones? | Un ejemplo educativo |
+|---|:---:|---|---|
+| [**CC BY 4.0**](https://creativecommons.org/licenses/by/4.0/deed.es) | Sí | Sí, con atribución | Traducir y actualizar una guía didáctica y publicar la versión adaptada. |
+| [**CC BY-SA 4.0**](https://creativecommons.org/licenses/by-sa/4.0/deed.es) | Sí | Sí, con la misma licencia o una compatible | Adaptar un manual abierto y compartir la adaptación con condiciones equivalentes. |
+| [**CC BY-ND 4.0**](https://creativecommons.org/licenses/by-nd/4.0/deed.es) | Sí | No, salvo permiso adicional o excepción legal | Redistribuir un documento sin modificarlo. |
+| [**CC BY-NC 4.0**](https://creativecommons.org/licenses/by-nc/4.0/deed.es) | No | Sí, para usos no comerciales | Adaptar un recurso para una actividad educativa no comercial. |
+| [**CC BY-NC-SA 4.0**](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es) | No | Sí, para usos no comerciales, bajo la misma licencia o una compatible | Traducir un cuadernillo y publicar la adaptación con iguales condiciones. |
+| [**CC BY-NC-ND 4.0**](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.es) | No | No, salvo permiso adicional o excepción legal | Compartir una copia íntegra para un uso no comercial, con atribución. |
+
+Si queremos que otras personas **traduzcan, corrijan o adapten** materiales, las licencias con el elemento **ND** no suelen ser una buena elección. Si queremos que el material pueda circular también en usos comerciales, conviene evitar **NC**. Para los recursos educativos abiertos y para muchas publicaciones de investigación, **CC BY** suele facilitar especialmente la reutilización; cuando interesa que las adaptaciones mantengan la misma apertura, **CC BY-SA** ofrece otra posibilidad.
+
+Esto no significa que una licencia sea siempre la correcta para cualquier obra. Conviene pensar primero **qué queremos que otros puedan hacer** con el material. También es fundamental recordar que no podemos aplicar una licencia a contenidos de terceros sobre los cuales no tenemos los derechos necesarios.
+
+## ¿Y si una obra está en dominio público? CC0 y Public Domain Mark
+
+El **dominio público** comprende materiales que no están sujetos a derechos patrimoniales de autor exclusivos, por ejemplo porque el plazo de protección terminó o porque no reúnen las condiciones para estar protegidos. En algunos sistemas jurídicos también puede haber obras que ingresaron por incumplimiento de antiguas formalidades o por una dedicación válida al dominio público. No es lo mismo que una obra que se puede descargar gratuitamente. Además, su situación jurídica puede variar entre países.
+
+Como vimos en la publicación anterior, en Argentina hay una particularidad: el régimen de **dominio público pagante** puede establecer un gravamen para determinados aprovechamientos de obras cuyos derechos patrimoniales ya expiraron. Por eso, que no sea necesario pedir autorización al antiguo titular de derechos no significa necesariamente que cualquier explotación de la obra esté libre de otras condiciones o cargos ([Decreto-Ley 1.224/1958](https://www.argentina.gob.ar/normativa/nacional/37242/actualizacion)).
+
+Creative Commons ofrece dos herramientas relacionadas con el dominio público, pero **no son dos licencias CC adicionales**:
+
+### CC0: dedicar una obra al dominio público
+
+![Ícono CC0](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg){width=112px}
+
+**[CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/deed.es)** permite que quien tiene los derechos renuncie a ellos, en la mayor medida admitida por la legislación aplicable, para facilitar que cualquiera reutilice la obra sin las condiciones de las seis licencias. Donde esa renuncia no es jurídicamente posible, la herramienta contempla permisos alternativos amplios.
+
+Un ejemplo en investigación: un equipo puede utilizar CC0 para dedicar al dominio público una base de datos que ha creado, siempre que tenga los derechos necesarios y que no existan obstáculos adicionales, como obligaciones de confidencialidad o protección de datos personales. **CC0 no elimina esas otras obligaciones legales ni convierte en públicos los datos sensibles.**
+
+### Public Domain Mark: señalar algo que ya es de dominio público
+
+![Ícono Public Domain Mark](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/publicdomain.svg){width=112px}
+
+La **[Public Domain Mark (PDM)](https://creativecommons.org/publicdomain/mark/1.0/deed.es)** no renuncia a derechos ni modifica la situación jurídica de una obra: **la identifica** como una obra que ya está en el dominio público, cuando ese estado se ha verificado. Es especialmente útil para archivos, bibliotecas y museos que ponen a disposición colecciones históricas.
+
+No deberíamos aplicarla si solo sabemos que la obra es de dominio público en un país, pero no podemos confirmar ese estado a nivel mundial.
+
+| Herramienta | ¿Qué hace? | ¿Quién la utiliza? |
+|---|---|---|
+| **Licencia CC** | Autoriza determinados usos de una obra protegida, bajo condiciones | La persona o institución que tiene los derechos correspondientes |
+| **CC0** | Procura renunciar a derechos y dedicar una obra al dominio público | Quien tiene autoridad para disponer de esos derechos |
+| **PDM** | Identifica una obra *ya* en dominio público; no altera sus derechos | Quien ha podido verificar su estado jurídico |
+
+Así, una licencia CC se parece a decir **«podés utilizar mi obra si respetás estas condiciones»**; CC0, a **«renuncio a los derechos en la mayor medida posible»**; y PDM, a **«esta obra ya se encuentra en dominio público»**.
+
+## ¿Las licencias CC modifican las excepciones al derecho de autor?
+
+Las licencias CC **no eliminan ni restringen las excepciones y limitaciones previstas por la legislación**. Si un uso está permitido por la ley sin necesidad de autorización del titular, no hace falta invocar la licencia CC para realizarlo y las condiciones de esa licencia no se aplican a ese uso concreto.
+
+Por ejemplo, imaginemos un artículo publicado bajo **CC BY-ND**. La licencia no permite, por sí sola, distribuir una adaptación del artículo. Sin embargo, si una actividad específica está amparada por una excepción de derecho de autor aplicable —por ejemplo, determinada cita breve con fines de análisis—, la licencia ND no puede quitar esa posibilidad.
+
+Es importante no trasladar mecánicamente reglas de otros países. Expresiones como *fair use* corresponden a marcos jurídicos específicos; **en Argentina**, las excepciones están previstas en la legislación nacional y deben evaluarse de acuerdo con sus requisitos. El hecho de que una actividad tenga fines educativos **no constituye por sí solo una autorización general** para copiar, traducir o distribuir cualquier obra.
+
+También vale la aclaración inversa: si una obra contiene fragmentos que están en dominio público o materiales usados legítimamente bajo una excepción, la licencia CC de la obra en su conjunto **no convierte automáticamente esos fragmentos en contenidos sujetos a las condiciones de la licencia**.
+
+## ¿Qué licencia usaríamos en nuestro trabajo?
+
+### Caso 1. Una presentación para una clase
+
+Una profesora prepara diapositivas originales y quiere que otras personas puedan traducirlas, reorganizarlas y reutilizarlas. **CC BY 4.0** puede ser una buena elección. Si incorporó una fotografía de otra persona, debe comprobar su licencia y aclarar por separado qué permisos corresponden a esa imagen.
+
+### Caso 2. Materiales de formación entre instituciones
+
+Varias comunidades colaboran en un manual de capacitación y desean que las adaptaciones compartidas sigan disponibles bajo las mismas condiciones abiertas. **CC BY-SA 4.0** puede ayudar a sostener ese criterio, siempre que los materiales utilizados sean compatibles y quienes participan tengan autoridad para licenciarlos.
+
+### Caso 3. Una base de datos de investigación
+
+Si la prioridad es facilitar la reutilización de datos, **CC0** suele ser una opción adecuada para los derechos de autor y de bases de datos que el equipo controle. Antes hay que considerar consentimiento, privacidad, compromisos con participantes y restricciones legales o institucionales. Una licencia abierta no sustituye ese análisis.
+
+### Caso 4. Un artículo científico
+
+Un equipo publica un artículo con **CC BY 4.0** para facilitar su traducción, reproducción y reutilización con atribución. Pero debe verificar los términos de la revista, los acuerdos editoriales y los derechos sobre figuras u otros contenidos de terceros. La licencia del artículo tampoco equivale a una licencia automática sobre el software o los datos relacionados.
+
+## Antes de publicar, algunas preguntas útiles
+
+1. **¿Tengo los derechos necesarios para licenciar este material?** Haber creado parte del contenido no significa tener derechos sobre todo lo que contiene.
+2. **¿Qué reutilizaciones quiero facilitar?** ¿Copiar, traducir, adaptar, redistribuir, incluso comercialmente?
+3. **¿Qué condiciones quiero conservar?** ¿Atribución, compartir adaptaciones bajo la misma licencia, restricción comercial?
+4. **¿Está claramente identificado qué contenido cubre la licencia?** Las fotos, citas, gráficos y otros recursos de terceros pueden tener condiciones distintas.
+
+Volvamos a la presentación que queríamos traducir al comienzo. Si está bajo **CC BY**, podemos traducirla y compartir la versión adaptada, dando la atribución correspondiente e indicando los cambios. Si está bajo **CC BY-ND**, la licencia no nos autoriza a publicar esa traducción: necesitamos otro permiso o una excepción legal aplicable. Y si el archivo no informa ninguna licencia, el hecho de que podamos descargarlo no implica que tengamos autorización para adaptarlo.
+
+La diferencia puede parecer pequeña, pero tiene consecuencias concretas. En educación e investigación, **abrir el acceso no es lo mismo que facilitar la reutilización**. Si buscamos que nuestros materiales puedan circular, traducirse y adaptarse a otros contextos, conviene pensar en esas posibilidades desde que los creamos.
+
+## Fuentes y lecturas recomendadas
+
+- Creative Commons. [Las seis licencias y sus condiciones](https://creativecommons.org/share-your-work/use-remix/cc-licenses/).
+- Creative Commons. [Sobre las licencias CC (en español)](https://creativecommons.org/share-your-work/cclicenses/?lang=es).
+- Creative Commons. [Las tres capas de las licencias](https://creativecommons.org/legal-code-defined/).
+- Creative Commons. [Herramientas de dominio público: CC0 y PDM](https://creativecommons.org/public-domain/).
+- Creative Commons. [Preguntas frecuentes sobre las licencias, las excepciones y las limitaciones](https://creativecommons.org/faq/).
+- Creative Commons. [Aspectos a considerar antes de licenciar una obra](https://creativecommons.org/cc-license-your-work/).
+- Creative Commons Certificate. [Unidad 3: tipos de licencias](https://creativecommons.org/course/cc-cert-edu/unit-3-anatomy-of-a-cc-license/3-3-license-types/).
+- República Argentina. [Ley 11.723 de Propiedad Intelectual (texto actualizado)](https://www.argentina.gob.ar/normativa/nacional/42755/actualizacion).
+- República Argentina. [Decreto-Ley 1.224/1958, Fondo Nacional de las Artes](https://www.argentina.gob.ar/normativa/nacional/37242/actualizacion).
+
+::: {.callout-note title="Sobre esta publicación"}
+Este artículo fue elaborado como parte del *Creative Commons Certificate for Educators*. Tiene fines educativos y no constituye asesoramiento jurídico.
+
+**Licencias Creative Commons: ¿qué podemos hacer con los materiales que compartimos?** © 2026 Jesica Formoso. Este artículo se publica bajo [Creative Commons Atribución 4.0 Internacional (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.es). Se permite compartirlo y adaptarlo, incluso comercialmente, siempre que se cumplan sus condiciones.
+
+**Íconos:** los símbolos de licencias, elementos y herramientas de dominio público se enlazan desde el [kit gráfico de Creative Commons](https://creativecommons.org/mission/downloads/). Las marcas e identificadores de Creative Commons se utilizan para identificar las licencias y herramientas correspondientes; no se afirma que el texto de este artículo esté respaldado por Creative Commons. Los recursos externos enlazados y las obras de terceros conservan sus propias condiciones de uso.
+:::

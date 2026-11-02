@@ -14,6 +14,7 @@ format:
 image: "../../images/derechos-de-autor.jpg"
 image-alt: "Pila de libros abiertos"
 image-caption: 'Foto de [Gülfer ERGİN](https://unsplash.com/es/@gulfergin_01) en [Unsplash](https://unsplash.com/es/fotos/pila-de-libros-abiertos-en-rustica-LUGuCtvlk1Q)'
+license: "CC BY 4.0"
 ---
 
 
@@ -85,17 +86,31 @@ De esta manera, la posibilidad de compartir, traducir y adaptar los materiales q
 
 ## ¿Qué significa que una obra esté en dominio público?
 
-Como vimos antes, los derechos patrimoniales tienen una duración limitada. En Argentina, para una obra de autoría individual, la regla general es la vida del autor más **70 años**, computados desde el 1 de enero del año siguiente a su fallecimiento; hay reglas especiales para ciertos tipos de obras y situaciones ([Ley 11.723](https://www.argentina.gob.ar/normativa/nacional/42755/actualizacion)).
-
-Al terminar esa protección, la obra ingresa al **dominio público**: ya no es necesario obtener la autorización de los antiguos titulares de los derechos patrimoniales para realizar usos que esos derechos antes controlaban.
-
+Como vimos antes, los derechos patrimoniales tienen una duración limitada. En Argentina, para una obra de autoría individual, la regla general es la vida del autor más **70 años**, computados desde el 1 de enero del año siguiente a su fallecimiento. 
+Al terminar esa protección, la obra ingresa al **dominio público** y ya no es necesario obtener la autorización de los antiguos titulares de los derechos patrimoniales para realizar usos que esos derechos antes controlaban.
 Por ejemplo, podríamos preparar una edición de una novela clásica cuyos derechos patrimoniales hayan expirado. 
 
-Pero ¡ojo! En Argentina existe un régimen que sorprende a quienes aprendieron que “dominio público” equivale a “uso completamente gratuito”. El [Decreto-Ley 1.224/1958](https://www.argentina.gob.ar/normativa/nacional/37242/actualizacion) estableció el **dominio público pagante** que implica que determinados aprovechamientos de obras cuyos derechos patrimoniales expiraron pueden estar sujetos a un gravamen destinado al Fondo Nacional de las Artes.
+Pero ¡ojo! En Argentina existe un régimen que sorprende a quienes aprendieron que “dominio público” equivale a “uso completamente gratuito”. El [Decreto-Ley 1.224/1958](https://www.argentina.gob.ar/normativa/nacional/37242/actualizacion) estableció el **dominio público pagante** que implica que determinados aprovechamientos de obras cuyos derechos patrimoniales expiraron pueden estar sujetos a un gravamen destinado al Fondo Nacional de las Artes. 
 
 Por ejemplo, una editorial que quiera explotar comercialmente una obra clásica puede tener que considerar ese régimen, aunque ya no necesite pedir permiso a los herederos del autor. La reglamentación contempla condiciones y exenciones; no significa que toda lectura, cita o utilización de una obra de dominio público genere automáticamente un pago.
 
+Por otro lado, hay reglas especiales para ciertos tipos de obras y situaciones ([Ley 11.723](https://www.argentina.gob.ar/normativa/nacional/42755/actualizacion)). Si se trata de una obra en colaboración, anónima, colectiva o audiovisual, los plazos de cómputo pueden variar según la legislación local (por ejemplo, contándose desde el año de su publicación).
+
 La enseñanza más importante es que **la ausencia de derechos patrimoniales exclusivos y la ausencia de cualquier cargo económico son cuestiones distintas**. Por eso, para una reutilización concreta conviene comprobar la normativa aplicable y su vigencia.
+
+### ¿La expiración del plazo legal de protección es la única vía de ingreso al dominio público?
+
+No existe una única vía. Por lo general, las obras ingresan al dominio público a través de cuatro mecanismos principales:
+
+1. Expiración de los derechos de autor: Es el mecanismo más habitual. Como vimos antes, ocurre cuando transcurre el plazo legal de protección tras el fallecimiento del autor (por ejemplo, los 70 años en Argentina).   
+
+2. Falta de elegibilidad originaria: Cuando la obra nunca estuvo protegida por el derecho de autor (como sucede con los hechos puros, las ideas o los datos sin una selección original).   
+
+3. Dedicación voluntaria: Cuando el creador o titular decide renunciar a sus derechos antes de que expire el plazo, utilizando herramientas específicas de liberación como CC0.   
+
+4. Incumplimiento de formalidades: Obras antiguas en las que el titular no cumplió en su momento con los requisitos o trámites formales exigidos por la ley de su país para adquirir o mantener la vigencia del copyright.  
+
+Entonces, ¿cómo podemos saber si una obra ingresó al dominio público? En principio, podemos investigar al autor y su fecha de fallecimiento para calcular los plazos legales de la jurisdicción correspondiente. Revisar si existen registros o renovaciones históricas, especialmente en obras extranjeras antiguas que dependían de formalidades. También, podemos buscar sellos de herramientas abiertas o repositorios oficiales, Como las etiquetas de Public Domain Mark (PDM) en museos, archivos o bibliotecas digitales que ya han verificado el estado jurídico de la obra.
 
 ## ¿Podemos utilizar obras protegidas sin pedir permiso?
 
