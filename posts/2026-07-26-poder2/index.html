@@ -545,7 +545,7 @@ Nota
 Formula: puntaje ~ metodo * numero_examen + (1 + numero_examen | estudiante) +  
     (1 | comision)
    Data: datos
-REML criterion at convergence: 987.2951
+REML criterion at convergence: 1001.305
 Random effects:
  Groups     Name          Std.Dev. Corr 
  estudiante (Intercept)   8.0           
@@ -582,7 +582,7 @@ Test: z-test
 
 Based on 100 simulations, (0 errors, 2 warnings, 48 messages)
 
-Time elapsed: 0 h 0 m 5 s</code></pre>
+Time elapsed: 0 h 0 m 3 s</code></pre>
 </div>
 </div>
 <p>Con las 6 comisiones (48 estudiantes, 144 observaciones), el poder ronda el <strong>50%</strong>, muy por debajo del 80% que buscamos. Para poner a prueba la hipótesis que nos interesa, con un diseño así de chico no alcanza.</p>
@@ -639,7 +639,7 @@ by number of levels in comision:
 
 (0 errors, 6 warnings, 51 messages)
 
-Time elapsed: 0 h 0 m 25 s</code></pre>
+Time elapsed: 0 h 0 m 18 s</code></pre>
 </div>
 </div>
 <p>En 14 comisiones el poder todavía no llega el 80%, mientras que con 18 comisiones lo supera. Podriamos calcular el poder exacto para 17 comisiones (te invito a hacer la prueba).</p>
@@ -683,7 +683,7 @@ by number of levels in estudiante:
 
 (0 errors, 14 warnings, 55 messages)
 
-Time elapsed: 0 h 0 m 26 s</code></pre>
+Time elapsed: 0 h 0 m 20 s</code></pre>
 </div>
 </div>
 <p>El gráfico permite inferir que con 24 estudiantes por comisión, 6 comisiones, 3 evaluaciones por estudiante, tenemos un poder superior al 80%. ¡Confirmemoslo! A continuación encontrarás el código integrado, armado desde cero.</p>
@@ -742,7 +742,7 @@ Test: z-test
 
 Based on 1000 simulations, (0 errors, 21 warnings, 298 messages)
 
-Time elapsed: 0 h 1 m 8 s</code></pre>
+Time elapsed: 0 h 0 m 49 s</code></pre>
 </div>
 </div>
 <p>Confirmamos nuestro análisis anterior. ¡Perfecto! Ahora nos queda un último paso: reportar el análisis que hicimos.</p>

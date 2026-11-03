@@ -283,14 +283,286 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="setup">0. Setup</h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Instalar paquetes si no los instalaste antes</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">requireNamespace</span>(<span class="st">"ordinal"</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) <span class="fu">install.packages</span>(<span class="st">"ordinal"</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">requireNamespace</span>(<span class="st">"emmeans"</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) <span class="fu">install.packages</span>(<span class="st">"emmeans"</span>)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">requireNamespace</span>(<span class="st">"tidyverse"</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) <span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Cargar paquetes</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ordinal)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(emmeans)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">requireNamespace</span>(<span class="st">"ordinal"</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) <span class="fu">install.packages</span>(<span class="st">"ordinal"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># Downloading packages -------------------------------------------------------
+- Downloading ordinal from CRAN ...             OK [1.2 Mb in 1.8s]
+- Downloading ucminf from CRAN ...              OK [41.7 Kb in 1.3s]
+- Downloading numDeriv from CRAN ...            OK [115.1 Kb in 0.81s]
+Successfully downloaded 3 packages in 9.3 seconds.
+
+The following package(s) will be installed:
+- numDeriv [2016.8-1.1]
+- ordinal  [2026.7-26]
+- ucminf   [1.2.3]
+These packages will be installed into "~/Documents/jformoso.github.io/renv/library/windows/R-4.6/x86_64-w64-mingw32".
+
+# Installing packages --------------------------------------------------------
+- Installing ucminf ...                         OK [installed binary and cached in 0.26s]
+- Installing numDeriv ...                       OK [installed binary and cached in 0.26s]
+- Installing ordinal ...                        OK [installed binary and cached in 0.27s]
+Successfully installed 3 packages in 0.87 seconds.</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">requireNamespace</span>(<span class="st">"emmeans"</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) <span class="fu">install.packages</span>(<span class="st">"emmeans"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># Downloading packages -------------------------------------------------------
+- Downloading emmeans from CRAN ...             OK [2.4 Mb in 1.9s]
+- Downloading estimability from CRAN ...        OK [327.4 Kb in 1.5s]
+- Downloading mvtnorm from CRAN ...             OK [1.1 Mb in 1.9s]
+Successfully downloaded 3 packages in 6 seconds.
+
+The following package(s) will be installed:
+- emmeans      [2.0.4]
+- estimability [2.0.0]
+- mvtnorm      [1.4-2]
+These packages will be installed into "~/Documents/jformoso.github.io/renv/library/windows/R-4.6/x86_64-w64-mingw32".
+
+# Installing packages --------------------------------------------------------
+- Installing estimability ...                   OK [installed binary and cached in 0.27s]
+- Installing mvtnorm ...                        OK [installed binary and cached in 0.28s]
+- Installing emmeans ...                        OK [installed binary and cached in 0.45s]
+Successfully installed 3 packages in 1.1 seconds.</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">requireNamespace</span>(<span class="st">"tidyverse"</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) <span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># Downloading packages -------------------------------------------------------
+- Downloading tidyverse from CRAN ...           OK [423.7 Kb in 1.6s]
+- Downloading broom from CRAN ...               OK [1.6 Mb in 0.91s]
+- Downloading backports from CRAN ...           OK [122.9 Kb in 0.81s]
+- Downloading dplyr from CRAN ...               OK [1.5 Mb in 0.81s]
+- Downloading generics from CRAN ...            OK [84.5 Kb in 0.81s]
+- Downloading glue from CRAN ...                OK [186.4 Kb in 0.81s]
+- Downloading magrittr from CRAN ...            OK [225 Kb in 0.81s]
+- Downloading pillar from CRAN ...              OK [659.6 Kb in 0.81s]
+- Downloading utf8 from CRAN ...                OK [151.7 Kb in 0.81s]
+- Downloading vctrs from CRAN ...               OK [1.8 Mb in 0.91s]
+- Downloading tibble from CRAN ...              OK [652.7 Kb in 0.81s]
+- Downloading pkgconfig from CRAN ...           OK [22.4 Kb in 0.81s]
+- Downloading tidyselect from CRAN ...          OK [224.3 Kb in 0.81s]
+- Downloading withr from CRAN ...               OK [229.6 Kb in 0.81s]
+- Downloading purrr from CRAN ...               OK [557.2 Kb in 0.81s]
+- Downloading stringr from CRAN ...             OK [344.7 Kb in 0.81s]
+- Downloading stringi from CRAN ...             OK [14 Mb in 1.3s]
+- Downloading tidyr from CRAN ...               OK [1.2 Mb in 0.81s]
+- Downloading cpp11 from CRAN ...               OK [319.1 Kb in 0.81s]
+- Downloading conflicted from CRAN ...          OK [58.7 Kb in 0.81s]
+- Downloading dbplyr from CRAN ...              OK [1.3 Mb in 1.8s]
+- Downloading blob from CRAN ...                OK [52 Kb in 0.91s]
+- Downloading DBI from CRAN ...                 OK [944.2 Kb in 0.81s]
+- Downloading dtplyr from CRAN ...              OK [402.6 Kb in 1.6s]
+- Downloading data.table from CRAN ...          OK [3.1 Mb in 1.0s]
+- Downloading forcats from CRAN ...             OK [422.4 Kb in 1.7s]
+- Downloading ggplot2 from CRAN ...             OK [8.1 Mb in 1.3s]
+- Downloading gtable from CRAN ...              OK [246.7 Kb in 0.81s]
+- Downloading isoband from CRAN ...             OK [1.9 Mb in 1.1s]
+- Downloading S7 from CRAN ...                  OK [342.2 Kb in 0.81s]
+- Downloading scales from CRAN ...              OK [860.8 Kb in 0.81s]
+- Downloading farver from CRAN ...              OK [1.5 Mb in 1.8s]
+- Downloading labeling from CRAN ...            OK [62.6 Kb in 0.81s]
+- Downloading RColorBrewer from CRAN ...        OK [53.5 Kb in 1.4s]
+- Downloading viridisLite from CRAN ...         OK [1.2 Mb in 0.81s]
+- Downloading googledrive from CRAN ...         OK [1.8 Mb in 1.9s]
+- Downloading gargle from CRAN ...              OK [811.4 Kb in 1.8s]
+- Downloading httr from CRAN ...                OK [480.7 Kb in 0.81s]
+- Downloading curl from CRAN ...                OK [3.5 Mb in 0.91s]
+- Downloading openssl from CRAN ...             OK [3.5 Mb in 0.92s]
+- Downloading askpass from CRAN ...             OK [72.9 Kb in 0.81s]
+- Downloading sys from CRAN ...                 OK [46 Kb in 0.81s]
+- Downloading uuid from CRAN ...                OK [51.4 Kb in 1.0s]
+- Downloading googlesheets4 from CRAN ...       OK [515 Kb in 1.7s]
+- Downloading cellranger from CRAN ...          OK [107.5 Kb in 0.81s]
+- Downloading rematch from CRAN ...             OK [20.5 Kb in 0.81s]
+- Downloading ids from CRAN ...                 OK [124.7 Kb in 0.81s]
+- Downloading rematch2 from CRAN ...            OK [50.4 Kb in 0.81s]
+- Downloading haven from CRAN ...               OK [775.5 Kb in 0.81s]
+- Downloading hms from CRAN ...                 OK [107.5 Kb in 0.81s]
+- Downloading readr from CRAN ...               OK [1.1 Mb in 0.91s]
+- Downloading clipr from CRAN ...               OK [57.9 Kb in 0.81s]
+- Downloading crayon from CRAN ...              OK [164.7 Kb in 0.81s]
+- Downloading vroom from CRAN ...               OK [1.3 Mb in 0.91s]
+- Downloading bit64 from CRAN ...               OK [562.8 Kb in 0.91s]
+- Downloading bit from CRAN ...                 OK [617.7 Kb in 0.81s]
+- Downloading tzdb from CRAN ...                OK [1018.4 Kb in 1.0s]
+- Downloading progress from CRAN ...            OK [89.7 Kb in 0.81s]
+- Downloading prettyunits from CRAN ...         OK [155.4 Kb in 0.81s]
+- Downloading lubridate from CRAN ...           OK [972.4 Kb in 1.8s]
+- Downloading timechange from CRAN ...          OK [519.4 Kb in 0.81s]
+- Downloading modelr from CRAN ...              OK [202.1 Kb in 0.81s]
+- Downloading ragg from CRAN ...                OK [3.1 Mb in 0.91s]
+- Downloading systemfonts from CRAN ...         OK [2.1 Mb in 0.91s]
+- Downloading textshaping from CRAN ...         OK [1.5 Mb in 0.91s]
+- Downloading readxl from CRAN ...              OK [1.2 Mb in 0.81s]
+- Downloading reprex from CRAN ...              OK [496.2 Kb in 1.6s]
+- Downloading callr from CRAN ...               OK [494 Kb in 0.81s]
+- Downloading otel from CRAN ...                OK [280.4 Kb in 0.81s]
+- Downloading processx from CRAN ...            OK [763.8 Kb in 0.81s]
+- Downloading ps from CRAN ...                  OK [664.1 Kb in 0.81s]
+- Downloading rstudioapi from CRAN ...          OK [377.7 Kb in 1.6s]
+- Downloading rvest from CRAN ...               OK [313.7 Kb in 1.6s]
+- Downloading selectr from CRAN ...             OK [251.2 Kb in 1.5s]
+- Downloading xml2 from CRAN ...                OK [1.5 Mb in 0.81s]
+Successfully downloaded 75 packages in 84 seconds.
+
+The following package(s) will be installed:
+- askpass       [1.2.1]
+- backports     [1.5.1]
+- bit           [4.6.0]
+- bit64         [4.8.6]
+- blob          [1.3.0]
+- broom         [1.0.13]
+- callr         [3.8.0]
+- cellranger    [1.1.0]
+- clipr         [0.8.1]
+- conflicted    [1.2.0]
+- cpp11         [0.5.5]
+- crayon        [1.5.3]
+- curl          [8.1.0]
+- data.table    [1.18.6.1]
+- DBI           [1.3.0]
+- dbplyr        [2.6.0]
+- dplyr         [1.2.1]
+- dtplyr        [1.3.3]
+- farver        [2.1.2]
+- forcats       [1.0.1]
+- gargle        [1.7.0]
+- generics      [0.1.4]
+- ggplot2       [4.0.3]
+- glue          [1.8.1]
+- googledrive   [2.2.0]
+- googlesheets4 [1.1.3]
+- gtable        [0.3.6]
+- haven         [2.5.5]
+- hms           [1.1.4]
+- httr          [1.4.9]
+- ids           [1.0.1]
+- isoband       [0.3.0]
+- labeling      [0.4.3]
+- lubridate     [1.9.5]
+- magrittr      [2.0.5]
+- modelr        [0.1.11]
+- openssl       [2.4.2]
+- otel          [0.2.0]
+- pillar        [1.11.1]
+- pkgconfig     [2.0.3]
+- prettyunits   [1.2.0]
+- processx      [3.9.0]
+- progress      [1.2.3]
+- ps            [1.9.3]
+- purrr         [1.2.2]
+- ragg          [1.5.2]
+- RColorBrewer  [1.1-3]
+- readr         [2.2.0]
+- readxl        [1.6.0]
+- rematch       [2.0.0]
+- rematch2      [2.1.2]
+- reprex        [2.1.1]
+- rstudioapi    [0.19.0]
+- rvest         [1.0.5]
+- S7            [0.2.2]
+- scales        [1.4.0]
+- selectr       [0.8-0]
+- stringi       [1.8.9]
+- stringr       [1.6.0]
+- sys           [3.4.3]
+- systemfonts   [1.3.2]
+- textshaping   [1.0.5]
+- tibble        [3.3.1]
+- tidyr         [1.3.2]
+- tidyselect    [1.2.1]
+- tidyverse     [2.0.0]
+- timechange    [0.4.0]
+- tzdb          [0.5.0]
+- utf8          [1.2.6]
+- uuid          [1.2-2]
+- vctrs         [0.7.3]
+- viridisLite   [0.4.3]
+- vroom         [1.7.1]
+- withr         [3.0.3]
+- xml2          [1.6.0]
+These packages will be installed into "~/Documents/jformoso.github.io/renv/library/windows/R-4.6/x86_64-w64-mingw32".
+
+# Installing packages --------------------------------------------------------
+- Installing backports ...                      OK [installed binary and cached in 0.26s]
+- Installing generics ...                       OK [installed binary and cached in 0.26s]
+- Installing glue ...                           OK [installed binary and cached in 0.28s]
+- Installing magrittr ...                       OK [installed binary and cached in 0.27s]
+- Installing utf8 ...                           OK [installed binary and cached in 0.26s]
+- Installing vctrs ...                          OK [installed binary and cached in 0.3s]
+- Installing pillar ...                         OK [installed binary and cached in 0.28s]
+- Installing pkgconfig ...                      OK [installed binary and cached in 0.16s]
+- Installing tibble ...                         OK [installed binary and cached in 0.3s]
+- Installing withr ...                          OK [installed binary and cached in 0.27s]
+- Installing tidyselect ...                     OK [installed binary and cached in 0.26s]
+- Installing dplyr ...                          OK [installed binary and cached in 0.32s]
+- Installing purrr ...                          OK [installed binary and cached in 0.28s]
+- Installing stringi ...                        OK [installed binary and cached in 0.39s]
+- Installing stringr ...                        OK [installed binary and cached in 0.29s]
+- Installing cpp11 ...                          OK [installed binary and cached in 0.3s]
+- Installing tidyr ...                          OK [installed binary and cached in 0.3s]
+- Installing broom ...                          OK [installed binary and cached in 0.29s]
+- Installing conflicted ...                     OK [installed binary and cached in 0.26s]
+- Installing blob ...                           OK [installed binary and cached in 0.25s]
+- Installing DBI ...                            OK [installed binary and cached in 0.29s]
+- Installing dbplyr ...                         OK [installed binary and cached in 0.29s]
+- Installing data.table ...                     OK [installed binary and cached in 0.6s]
+- Installing dtplyr ...                         OK [installed binary and cached in 0.27s]
+- Installing forcats ...                        OK [installed binary and cached in 0.27s]
+- Installing gtable ...                         OK [installed binary and cached in 0.27s]
+- Installing isoband ...                        OK [installed binary and cached in 0.28s]
+- Installing S7 ...                             OK [installed binary and cached in 0.29s]
+- Installing farver ...                         OK [installed binary and cached in 0.27s]
+- Installing labeling ...                       OK [installed binary and cached in 0.25s]
+- Installing RColorBrewer ...                   OK [installed binary and cached in 0.25s]
+- Installing viridisLite ...                    OK [installed binary and cached in 0.26s]
+- Installing scales ...                         OK [installed binary and cached in 0.27s]
+- Installing ggplot2 ...                        OK [installed binary and cached in 0.33s]
+- Installing curl ...                           OK [installed binary and cached in 0.3s]
+- Installing sys ...                            OK [installed binary and cached in 0.26s]
+- Installing askpass ...                        OK [installed binary and cached in 0.26s]
+- Installing openssl ...                        OK [installed binary and cached in 0.32s]
+- Installing httr ...                           OK [installed binary and cached in 0.27s]
+- Installing gargle ...                         OK [installed binary and cached in 0.42s]
+- Installing uuid ...                           OK [installed binary and cached in 0.26s]
+- Installing googledrive ...                    OK [installed binary and cached in 0.29s]
+- Installing rematch ...                        OK [installed binary and cached in 0.25s]
+- Installing cellranger ...                     OK [installed binary and cached in 0.26s]
+- Installing ids ...                            OK [installed binary and cached in 0.26s]
+- Installing rematch2 ...                       OK [installed binary and cached in 0.25s]
+- Installing googlesheets4 ...                  OK [installed binary and cached in 0.27s]
+- Installing hms ...                            OK [installed binary and cached in 0.26s]
+- Installing clipr ...                          OK [installed binary and cached in 0.26s]
+- Installing crayon ...                         OK [installed binary and cached in 0.26s]
+- Installing bit ...                            OK [installed binary and cached in 0.27s]
+- Installing bit64 ...                          OK [installed binary and cached in 0.26s]
+- Installing tzdb ...                           OK [installed binary and cached in 0.41s]
+- Installing prettyunits ...                    OK [installed binary and cached in 0.25s]
+- Installing progress ...                       OK [installed binary and cached in 0.26s]
+- Installing vroom ...                          OK [installed binary and cached in 0.48s]
+- Installing readr ...                          OK [installed binary and cached in 0.3s]
+- Installing haven ...                          OK [installed binary and cached in 0.28s]
+- Installing timechange ...                     OK [installed binary and cached in 0.26s]
+- Installing lubridate ...                      OK [installed binary and cached in 0.28s]
+- Installing modelr ...                         OK [installed binary and cached in 0.26s]
+- Installing systemfonts ...                    OK [installed binary and cached in 0.3s]
+- Installing textshaping ...                    OK [installed binary and cached in 0.29s]
+- Installing ragg ...                           OK [installed binary and cached in 0.29s]
+- Installing readxl ...                         OK [installed binary and cached in 0.3s]
+- Installing otel ...                           OK [installed binary and cached in 0.27s]
+- Installing ps ...                             OK [installed binary and cached in 0.27s]
+- Installing processx ...                       OK [installed binary and cached in 0.28s]
+- Installing callr ...                          OK [installed binary and cached in 0.29s]
+- Installing rstudioapi ...                     OK [installed binary and cached in 0.28s]
+- Installing reprex ...                         OK [installed binary and cached in 0.29s]
+- Installing selectr ...                        OK [installed binary and cached in 0.25s]
+- Installing xml2 ...                           OK [installed binary and cached in 0.29s]
+- Installing rvest ...                          OK [installed binary and cached in 0.28s]
+- Installing tidyverse ...                      OK [installed binary and cached in 0.27s]
+Successfully installed 75 packages in 23 seconds.</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cargar paquetes</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ordinal)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(emmeans)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <hr>
 </section>
@@ -337,57 +609,57 @@ window.Quarto = {
 </table>
 <p>Tenemos <strong>150 participantes</strong>, <strong>2 prácticas</strong>, y dos momentos de evaluación (<strong>pre</strong> y <strong>post</strong>).</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Parámetros</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>n_participantes <span class="ot">&lt;-</span> <span class="dv">150</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>practicas <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Práctica A"</span>, <span class="st">"Práctica B"</span>)</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>tiempos <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"pre"</span>, <span class="st">"post"</span>)</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Creamos el dataset en formato largo</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">expand.grid</span>(</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">id          =</span> <span class="dv">1</span><span class="sc">:</span>n_participantes,</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">practica    =</span> practicas,</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">tiempo      =</span> tiempos</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>) <span class="sc">|&gt;</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(id, practica, tiempo)</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Simulamos respuestas ordinales (1, 2, 3)</span></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="co"># En "post", las probabilidades se desplazan hacia categorías más altas</span></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>simular_respuesta <span class="ot">&lt;-</span> <span class="cf">function</span>(tiempo, practica) {</span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (tiempo <span class="sc">==</span> <span class="st">"pre"</span>) {</span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    probs <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">0.50</span>, <span class="fl">0.35</span>, <span class="fl">0.15</span>)</span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    <span class="co"># El efecto del taller varía un poco por práctica</span></span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    probs <span class="ot">&lt;-</span> <span class="fu">case_when</span>(</span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>      practica <span class="sc">==</span> <span class="st">"Práctica A"</span> <span class="sc">~</span> <span class="fu">list</span>(<span class="fu">c</span>(<span class="fl">0.15</span>, <span class="fl">0.35</span>, <span class="fl">0.50</span>)),</span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>      practica <span class="sc">==</span> <span class="st">"Práctica B"</span> <span class="sc">~</span> <span class="fu">list</span>(<span class="fu">c</span>(<span class="fl">0.25</span>, <span class="fl">0.40</span>, <span class="fl">0.35</span>))</span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>    )[[<span class="dv">1</span>]]</span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, <span class="dv">1</span>, <span class="at">prob =</span> probs)</span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span></span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rowwise</span>() <span class="sc">|&gt;</span></span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">respuesta =</span> <span class="fu">simular_respuesta</span>(tiempo, practica)) <span class="sc">|&gt;</span></span>
-<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Convertimos a factor ordinal</span></span>
-<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span></span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>    <span class="at">respuesta_ord =</span> <span class="fu">factor</span>(</span>
-<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>      respuesta,</span>
-<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>      <span class="at">levels =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>,</span>
-<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>      <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"No conozco"</span>, <span class="st">"Conozco, no implementé"</span>, <span class="st">"Implementé"</span>),</span>
-<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>      <span class="at">ordered =</span> <span class="cn">TRUE</span></span>
-<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>    ),</span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>    <span class="at">tiempo   =</span> <span class="fu">factor</span>(tiempo, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"pre"</span>, <span class="st">"post"</span>)),</span>
-<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>    <span class="at">practica =</span> <span class="fu">factor</span>(practica)</span>
-<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Parámetros</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>n_participantes <span class="ot">&lt;-</span> <span class="dv">150</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>practicas <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Práctica A"</span>, <span class="st">"Práctica B"</span>)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>tiempos <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"pre"</span>, <span class="st">"post"</span>)</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Creamos el dataset en formato largo</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">expand.grid</span>(</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">id          =</span> <span class="dv">1</span><span class="sc">:</span>n_participantes,</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">practica    =</span> practicas,</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">tiempo      =</span> tiempos</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>) <span class="sc">|&gt;</span></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(id, practica, tiempo)</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Simulamos respuestas ordinales (1, 2, 3)</span></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a><span class="co"># En "post", las probabilidades se desplazan hacia categorías más altas</span></span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>simular_respuesta <span class="ot">&lt;-</span> <span class="cf">function</span>(tiempo, practica) {</span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (tiempo <span class="sc">==</span> <span class="st">"pre"</span>) {</span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>    probs <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">0.50</span>, <span class="fl">0.35</span>, <span class="fl">0.15</span>)</span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>    <span class="co"># El efecto del taller varía un poco por práctica</span></span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>    probs <span class="ot">&lt;-</span> <span class="fu">case_when</span>(</span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>      practica <span class="sc">==</span> <span class="st">"Práctica A"</span> <span class="sc">~</span> <span class="fu">list</span>(<span class="fu">c</span>(<span class="fl">0.15</span>, <span class="fl">0.35</span>, <span class="fl">0.50</span>)),</span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>      practica <span class="sc">==</span> <span class="st">"Práctica B"</span> <span class="sc">~</span> <span class="fu">list</span>(<span class="fu">c</span>(<span class="fl">0.25</span>, <span class="fl">0.40</span>, <span class="fl">0.35</span>))</span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>    )[[<span class="dv">1</span>]]</span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, <span class="dv">1</span>, <span class="at">prob =</span> probs)</span>
+<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span></span>
+<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rowwise</span>() <span class="sc">|&gt;</span></span>
+<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">respuesta =</span> <span class="fu">simular_respuesta</span>(tiempo, practica)) <span class="sc">|&gt;</span></span>
+<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span>
+<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Convertimos a factor ordinal</span></span>
+<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span></span>
+<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a>    <span class="at">respuesta_ord =</span> <span class="fu">factor</span>(</span>
+<span id="cb8-42"><a href="#cb8-42" aria-hidden="true" tabindex="-1"></a>      respuesta,</span>
+<span id="cb8-43"><a href="#cb8-43" aria-hidden="true" tabindex="-1"></a>      <span class="at">levels =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>,</span>
+<span id="cb8-44"><a href="#cb8-44" aria-hidden="true" tabindex="-1"></a>      <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"No conozco"</span>, <span class="st">"Conozco, no implementé"</span>, <span class="st">"Implementé"</span>),</span>
+<span id="cb8-45"><a href="#cb8-45" aria-hidden="true" tabindex="-1"></a>      <span class="at">ordered =</span> <span class="cn">TRUE</span></span>
+<span id="cb8-46"><a href="#cb8-46" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb8-47"><a href="#cb8-47" aria-hidden="true" tabindex="-1"></a>    <span class="at">tiempo   =</span> <span class="fu">factor</span>(tiempo, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"pre"</span>, <span class="st">"post"</span>)),</span>
+<span id="cb8-48"><a href="#cb8-48" aria-hidden="true" tabindex="-1"></a>    <span class="at">practica =</span> <span class="fu">factor</span>(practica)</span>
+<span id="cb8-49"><a href="#cb8-49" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb8-50"><a href="#cb8-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-51"><a href="#cb8-51" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 600
 Columns: 5
@@ -400,23 +672,23 @@ $ respuesta_ord &lt;ord&gt; "Implementé", "No conozco", "No conozco", "No conoz
 </div>
 <p>Veamos como se distribuyen las respuestas antes y después de la capacitación para cada práctica.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Frecuencias por tiempo y práctica</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>df <span class="sc">|&gt;</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(tiempo, practica, respuesta_ord) <span class="sc">|&gt;</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(tiempo, practica) <span class="sc">|&gt;</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">pct =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n) <span class="sc">*</span> <span class="dv">100</span>) <span class="sc">|&gt;</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> respuesta_ord, <span class="at">y =</span> pct, <span class="at">fill =</span> tiempo)) <span class="sc">+</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">position =</span> <span class="st">"dodge"</span>) <span class="sc">+</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>practica, <span class="at">ncol =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"pre"</span> <span class="ot">=</span> <span class="st">"#7393B3"</span>, <span class="st">"post"</span> <span class="ot">=</span> <span class="st">"#2E8B57"</span>)) <span class="sc">+</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Distribución de respuestas por práctica y momento de evaluación"</span>,</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">x     =</span> <span class="st">"Respuesta"</span>,</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">y     =</span> <span class="st">"Porcentaje (%)"</span>,</span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill  =</span> <span class="st">"Evaluación"</span></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">13</span>) <span class="sc">+</span></span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">20</span>, <span class="at">hjust =</span> <span class="dv">1</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Frecuencias por tiempo y práctica</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>df <span class="sc">|&gt;</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(tiempo, practica, respuesta_ord) <span class="sc">|&gt;</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(tiempo, practica) <span class="sc">|&gt;</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">pct =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n) <span class="sc">*</span> <span class="dv">100</span>) <span class="sc">|&gt;</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> respuesta_ord, <span class="at">y =</span> pct, <span class="at">fill =</span> tiempo)) <span class="sc">+</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">position =</span> <span class="st">"dodge"</span>) <span class="sc">+</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>practica, <span class="at">ncol =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"pre"</span> <span class="ot">=</span> <span class="st">"#7393B3"</span>, <span class="st">"post"</span> <span class="ot">=</span> <span class="st">"#2E8B57"</span>)) <span class="sc">+</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Distribución de respuestas por práctica y momento de evaluación"</span>,</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">x     =</span> <span class="st">"Respuesta"</span>,</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">y     =</span> <span class="st">"Porcentaje (%)"</span>,</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill  =</span> <span class="st">"Evaluación"</span></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">13</span>) <span class="sc">+</span></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">20</span>, <span class="at">hjust =</span> <span class="dv">1</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -432,20 +704,20 @@ $ respuesta_ord &lt;ord&gt; "Implementé", "No conozco", "No conozco", "No conoz
 <h2 class="anchored" data-anchor-id="selección-de-modelos">3. Selección de modelos</h2>
 <p>Seguimos una estrategia <strong>jerárquica</strong>. Partimos del modelo más simple e incorporamos predictores uno a uno, evaluando si el ajuste mejora con <strong>pruebas de razón de verosimilitud (Likelihood ratio tests, LRT)</strong>.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Paso 1: Modelo nulo (solo intercepto aleatorio)</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>m0 <span class="ot">&lt;-</span> <span class="fu">clmm</span>(respuesta_ord <span class="sc">~</span> <span class="dv">1</span> <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> id), <span class="at">data =</span> df)</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Paso 2: Agregar tiempo</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>m1 <span class="ot">&lt;-</span> <span class="fu">clmm</span>(respuesta_ord <span class="sc">~</span> tiempo <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> id), <span class="at">data =</span> df)</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Paso 3: Agregar práctica</span></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>m2 <span class="ot">&lt;-</span> <span class="fu">clmm</span>(respuesta_ord <span class="sc">~</span> tiempo <span class="sc">+</span> practica <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> id), <span class="at">data =</span> df)</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Paso 4: Agregar la interacción tiempo × práctica</span></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>m3 <span class="ot">&lt;-</span> <span class="fu">clmm</span>(respuesta_ord <span class="sc">~</span> tiempo <span class="sc">*</span> practica <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> id), <span class="at">data =</span> df)</span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Comparación con LRT</span></span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(m0, m1, m2, m3)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Paso 1: Modelo nulo (solo intercepto aleatorio)</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>m0 <span class="ot">&lt;-</span> <span class="fu">clmm</span>(respuesta_ord <span class="sc">~</span> <span class="dv">1</span> <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> id), <span class="at">data =</span> df)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Paso 2: Agregar tiempo</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>m1 <span class="ot">&lt;-</span> <span class="fu">clmm</span>(respuesta_ord <span class="sc">~</span> tiempo <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> id), <span class="at">data =</span> df)</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Paso 3: Agregar práctica</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>m2 <span class="ot">&lt;-</span> <span class="fu">clmm</span>(respuesta_ord <span class="sc">~</span> tiempo <span class="sc">+</span> practica <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> id), <span class="at">data =</span> df)</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Paso 4: Agregar la interacción tiempo × práctica</span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>m3 <span class="ot">&lt;-</span> <span class="fu">clmm</span>(respuesta_ord <span class="sc">~</span> tiempo <span class="sc">*</span> practica <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> id), <span class="at">data =</span> df)</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Comparación con LRT</span></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(m0, m1, m2, m3)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Likelihood ratio tests of cumulative link models:
  
@@ -480,14 +752,14 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <p>El supuesto de <strong>proporcionalidad de los odds</strong> establece que el efecto de los predictores es constante a lo largo de todos los puntos de corte de la escala. Si se viola, el modelo no es apropiado.</p>
 <p>Lo testeamos con un LRT comparando el modelo proporcional vs.&nbsp;uno que permite efectos distintos por umbral (modelo nominal). Esto se hace con modelos <code>clm</code> (sin efectos aleatorios) por limitaciones computacionales.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Modelo proporcional (cumulative link)</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>m_prop <span class="ot">&lt;-</span> <span class="fu">clm</span>(respuesta_ord <span class="sc">~</span> tiempo <span class="sc">*</span> practica, <span class="at">data =</span> df)</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Modelo no restringido (nominal)</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>m_nom  <span class="ot">&lt;-</span> <span class="fu">clm</span>(respuesta_ord <span class="sc">~</span> <span class="dv">1</span>, <span class="at">nominal =</span> <span class="sc">~</span> tiempo <span class="sc">*</span> practica, <span class="at">data =</span> df)</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co"># LRT: si p &gt; 0.05, el supuesto se sostiene</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(m_prop, m_nom)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Modelo proporcional (cumulative link)</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>m_prop <span class="ot">&lt;-</span> <span class="fu">clm</span>(respuesta_ord <span class="sc">~</span> tiempo <span class="sc">*</span> practica, <span class="at">data =</span> df)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Modelo no restringido (nominal)</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>m_nom  <span class="ot">&lt;-</span> <span class="fu">clm</span>(respuesta_ord <span class="sc">~</span> <span class="dv">1</span>, <span class="at">nominal =</span> <span class="sc">~</span> tiempo <span class="sc">*</span> practica, <span class="at">data =</span> df)</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="co"># LRT: si p &gt; 0.05, el supuesto se sostiene</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(m_prop, m_nom)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Likelihood ratio tests of cumulative link models:
  
@@ -515,8 +787,8 @@ m_nom       8 1224.8 -604.42  4.0252  3     0.2588</code></pre>
 <li>IC 95% que no incluye el 1: el efecto es estadísticamente significativo.</li>
 </ul>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Coeficientes en escala log-odds</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(m3)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Coeficientes en escala log-odds</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(m3)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Cumulative Link Mixed Model fitted with the Laplace approximation
 
@@ -524,11 +796,11 @@ formula: respuesta_ord ~ tiempo * practica + (1 | id)
 data:    df
 
  link  threshold nobs logLik  AIC     niter    max.grad cond.H 
- logit flexible  600  -606.43 1224.86 457(518) 2.38e-07 1.2e+06
+ logit flexible  600  -606.43 1224.86 457(518) 2.98e-07 5.5e+05
 
 Random effects:
  Groups Name        Variance  Std.Dev. 
- id     (Intercept) 5.472e-09 7.397e-05
+ id     (Intercept) 5.436e-09 7.373e-05
 Number of groups:  id 150 
 
 Coefficients:
@@ -541,40 +813,40 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 Threshold coefficients:
                                   Estimate Std. Error z value
-No conozco|Conozco, no implementé   0.1624     0.1565   1.037
+No conozco|Conozco, no implementé   0.1624     0.1565   1.038
 Conozco, no implementé|Implementé   1.7684     0.1748  10.115</code></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>cf <span class="ot">&lt;-</span> <span class="fu">summary</span>(m3)<span class="sc">$</span>coefficients</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Extraemos los intervalos de confianza en escala log-odds</span></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>ci <span class="ot">&lt;-</span> <span class="fu">confint</span>(m3)</span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Convertimos a data frame</span></span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>ci_df <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(ci)</span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>ci_df<span class="sc">$</span>term <span class="ot">&lt;-</span> <span class="fu">rownames</span>(ci_df)</span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Unimos los IC con los coeficientes</span></span>
-<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>or_tabla <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">term =</span> <span class="fu">rownames</span>(cf),</span>
-<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">OR   =</span> <span class="fu">exp</span>(cf[, <span class="st">"Estimate"</span>])</span>
-<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>) <span class="sc">|&gt;</span></span>
-<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">left_join</span>(ci_df, <span class="at">by =</span> <span class="st">"term"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">rename</span>(</span>
-<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">IC_low  =</span> <span class="st">`</span><span class="at">2.5 %</span><span class="st">`</span>,</span>
-<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">IC_high =</span> <span class="st">`</span><span class="at">97.5 %</span><span class="st">`</span></span>
-<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(</span>
-<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">IC_low  =</span> <span class="fu">exp</span>(IC_low),</span>
-<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">IC_high =</span> <span class="fu">exp</span>(IC_high)</span>
-<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(<span class="sc">!</span><span class="fu">grepl</span>(<span class="st">"</span><span class="sc">\\</span><span class="st">|"</span>, term))  <span class="co"># sacar umbrales</span></span>
-<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a>or_tabla</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>cf <span class="ot">&lt;-</span> <span class="fu">summary</span>(m3)<span class="sc">$</span>coefficients</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Extraemos los intervalos de confianza en escala log-odds</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>ci <span class="ot">&lt;-</span> <span class="fu">confint</span>(m3)</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Convertimos a data frame</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>ci_df <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(ci)</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>ci_df<span class="sc">$</span>term <span class="ot">&lt;-</span> <span class="fu">rownames</span>(ci_df)</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Unimos los IC con los coeficientes</span></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>or_tabla <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">term =</span> <span class="fu">rownames</span>(cf),</span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">OR   =</span> <span class="fu">exp</span>(cf[, <span class="st">"Estimate"</span>])</span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>) <span class="sc">|&gt;</span></span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">left_join</span>(ci_df, <span class="at">by =</span> <span class="st">"term"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">rename</span>(</span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">IC_low  =</span> <span class="st">`</span><span class="at">2.5 %</span><span class="st">`</span>,</span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">IC_high =</span> <span class="st">`</span><span class="at">97.5 %</span><span class="st">`</span></span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(</span>
+<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">IC_low  =</span> <span class="fu">exp</span>(IC_low),</span>
+<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">IC_high =</span> <span class="fu">exp</span>(IC_high)</span>
+<span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(<span class="sc">!</span><span class="fu">grepl</span>(<span class="st">"</span><span class="sc">\\</span><span class="st">|"</span>, term))  <span class="co"># sacar umbrales</span></span>
+<span id="cb17-25"><a href="#cb17-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-26"><a href="#cb17-26" aria-hidden="true" tabindex="-1"></a>or_tabla</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>                           term        OR    IC_low    IC_high
-1                    tiempopost 7.6616211 4.8595482 12.0794022
-2            practicaPráctica B 1.2190401 0.7922918  1.8756457
-3 tiempopost:practicaPráctica B 0.2768747 0.1498843  0.5114587</code></pre>
+1                    tiempopost 7.6616211 4.8595866 12.0793070
+2            practicaPráctica B 1.2190401 0.7922956  1.8756367
+3 tiempopost:practicaPráctica B 0.2768747 0.1498857  0.5114536</code></pre>
 </div>
 </div>
 <p><strong>En el caso de nuestros datos:</strong></p>
@@ -589,14 +861,14 @@ Conozco, no implementé|Implementé   1.7684     0.1748  10.115</code></pre>
 <p>Para saber si las prácticas difieren entre sí, usamos comparaciones múltiples con ajuste de Tukey mediante el paquete emmeans.</p>
 <p>Como en nuestros datos la interacción entre tiempo de evaluación y práctica es significativa, entendemos que el efecto de la práctica no es el mismo en los dos momentos (pre/post). Las prácticas se comportan distinto. Por eso no tiene sentido compararlas colapsando sobre el tiempo; estaríamos promediando algo que varía. Lo correcto es compararlas por separado en cada momento.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Comparación entre prácticas en cada momento por separado</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>emm <span class="ot">&lt;-</span> <span class="fu">emmeans</span>(m3, <span class="sc">~</span> practica <span class="sc">|</span> tiempo, <span class="at">mode =</span> <span class="st">"linear.predictor"</span>)</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>pares <span class="ot">&lt;-</span> <span class="fu">pairs</span>(emm, <span class="at">adjust =</span> <span class="st">"tukey"</span>)</span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="fu">confint</span>(pares, <span class="at">type =</span> <span class="st">"response"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_tibble</span>() <span class="sc">|&gt;</span></span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">where</span>(is.numeric), <span class="sc">~</span><span class="fu">round</span>(., <span class="dv">3</span>)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Comparación entre prácticas en cada momento por separado</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>emm <span class="ot">&lt;-</span> <span class="fu">emmeans</span>(m3, <span class="sc">~</span> practica <span class="sc">|</span> tiempo, <span class="at">mode =</span> <span class="st">"linear.predictor"</span>)</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>pares <span class="ot">&lt;-</span> <span class="fu">pairs</span>(emm, <span class="at">adjust =</span> <span class="st">"tukey"</span>)</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="fu">confint</span>(pares, <span class="at">type =</span> <span class="st">"response"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_tibble</span>() <span class="sc">|&gt;</span></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">where</span>(is.numeric), <span class="sc">~</span><span class="fu">round</span>(., <span class="dv">3</span>)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 7
   contrast                tiempo odds.ratio    SE    df asymp.LCL asymp.UCL
@@ -612,11 +884,11 @@ Conozco, no implementé|Implementé   1.7684     0.1748  10.115</code></pre>
 </ul>
 <p>Si queremos invertir la dirección del contraste, usamos <code>reverse = TRUE</code> en la función <code>pairs()</code>. De esa forma, valores mayores a 1 indican que la Práctica tiene mayores chances de estar en categorías más altas.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>pares <span class="ot">&lt;-</span> <span class="fu">pairs</span>(emm, <span class="at">adjust =</span> <span class="st">"tukey"</span>, <span class="at">reverse =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">confint</span>(pares, <span class="at">type =</span> <span class="st">"response"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_tibble</span>() <span class="sc">|&gt;</span></span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">where</span>(is.numeric), <span class="sc">~</span><span class="fu">round</span>(., <span class="dv">3</span>)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>pares <span class="ot">&lt;-</span> <span class="fu">pairs</span>(emm, <span class="at">adjust =</span> <span class="st">"tukey"</span>, <span class="at">reverse =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="fu">confint</span>(pares, <span class="at">type =</span> <span class="st">"response"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_tibble</span>() <span class="sc">|&gt;</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="fu">where</span>(is.numeric), <span class="sc">~</span><span class="fu">round</span>(., <span class="dv">3</span>)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 7
   contrast                tiempo odds.ratio    SE    df asymp.LCL asymp.UCL
@@ -633,25 +905,25 @@ Conozco, no implementé|Implementé   1.7684     0.1748  10.115</code></pre>
 <h2 class="anchored" data-anchor-id="visualización-de-los-coeficientes">7. Visualización de los coeficientes</h2>
 <p>Una forma de visualizar los coeficientes estimados del modelo que seleccionamos es mediante un <strong>forest plot</strong>. En este gráfico, cada punto representa un odds ratio y las líneas horizontales su IC 95%.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>or_plot_data <span class="ot">&lt;-</span> or_tabla <span class="sc">|&gt;</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">term =</span> <span class="fu">case_when</span>(</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    term <span class="sc">==</span> <span class="st">"tiempopost"</span>                    <span class="sc">~</span> <span class="st">"Tiempo"</span>,</span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    term <span class="sc">==</span> <span class="st">"practicaPráctica B"</span>            <span class="sc">~</span> <span class="st">"Práctica"</span>,</span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>    term <span class="sc">==</span> <span class="st">"tiempopost:practicaPráctica B"</span> <span class="sc">~</span> <span class="st">"Tiempo × Práctica"</span></span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>  ))</span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(or_plot_data, <span class="fu">aes</span>(<span class="at">x =</span> OR, <span class="at">y =</span> <span class="fu">reorder</span>(term, OR))) <span class="sc">+</span></span>
-<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">1</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">color =</span> <span class="st">"gray50"</span>) <span class="sc">+</span></span>
-<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_errorbarh</span>(<span class="fu">aes</span>(<span class="at">xmin =</span> IC_low, <span class="at">xmax =</span> IC_high),</span>
-<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>                 <span class="at">height =</span> <span class="fl">0.25</span>, <span class="at">color =</span> <span class="st">"#7393B3"</span>, <span class="at">linewidth =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
-<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">3</span>, <span class="at">color =</span> <span class="st">"#2E8B57"</span>) <span class="sc">+</span></span>
-<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_log10</span>() <span class="sc">+</span></span>
-<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Odds Ratios del modelo CLMM final"</span>,</span>
-<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">x     =</span> <span class="st">"Odds Ratio (escala logarítmica)"</span>,</span>
-<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">y     =</span> <span class="cn">NULL</span></span>
-<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">13</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>or_plot_data <span class="ot">&lt;-</span> or_tabla <span class="sc">|&gt;</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">term =</span> <span class="fu">case_when</span>(</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>    term <span class="sc">==</span> <span class="st">"tiempopost"</span>                    <span class="sc">~</span> <span class="st">"Tiempo"</span>,</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>    term <span class="sc">==</span> <span class="st">"practicaPráctica B"</span>            <span class="sc">~</span> <span class="st">"Práctica"</span>,</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>    term <span class="sc">==</span> <span class="st">"tiempopost:practicaPráctica B"</span> <span class="sc">~</span> <span class="st">"Tiempo × Práctica"</span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>  ))</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(or_plot_data, <span class="fu">aes</span>(<span class="at">x =</span> OR, <span class="at">y =</span> <span class="fu">reorder</span>(term, OR))) <span class="sc">+</span></span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">1</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">color =</span> <span class="st">"gray50"</span>) <span class="sc">+</span></span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_errorbarh</span>(<span class="fu">aes</span>(<span class="at">xmin =</span> IC_low, <span class="at">xmax =</span> IC_high),</span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>                 <span class="at">height =</span> <span class="fl">0.25</span>, <span class="at">color =</span> <span class="st">"#7393B3"</span>, <span class="at">linewidth =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">3</span>, <span class="at">color =</span> <span class="st">"#2E8B57"</span>) <span class="sc">+</span></span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_log10</span>() <span class="sc">+</span></span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Odds Ratios del modelo CLMM final"</span>,</span>
+<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">x     =</span> <span class="st">"Odds Ratio (escala logarítmica)"</span>,</span>
+<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">y     =</span> <span class="cn">NULL</span></span>
+<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb23-19"><a href="#cb23-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">13</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
