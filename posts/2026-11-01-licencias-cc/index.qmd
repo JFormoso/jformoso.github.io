@@ -18,7 +18,7 @@ image-caption: 'Foto de [Nikita Rashnii](https://unsplash.com/es/@megaviolence) 
 license: "CC BY 4.0"
 ---
 
-Imaginemos que estamos organizando un taller y encontramos una presentación muy buena, publicada por otra universidad. Queremos traducirla al español, reemplazar algunos ejemplos por otros más cercanos a nuestro contexto y distribuir la versión adaptada entre participantes. El archivo está online y se puede descargar sin pagar. ¿Eso significa que podemos hacer todo lo anterior?
+Seguro alguna vez te encontraste con esta situación. Estas organizando un taller y encontras una presentación muy buena, publicada por otra universidad. Querés traducirla al español, reemplazar algunos ejemplos por otros más cercanos a nuestro contexto y distribuir la versión adaptada entre los participantes del taller. El archivo está online y se puede descargar sin pagar. ¿Eso significa que podemos hacer todo lo anterior?
 
 En [un posteo anterior sobre derechos de autor en Argentina](https://jformoso.github.io/posts/2026-10-26-derechos-de-autor/) vimos que **poder acceder gratuitamente a un material no equivale a tener permiso para reutilizarlo**. También repasamos qué protege el derecho de autor, qué excepciones existen y por qué es importante distinguir entre la autoría de una obra y la titularidad de los derechos para licenciarla.
 
@@ -70,6 +70,12 @@ Esto no significa que una licencia sea siempre la correcta para cualquier obra. 
 ## ¿Y si una obra está en dominio público? CC0 y Public Domain Mark
 
 El **dominio público** comprende materiales que no están sujetos a derechos patrimoniales de autor exclusivos, por ejemplo porque el plazo de protección terminó o porque no reúnen las condiciones para estar protegidos. En algunos sistemas jurídicos también puede haber obras que ingresaron por incumplimiento de antiguas formalidades o por una dedicación válida al dominio público. No es lo mismo que una obra que se puede descargar gratuitamente. Además, su situación jurídica puede variar entre países.
+
+::: {.callout-note title="¡Importante!"}
+
+Las licencias Creative Commons no se aplican a las obras que ya están en dominio público. Una persona no puede tomar una obra del dominio público y aplicarle una licencia CC para imponer nuevas restricciones a su reutilización. 
+
+:::
 
 Como vimos en la publicación anterior, en Argentina hay una particularidad: el régimen de **dominio público pagante** puede establecer un gravamen para determinados aprovechamientos de obras cuyos derechos patrimoniales ya expiraron. Por eso, que no sea necesario pedir autorización al antiguo titular de derechos no significa necesariamente que cualquier explotación de la obra esté libre de otras condiciones o cargos ([Decreto-Ley 1.224/1958](https://www.argentina.gob.ar/normativa/nacional/37242/actualizacion)).
 
