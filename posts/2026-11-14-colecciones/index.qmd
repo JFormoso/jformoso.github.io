@@ -2,6 +2,8 @@
 title: "Colecciones, adaptaciones y licencias Creative Commons"
 subtitle: "Aves del Iberá"
 author: "Jesica Formoso"
+date: "2026-11-14"
+categories: ["Creative Commons", "licencias abiertas", "educación abierta", "investigación", "Argentina"]
 lang: es
 format:
   html:
