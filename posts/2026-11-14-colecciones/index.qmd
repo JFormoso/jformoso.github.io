@@ -97,7 +97,7 @@ Antes de mezclar obras es útil distinguir dos preguntas diferentes:
 
 ![CC Adapters License Chart: licencias disponibles para los aportes originales a una adaptación, según la licencia de la obra de partida.](https://upload.wikimedia.org/wikipedia/commons/6/6e/CC_Adapter%27s_License_Chart.png){fig-alt="Tabla de Creative Commons que compara la licencia de la obra original con la licencia que puede utilizar quien realiza una adaptación" width="100%"}
 
-*Fuente: [«CC Adapter's License Chart», Creative Commons](https://commons.wikimedia.org/wiki/File:CC_Adapter%27s_License_Chart.png), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), reproducida sin modificaciones.*
+*Fuente: [CC Adapter's License Chart, Creative Commons](https://commons.wikimedia.org/wiki/File:CC_Adapter%27s_License_Chart.png), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), reproducida sin modificaciones.*
 
 2. **¿Son compatibles las licencias de dos obras que quiero combinar en un remix?** El *CC License Compatibility Chart* cruza dos licencias y marca con un ✓ las combinaciones que permiten compartir el remix y con una ✕ aquellas que no son compatibles bajo las autorizaciones de esas licencias.
 
